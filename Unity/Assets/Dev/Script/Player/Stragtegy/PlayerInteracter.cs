@@ -61,13 +61,17 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     {
 
         if (interaction.TryGetContractInfo(out ActorContractInfo actorInfo) &&
-            actorInfo.TryGetBehaviour(out IBAMove move) &&
+            actorInfo.TryGetBehaviour(out IBAStateTransfer stateTransfer) &&
             actorInfo.TryGetBehaviour(out IBAFavorablity favorablity) &&
             actorInfo.TryGetBehaviour(out IBANameKey nameKey))
         {
-            //move.SetMoveLock(false);
-
+            stateTransfer.TranslateState("TalkingForPlayer");
             _controller.QuickInventory.Visible = false;
+
+            if (actorInfo.Interaction.Owner is Actor actor)
+            {
+                actor.Visual.LookAt(_controller.transform.position - actor.transform.position, true);
+            }
             
             var favorablityContainer = favorablity.FavorablityContainer;
             
@@ -100,9 +104,11 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
                     break;
                 case 2:
                     instance.ResetDialogue();
+                    stateTransfer.TranslateState("DailyRoutine");
                     return;
                 default:
                     instance.ResetDialogue();
+                    stateTransfer.TranslateState("DailyRoutine");
                     return;
             }
             
@@ -133,6 +139,9 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
                 await UniTask.WaitUntil(() => InputManager.Actions.DialogueSkip.triggered, PlayerLoopTiming.Update,
                     GlobalCancelation.PlayMode);
             }
+
+
+            stateTransfer.TranslateState("DailyRoutine");
         }
     }
 

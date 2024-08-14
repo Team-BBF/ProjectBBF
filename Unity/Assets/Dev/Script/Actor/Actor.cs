@@ -51,21 +51,22 @@ public class Actor : MonoBehaviour, IBANameKey
         MoveStrategy = gameObject.AddComponent<ActorMove>();
         MoveStrategy.Init(this);
         Visual = gameObject.AddComponent<ActorVisual>();
-        Visual.Init(Animator);
+        Visual.Init(Animator, AniData);
         Favorablity = gameObject.AddComponent<ActorFavorablity>();
         Favorablity.Init(this);
         
         
         /* Collision interaction */
         var info = ActorContractInfo.Create(() => gameObject);
-        info.AddBehaivour<IBAMove>(MoveStrategy);
         info.AddBehaivour<IBAFavorablity>(Favorablity);
         info.AddBehaivour<IBANameKey>(this);
+        info.AddBehaivour<IBAStateTransfer>(_transitionHandler);
         
         _interaction.SetContractInfo(info, this);
         
         
         /* State handler */
+        _transitionHandler.Init(Interaction);
         _transitionHandler.AddHandleCallback("DailyRoutine", ToDailyRoutine);
         _transitionHandler.AddHandleCallback("TalkingForPlayer", ToTalkingForPlayer);
     }

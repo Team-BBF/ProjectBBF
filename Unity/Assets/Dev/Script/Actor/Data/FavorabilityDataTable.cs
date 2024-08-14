@@ -48,7 +48,7 @@ public class ActorDataManager : MonoBehaviourSingleton<ActorDataManager>
 
     public override void PostInitialize()
     {
-        Table = Resources.Load<FavorabilityDataTable>("Data/ActorDataTable");
+        Table = Resources.Load<FavorabilityDataTable>("Data/FavorabilityTable");
         Debug.Assert(Table is not null);
     }
 

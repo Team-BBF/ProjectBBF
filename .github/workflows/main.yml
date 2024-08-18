@@ -1,0 +1,19 @@
+name: 'sprint pullrequest discord notification'
+
+on:
+  pull_request:
+    type: [opened, reopened]
+
+jobs:
+  notify:
+    name: discord notification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_PULL_REQUEST }}
+          
+        uses: Ilshidur/action-discord@master
+        with:
+          args: "{{GITHUB_ACTOR}}님이 Pull Request 했습니다!\n검수해주세요!\n https://github.com/Team-BBF/ProjectBBF/commit/{{GITHUB_SHA}}"

@@ -1,4 +1,4 @@
-name: 'sprint pullrequest discord notification'
+name: 'pullrequest discord notification'
 
 on:
   pull_request:
@@ -16,4 +16,4 @@ jobs:
           
         uses: Ilshidur/action-discord@master
         with:
-          args: "{{GITHUB_ACTOR}}님이 Pull Request 했습니다!\n검수해주세요!\n https://github.com/Team-BBF/ProjectBBF/commit/{{GITHUB_SHA}}"
+          args: "{{GITHUB_ACTOR}}님이 Pull Request 했습니다!\n검수해주세요!\n https://github.com/Team-BBF/ProjectBBF/pull/${{ github.event.pull_request.number }}"

@@ -15,6 +15,8 @@ public class PatrollPointPathFinder : StateBehaviour
     [CanBeNull]
     public PatrolPoint GetNextPoint(PatrolPointPath path)
     {
+        if (path is null) return null;
+        
         if (_currentIndex == null)
         {
             if (path.PatrollPoints.Any())
@@ -58,8 +60,11 @@ public class PatrolPointPathFinderUnit : Unit
                 flow.GetValue<PatrolPointPath>(_vPatrollPointPath)
             );
 
-        Debug.Assert(_lastPoint != null, "patrol point가 null 입니다.");
-
+        if (_lastPoint is null)
+        {
+            return null;
+        }
+        
         return _cOutput;
     }
 

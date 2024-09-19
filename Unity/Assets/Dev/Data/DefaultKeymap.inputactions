@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Collect",
+                    "name": "Interaction",
                     "type": "Button",
                     "id": "5bb6e3fe-0e7f-46c4-84ab-0423b6fde981",
                     "expectedControlType": "Button",
@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DestroyObject",
+                    "name": "UseItem",
                     "type": "Button",
                     "id": "5a61ab1f-d552-456e-b080-856e8b62fffe",
                     "expectedControlType": "Button",
@@ -121,11 +121,11 @@
                 {
                     "name": "",
                     "id": "109f2777-561c-45fb-acf6-4c913737fc3a",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "WinPCScheme",
-                    "action": "Collect",
+                    "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -136,7 +136,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "WinPCScheme",
-                    "action": "DestroyObject",
+                    "action": "UseItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -188,6 +188,15 @@
                     "name": "Inventory",
                     "type": "Button",
                     "id": "a7289533-7395-46f2-b56e-2313d41dea27",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Setting",
+                    "type": "Button",
+                    "id": "02f361aa-256e-47d4-b0c2-29387a5ccde3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -352,11 +361,22 @@
                 {
                     "name": "",
                     "id": "db6c3337-f47a-40c5-a447-c1fc1768b0b1",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "WinPCScheme",
                     "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84798a6b-ab02-48c3-b9c6-f9cd01b202c8",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WinPCScheme",
+                    "action": "Setting",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

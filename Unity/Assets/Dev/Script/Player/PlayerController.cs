@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
 
 
     public PlayerInventoryController Inventory { get; private set; }
+    public PlayerPannelController PannelController => _pannelController;
 
     #endregion
 

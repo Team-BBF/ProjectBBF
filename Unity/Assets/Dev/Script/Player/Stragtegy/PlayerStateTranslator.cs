@@ -28,7 +28,7 @@ public class PlayerStateTranslator : MonoBehaviour, IPlayerStrategy
     {
         
         // collecting
-        if (InputManager.Map.Player.Collect.triggered)
+        if (InputManager.Map.Player.Interaction.triggered)
         {
             PeekState = EPlayerControlState.Collection;
         }

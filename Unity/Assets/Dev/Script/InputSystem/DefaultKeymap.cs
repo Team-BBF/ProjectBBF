@@ -46,7 +46,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Collect"",
+                    ""name"": ""Interaction"",
                     ""type"": ""Button"",
                     ""id"": ""5bb6e3fe-0e7f-46c4-84ab-0423b6fde981"",
                     ""expectedControlType"": ""Button"",
@@ -55,7 +55,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""DestroyObject"",
+                    ""name"": ""UseItem"",
                     ""type"": ""Button"",
                     ""id"": ""5a61ab1f-d552-456e-b080-856e8b62fffe"",
                     ""expectedControlType"": ""Button"",
@@ -143,11 +143,11 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""109f2777-561c-45fb-acf6-4c913737fc3a"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""WinPCScheme"",
-                    ""action"": ""Collect"",
+                    ""action"": ""Interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -158,7 +158,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""WinPCScheme"",
-                    ""action"": ""DestroyObject"",
+                    ""action"": ""UseItem"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -210,6 +210,15 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                     ""name"": ""Inventory"",
                     ""type"": ""Button"",
                     ""id"": ""a7289533-7395-46f2-b56e-2313d41dea27"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Setting"",
+                    ""type"": ""Button"",
+                    ""id"": ""02f361aa-256e-47d4-b0c2-29387a5ccde3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -374,11 +383,22 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""db6c3337-f47a-40c5-a447-c1fc1768b0b1"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""WinPCScheme"",
                     ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84798a6b-ab02-48c3-b9c6-f9cd01b202c8"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WinPCScheme"",
+                    ""action"": ""Setting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -408,8 +428,8 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
-        m_Player_Collect = m_Player.FindAction("Collect", throwIfNotFound: true);
-        m_Player_DestroyObject = m_Player.FindAction("DestroyObject", throwIfNotFound: true);
+        m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
+        m_Player_UseItem = m_Player.FindAction("UseItem", throwIfNotFound: true);
         m_Player_Fishing = m_Player.FindAction("Fishing", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
@@ -417,6 +437,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         m_UI_QuickSlotScroll = m_UI.FindAction("QuickSlotScroll", throwIfNotFound: true);
         m_UI_QuickSlotScrollButton = m_UI.FindAction("QuickSlotScrollButton", throwIfNotFound: true);
         m_UI_Inventory = m_UI.FindAction("Inventory", throwIfNotFound: true);
+        m_UI_Setting = m_UI.FindAction("Setting", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -480,8 +501,8 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Sprint;
-    private readonly InputAction m_Player_Collect;
-    private readonly InputAction m_Player_DestroyObject;
+    private readonly InputAction m_Player_Interaction;
+    private readonly InputAction m_Player_UseItem;
     private readonly InputAction m_Player_Fishing;
     public struct PlayerActions
     {
@@ -489,8 +510,8 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         public PlayerActions(@DefaultKeymap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
-        public InputAction @Collect => m_Wrapper.m_Player_Collect;
-        public InputAction @DestroyObject => m_Wrapper.m_Player_DestroyObject;
+        public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
+        public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
         public InputAction @Fishing => m_Wrapper.m_Player_Fishing;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -507,12 +528,12 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
-            @Collect.started += instance.OnCollect;
-            @Collect.performed += instance.OnCollect;
-            @Collect.canceled += instance.OnCollect;
-            @DestroyObject.started += instance.OnDestroyObject;
-            @DestroyObject.performed += instance.OnDestroyObject;
-            @DestroyObject.canceled += instance.OnDestroyObject;
+            @Interaction.started += instance.OnInteraction;
+            @Interaction.performed += instance.OnInteraction;
+            @Interaction.canceled += instance.OnInteraction;
+            @UseItem.started += instance.OnUseItem;
+            @UseItem.performed += instance.OnUseItem;
+            @UseItem.canceled += instance.OnUseItem;
             @Fishing.started += instance.OnFishing;
             @Fishing.performed += instance.OnFishing;
             @Fishing.canceled += instance.OnFishing;
@@ -526,12 +547,12 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
-            @Collect.started -= instance.OnCollect;
-            @Collect.performed -= instance.OnCollect;
-            @Collect.canceled -= instance.OnCollect;
-            @DestroyObject.started -= instance.OnDestroyObject;
-            @DestroyObject.performed -= instance.OnDestroyObject;
-            @DestroyObject.canceled -= instance.OnDestroyObject;
+            @Interaction.started -= instance.OnInteraction;
+            @Interaction.performed -= instance.OnInteraction;
+            @Interaction.canceled -= instance.OnInteraction;
+            @UseItem.started -= instance.OnUseItem;
+            @UseItem.performed -= instance.OnUseItem;
+            @UseItem.canceled -= instance.OnUseItem;
             @Fishing.started -= instance.OnFishing;
             @Fishing.performed -= instance.OnFishing;
             @Fishing.canceled -= instance.OnFishing;
@@ -560,6 +581,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_QuickSlotScroll;
     private readonly InputAction m_UI_QuickSlotScrollButton;
     private readonly InputAction m_UI_Inventory;
+    private readonly InputAction m_UI_Setting;
     public struct UIActions
     {
         private @DefaultKeymap m_Wrapper;
@@ -568,6 +590,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         public InputAction @QuickSlotScroll => m_Wrapper.m_UI_QuickSlotScroll;
         public InputAction @QuickSlotScrollButton => m_Wrapper.m_UI_QuickSlotScrollButton;
         public InputAction @Inventory => m_Wrapper.m_UI_Inventory;
+        public InputAction @Setting => m_Wrapper.m_UI_Setting;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -589,6 +612,9 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
             @Inventory.started += instance.OnInventory;
             @Inventory.performed += instance.OnInventory;
             @Inventory.canceled += instance.OnInventory;
+            @Setting.started += instance.OnSetting;
+            @Setting.performed += instance.OnSetting;
+            @Setting.canceled += instance.OnSetting;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -605,6 +631,9 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
             @Inventory.started -= instance.OnInventory;
             @Inventory.performed -= instance.OnInventory;
             @Inventory.canceled -= instance.OnInventory;
+            @Setting.started -= instance.OnSetting;
+            @Setting.performed -= instance.OnSetting;
+            @Setting.canceled -= instance.OnSetting;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -635,8 +664,8 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
-        void OnCollect(InputAction.CallbackContext context);
-        void OnDestroyObject(InputAction.CallbackContext context);
+        void OnInteraction(InputAction.CallbackContext context);
+        void OnUseItem(InputAction.CallbackContext context);
         void OnFishing(InputAction.CallbackContext context);
     }
     public interface IUIActions
@@ -645,5 +674,6 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         void OnQuickSlotScroll(InputAction.CallbackContext context);
         void OnQuickSlotScrollButton(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
+        void OnSetting(InputAction.CallbackContext context);
     }
 }

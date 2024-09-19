@@ -31,7 +31,7 @@ public class DialogueContextUnit : WaitUnit
         {
             if (context.CanNext == false)
             {
-                if (InputManager.Actions.DialogueSkip.triggered)
+                if (InputManager.Map.UI.DialogueSkip.triggered)
                 {
                     yield return exit;
                 }
@@ -54,11 +54,11 @@ public class DialogueContextUnit : WaitUnit
 
 
             yield return new WaitUntil(() =>
-                InputManager.Actions.DialogueSkip.triggered|| task.Status != UniTaskStatus.Pending);
+                InputManager.Map.UI.DialogueSkip.triggered|| task.Status != UniTaskStatus.Pending);
 
             if (task.Status != UniTaskStatus.Pending)
             {
-                yield return new WaitUntil(() => InputManager.Actions.DialogueSkip.triggered);
+                yield return new WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered);
             }
         }
     }

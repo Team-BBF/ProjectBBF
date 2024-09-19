@@ -2,7 +2,7 @@
     "name": "DefaultKeymap",
     "maps": [
         {
-            "name": "PlayerControl",
+            "name": "Player",
             "id": "2a21b6ac-1b20-440f-b6f5-3e06dc8fdfd2",
             "actions": [
                 {
@@ -33,45 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DialogueSkip",
-                    "type": "Button",
-                    "id": "6d024a56-b456-4478-bac8-ddaf4c6f4925",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "DestroyObject",
                     "type": "Button",
                     "id": "5a61ab1f-d552-456e-b080-856e8b62fffe",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "QuickSlotScroll",
-                    "type": "PassThrough",
-                    "id": "8de32bb8-4940-4d21-ab65-5f8c42879b7e",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "QuickSlotScrollButton",
-                    "type": "Value",
-                    "id": "038c79a3-707f-420e-8739-50d47db3c0e0",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Inventory",
-                    "type": "Button",
-                    "id": "529f9887-26fe-4a02-9cad-a130fe4e7135",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -167,39 +131,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8432545f-fa34-4943-b0e6-97ca55756fbd",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "WinPCScheme",
-                    "action": "DialogueSkip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6fef4a9e-962f-40cf-8f0c-dac8e773fdea",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "WinPCScheme",
-                    "action": "DialogueSkip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7551d58b-7182-4a53-8aa6-37a9c1d874c5",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "WinPCScheme",
-                    "action": "DialogueSkip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "8c53c89b-1df0-4e25-adcc-0c1157f539cb",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -211,7 +142,95 @@
                 },
                 {
                     "name": "",
-                    "id": "644ecf5c-139e-4942-8a51-fee02b3ea77e",
+                    "id": "c3a084c0-4769-4084-a75e-3704eb8bb21b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WinPCScheme",
+                    "action": "Fishing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "4ff4bc3e-38eb-4c34-9074-7ef91a24d0ff",
+            "actions": [
+                {
+                    "name": "DialogueSkip",
+                    "type": "Button",
+                    "id": "af70dc0b-fd27-46fd-8984-44a875fb5e03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "QuickSlotScroll",
+                    "type": "PassThrough",
+                    "id": "a235a3c1-4b77-4660-919b-dea1fdfde0d5",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "QuickSlotScrollButton",
+                    "type": "Value",
+                    "id": "a7b46c3b-5d7c-450a-a7f5-c33ed7b72ad8",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Inventory",
+                    "type": "Button",
+                    "id": "a7289533-7395-46f2-b56e-2313d41dea27",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0815a371-eff4-41d9-b269-460395c73a27",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WinPCScheme",
+                    "action": "DialogueSkip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "968ac20b-0c18-444f-b343-b7b846044199",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WinPCScheme",
+                    "action": "DialogueSkip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87e54dfa-80e8-4b12-ab7c-7f7a89acd7a5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WinPCScheme",
+                    "action": "DialogueSkip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3fabb9e-feb2-4dd7-8ec4-03a075ff66f8",
                     "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "Invert",
@@ -222,7 +241,7 @@
                 },
                 {
                     "name": "",
-                    "id": "608c7edb-0bfd-4655-a0ea-3778c189688b",
+                    "id": "704ec141-7102-4a1e-882f-690fbfb0bb88",
                     "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "Scale",
@@ -233,7 +252,7 @@
                 },
                 {
                     "name": "",
-                    "id": "34879d20-6597-4562-a779-d651c2fcfba5",
+                    "id": "6dbc36ce-d465-4e36-b5d2-3d87c5cc13a5",
                     "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "Scale(factor=2)",
@@ -244,7 +263,7 @@
                 },
                 {
                     "name": "",
-                    "id": "367c4166-6ce4-486f-96c3-c1f68998b0a3",
+                    "id": "09f20a05-33ce-4341-bb50-9331879eaee6",
                     "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "Scale(factor=3)",
@@ -255,7 +274,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e32d8a83-1a1d-4b69-b25b-8f90702f27db",
+                    "id": "95939182-1efc-4f20-af9a-9c6f8f396d1b",
                     "path": "<Keyboard>/4",
                     "interactions": "",
                     "processors": "Scale(factor=4)",
@@ -266,7 +285,7 @@
                 },
                 {
                     "name": "",
-                    "id": "c2b24ba5-75eb-4477-8376-25d811eea5a0",
+                    "id": "eca71a7b-d8c4-40eb-8c85-3f5f08d1f212",
                     "path": "<Keyboard>/5",
                     "interactions": "",
                     "processors": "Scale(factor=5)",
@@ -277,7 +296,7 @@
                 },
                 {
                     "name": "",
-                    "id": "c0468866-70a7-46f0-829d-19ff6eea8472",
+                    "id": "7346549d-384b-4319-9cad-d0b6b8edd36c",
                     "path": "<Keyboard>/6",
                     "interactions": "",
                     "processors": "Scale(factor=6)",
@@ -288,7 +307,7 @@
                 },
                 {
                     "name": "",
-                    "id": "7abcd911-2a27-41c6-a423-ab275cb335f0",
+                    "id": "8ff45f52-1791-4dbf-9ccb-9481bc07264c",
                     "path": "<Keyboard>/7",
                     "interactions": "",
                     "processors": "Scale(factor=7)",
@@ -299,7 +318,7 @@
                 },
                 {
                     "name": "",
-                    "id": "50d8f083-2b32-42c2-b7c7-7d4d6dbadf40",
+                    "id": "b94cf763-ef70-41b5-8501-4585fdff443e",
                     "path": "<Keyboard>/8",
                     "interactions": "",
                     "processors": "Scale(factor=8)",
@@ -310,7 +329,7 @@
                 },
                 {
                     "name": "",
-                    "id": "77e3e6f3-741b-4fb9-8f38-dd471a33194a",
+                    "id": "854ab4d9-1915-4a7a-aab1-723cb5225b73",
                     "path": "<Keyboard>/9",
                     "interactions": "",
                     "processors": "Scale(factor=9)",
@@ -321,7 +340,7 @@
                 },
                 {
                     "name": "",
-                    "id": "2d35e34f-6eed-48d4-8541-78f3bb3f425c",
+                    "id": "6d3a889e-7eef-4f6f-a7ae-b178c480d8ba",
                     "path": "<Keyboard>/0",
                     "interactions": "",
                     "processors": "Scale(factor=10)",
@@ -332,23 +351,12 @@
                 },
                 {
                     "name": "",
-                    "id": "577d238a-bd39-4c53-b259-74216fd803ec",
+                    "id": "db6c3337-f47a-40c5-a447-c1fc1768b0b1",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "WinPCScheme",
                     "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c3a084c0-4769-4084-a75e-3704eb8bb21b",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "WinPCScheme",
-                    "action": "Fishing",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

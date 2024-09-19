@@ -30,7 +30,7 @@ public class FishingView : MonoBehaviour
         
         float t = 0f;
         float sign = 1;
-        while (InputManager.Actions.Fishing.IsPressed())
+        while (InputManager.Map.Player.Fishing.IsPressed())
         {
 
             if (t > pressTime)

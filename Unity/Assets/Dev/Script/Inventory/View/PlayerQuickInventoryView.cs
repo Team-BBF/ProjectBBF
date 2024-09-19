@@ -16,14 +16,14 @@ public class PlayerQuickInventoryView : MonoBehaviour, IInventoryView
 
     private void OnEnable()
     {
-        InputManager.Actions.QuickSlotScroll.performed += MoveCursorScroll;
-        InputManager.Actions.QuickSlotScrollButton.performed += MoveCursorButton;
+        InputManager.Map.UI.QuickSlotScroll.performed += MoveCursorScroll;
+        InputManager.Map.UI.QuickSlotScrollButton.performed += MoveCursorButton;
     }
 
     private void OnDisable()
     {
-        InputManager.Actions.QuickSlotScroll.performed -= MoveCursorScroll;
-        InputManager.Actions.QuickSlotScrollButton.performed -= MoveCursorButton;
+        InputManager.Map.UI.QuickSlotScroll.performed -= MoveCursorScroll;
+        InputManager.Map.UI.QuickSlotScrollButton.performed -= MoveCursorButton;
     }
     
     public bool Visible

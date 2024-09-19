@@ -37,7 +37,7 @@ public class DialogueControllerTest : MonoBehaviour
     {
         if (_context == null) return;
 
-        if (InputManager.Actions.DialogueSkip.triggered)
+        if (InputManager.Map.UI.DialogueSkip.triggered)
         {
             _ = _context.Next();
             if (_context.CanNext == false)

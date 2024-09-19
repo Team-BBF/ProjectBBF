@@ -6,14 +6,12 @@ using UnityEngine;
 [Singleton(ESingletonType.Global)]
 public class InputManager : IGeneralSingleton
 {
-    private DefaultKeymap _keyMap;
+    private static DefaultKeymap _keyMap;
 
     public void Initialize()
     {
         _keyMap = new DefaultKeymap();
         _keyMap.Enable();
-
-        Actions = _keyMap.PlayerControl;
     }
 
     public void Release()
@@ -22,5 +20,5 @@ public class InputManager : IGeneralSingleton
     }
 
 
-    public static DefaultKeymap.PlayerControlActions Actions { get; private set; }
+    public static DefaultKeymap Map => _keyMap;
 }

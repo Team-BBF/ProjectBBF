@@ -28,7 +28,7 @@ public class PlayerStateTranslator : MonoBehaviour, IPlayerStrategy
     {
         
         // collecting
-        if (InputManager.Actions.Collect.triggered)
+        if (InputManager.Map.Player.Collect.triggered)
         {
             PeekState = EPlayerControlState.Collection;
         }
@@ -49,6 +49,7 @@ public class InputActionUnit : Unit
     private ControlOutput _outputSuccess;
     private ControlOutput _outputFail;
 
+    private ValueInput _actionMap;
     private ValueInput _action;
     private ValueInput _type;
     
@@ -60,6 +61,7 @@ public class InputActionUnit : Unit
         _outputSuccess = ControlOutput("Success");
         _outputFail = ControlOutput("Fail");
 
+        _actionMap = ValueInput<string>("Input Action Map");
         _action = ValueInput<string>("Input Action");
         _type = ValueInput<EInputType>("Input Type");
         
@@ -69,9 +71,11 @@ public class InputActionUnit : Unit
     private ControlOutput Execute(Flow flow)
     {
         var actionStr = flow.GetValue<string>(_action);
+        var actionMapStr = flow.GetValue<string>(_actionMap);
 
-        var action= InputManager.Actions.Get().FindAction(actionStr);
-        Debug.Assert(action != null, $"'{action}' input action을 찾을 수 없습니다.");
+        var actionMap = InputManager.Map.asset.FindActionMap(actionMapStr);
+        var action= actionMap.FindAction(actionStr);
+        Debug.Assert(action != null, $"map: '{actionStr}', action: {actionMapStr}' input action을 찾을 수 없습니다.");
         
         var type = flow.GetValue<EInputType>(_type);
 

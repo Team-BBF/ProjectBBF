@@ -38,8 +38,8 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy
 
     private void BindInputAction()
     {
-        _movementAction = InputManager.Actions.Movement;
-        _sprintAction = InputManager.Actions.Sprint;
+        _movementAction = InputManager.Map.Player.Movement;
+        _sprintAction = InputManager.Map.Player.Sprint;
     }
 
     private IEnumerator CoSteminaUpdate()

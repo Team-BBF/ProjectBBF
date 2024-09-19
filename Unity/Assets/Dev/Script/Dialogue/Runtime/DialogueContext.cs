@@ -67,7 +67,7 @@ public class DialogueContext
                
                await UniTask.WhenAny(
                    TextUtil.DoTextUniTask(_textInput, textItem.Text, _duration, true, link.Token),
-                   UniTask.WaitUntil(() => InputManager.Actions.DialogueSkip.triggered, PlayerLoopTiming.Update, link.Token
+                   UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update, link.Token
                        )
                );
                
@@ -92,7 +92,7 @@ public class DialogueContext
                
                 await UniTask.WhenAny(
                     TextUtil.DoTextUniTask(_textInput, branchItem.Text, _duration, true, link.Token),
-                    UniTask.WaitUntil(() => InputManager.Actions.DialogueSkip.triggered, PlayerLoopTiming.Update, link.Token
+                    UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update, link.Token
                     )
                 );
                

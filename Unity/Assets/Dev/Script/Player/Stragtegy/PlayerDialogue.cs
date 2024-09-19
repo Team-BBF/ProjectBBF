@@ -30,13 +30,17 @@ public class PlayerDialogue: MonoBehaviour, IPlayerStrategy
 
 
             if (interaction.TryGetContractInfo(out ActorContractInfo actorInfo) &&
-                actorInfo.TryGetBehaviour(out IBADialogue dialogue) && 
-                dialogue.PeekDialogueEvent().IsEmpty)
+                actorInfo.TryGetBehaviour(out IBADialogue dialogue))
             {
-                return false;
+                if (dialogue.PeekDialogueEvent().IsEmpty)
+                {
+                    return false;
+                }
+
+                return true;
             }
 
-            return true;
+            return false;
         }
     }
 
@@ -92,14 +96,14 @@ public class PlayerDialogue: MonoBehaviour, IPlayerStrategy
         while (context.CanNext)
         {
             await UniTask.Yield(PlayerLoopTiming.Update, token);
-            if (InputManager.Actions.DialogueSkip.triggered)
+            if (InputManager.Map.UI.DialogueSkip.triggered)
             {
                 await UniTask.Yield(PlayerLoopTiming.Update, token);
                 await context.Next();
             }
         }
 
-        await UniTask.WaitUntil(() => InputManager.Actions.DialogueSkip.triggered, PlayerLoopTiming.Update,
+        await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update,
             token);
         
         instance.Visible = false;

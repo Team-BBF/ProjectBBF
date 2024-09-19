@@ -141,7 +141,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
         Fishing(dir, pos);
 
         await UniTask.WaitUntil(() => _co is not null, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
-        await UniTask.WaitUntil(() =>  InputManager.Actions.Fishing.triggered, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
+        await UniTask.WaitUntil(() =>  InputManager.Map.Player.Fishing.triggered, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
         
         await UnFishing(dir, pos);
 

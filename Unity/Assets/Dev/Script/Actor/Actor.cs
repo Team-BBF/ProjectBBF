@@ -110,6 +110,7 @@ public class Actor : MonoBehaviour, IBANameKey
 
                     var i = item;
                     if(i.ChangeTimeEvent == false)continue;
+                    if(i.ChangeTimeEvent.IsTriggered)continue;
                     
                     list.Add(UniTask.Create(async () =>
                     {

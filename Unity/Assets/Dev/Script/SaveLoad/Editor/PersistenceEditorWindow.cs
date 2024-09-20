@@ -16,6 +16,7 @@ namespace ProjectBBF.Persistence.Editor
         private string _selectedKey = string.Empty;
         private Dictionary<string, bool> _dirtyElementTable = new();
         private Dictionary<string, bool> _dirtyFieldTable = new();
+        private Dictionary<string, bool> _foldoutTable = new();
 
         private int _tabIndex;
 
@@ -45,6 +46,7 @@ namespace ProjectBBF.Persistence.Editor
                 if (GUILayout.Button("런타임 데이터", EditorStyles.miniButtonLeft))
                 {
                     _tabIndex = 1;
+                    _diskPairs = null;
                 }
             }
             GUILayout.EndHorizontal();
@@ -84,8 +86,15 @@ namespace ProjectBBF.Persistence.Editor
                 GUILayout.Label("비었음");
                 return;
             }
-
+            
+            
             GUILayout.BeginVertical();
+            
+            if (GUILayout.Button("저장"))
+            {
+                PersistenceManager.Instance.SaveGameDataCurrentFileName();
+            }
+            
             _elementScrollPosition = GUILayout.BeginScrollView(_elementScrollPosition, GUILayout.Width(400),
                 GUILayout.Height(windowRect.height));
             {
@@ -123,19 +132,8 @@ namespace ProjectBBF.Persistence.Editor
                         if (pair.Key != _selectedKey) continue;
 
                         object target = pair.Value;
-                        var type = target.GetType();
-                        var infos = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic |
-                                                   BindingFlags.Instance);
-
-                        foreach (FieldInfo info in infos)
-                        {
-                            if (info.IsPublic is false && info.GetCustomAttribute<SerializeField>() is null)
-                            {
-                                continue;
-                            }
-
-                            DrawField(target, info, pair.Key);
-                        }
+                        
+                        DrawField(target, pair.Key, pair.Key, false);
                     }
                 }
             }
@@ -154,7 +152,7 @@ namespace ProjectBBF.Persistence.Editor
                 GUILayout.Label("플레이 모드에서는 사용할 수 없습니다.");
                 return;
             }
-
+            
             GUILayout.BeginVertical();
             {
                 var fileNames = PersistenceManager.GetAllSaveDataName();
@@ -219,6 +217,11 @@ namespace ProjectBBF.Persistence.Editor
                 {
                     _elementScrollPosition = GUILayout.BeginScrollView(_elementScrollPosition, GUILayout.Width(400),
                         GUILayout.Height(windowRect.height));
+                    
+                        
+                    GUILayout.Space(5);
+                    GUILayout.Label("데이터 선택");
+                    
                     foreach (var pair in _diskPairs)
                     {
                         string dirtyTag = "";
@@ -261,41 +264,86 @@ namespace ProjectBBF.Persistence.Editor
                         if (pair.Key != _selectedKey) continue;
 
                         object target = pair.Value;
-                        var type = target.GetType();
-                        var infos = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic |
-                                                   BindingFlags.Instance);
-
-                        foreach (FieldInfo info in infos)
-                        {
-                            if (info.IsPublic is false && info.GetCustomAttribute<SerializeField>() is null)
-                            {
-                                continue;
-                            }
-
-                            object tempValue = info.GetValue(target);
-                            if (DrawField(target, info, pair.Key))
-                            {
-                                if (tempValue.Equals(info.GetValue(target)) is false)
-                                {
-                                    _dirtyElementTable[pair.Key] = true;
-                                    _dirtyFieldTable[pair.Key + "_" + info.Name] = true;
-                                }
-                            }
-                        }
+                        
+                        DrawField(target, pair.Key, pair.Key, true);
                     }
                 }
             }
             GUILayout.EndScrollView();
         }
 
+        private bool DrawField(object target, string eKey, string fKey, bool drawDirty)
+        {
+            if (target is null)
+            {
+                GUILayout.Label($"({fKey}) Serialization failed: it is null.");
+                return false;
+            }
+            
+            var type = target.GetType();
+            var infos = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic |
+                                       BindingFlags.Instance);
 
-        private bool DrawField(object obj, FieldInfo info, string key)
+            bool flag = false;
+            foreach (FieldInfo info in infos)
+            {
+                if (info.IsPublic is false && info.GetCustomAttribute<SerializeField>() is null)
+                {
+                    continue;
+                }
+
+                object tempValue = info.GetValue(target);
+
+                bool isDirty = DrawField(target, info, eKey, fKey, drawDirty); 
+                if (isDirty && drawDirty)
+                {
+                    flag = true;
+                    if (tempValue is not null && tempValue.Equals(info.GetValue(target)) is false)
+                    {
+                        _dirtyElementTable[eKey] = true;
+                        _dirtyFieldTable[fKey + "_" + info.Name] = true;
+                    }
+                }
+            }
+
+            return flag;
+        }
+
+        private bool DrawField(object obj, FieldInfo info,  string eKey, string fKey, bool drawDirty)
         {
             string dirtyTag = "";
 
-            if (_dirtyFieldTable.TryGetValue(key + "_" + info.Name, out var dirty) && dirty)
+            if (_dirtyFieldTable.TryGetValue(fKey + "_" + info.Name, out var dirty) && dirty && drawDirty)
             {
                 dirtyTag = " *";
+            }
+
+            if (info.FieldType.IsValueType is false && info.FieldType != typeof(string))
+            {
+                GUILayout.Space(5);
+                GUILayout.Label(info.Name);
+
+                if (_foldoutTable.TryGetValue(fKey + "_" + info.Name, out var foldout) is false)
+                {
+                    _foldoutTable[fKey + "_" + info.Name] = false;
+                    foldout = false;
+                }
+
+                foldout = EditorGUILayout.Foldout(foldout, "접기");
+                _foldoutTable[fKey + "_" + info.Name] = foldout;
+
+                if (foldout)
+                {
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Space(20);
+                    GUILayout.BeginVertical();
+                    bool f = DrawField(info.GetValue(obj), eKey, fKey + "_"+ info.Name, drawDirty);
+                    GUILayout.EndVertical();
+                    GUILayout.EndHorizontal();
+                    return f;
+                }
+
+                return false;
             }
 
             if (info.FieldType == typeof(int))

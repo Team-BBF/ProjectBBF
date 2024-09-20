@@ -17,6 +17,26 @@ namespace ProjectBBF.Persistence.Test
         public string Data2;
         public float Data3;
         public bool Data4;
+        public PersistenceTestObjectIn Data5;
+    }
+    
+    [Serializable]
+    public class PersistenceTestObjectIn
+    {
+        public int Data1;
+        public string Data2;
+        public float Data3;
+        public bool Data4;
+        public PersistenceTestObjectInIn Data5;
+    }
+    
+    [Serializable]
+    public class PersistenceTestObjectInIn
+    {
+        public int Data1;
+        public string Data2;
+        public float Data3;
+        public bool Data4;
     }
 
     public class PersistenceTest : MonoBehaviour

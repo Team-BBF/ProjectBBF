@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace ProjectBBF.Persistence
 {
-    public class JsonDescriptor : IPersistenceDescriptor
+    public class JsonDescriptor
     {
         private const bool PRETTY_PRINT = 
         #if UNITY_EDITOR
@@ -20,19 +20,29 @@ namespace ProjectBBF.Persistence
         [Serializable]
         private class Wrapper
         {
+            public string Key;
             public string Type;
             public string Json;
         }
         
-        public void Save(IEnumerable<(string, IPersistenceObject)> toSaveObject)
+        [Serializable]
+        private class JsonWrapper
         {
-            foreach ((string, IPersistenceObject) objTuple in toSaveObject)
+            public List<Wrapper> Wrappers = new List<Wrapper>(10);
+        }
+        
+        public byte[] ToBytes(IEnumerable<KeyValuePair<string, object>> objList)
+        {
+            JsonWrapper jsonWrapper = new JsonWrapper();
+            
+            foreach (var pair in objList)
             {
-                string json = JsonUtility.ToJson(objTuple.Item2, PRETTY_PRINT);
+                string json = JsonUtility.ToJson(pair.Value, PRETTY_PRINT);
 
                 var wrapper = new Wrapper
                 {
-                    Type = objTuple.Item2.GetType().FullName,
+                    Key = pair.Key,
+                    Type = pair.Value.GetType().FullName,
                     Json = json,
                 };
                 
@@ -40,69 +50,52 @@ namespace ProjectBBF.Persistence
 
                 if (string.IsNullOrEmpty(json))
                 {
-                    Debug.LogError($"key({objTuple.Item1}) 데이터를 저장하는데 실패");
+                    Debug.LogError($"key({pair.Key}) 데이터를 저장하는데 실패");
                     continue;
                 }
                 
-                PlayerPrefs.SetString(objTuple.Item1, json);
+                jsonWrapper.Wrappers.Add(wrapper);
             }
+            
+            string totalJson = JsonUtility.ToJson(jsonWrapper, PRETTY_PRINT);
+            
+            return Encoding.BigEndianUnicode.GetBytes(totalJson);
         }
 
-        public void LoadPersistenceObject(IEnumerable<(string, IPersistenceObject)> toLoadObject)
+
+        public IEnumerable<KeyValuePair<string, object>> FromBytes(byte[] bytes)
         {
-            Wrapper wrapper = new Wrapper();
-            foreach ((string, IPersistenceObject) objTuple in toLoadObject)
+            string json = Encoding.BigEndianUnicode.GetString(bytes);
+            JsonWrapper jsonWrapper = JsonUtility.FromJson(json, typeof(JsonWrapper)) as JsonWrapper;
+
+            if (jsonWrapper is null)
             {
-                string json = PlayerPrefs.GetString(objTuple.Item1);
-                
-                if (string.IsNullOrEmpty(json))
-                {
-                    Debug.LogError($"key({objTuple.Item1}) 데이터를 불러오는데 실패");
-                    continue;
-                }
-                
-                JsonUtility.FromJsonOverwrite(json, wrapper);
-                JsonUtility.FromJsonOverwrite(wrapper.Json, objTuple.Item2);
-            }
-        }
-
-        public List<IPersistenceObject> LoadPersistenceObject(IEnumerable<string> toLoadObject)
-        {
-            Wrapper wrapper = new Wrapper();
-            List<IPersistenceObject> list = new List<IPersistenceObject>(10);
-            foreach (string key in toLoadObject)
-            {
-                string json = PlayerPrefs.GetString(key);
-                
-                if (string.IsNullOrEmpty(json))
-                {
-                    list.Add(null);
-                    continue;
-                }
-                
-                JsonUtility.FromJsonOverwrite(json, wrapper);
-
-                var type = Type.GetType(wrapper.Type);
-                if (type is null)
-                {
-                    Debug.LogError($"key({key}) 데이터를 불러오는데 실패");
-                    list.Add(null);
-                    continue;
-                }
-
-                IPersistenceObject rtv = Activator.CreateInstance(type) as IPersistenceObject;
-                
-                if(rtv is null)
-                {
-                    Debug.LogError($"key({key}) 데이터를 불러오는데 실패");
-                    list.Add(null);
-                    continue;
-                }
-                
-                list.Add(rtv);
+                Debug.LogError("데이터를 불러오는데 실패");
+                return new List<KeyValuePair<string, object>>();
             }
 
-            return list;
+            List<KeyValuePair<string, object>> objList = new List<KeyValuePair<string, object>>();
+            
+            foreach (Wrapper wrapper in jsonWrapper.Wrappers)
+            {
+                if (string.IsNullOrEmpty(wrapper.Json))
+                {
+                    Debug.LogError($"key({wrapper.Key}) 데이터를 불러오는데 실패");
+                    continue;
+                }
+                
+                var obj = JsonUtility.FromJson(wrapper.Json, Type.GetType(wrapper.Type));
+                if (obj is not object dataMessage)
+                {
+                    Debug.LogError($"key({wrapper.Key}) 데이터를 불러오는데 실패");
+                    continue;
+                }
+                
+                objList.Add(new KeyValuePair<string, object>(wrapper.Key, dataMessage));
+            }
+
+            return objList;
         }
+
     }
 }

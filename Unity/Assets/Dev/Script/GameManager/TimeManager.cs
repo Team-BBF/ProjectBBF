@@ -120,10 +120,11 @@ public struct RealTime
     }
 }
 
-[System.Serializable]
-public class TimePersistenceObject : IPersistenceObject
+[GameData]
+[Serializable]
+public class TimePersistenceObject
 {
-    [SerializeField] private int _day = 1;
+    private int _day = 1;
 
     public int Day
     {

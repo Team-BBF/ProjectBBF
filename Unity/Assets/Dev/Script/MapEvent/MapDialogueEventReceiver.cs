@@ -6,7 +6,9 @@ using ProjectBBF.Event;
 using ProjectBBF.Persistence;
 using UnityEngine;
 
-public class MapDialogueEventPersistence : IPersistenceObject
+[Serializable]
+[GameData]
+public class MapDialogueEventPersistence
 {
     public bool IsPlayed;
 }

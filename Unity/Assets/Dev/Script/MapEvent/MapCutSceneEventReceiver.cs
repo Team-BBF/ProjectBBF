@@ -9,7 +9,9 @@ using ProjectBBF.Event;
 using ProjectBBF.Persistence;
 using UnityEngine;
 
-public class MapCutSceneEventPersistence : IPersistenceObject
+[GameData]
+[Serializable]
+public class MapCutSceneEventPersistence
 {
     public bool IsPlayed;
     [NonSerialized] public bool IsPlayedCutScene;

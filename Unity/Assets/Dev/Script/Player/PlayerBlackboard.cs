@@ -1,18 +1,20 @@
 using System;
+using System.Runtime.Serialization;
 using ProjectBBF.Persistence;
 using UnityEngine;
 
+[GameData]
 [Serializable]
-public class PlayerBlackboard : IPersistenceObject
+public class PlayerBlackboard
 {
     [NonSerialized] private float _stemina;
     [NonSerialized] private float _maxStemina;
 
-    [SerializeField] private int _energy = 50;
-    [SerializeField] private int _maxEnergy = 50;
+    private int _energy = 50;
+    private int _maxEnergy = 50;
 
-    [SerializeField] private string _currentWorld;
-    [SerializeField] private Vector2 _currentPosition;
+    private string _currentWorld;
+    private Vector2 _currentPosition;
 
     public float Stemina
     {

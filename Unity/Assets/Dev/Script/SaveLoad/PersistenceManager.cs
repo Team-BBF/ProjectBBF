@@ -155,6 +155,11 @@ namespace ProjectBBF.Persistence
                 $"Persistence 에러! Key({key}), cachedObject Type({cachedObj.GetType()}), Acquire Type({typeof(T)})");
         }
 
+        public List<KeyValuePair<string, object>> GetAllData()
+        {
+            return _objTable.ToList();
+        }
+
         public object GetCachedPersistenceObj(ref string key)
         {
             return _objTable.GetValueOrDefault(key);

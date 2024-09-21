@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
-public enum GameScreenResolution : int
-{
-    _960_540,
-    _1920_1080,
-    _2560_1440,
-    _3840_2160
-}
 
 public enum GameScreenMode : int
 {
@@ -52,6 +45,8 @@ public class PlayerSettingView : MonoBehaviour
     [SerializeField] private TMP_Dropdown _vsyncDropdown;
     
     [SerializeField] private GameObject _graphicFrame;
+
+
     public bool Visible
     {
         get => gameObject.activeSelf;
@@ -110,41 +105,18 @@ public class PlayerSettingView : MonoBehaviour
 
     private void OnResolution(int i)
     {
-        if (i == (int)GameScreenResolution._960_540)
-        {
-            Screen.SetResolution(960, 540, Screen.fullScreenMode);
-        }
-        if (i == (int)GameScreenResolution._1920_1080)
-        {
-            Screen.SetResolution(2560, 1440, Screen.fullScreenMode);
-        }
-        if (i == (int)GameScreenResolution._2560_1440)
-        {
-            Screen.SetResolution(2560, 1440, Screen.fullScreenMode);
-        }
-        if (i == (int)GameScreenResolution._3840_2160)
-        {
-            Screen.SetResolution(3840, 2160, Screen.fullScreenMode);
-        }
+        var resolutions = ScreenManager.Instance.AllResolutions;
+        if (resolutions.Length <= i || i < 0) return;
         
+        var resolution = resolutions[i];
+        
+        ScreenManager.Instance.SetResolution(resolution.width, resolution.height);
         
         _resolutionDropdown.SetValueWithoutNotify(i);
     }
     private void OnScreenMode(int i)
     {
-        if (i == (int)GameScreenMode.FullScreen)
-        {
-            Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
-        }
-        if (i == (int)GameScreenMode.FullScreenWindow)
-        {
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        }
-        if (i == (int)GameScreenMode.Windowed)
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
-        }
-        
+        ScreenManager.Instance.ScreenMode = (FullScreenMode)(i + 1);
         _screenModeDropdown.SetValueWithoutNotify(i);
     }
     private void OnVsync(int i)
@@ -160,6 +132,7 @@ public class PlayerSettingView : MonoBehaviour
         _backgroundVolumeSlider.value = 1f;
         _sfxVolumeSlider.value = 1f;
 
+        // sound
         _globalVolumeInputField.text = "100/100";
         _backgroundVolumeInputField.text =  "100/100";
         _sfxVolumeInputField.text = "100/100";
@@ -172,79 +145,33 @@ public class PlayerSettingView : MonoBehaviour
         _backgroundVolumeInputField.onEndEdit.AddListener(x => OnInputFieldChanged(_backgroundVolumeSlider, _backgroundVolumeInputField, x));
         _sfxVolumeInputField.onEndEdit.AddListener(x => OnInputFieldChanged(_sfxVolumeSlider, _sfxVolumeInputField, x));
 
-        // sound
+        
+        
+        // init..
         _screenModeDropdown.options = new List<TMP_Dropdown.OptionData>()
         {
-            new TMP_Dropdown.OptionData("전체 화면"),
             new TMP_Dropdown.OptionData("전체 창 모드"),
+            new TMP_Dropdown.OptionData("전체 화면"),
             new TMP_Dropdown.OptionData("창 모드"),
         };
-        OnScreenMode((int)GameScreenMode.FullScreen);
-        
-        _resolutionDropdown.options = new List<TMP_Dropdown.OptionData>()
-        {
-            new TMP_Dropdown.OptionData("960 x 540"),
-            new TMP_Dropdown.OptionData("1920 x 1080"),
-            new TMP_Dropdown.OptionData("2560 x 1440"),
-            new TMP_Dropdown.OptionData("3840 x 2160"),
-        };
+
+        _resolutionDropdown.options = ScreenManager.Instance.AllResolutions
+            .Select(x => new TMP_Dropdown.OptionData(x.ToString())).ToList();
         
         _vsyncDropdown.options = new List<TMP_Dropdown.OptionData>()
         {
             new TMP_Dropdown.OptionData("활성화"),
             new TMP_Dropdown.OptionData("비활성화"),
         };
-        OnVsync((int)GameScreenMode.FullScreen);
 
-        if (Screen.fullScreenMode == FullScreenMode.MaximizedWindow)
-        {
-            _screenModeDropdown.value = (int)GameScreenMode.FullScreenWindow;
-        }
-        else if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow)
-        {
-            _screenModeDropdown.value = (int)GameScreenMode.FullScreenWindow;
-        }
-        else if (Screen.fullScreenMode == FullScreenMode.Windowed)
-        {
-            _screenModeDropdown.value = (int)GameScreenMode.Windowed;
-        }
-        
-
-        if (Screen.fullScreenMode == FullScreenMode.MaximizedWindow)
-        {
-            _screenModeDropdown.value = (int)GameScreenMode.FullScreenWindow;
-        }
-        else if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow)
-        {
-            _screenModeDropdown.value = (int)GameScreenMode.FullScreenWindow;
-        }
-        else if (Screen.fullScreenMode == FullScreenMode.Windowed)
-        {
-            _screenModeDropdown.value = (int)GameScreenMode.Windowed;
-        }
-
-        if (Screen.currentResolution.width == 960 && Screen.currentResolution.height == 540)
-        {
-            _resolutionDropdown.value = (int)GameScreenResolution._960_540;
-        }
-        if (Screen.currentResolution.width == 1920 && Screen.currentResolution.height == 1080)
-        {
-            _resolutionDropdown.value = (int)GameScreenResolution._1920_1080;
-        }
-        if (Screen.currentResolution.width == 2560 && Screen.currentResolution.height == 1440)
-        {
-            _resolutionDropdown.value = (int)GameScreenResolution._2560_1440;
-        }
-        if (Screen.currentResolution.width == 3840 && Screen.currentResolution.height == 2160)
-        {
-            _resolutionDropdown.value = (int)GameScreenResolution._3840_2160;
-        }
-        
-        _vsyncDropdown.value = QualitySettings.vSyncCount;
         
         
         _screenModeDropdown.onValueChanged.AddListener(OnScreenMode);
         _resolutionDropdown.onValueChanged.AddListener(OnResolution);
         _vsyncDropdown.onValueChanged.AddListener(OnVsync);
+
+        _screenModeDropdown.value = (int)ScreenManager.Instance.ScreenMode - 1;
+        _resolutionDropdown.value = ScreenManager.Instance.AllResolutions.Length - 1;
+        _vsyncDropdown.value = QualitySettings.vSyncCount;
     }
 }

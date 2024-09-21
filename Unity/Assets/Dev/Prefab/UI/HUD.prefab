@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4593947725953166977}
   - component: {fileID: 2474663148078334708}
   - component: {fileID: 4019939512885296281}
+  - component: {fileID: 3076127549599300145}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -208,6 +209,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926481f490152f6439b6dd69a5c7e7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3076127549599300145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144419925886643988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e786d127d8b6604087542b2cad0640c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _standardResolution: {x: 1920, y: 1080}
+  _upperCase: 1
+  _lowerCase: 0
+  _upperReferenceResolution: {x: 1920, y: 1080}
+  _upperScreenMatchMode: 1
+  _upperScaleFactor: 1
+  _upperPhysicalUnit: 3
+  _upperFallbackScreenDPI: 96
+  _upperDefaultSpriteDPI: 96
+  _upperReferencePixelsPerUnit: 100
+  _lowerReferenceResolution: {x: 1920, y: 1080}
+  _lowerScreenMatchMode: 1
+  _lowerScaleFactor: 1
+  _lowerPhysicalUnit: 3
+  _lowerFallbackScreenDPI: 96
+  _lowerDefaultSpriteDPI: 96
+  _lowerReferencePixelsPerUnit: 100
 --- !u!1 &2381041345949198094
 GameObject:
   m_ObjectHideFlags: 0

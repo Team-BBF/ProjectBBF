@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7951223276963793669}
   - component: {fileID: 3263242486269980622}
   - component: {fileID: 299884806764500027}
+  - component: {fileID: 1025110976345147699}
   m_Layer: 5
   m_Name: QuickInventory
   m_TagString: Untagged
@@ -128,6 +129,35 @@ MonoBehaviour:
   - {fileID: 8030577415586460686}
   - {fileID: 1436341321984055966}
   _cursor: {fileID: 4242917652932285374}
+--- !u!114 &1025110976345147699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348312654162677784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e786d127d8b6604087542b2cad0640c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _standardResolution: {x: 1920, y: 1080}
+  _upperCase: 1
+  _lowerCase: 0
+  _upperReferenceResolution: {x: 1920, y: 1080}
+  _upperScreenMatchMode: 1
+  _upperScaleFactor: 1
+  _upperPhysicalUnit: 3
+  _upperFallbackScreenDPI: 96
+  _upperDefaultSpriteDPI: 96
+  _upperReferencePixelsPerUnit: 100
+  _lowerReferenceResolution: {x: 1920, y: 1080}
+  _lowerScreenMatchMode: 1
+  _lowerScaleFactor: 1
+  _lowerPhysicalUnit: 3
+  _lowerFallbackScreenDPI: 96
+  _lowerDefaultSpriteDPI: 96
+  _lowerReferencePixelsPerUnit: 100
 --- !u!1 &2373075447916059963
 GameObject:
   m_ObjectHideFlags: 0

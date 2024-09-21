@@ -10,7 +10,8 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 {
     public override void PostInitialize()
     {
-        SetResolution(Screen.width, Screen.height);
+        var res = AllResolutions[^1];
+        SetResolution(res.width, res.height);
     }
 
     public override void PostRelease()
@@ -22,7 +23,11 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 
     public Resolution[] AllResolutions => Screen.resolutions;
 
-    public FullScreenMode ScreenMode => Screen.fullScreenMode;
+    public FullScreenMode ScreenMode
+    {
+        get => Screen.fullScreenMode;
+        set => Screen.fullScreenMode = value;
+    }
     private int _resolutionIndex;
 
     public Vector2Int CurrentResolution { get; private set; }
@@ -34,6 +39,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         OnChangedResolution?.Invoke(CurrentResolution);
     }
 
+    #if UNITY_EDITOR
     private void Update()
     {
         if (CurrentResolution.x == Screen.width &&
@@ -42,4 +48,5 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 
         SetResolution(Screen.width, Screen.height);
     }
+    #endif
 }

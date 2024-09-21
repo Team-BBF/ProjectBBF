@@ -14,18 +14,27 @@ public class CameraLens : MonoBehaviour
 
     private void Awake()
     {
-        LensUpdate();
+        ScreenManager.Instance.OnChangedResolution += LensUpdate;
+        LensUpdate(ScreenManager.Instance.CurrentResolution);
     }
 
-    private void LateUpdate()
-    {
-        LensUpdate();
-    }
-
-    public void LensUpdate()
+    public void LensUpdate(Vector2Int resolution)
     {
         var lens = _camera.m_Lens;
-        lens.OrthographicSize = (Screen.height / _ppu) * 0.5f * _size;
+
+        float height = resolution.y;
+
+        if (height <= 1080)
+        {
+            height = 1080f;
+        }
+        
+        lens.OrthographicSize = (height / _ppu) * 0.5f * _size;
         _camera.m_Lens = lens;
+
+        if (_camera.TryGetComponent<CinemachineConfiner2D>(out var confiner))
+        {
+            confiner.InvalidateCache();
+        }
     }
 }

@@ -10,4 +10,7 @@ namespace ProjectBBF.Persistence
 
     public class GameDataAttribute : DataTagAttribute {}
     public class UserDataAttribute : DataTagAttribute {}
+    
+    public class DoNotEditableAttribute : DataTagAttribute {}
+    public class EditableAttribute : DataTagAttribute {}
 }

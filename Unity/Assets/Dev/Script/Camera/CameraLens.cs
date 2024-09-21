@@ -20,6 +20,8 @@ public class CameraLens : MonoBehaviour
 
     public void LensUpdate(Vector2Int resolution)
     {
+        if (_camera == false) return;
+        
         var lens = _camera.m_Lens;
 
         float height = resolution.y;

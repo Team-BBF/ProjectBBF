@@ -1,12 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using ProjectBBF.Persistence;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class SaveSlotView : MonoBehaviour
 {
     [SerializeField] private TMP_Text _saveName;
     [SerializeField] private TMP_Text _saveDescription;
+    [SerializeField] private Button _btn;
+    
+    public Metadata CurrentMetaData { get; private set; }
 
     public string SaveName
     {
@@ -16,18 +24,37 @@ public class SaveSlotView : MonoBehaviour
 
     public string SaveDescription => _saveDescription.text;
 
-    public void SetDescription(string charName, int day)
+    private void SetDescription(string charName, int day)
     {
         _saveDescription.text = $"{charName}, {day:D3}";
     }
 
-    public SaveSlotView Clone(string saveName, string charName, int day)
+    public SaveSlotView Clone(Metadata metadata)
     {
         var obj = Instantiate(this);
         
-        obj.SaveName = saveName;
-        obj.SetDescription(charName, day);
+        obj.SaveName = metadata.SaveFileName;
+        obj.SetDescription(metadata.PlayerName, metadata.Day);
+        obj.CurrentMetaData = metadata;
 
         return obj;
+    }
+
+    private void Awake()
+    {
+        _btn.onClick.AddListener(() =>
+        {
+            if (CurrentMetaData != null)
+            {
+                PersistenceManager.Instance.CurrentMetadata = CurrentMetaData;
+                PersistenceManager.Instance.LoadGameDataCurrentFileName();
+                
+                SceneLoader.Instance.WorkDirectorAsync(false, "BlackAlpha")
+                    .ContinueWith(_ => SceneLoader.Instance.LoadWorldAsync("World_DaffodilLake_Arakar"))
+                    .ContinueWith(_ => SceneLoader.Instance.LoadImmutableScenesAsync())
+                    .ContinueWith(_ => SceneLoader.Instance.WorkDirectorAsync(true, "BlackAlpha"))
+                    .Forget();
+            }
+        });
     }
 }

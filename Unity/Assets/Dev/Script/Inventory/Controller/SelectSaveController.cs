@@ -16,15 +16,15 @@ public class SelectSaveController : MonoBehaviour
             Destroy(_content.GetChild(i).gameObject);
         }
         
-        string[] saves = PersistenceManager.GetAllSaveDataName();
+        Metadata[] saves = PersistenceManager.GetAllSaveFileMetadata();
 
-        foreach (string save in saves)
+        foreach (Metadata save in saves)
         {
-            var saveName = save.Split(".")[0];
-            var slot = _saveSlotPrototype.Clone(saveName, "Default", 1);
+            var slot = _saveSlotPrototype.Clone(save);
             slot.transform.SetParent(_content);
             slot.gameObject.SetActive(true);
         }
+        
     }
 
     private void OnEnable()

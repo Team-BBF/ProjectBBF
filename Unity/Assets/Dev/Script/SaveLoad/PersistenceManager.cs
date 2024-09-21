@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using ProjectBBF.Singleton;
+using UnityEditor;
 using UnityEngine;
 
 namespace ProjectBBF.Persistence
@@ -29,11 +30,18 @@ namespace ProjectBBF.Persistence
             _objTable = null;
         }
 
-        public string SaveFileName { get; set; } = "Default";
-        public static readonly string UserDataFileName = "User";
-        public static readonly string FileExtension = "save";
+        public Metadata CurrentMetadata { get; set; } = new()
+        {
+            SaveFileName = "Default",
+            PlayerName = "Default Player",
+            Day = 1,
+        };
+        public static readonly string UserDataFileName = "userData";
+        public static readonly string UserDataExtension = "user";
+        public static readonly string GameDataExtension = "save";
+        public static readonly string MetadataExtension = "meta";
         
-        public void SaveGameData(string saveFileName)
+        public void SaveGameData(Metadata metadata)
         {
             var pairs = _objTable
                 .Where(x => IsDecorated<GameDataAttribute>(x.Value))
@@ -41,13 +49,38 @@ namespace ProjectBBF.Persistence
             
             var buffer = Descriptor.ToBytes(pairs);
             
-            SaveFile(saveFileName, buffer);
+            SaveFile(metadata.SaveFileName, GameDataExtension, buffer);
+            SaveMetadata(metadata);
+        }
+
+        public static void SaveMetadata(Metadata metadata)
+        {
+            var json = JsonUtility.ToJson(metadata, false);
+            var buf = Encoding.BigEndianUnicode.GetBytes(json);
+            
+            SaveFile(metadata.SaveFileName, MetadataExtension, buf);
+        }
+
+        public static Metadata LoadMetadata(string fileName)
+        {
+            var buf = LoadFile(fileName, MetadataExtension);
+
+            if (buf is null)
+            {
+                return null;
+            }
+            
+            var json = Encoding.BigEndianUnicode.GetString(buf);
+            
+            var metadata = JsonUtility.FromJson<Metadata>(json);
+
+            return metadata;
         }
         
 
         public void Load(string saveFileName)
         {
-            var buffer = LoadFile(saveFileName);
+            var buffer = LoadFile(saveFileName, GameDataExtension);
 
             if (buffer is not null)
             {
@@ -60,8 +93,8 @@ namespace ProjectBBF.Persistence
             _objTable = new Dictionary<string, object>();
         }
 
-        public void SaveGameDataCurrentFileName() => SaveGameData(SaveFileName);
-        public void LoadGameDataCurrentFileName() => Load(SaveFileName);
+        public void SaveGameDataCurrentFileName() => SaveGameData(CurrentMetadata);
+        public void LoadGameDataCurrentFileName() => Load(CurrentMetadata.SaveFileName);
         public void SaveUserData()
         {
             var pairs = _objTable
@@ -70,36 +103,45 @@ namespace ProjectBBF.Persistence
             
             var buffer = Descriptor.ToBytes(pairs);
             
-            SaveFile(UserDataFileName, buffer);
+            SaveFile(UserDataFileName, UserDataExtension, buffer);
         }
 
-        public static string[] GetAllSaveDataName(bool fullPath = false)
+        public static Metadata[] GetAllSaveFileMetadata(bool fullPath = false)
         {
             var path = Application.persistentDataPath;
 
-            string[] files = Directory.GetFiles(path, $"*.{FileExtension}");
+            string[] files = Directory.GetFiles(path, $"*.{MetadataExtension}");
 
             if (fullPath is false)
             {
                 files = files
-                    .Select(x => x.Split('/', '\\').Last())
+                    .Select(Path.GetFileNameWithoutExtension)
                     .ToArray();
             }
             
-            return files;
+            List<Metadata> metadatas = new List<Metadata>(files.Length);
+            for (int i = 0; i < files.Length; i++)
+            {
+                var metadata = LoadMetadata(files[i]);
+
+                if (metadata is null) continue;
+                metadatas.Add(metadata);
+            }
+            
+            return metadatas.ToArray();
         }
         
-        public static void SaveFile(string fileName, byte[] data)
+        public static void SaveFile(string fileName, string extension, byte[] data)
         {
-            var path = CombinePathAndFile(fileName);
+            var path = CombinePathAndFile(fileName, extension);
             using var stream = new BufferedStream(File.Open(path, FileMode.Create));
             
             stream.Write(data, 0, data.Length);
         }
 
-        public static byte[] LoadFile(string fileName)
+        public static byte[] LoadFile(string fileName, string extension)
         {
-            var path = CombinePathAndFile(fileName);
+            var path = CombinePathAndFile(fileName, extension);
             
             List<byte> data = new List<byte>(1024);
 
@@ -128,7 +170,7 @@ namespace ProjectBBF.Persistence
             return data.ToArray();
         }
 
-        private static string CombinePathAndFile(string fileName) => Application.persistentDataPath + $"/{fileName}.{FileExtension}";
+        private static string CombinePathAndFile(string fileName, string extension) => Application.persistentDataPath + $"/{fileName}.{extension}";
 
         private static bool IsDecorated<T>(object obj) where T : DataTagAttribute
         {

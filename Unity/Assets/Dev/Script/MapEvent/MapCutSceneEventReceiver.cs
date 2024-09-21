@@ -14,7 +14,7 @@ using UnityEngine;
 public class MapCutSceneEventPersistence
 {
     public bool IsPlayed;
-    [NonSerialized] public bool IsPlayedCutScene;
+    [NonSerialized, DoNotEditable] public bool IsPlayedCutScene;
 }
 
 public class MapCutSceneEventReceiver : MonoBehaviour

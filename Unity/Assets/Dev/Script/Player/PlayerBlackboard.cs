@@ -7,11 +7,11 @@ using UnityEngine;
 [Serializable]
 public class PlayerBlackboard
 {
-    [NonSerialized] private float _stemina;
-    [NonSerialized] private float _maxStemina;
+    [NonSerialized, Editable] private float _stemina;
+    [NonSerialized, Editable] private float _maxStemina;
 
-    private int _energy = 50;
-    private int _maxEnergy = 50;
+    [Editable] private int _energy = 50;
+    [Editable] private int _maxEnergy = 50;
 
     private string _currentWorld;
     private Vector2 _currentPosition;

@@ -2,14 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using ProjectBBF.Persistence;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject _settingPanel;
     [SerializeField] private GameObject _selectSavePanel;
+    [SerializeField] private GameObject _newSavePanel;
 
     [SerializeField] private PlayerSettingView _settingView;
+    [SerializeField] private NewSaveView _newSaveView;
 
     [SerializeField] private GameObject _mainMenuFrame;
 
@@ -18,28 +22,38 @@ public class MainMenu : MonoBehaviour
         _settingView.Init();
         _settingView.Visible = true;
 
-        _settingPanel.SetActive(false);
-        _selectSavePanel.SetActive(false);
-    }
-
-    public void GotoGameWorld()
-    {
-        SceneLoader.Instance.WorkDirectorAsync(false, "BlackAlpha")
-            .ContinueWith(_ => SceneLoader.Instance.LoadWorldAsync("World_DaffodilLake_Arakar"))
-            .ContinueWith(_ => SceneLoader.Instance.LoadImmutableScenesAsync())
-            .ContinueWith(_ => SceneLoader.Instance.WorkDirectorAsync(true, "BlackAlpha"))
-            .Forget();
+        SetActivePanels(false);
     }
 
     public void Quit()
     {
         Application.Quit();
     }
-    
+
+    public void CreateNewSave()
+    {
+        _newSaveView.GetTexts(out string charName, out string worldName);
+
+        PersistenceManager.Instance.CurrentMetadata = new Metadata()
+        {
+            SaveFileName = worldName,
+            PlayerName = charName
+        };
+        
+        PersistenceManager.Instance.SaveGameDataCurrentFileName();
+        
+        //TODO: 축제 씬 완성되면 여기를 수정
+        SceneLoader.Instance.WorkDirectorAsync(false, "BlackAlpha")
+            .ContinueWith(_ => SceneLoader.Instance.LoadWorldAsync("World_DaffodilLake_Arakar"))
+            .ContinueWith(_ => SceneLoader.Instance.LoadImmutableScenesAsync())
+            .ContinueWith(_ => SceneLoader.Instance.WorkDirectorAsync(true, "BlackAlpha"))
+            .Forget();
+    }
     public void SetActivePanels(bool active)
     {
         _settingPanel.SetActive(active);
         _selectSavePanel.SetActive(active);
+        _newSavePanel.SetActive(active);
     }
 
     public void ToggleSetting()
@@ -60,5 +74,14 @@ public class MainMenu : MonoBehaviour
 
         _mainMenuFrame.SetActive(active);
         _selectSavePanel.SetActive(!active);
+    }
+    public void ToggleNewSaveSlot()
+    {
+        bool active = _newSavePanel.activeSelf;
+
+        SetActivePanels(false);
+
+        _mainMenuFrame.SetActive(active);
+        _newSavePanel.SetActive(!active);
     }
 }

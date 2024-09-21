@@ -7,12 +7,14 @@ public class PlayerPannelController : MonoBehaviour
 {
     [SerializeField] private PlayerMainInventoryView _invView;
     [SerializeField] private PlayerSettingView _settingView;
+    [SerializeField] private PlayerGameQuitView _quitView;
 
     public enum ViewType : int
     {
         Close,
         Inv,
-        Setting
+        Setting,
+        Quit,
     }
 
     private ViewType _viewState;
@@ -25,6 +27,7 @@ public class PlayerPannelController : MonoBehaviour
 
             _settingView.Visible = false;
             _invView.Visible = false;
+            _quitView.Visible = false;
             
             
             gameObject.SetActive(_viewState != ViewType.Close);
@@ -38,6 +41,9 @@ public class PlayerPannelController : MonoBehaviour
                     break;
                 case ViewType.Setting:
                     _settingView.Visible = true;
+                    break;
+                case ViewType.Quit:
+                    _quitView.Visible = true;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -54,6 +60,7 @@ public class PlayerPannelController : MonoBehaviour
     {
         _invView.Init();
         _settingView.Init();
+        _quitView.Init();
         
         ViewState = ViewType.Close;
     }

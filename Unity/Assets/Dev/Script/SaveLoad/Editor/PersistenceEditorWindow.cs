@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
@@ -90,6 +91,8 @@ namespace ProjectBBF.Persistence.Editor
             
             GUILayout.BeginVertical();
             
+            GUILayout.Label("현재 세이브파일(world): " + PersistenceManager.Instance.CurrentMetadata.SaveFileName);
+            
             if (GUILayout.Button("저장"))
             {
                 PersistenceManager.Instance.SaveGameDataCurrentFileName();
@@ -155,10 +158,10 @@ namespace ProjectBBF.Persistence.Editor
             
             GUILayout.BeginVertical();
             {
-                var fileNames = PersistenceManager.GetAllSaveDataName();
+                var metadatas = PersistenceManager.GetAllSaveFileMetadata();
 
                 _saveDataDropdownSelectedIndex =
-                    EditorGUILayout.Popup("SaveData", _saveDataDropdownSelectedIndex, fileNames);
+                    EditorGUILayout.Popup("SaveData", _saveDataDropdownSelectedIndex, metadatas.Select(x=>x.SaveFileName).ToArray());
 
                 if (_beforeSaveDataDropdownSelectedIndex != _saveDataDropdownSelectedIndex)
                 {
@@ -176,9 +179,9 @@ namespace ProjectBBF.Persistence.Editor
                 if (GUILayout.Button("저장"))
                 {
                     var buf = PersistenceManager.Descriptor.ToBytes(_diskPairs);
-                    string curFileName = fileNames[_saveDataDropdownSelectedIndex];
-                    curFileName = curFileName.Split('.')[0];
-                    PersistenceManager.SaveFile(curFileName, buf);
+                    var metadata = metadatas[_saveDataDropdownSelectedIndex];
+                    PersistenceManager.SaveFile(metadata.SaveFileName, PersistenceManager.GameDataExtension, buf);
+                    PersistenceManager.SaveMetadata(metadata);
                     _dirtyElementTable.Clear();
                     _dirtyFieldTable.Clear();
                 }
@@ -193,9 +196,8 @@ namespace ProjectBBF.Persistence.Editor
 
                 if (GUILayout.Button("다시 불러오기"))
                 {
-                    string curFileName = fileNames[_saveDataDropdownSelectedIndex];
-                    curFileName = curFileName.Split('.')[0];
-                    var buf = PersistenceManager.LoadFile(curFileName);
+                    var metadata = metadatas[_saveDataDropdownSelectedIndex];
+                    var buf = PersistenceManager.LoadFile(metadata.SaveFileName, PersistenceManager.GameDataExtension);
                     _diskPairs = PersistenceManager.Descriptor.FromBytes(buf);
                     _dirtyElementTable.Clear();
                     _dirtyFieldTable.Clear();
@@ -206,10 +208,9 @@ namespace ProjectBBF.Persistence.Editor
 
                 if ((GUI.changed || _diskPairs is null) && _saveDataDropdownSelectedIndex != -1)
                 {
-                    string curFileName = fileNames[_saveDataDropdownSelectedIndex];
-                    curFileName = curFileName.Split('.')[0];
+                    var metadata = metadatas[_saveDataDropdownSelectedIndex];
 
-                    byte[] bytes = PersistenceManager.LoadFile(curFileName);
+                    byte[] bytes = PersistenceManager.LoadFile(metadata.SaveFileName, PersistenceManager.GameDataExtension);
                     _diskPairs = PersistenceManager.Descriptor.FromBytes(bytes);
                 }
 
@@ -287,7 +288,16 @@ namespace ProjectBBF.Persistence.Editor
             bool flag = false;
             foreach (FieldInfo info in infos)
             {
-                if (info.IsPublic is false && info.GetCustomAttribute<SerializeField>() is null)
+                if (info.IsPublic is false)
+                {
+                    if (info.GetCustomAttribute<SerializeField>() is null &&
+                        info.GetCustomAttribute<EditableAttribute>() is null)
+                    {
+                        continue;
+                    }
+                }
+
+                if (info.GetCustomAttribute<DoNotEditableAttribute>() is not null)
                 {
                     continue;
                 }

@@ -47,7 +47,7 @@ public class UIResolutionScaler : MonoBehaviour
     private CanvasScaler _scaler;
     private ScreenManager _manager;
 
-    private void Awake()
+    private void Start()
     {
         _manager = ScreenManager.Instance;
 

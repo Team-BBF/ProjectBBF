@@ -120,8 +120,6 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
         }
     }
 
-
-
     private bool Farmland(CollisionInteractionMono interaction)
     {
         CollisionInteractionUtil

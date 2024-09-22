@@ -6,7 +6,7 @@ using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MainMenu : MonoBehaviour
+public class MainMenuPresenter : MonoBehaviour
 {
     [SerializeField] private GameObject _settingPanel;
     [SerializeField] private GameObject _selectSavePanel;

@@ -43,7 +43,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
     private IEnumerator _co;
 
-    private PlayerInventoryController _invController;
+    private PlayerInventoryPresenter _invPresenter;
     private PlayerCoordinate _coordinate;
     private PlayerMove _move;
 
@@ -51,7 +51,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
     {
         get
         {
-            ItemData curItem = _invController.CurrentItemData;
+            ItemData curItem = _invPresenter.CurrentItemData;
             if (curItem is null) return false;
 
             return curItem.Info.Contains(ToolType.FishingRod);
@@ -60,7 +60,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
     
     public void Init(PlayerController controller)
     {
-        _invController = controller.Inventory;
+        _invPresenter = controller.Inventory;
         _coordinate = controller.Coordinate;
         _move = controller.MoveStrategy;
     }

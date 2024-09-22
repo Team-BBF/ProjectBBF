@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class PlayerCollector : MonoBehaviour, IPlayerStrategy
 {
-    private PlayerInventoryController _playerInventory;
+    private PlayerInventoryPresenter _playerInventory;
     
     public void Init(PlayerController controller)
     {

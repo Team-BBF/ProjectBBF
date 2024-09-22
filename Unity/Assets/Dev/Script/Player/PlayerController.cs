@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMainInventoryView _mainInventoryView;
 
     [field: SerializeField, MustBeAssigned, InitializationField, AutoProperty(AutoPropertyMode.Scene)]
-    private PlayerPannelController _pannelController;
+    private PlayerPannelView pannelView;
 
     [field: SerializeField, MustBeAssigned, InitializationField, AutoProperty(AutoPropertyMode.Children)]
     private PlayerFishing _fishing;
@@ -100,8 +100,8 @@ public class PlayerController : MonoBehaviour
     public PlayerDialogue Dialogue { get; private set; }
 
 
-    public PlayerInventoryController Inventory { get; private set; }
-    public PlayerPannelController PannelController => _pannelController;
+    public PlayerInventoryPresenter Inventory { get; private set; }
+    public PlayerPannelView PannelView => pannelView;
 
     #endregion
 
@@ -128,11 +128,11 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        Inventory = new PlayerInventoryController(
+        Inventory = new PlayerInventoryPresenter(
             new GridInventoryModel(new Vector2Int(10, 3)),
             _mainInventoryView,
             _quickInventoryView,
-            _pannelController
+            pannelView
         );
 
         DataInit();

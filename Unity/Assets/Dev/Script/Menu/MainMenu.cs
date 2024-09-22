@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _selectSavePanel;
     [SerializeField] private GameObject _newSavePanel;
 
-    [SerializeField] private PlayerSettingView _settingView;
+    [SerializeField] private SettingView _settingView;
     [SerializeField] private NewSaveView _newSaveView;
 
     [SerializeField] private GameObject _mainMenuFrame;

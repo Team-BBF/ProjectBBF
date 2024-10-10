@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: FarmNpc
+  m_EditorClassIdentifier: 
+  _guid: 547155ee2a7b3084bae763b97596358e
+  NodeLinks:
+  - BaseNodeGuid: 4ee0ea29-1d37-4db4-85cd-6a97754e1163
+    PortName: Execute
+    TargetNodeGuid: ae8bd277-b463-4d1d-a851-7b801530bd90
+  - BaseNodeGuid: 0e5f76ed-35fc-465b-8460-81dbe706bdb4
+    PortName: "\u3131\u3131"
+    TargetNodeGuid: 56699396-18e9-458e-bfa4-808dd94dc913
+  - BaseNodeGuid: 0e5f76ed-35fc-465b-8460-81dbe706bdb4
+    PortName: "\u3142\u3142"
+    TargetNodeGuid: 04a6cc48-7135-4b6c-b83e-45b5f9aab3cc
+  - BaseNodeGuid: 3cdfee73-2b75-4934-80b6-96618a156dc7
+    PortName: True
+    TargetNodeGuid: 8d74d3be-95bf-43c4-8d6c-9dfd3b8767ee
+  - BaseNodeGuid: 3cdfee73-2b75-4934-80b6-96618a156dc7
+    PortName: False
+    TargetNodeGuid: 0e5f76ed-35fc-465b-8460-81dbe706bdb4
+  - BaseNodeGuid: 56699396-18e9-458e-bfa4-808dd94dc913
+    PortName: Next
+    TargetNodeGuid: 020accbf-27f0-48c9-aa5d-0abf7f862e89
+  - BaseNodeGuid: 8d74d3be-95bf-43c4-8d6c-9dfd3b8767ee
+    PortName: "\u3147\u3147"
+    TargetNodeGuid: d4b6e72b-27b1-45d6-9a38-3b1178184b75
+  - BaseNodeGuid: 8d74d3be-95bf-43c4-8d6c-9dfd3b8767ee
+    PortName: "\u3134\u3134"
+    TargetNodeGuid: 0c6ce821-24d2-412c-90b8-b4aa751f2268
+  - BaseNodeGuid: ae8bd277-b463-4d1d-a851-7b801530bd90
+    PortName: True
+    TargetNodeGuid: e7594286-0456-4f66-81d9-d616f91bf269
+  - BaseNodeGuid: ae8bd277-b463-4d1d-a851-7b801530bd90
+    PortName: False
+    TargetNodeGuid: 3cdfee73-2b75-4934-80b6-96618a156dc7
+  - BaseNodeGuid: d4b6e72b-27b1-45d6-9a38-3b1178184b75
+    PortName: Next
+    TargetNodeGuid: 083e41f5-ac73-4d57-88ae-d2b4a3bc157e
+  NodeData:
+  - rid: 7386576811144511843
+  - rid: 7386576811144511844
+  - rid: 7386576811144511845
+  - rid: 7386576811144511846
+  - rid: 7386576811144511847
+  - rid: 7386576811144511848
+  - rid: 7386576811144511849
+  - rid: 7386576811144511850
+  - rid: 7386576811144511851
+  - rid: 7386576811144511852
+  - rid: 7386576811144511853
+  references:
+    version: 2
+    RefIds:
+    - rid: 7386576811144511843
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 020accbf-27f0-48c9-aa5d-0abf7f862e89
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 2168.6667, y: 718.6667}
+        Handler: {fileID: 11400000, guid: a3aa23aa75399a64b932c3483a7b7ed4, type: 2}
+        Warps:
+        - Target: Bool
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 1
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Farm
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 7386576811144511844
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 04a6cc48-7135-4b6c-b83e-45b5f9aab3cc
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1839.3334, y: 900}
+        DialogueText: "\u3147\u314B\u3142\u3142"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 7386576811144511845
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 083e41f5-ac73-4d57-88ae-d2b4a3bc157e
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 2045.3334, y: 57.33333}
+        Handler: {fileID: 11400000, guid: a3aa23aa75399a64b932c3483a7b7ed4, type: 2}
+        Warps:
+        - Target: Bool
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Farm
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 7386576811144511846
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0c6ce821-24d2-412c-90b8-b4aa751f2268
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1749.3334, y: 348.66666}
+        DialogueText: "\u3147\u314B"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 7386576811144511847
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0e5f76ed-35fc-465b-8460-81dbe706bdb4
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 1474.6666, y: 749.3334}
+        DialogueText: "\uB18D\uC0AC \uCCB4\uD5D8 \u3131?"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 7386576811144511848
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3cdfee73-2b75-4934-80b6-96618a156dc7
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 1007.3333, y: 409.3333}
+        Handler: {fileID: 11400000, guid: 816e0322c69a8a647a1b5be7c7e2e32b, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Farm
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 7386576811144511849
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 56699396-18e9-458e-bfa4-808dd94dc913
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1839.3334, y: 650}
+        DialogueText: "\u3145\u3131\u3147"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 7386576811144511850
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 8d74d3be-95bf-43c4-8d6c-9dfd3b8767ee
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 1429.3334, y: 178}
+        DialogueText: "\uB18D\uC0AC \uCCB4\uD5D8 \uB05D?"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 7386576811144511851
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ae8bd277-b463-4d1d-a851-7b801530bd90
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 273.33334, y: 192.66667}
+        Handler: {fileID: 11400000, guid: e586ae22e2a58484c917f3af0c543798, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Farm
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 7386576811144511852
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: d4b6e72b-27b1-45d6-9a38-3b1178184b75
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1772, y: 102.666664}
+        DialogueText: "\u3142\u3142"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 7386576811144511853
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e7594286-0456-4f66-81d9-d616f91bf269
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 906.6667, y: -1.333334}
+        DialogueText: "\uC774\uBBF8 \uD50C\uB808\uC774\uD588\uC74C. \uC9D1\uC5D0\uAC00"
+        PortraitKey: 
+        ActorKey: FarmNpc

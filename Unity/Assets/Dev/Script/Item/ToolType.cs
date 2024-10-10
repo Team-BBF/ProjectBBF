@@ -5,8 +5,13 @@ using UnityEngine.Serialization;
 
 public enum ToolType
 {
-    Absolute,
-    Hoe
+    Nothing,
+    Hoe,
+    Fertilizer,
+    WaterSpray,
+    FishingRod,
+    Seed,
+    Pickaxe,
 }
 
 public enum ToolRank : int
@@ -46,14 +51,7 @@ public class ItemTypeInfo
 
     public static readonly ItemTypeInfo Empty = new ItemTypeInfo()
     {
-        _sets = new ToolRequireSet[0]
-    };
-    public static readonly ItemTypeInfo GodItemType = new ItemTypeInfo()
-    {
-        _sets = new []
-        {
-            new ToolRequireSet(ToolType.Absolute, ToolRank.Max)
-        }
+        _sets = new ToolRequireSet[] {new ToolRequireSet(ToolType.Nothing, ToolRank.Max)}
     };
 
     public ItemTypeInfo(ToolRequireSet[] sets)
@@ -67,79 +65,94 @@ public class ItemTypeInfo
     
     
     public bool Contains(ToolType type, ToolRank? rank = null)
-        => ToolTypeUtil.Contains(this, type, rank);
-
-    public bool IsCompetible(ItemTypeInfo target)
-        => ToolTypeUtil.IsCompetible(this, target);
-
-    public bool IsCompetible(ToolType type, ToolRank rank)
-    {
-        foreach (ToolRequireSet set in _sets)
-        {
-            if (ToolTypeUtil.IsCompetible(set.RequireToolType, set.RequireToolRank, type, rank))
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
+        => ToolTypeUtil.Contains(Sets, type, rank);
+    public bool ContainsOverRank(ToolType type, ToolRank rank)
+        => ToolTypeUtil.ContainsOverRank(Sets, type, rank);
 }
 
 public static class ToolTypeUtil
 {
-    public static bool Contains(ItemTypeInfo info, ToolType type, ToolRank? rank = null)
+    public static bool Contains(ToolRequireSet set, ToolType type, ToolRank? rank = null)
     {
-        foreach (ToolRequireSet set in info.Sets)
+        if (set.RequireToolType == type)
         {
-            if (set.RequireToolType == type)
-            {
-                if (rank is null) return true;
+            if (rank is null) return true;
 
-                return set.RequireToolRank == rank;
+            return set.RequireToolRank == rank;
+        }
+
+        return false;
+    }
+    public static bool Contains(ToolRequireSet[] sets, ToolType type, ToolRank? rank = null)
+    {
+        foreach (ToolRequireSet set in sets)
+        {
+            if (Contains(set, type, rank))
+            {
+                return true;
             }
         }
 
         return false;
     }
-    
-    public static bool IsCompetible(ToolType current, ToolRank requireRank, ToolType target, ToolRank targetRank)
-    {
-        if (target is ToolType.Absolute) return true;
 
-        return current == target && (int)requireRank <= (int)targetRank;
-    }
-
-    public static bool IsCompetible(ItemTypeInfo current, ItemTypeInfo target)
+    public static bool Contains(ToolRequireSet a, ToolRequireSet b)
     {
-        return IsCompetible(current.Sets, target.Sets);
-    }
-
-    public static bool IsCompetible(ToolRequireSet[] current, ToolRequireSet[] target)
-    {
-        var targetEnum = target.GetEnumerator();
-        
-        while (targetEnum.MoveNext())
+        if (Contains(a, b.RequireToolType, b.RequireToolRank))
         {
-            if (targetEnum.Current is ToolRequireSet { RequireToolType: ToolType.Absolute })
-            {
-                return true;
-            }
-            
-            var currentEnum = current.GetEnumerator();
+            return true;
+        }
 
-            while (currentEnum.MoveNext())
+        return false;
+    }
+    public static bool Contains(ToolRequireSet[] setsA, ToolRequireSet[] setsB)
+    {
+        foreach (ToolRequireSet a in setsA)
+        {
+            foreach (ToolRequireSet b in setsB)
             {
-                if (currentEnum.Current is ToolRequireSet currentSet &&
-                    targetEnum.Current is ToolRequireSet targetSet &&
-                    IsCompetible(
-                        currentSet.RequireToolType,
-                        currentSet.RequireToolRank, 
-                        targetSet.RequireToolType, 
-                        targetSet.RequireToolRank))
+                if (Contains(a, b))
                 {
                     return true;
                 }
+            }
+        }
+
+        return false;
+    }
+
+    public static bool ContainsOverRank(ToolRequireSet[] setsA, ToolRequireSet[] setsB)
+    {
+        foreach (ToolRequireSet a in setsA)
+        {
+            foreach (ToolRequireSet b in setsB)
+            {
+                if (ContainsOverRank(a, b.RequireToolType, b.RequireToolRank))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public static bool ContainsOverRank(ToolRequireSet set, ToolType type, ToolRank rank)
+    {
+        if (set.RequireToolType == type)
+        {
+            return (int)set.RequireToolRank >= (int)rank;
+        }
+
+        return false;
+    }
+    public static bool ContainsOverRank(ToolRequireSet[] sets, ToolType type, ToolRank rank)
+    {
+        foreach (ToolRequireSet set in sets)
+        {
+            if (ContainsOverRank(set, type, rank))
+            {
+                return true;
             }
         }
 

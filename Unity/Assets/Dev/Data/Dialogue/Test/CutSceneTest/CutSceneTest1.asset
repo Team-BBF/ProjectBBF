@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: CutSceneTest1
+  m_EditorClassIdentifier: 
+  _guid: 6c1240703a8b65a4f94d331dc9adc133
+  NodeLinks:
+  - BaseNodeGuid: 29319885-3d8a-481a-bb9a-5e1ea48668f7
+    PortName: Execute
+    TargetNodeGuid: e644e83f-217b-4821-8140-b5b99d6df197
+  - BaseNodeGuid: e644e83f-217b-4821-8140-b5b99d6df197
+    PortName: Next
+    TargetNodeGuid: 30f88ab8-15d8-47e4-89cc-fc3d90b0c19f
+  NodeData:
+  - rid: 7386576351117967419
+  - rid: 7386576351117967420
+  references:
+    version: 2
+    RefIds:
+    - rid: 7386576351117967419
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 30f88ab8-15d8-47e4-89cc-fc3d90b0c19f
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 637.3333, y: 191.33334}
+        DialogueText: "\uC548\uB155\uD558\uC138\uC694!"
+        PortraitKey: TEST_PORT_0
+        ActorKey: Dummy
+    - rid: 7386576351117967420
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e644e83f-217b-4821-8140-b5b99d6df197
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 277.33334, y: 191.33334}
+        DialogueText: '!'
+        PortraitKey: TEST_PORT_0
+        ActorKey: Dummy

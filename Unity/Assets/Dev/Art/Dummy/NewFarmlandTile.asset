@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5621de97731b8b4cac1366ff20e5fe5, type: 3}
+  m_Name: NewFarmlandTile
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: -117861611, guid: f575061737d8abc4d947079b627e385d, type: 3}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules: []
+  _isCultivate: 0
+  _dropItem: {fileID: 0}
+  _dropItemCount: 0
+  _requireTools: []

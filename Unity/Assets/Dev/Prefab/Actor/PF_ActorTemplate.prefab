@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 6395055326370760139}
   - component: {fileID: 7453523426037538948}
   - component: {fileID: 6952242945448404742}
+  - component: {fileID: 5417562707640498862}
+  - component: {fileID: 3358667785332266060}
+  - component: {fileID: 1672321309576992059}
   m_Layer: 0
   m_Name: PF_ActorTemplate
   m_TagString: Untagged
@@ -50,14 +53,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16161bb669047fe428de360f78a02175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actorKey: Dummy
-  _aniData: {fileID: 11400000, guid: e9e8a77bc55e36245920750967fc6dd7, type: 2}
+  _actorKey: Pirene
   _movementData: {fileID: 11400000, guid: 877b8076e7d08144db3d78f9023e4817, type: 2}
-  _interaction: {fileID: 7227657714410071605}
+  _actorComponents: []
+  _interaction: {fileID: 1672321309576992059}
   _transitionHandler: {fileID: 1636151492688819390}
   _animator: {fileID: 657897982702387281}
   _rigid: {fileID: 6952242945448404742}
-  _patrolPath: {fileID: 0}
+  _agent: {fileID: 3358667785332266060}
 --- !u!114 &1636151492688819390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +137,58 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5417562707640498862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261038012854622852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e39f6090724e4a4a8aadeb042afa2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &3358667785332266060
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261038012854622852}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 1000
+  avoidancePriority: 50
+  m_AngularSpeed: 1000
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 2
+--- !u!114 &1672321309576992059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261038012854622852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86a186516ae3f948b87e892c63e6dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBindChildProxy: 1
+  _targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _listeningOnly: 0
+  _detectedOnly: 0
 --- !u!1 &3881207738255202016
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,8 +232,8 @@ GameObject:
   - component: {fileID: 411034240150859704}
   - component: {fileID: 657897982702387281}
   - component: {fileID: 7076314395520464546}
-  - component: {fileID: 7227657714410071605}
-  m_Layer: 0
+  - component: {fileID: 6929142158378601953}
+  m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +373,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3708153}
   m_EdgeRadius: 0
---- !u!114 &7227657714410071605
+--- !u!114 &6929142158378601953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,12 +382,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7608029063418891115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c86a186516ae3f948b87e892c63e6dde, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d2df478be088934a87bf3db64b8eea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isBindChildProxy: 1
-  _targetLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  _listeningOnly: 0
-  _detectedOnly: 0

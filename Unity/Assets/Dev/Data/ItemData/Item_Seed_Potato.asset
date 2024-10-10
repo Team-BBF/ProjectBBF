@@ -18,7 +18,9 @@ MonoBehaviour:
   _itemDescription: 
   _maxStackCount: 5
   _itemTypeInfo:
-    _sets: []
+    _sets:
+    - _requireToolTypes: 5
+      _requireToolRank: 1
   _actionCategoryType: 2
   _actionAnimationType: 0
   _definition: {fileID: 11400000, guid: 9fdbeb2eab51603418b5a65bb36b3483, type: 2}

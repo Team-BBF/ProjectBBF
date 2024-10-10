@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6780d0ee07b34a7c96e7a865461cf924, type: 3}
+  m_Name: Dat_Movement_Pirene
+  m_EditorClassIdentifier: 
+  _movementSpeed: 3
+  _paths:
+  - Path: {fileID: 1619438057120121989, guid: 526ee572ad4a68a41bca0bae8706c616, type: 3}
+    ChangeTimeEvent: {fileID: 11400000, guid: 454255f92bf4ed54a986ff8dca5d87cd, type: 2}
+  - Path: {fileID: 1132368144263532997, guid: 98f46cf200530a344b7102557dd20950, type: 3}
+    ChangeTimeEvent: {fileID: 11400000, guid: 43257be724bc06f42a5ce621fa6a8ddc, type: 2}
+  - Path: {fileID: 5480501809969903496, guid: ee2f9b8f061596842ad3b66e92b9c9a4, type: 3}
+    ChangeTimeEvent: {fileID: 11400000, guid: 3bc4ba9ae15cff946b86b9e9791a2754, type: 2}

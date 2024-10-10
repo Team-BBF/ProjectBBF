@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266b8ba9cddb9444f8b155ae3458eeba, type: 3}
+  m_Name: Dat_Minigame_Deer
+  m_EditorClassIdentifier: 
+  _minigameKey: Deer
+  _directorKey: BlackAlpha
+  _dialogueAfterGameEnd: {fileID: 11400000, guid: 6819c6ef633d7a14f856c4b07cd85dcc, type: 2}
+  _dialogueAfterGameExit: {fileID: 11400000, guid: c77109ecc1d629949a08a40710001ba3, type: 2}
+  _goalItemCount: 1
+  _gloalItem: {fileID: 11400000, guid: 8b3669966bf2867419f7d3a4d498a060, type: 2}
+  _tutorial: {fileID: 11400000, guid: 8957b3c52acc80a4eb975db37ec4174b, type: 2}

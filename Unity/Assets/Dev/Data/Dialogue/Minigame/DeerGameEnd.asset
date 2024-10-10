@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: DeerGameEnd
+  m_EditorClassIdentifier: 
+  _guid: d48689484d18b2c44844dc09ae39909b
+  NodeLinks:
+  - BaseNodeGuid: fbd6df75-f77d-4b83-9cb3-2f685f9d2458
+    PortName: Execute
+    TargetNodeGuid: 135b38bc-c5a3-4e42-937e-fef43299e78d
+  NodeData:
+  - rid: 7386576796714008615
+  references:
+    version: 2
+    RefIds:
+    - rid: 7386576796714008615
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 135b38bc-c5a3-4e42-937e-fef43299e78d
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 376, y: 176}
+        DialogueText: Game End
+        PortraitKey: 
+        ActorKey: 

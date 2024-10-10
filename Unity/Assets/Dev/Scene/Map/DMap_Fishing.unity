@@ -328,6 +328,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8540391914235122656, guid: 7e7a439e816c98d4d9d1b22379662044, type: 3}
   m_PrefabInstance: {fileID: 225306578}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1442658811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442658814}
+  - component: {fileID: 1442658813}
+  - component: {fileID: 1442658812}
+  m_Layer: 0
+  m_Name: VisualScripting SceneVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1442658812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442658811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1442658813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442658811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &1442658814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442658811}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &292867734561201154
 Transform:
   m_ObjectHideFlags: 0
@@ -829,11 +889,11 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 05c5a074e6035414bbfff3aee2a45715, type: 2}
   _playerStartPoint: {fileID: 5561748459987435381}
   _playerEndPoint: {fileID: 2022515370311487748}
-  _playOnce: 0
   _col: {fileID: 201376999}
   _uiPanel: {fileID: 7847014083950878904}
   _timeboard: {fileID: 1774643510964494183}
   _fishRenderer: {fileID: 5633430162039817015}
+  _fishingRod: {fileID: 11400000, guid: 20e804168d99ff84f94e08bd942bf631, type: 2}
 --- !u!1 &6311978649578078622
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,3 +1051,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 292867734561201154}
+  - {fileID: 1442658814}

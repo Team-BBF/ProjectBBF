@@ -12,8 +12,8 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
     [SerializeField] private PolygonCollider2D _col;
     [SerializeField] private GameObject _uiPanel;
     [SerializeField] private TMP_Text _timeboard;
-
     [SerializeField] private SpriteRenderer _fishRenderer;
+    [SerializeField] private ItemData _fishingRod;
 
     private Collider2D _backupCol;
     private float _timer;
@@ -52,6 +52,8 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         }
 
         _fishRenderer.enabled = false;
+
+        Player.Inventory.Model.PushItem(_fishingRod, 1);
     }
 
     protected override async UniTask OnTutorial()
@@ -93,6 +95,12 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         var confiner2D = Camera.main.GetComponent<CinemachineConfiner2D>();
         confiner2D.m_BoundingShape2D = _backupCol;
         _backupCol = null;
+
+
+        if (Player.Inventory.Model.PopItem(_fishingRod))
+        {
+            Player.Inventory.Model.ApplyChanged();
+        }
     }
 
     public FishingContext CreateContext()

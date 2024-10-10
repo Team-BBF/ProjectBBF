@@ -21,6 +21,7 @@ public class GridInventoryModel : IInventoryModel
 
     public bool IsFull => GetFirstEmptySlotPosition() is null;
     public event Action<ItemData, int, GridInventoryModel> OnPushItem;
+    public event Action<ItemData, GridInventoryModel> OnPopItem;
 
     public event Action<IInventoryModel> OnChanged;
     
@@ -126,6 +127,28 @@ public class GridInventoryModel : IInventoryModel
 
         return null;
     }
+
+    public bool PopItem(ItemData targetItem)
+    {
+        if (targetItem == false)
+        {
+            Debug.LogError("itemdata is null");
+            return false;
+        }
+        
+        for (int i = MaxSize - 1; i >= 0; i--)
+        {
+            var slot = GetSlotSequentially(i);
+
+            var result = slot.TryAdd(-1, true);
+            if (SlotChecker.Contains(result, SlotStatus.Success))
+            {
+                OnPopItem?.Invoke(targetItem, this);
+                return true;
+            }
+        }
+        return false;
+    }
     
     public bool PushItem(ItemData itemData, int count)
     {
@@ -187,7 +210,7 @@ public class GridInventoryModel : IInventoryModel
         return false;
     }
 
-    public int MaxSize => Size.sqrMagnitude;
+    public int MaxSize => Size.x * Size.y;
 
     public IInventorySlot GetSlotSequentially(int index)
     {

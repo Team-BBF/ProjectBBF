@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 227799641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.58, y: 5.29, z: 0}
+  m_LocalPosition: {x: -2.58, y: 5.2899933, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,7 +293,6 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 31aa287d0ba7b38418c542d4b6963a86, type: 2}
   _playerStartPoint: {fileID: 227799642}
   _playerEndPoint: {fileID: 1016954007}
-  _playOnce: 0
   _camera: {fileID: 1006629197}
   _timeText: {fileID: 1845114762}
   _scoreText: {fileID: 1520635140}
@@ -337,8 +336,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 227799642}
   - {fileID: 1016954007}
+  - {fileID: 227799642}
   - {fileID: 975550964}
   m_Father: {fileID: 86120200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

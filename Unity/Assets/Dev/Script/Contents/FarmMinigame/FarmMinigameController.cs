@@ -17,6 +17,9 @@ public class FarmMinigameController : MinigameBase<FarmMinigameData>
     [SerializeField] private Light2D _light;
     [SerializeField] private Transform _lightOnPoint;
     [SerializeField] private Transform _lightOffPoint;
+    
+    [SerializeField] private List<ItemDataSerializedSet> _givenItems;
+    [SerializeField] private List<ItemDataSerializedSet> _retrieveItems;
 
     private int _currentItemCount = 0;
 
@@ -85,6 +88,13 @@ public class FarmMinigameController : MinigameBase<FarmMinigameData>
 
         _light.transform.position = _lightOffPoint.position;
         _light.intensity = data.LightOffIntensity;
+
+        foreach (var set in _givenItems)
+        {
+            Player.Inventory.Model.PushItem(set.Item, set.Count);
+        }
+        Player.Inventory.Model.ApplyChanged();
+        
         Player.Inventory.Model.OnPushItem += OnItemCount;
     }
 
@@ -116,6 +126,18 @@ public class FarmMinigameController : MinigameBase<FarmMinigameData>
         var data = Data as FarmMinigameData;
 
         return _currentItemCount >= data.GoalItemCount;
+    }
+
+    protected override void OnPreGameEnd(bool isRequestEnd)
+    {
+        foreach (var set in _retrieveItems)
+        {
+            for (int i = 0; i < set.Count; i++)
+            {
+                Player.Inventory.Model.PopItem(set.Item);
+            }
+        }
+        Player.Inventory.Model.ApplyChanged();
     }
 
     protected override UniTask OnGameEnd(bool isRequestEnd)

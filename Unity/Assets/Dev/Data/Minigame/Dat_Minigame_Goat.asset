@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minigameKey: Goat
   _directorKey: BlackAlpha
+  _playCount: -1
   _dialogueAfterGameEnd: {fileID: 11400000, guid: f44308b56a7b971408426cee12e643aa, type: 2}
   _dialogueAfterGameExit: {fileID: 11400000, guid: 9fd2fcb48d80cfa4ebfa9e88f11202df, type: 2}
   _goalItemCount: 1
   _gloalItem: {fileID: 11400000, guid: 8b3669966bf2867419f7d3a4d498a060, type: 2}
+  _rewards: []
   _tutorial: {fileID: 11400000, guid: 1300e661c228f654e9731ee3c954ce7c, type: 2}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DS.Core;
+using ProjectBBF.Persistence;
 using UnityEngine;
 
 public interface IMinigameEventSignal
@@ -20,13 +21,11 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal
     [SerializeField] private Transform _playerStartPoint;
     [SerializeField] private Transform _playerEndPoint;
 
-    [SerializeField] private bool _playOnce;
-
-
     public T Data => _data;
     
     protected PlayerController Player { get; private set; }
     private bool _isRequestEnd;
+    private MinigamePersistenceObject _persistenceObject;
     
     public event Action OnGameInitEvent;
     public event Action OnGameEndEvent;
@@ -36,6 +35,13 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal
     {
         MinigameController.Instance.OnSignalMinigameStart += OnStart;
         MinigameController.Instance.OnSignalMinigameEnd += OnEnd;
+
+        _persistenceObject = PersistenceManager.Instance.LoadOrCreate<MinigamePersistenceObject>(Data.MinigameKey);
+
+        if (Data.PlayCount == 0)
+        {
+            _persistenceObject.CanPlay = false;
+        }
     }
 
     protected virtual void OnDestroy()
@@ -62,7 +68,7 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal
             }
         }
         
-        MinigameController.Instance.CurrentGameKey = _data.MinigameKey;
+        _persistenceObject.IsPlaying = true;
 
         _ = OnSignalAsync();
     }
@@ -76,21 +82,12 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal
 
     public void RequestEndGame()
     {
-        if (MinigameController.Instance.CurrentGameKey == _data.MinigameKey)
-        {
-            MinigameController.Instance.CurrentGameKey = null;
-        }
-
+        _persistenceObject.IsPlaying = false;
         _isRequestEnd = true;
     }
 
     protected void Release()
     {
-        if (MinigameController.Instance.CurrentGameKey == _data.MinigameKey)
-        {
-            MinigameController.Instance.CurrentGameKey = null;
-        }
-        
         _isRequestEnd = false;
     }
 
@@ -143,9 +140,10 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal
             }
             else
             {
-                if (_playOnce)
+                _persistenceObject.PlayCount++;
+                if (Data.PlayCount > -1 && _persistenceObject.PlayCount >= Data.PlayCount)
                 {
-                    MinigameController.Instance.PlayOnceTable.Add(Data.MinigameKey);
+                    _persistenceObject.CanPlay = false;
                 }
                 await RunDialogue(Data.DialogueAfterGameExit);
             }
@@ -153,6 +151,8 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal
             OnGameRelease();
 
             Release();
+            
+            _persistenceObject.IsPlaying = false;
         }
         catch (Exception e)when (e is not OperationCanceledException)
         {
@@ -193,12 +193,14 @@ public abstract class MinigameData : ScriptableObject
 {
     [SerializeField] private string _minigameKey;
     [SerializeField] private string _directorKey;
-    
+    [SerializeField] private int _playCount = 1;
 
     [SerializeField, Header("게임 종료 대사")] private DialogueContainer _dialogueAfterGameEnd;
     [SerializeField, Header("게임 중도 종료 대사")] private DialogueContainer _dialogueAfterGameExit;
     public string MinigameKey => _minigameKey;
     public string DirectorKey => _directorKey;
+
+    public int PlayCount => _playCount;
 
     public DialogueContainer DialogueAfterGameEnd => _dialogueAfterGameEnd;
     public DialogueContainer DialogueAfterGameExit => _dialogueAfterGameExit;

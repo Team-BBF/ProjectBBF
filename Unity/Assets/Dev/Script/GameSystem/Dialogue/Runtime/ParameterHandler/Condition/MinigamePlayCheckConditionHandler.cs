@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ProjectBBF.Persistence;
 using UnityEngine;
 
 namespace DS.Runtime
@@ -11,7 +12,14 @@ namespace DS.Runtime
         {
             Debug.Assert(string.IsNullOrEmpty(key) is false);
 
-            return MinigameController.Instance.PlayOnceTable.Contains(key);
+            var data = PersistenceManager.Instance.GetCachedPersistenceObj(ref key) as MinigamePersistenceObject;
+            if (data is null)
+            {
+                Debug.LogError($"등록되지 않은 미니게임({key})을 검사했습니다.");
+                return false;
+            }
+            
+            return data.CanPlay is false;
         }
     }
 }

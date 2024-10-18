@@ -19,6 +19,7 @@ public class DialogueContext
     private DialogueController _controller;
 
     private CancellationTokenSource _source;
+    private ProcessorData _processorData;
 
     public bool CanNext => CurrentNode is not null;
 
@@ -63,17 +64,18 @@ public class DialogueContext
                     _source.Token
                 );
 
-                var textTask = TextUtil.DoTextUniTask(_textInput, textItem.Text, _duration, true, link.Token);
+                var textTree = TextUtil.CreateTextTree(textItem.Text, _processorData);
+                var textTask = TextUtil.DoTextUniTask(_textInput, textTree, _duration, false, _processorData, link.Token);
 
                 await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update,
                     link.Token);
 
                 bool skipped = textTask.Status == UniTaskStatus.Pending;
                 link.Cancel();
-                _textInput(textItem.Text);
+                _textInput(textTree.ToString());
                 CurrentNode = textItem.Node.GetNext();
 
-                if (CurrentNode is null && skipped)
+                if (skipped)
                 {
                     await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update,
                         _source.Token);
@@ -89,15 +91,17 @@ public class DialogueContext
                     _source.Token
                 );
 
+                var textTree = TextUtil.CreateTextTree(branchItem.Text, _processorData);
+                
                 await UniTask.WhenAny(
-                    TextUtil.DoTextUniTask(_textInput, branchItem.Text, _duration, true, link.Token),
+                    TextUtil.DoTextUniTask(_textInput,textTree, _duration, false, _processorData, link.Token),
                     UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update,
                         link.Token
                     )
                 );
 
                 link.Cancel();
-                _textInput(branchItem.Text);
+                _textInput(textTree.ToString());
 
 
                 var result = await _controller.GetBranchResultAsync
@@ -156,7 +160,7 @@ public class DialogueContext
         _source = null;
     }
 
-    public DialogueContext(DialogueRuntimeTree tree, float duration, DialogueController controller)
+    public DialogueContext(DialogueRuntimeTree tree, float duration, DialogueController controller, ProcessorData processorData)
     {
         _tree = tree;
         _textInput = str =>
@@ -166,6 +170,7 @@ public class DialogueContext
         };
         _duration = duration;
         _controller = controller;
+        _processorData = processorData;
         _source = new();
         CurrentNode = tree.EntryPoint;
     }

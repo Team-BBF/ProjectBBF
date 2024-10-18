@@ -5,6 +5,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using DS.Core;
 using DS.Runtime;
+using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
@@ -16,7 +17,7 @@ public class DialogueMarker : Marker, INotification
     [SerializeField] private DialogueContainer _container;
 
 
-    public async UniTask OnPlay(PlayableDirector director, CancellationToken cancellationToken = default)
+    public async UniTask OnPlay(PlayableDirector director, ProcessorData processorData, CancellationToken cancellationToken = default)
     {
         try
         {
@@ -28,7 +29,7 @@ public class DialogueMarker : Marker, INotification
 
 
             var inst = DialogueController.Instance;
-            DialogueContext ctx = inst.CreateContext(_container);
+            DialogueContext ctx = inst.CreateContext(_container, processorData);
             inst.Visible = true;
             director.Pause();
 

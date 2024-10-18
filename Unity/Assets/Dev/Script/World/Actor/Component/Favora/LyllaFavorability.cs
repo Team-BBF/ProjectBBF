@@ -87,7 +87,8 @@ public class LyllaFavorability : ActorComFavorability
             return new DialogueEvent()
             {
                 Container = _interruptDialogue,
-                Type = DialogueBranchType.Dialogue
+                Type = DialogueBranchType.Dialogue,
+                ProcessorData = ProcessorData
             };
         }
 
@@ -96,7 +97,8 @@ public class LyllaFavorability : ActorComFavorability
             return new DialogueEvent()
             {
                 Container = events[_index].Container,
-                Type = DialogueBranchType.Dialogue
+                Type = DialogueBranchType.Dialogue,
+                ProcessorData = ProcessorData
             };
         }
 
@@ -105,14 +107,16 @@ public class LyllaFavorability : ActorComFavorability
             return new DialogueEvent()
             {
                 Container = _arriveDialogue ?? events[^1].Container,
-                Type = DialogueBranchType.Dialogue
+                Type = DialogueBranchType.Dialogue,
+                ProcessorData = ProcessorData
             };
         }
 
         return new DialogueEvent()
         {
             Container = events[_index++].Container,
-            Type = DialogueBranchType.Dialogue
+            Type = DialogueBranchType.Dialogue,
+            ProcessorData = ProcessorData
         };
     }
 

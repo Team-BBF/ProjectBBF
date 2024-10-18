@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DS.Core;
+using DS.Runtime;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -16,8 +17,25 @@ public struct DialogueEvent
         Type = DialogueBranchType.None
     };
     
+    private ProcessorData _processorData;
+    
     public DialogueContainer Container;
     public DialogueBranchType Type;
+
+    public ProcessorData ProcessorData
+    {
+        get
+        {
+            if (_processorData is null)
+            {
+                _processorData = ProcessorData.Default;
+            }
+
+            return _processorData;
+        }
+
+        set => _processorData = value;
+    }
 
     public bool IsEmpty => Container == false;
 }

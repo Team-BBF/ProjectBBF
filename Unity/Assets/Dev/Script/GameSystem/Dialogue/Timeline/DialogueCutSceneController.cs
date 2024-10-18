@@ -24,8 +24,11 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
 
     private const string FIRST_ACTOR_KEY = "Ahir";
     private const string SECOND_ACTOR_KEY = "Elisia";
+
+    private const string CONTEST_RESULT_BINDING_KEY = "contestResultItem";
     
     private ItemData _lastResultItem;
+    private ProcessorData _processorData;
 
     private void Awake()
     {
@@ -34,6 +37,12 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
         {
             _esoResultPush.OnEventRaised += OnResultItemPush;
         }
+
+        _processorData = new ProcessorData(new Dictionary<string, string>(new List<KeyValuePair<string, string>>()
+        {
+            new("player", PersistenceManager.Instance.CurrentMetadata.PlayerName),
+            new(CONTEST_RESULT_BINDING_KEY, "None"),
+        }));
     }
 
     private void Start()
@@ -100,6 +109,7 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
         if (obj.TargetItem)
         {
             _lastResultItem = obj.TargetItem;
+            _processorData.BindingTable[CONTEST_RESULT_BINDING_KEY] = _lastResultItem.ItemName;
         }
     }
 
@@ -118,7 +128,7 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
     {
         if (notification is DialogueMarker dialogueMarker)
         {
-            _ = dialogueMarker.OnPlay(_director, this.GetCancellationTokenOnDestroy());
+            _ = dialogueMarker.OnPlay(_director, _processorData, this.GetCancellationTokenOnDestroy());
         }
         else if (notification is BranchTimelineMarker)
         {

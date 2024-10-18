@@ -24,7 +24,7 @@ public class DialogueControllerTest : MonoBehaviour
         if (Application.isPlaying == false) return;
         if (Controller == false) return;
 
-        _context = Controller.CreateContext(DialogueRuntimeTree.Build(Container));
+        _context = Controller.CreateContext(DialogueRuntimeTree.Build(Container), ProcessorData.Default);
     }
 
     private void Start()

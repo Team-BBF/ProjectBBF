@@ -5,6 +5,8 @@ using System.Threading;
 using Cinemachine.Utility;
 using Cysharp.Threading.Tasks;
 using DS.Core;
+using DS.Runtime;
+using JetBrains.Annotations;
 using MyBox;
 using ProjectBBF.Event;
 using ProjectBBF.Persistence;
@@ -91,6 +93,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
                 return false;
             }
 
+
             _controller.MoveStrategy.ResetVelocity();
 
             bool success = await BranchDialogue(caller);
@@ -111,7 +114,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         return false;
     }
 
-    public async UniTask<bool> RunDialogue(DialogueContainer container)
+    public async UniTask<bool> RunDialogue(DialogueContainer container, ProcessorData processorData)
     {
         _controller.MoveStrategy.ResetVelocity();
 
@@ -121,7 +124,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         instance.ResetDialogue();
         instance.Visible = true;
 
-        DialogueContext context = instance.CreateContext(container);
+        DialogueContext context = instance.CreateContext(container, processorData);
 
         await context.Next();
 
@@ -177,7 +180,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
 
             if (resultType is DialogueBranchType.Dialogue)
             {
-                _ = await RunDialogue(dialogueEvent.Container);
+                _ = await RunDialogue(dialogueEvent.Container, dialogueEvent.ProcessorData);
             }
 
             stateTransfer?.TranslateState("DailyRoutine");

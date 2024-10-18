@@ -169,10 +169,10 @@ public class DialogueController : MonoBehaviourSingleton<DialogueController>
     }
     
 
-    public DialogueContext CreateContext(DialogueContainer container)
-        => CreateContext(DialogueRuntimeTree.Build(container));
+    public DialogueContext CreateContext(DialogueContainer container, ProcessorData processorData)
+        => CreateContext(DialogueRuntimeTree.Build(container), processorData);
 
-    public DialogueContext CreateContext(DialogueRuntimeTree tree)
+    public DialogueContext CreateContext(DialogueRuntimeTree tree, ProcessorData processorData)
     {
         // 현재 Context가 누군가에게 점유되어 있으면 null 반환
         if (LastestContext != null && LastestContext.CanNext)
@@ -183,7 +183,8 @@ public class DialogueController : MonoBehaviourSingleton<DialogueController>
         var context = new DialogueContext(
             tree,
             _view.TextCompletionDuration,
-            this
+            this,
+            processorData
         );
 
         LastestContext = context;

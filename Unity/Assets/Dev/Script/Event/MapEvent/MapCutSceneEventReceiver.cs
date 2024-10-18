@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DS.Core;
+using DS.Runtime;
 using MyBox;
 using ProjectBBF.Event;
 using ProjectBBF.Persistence;
@@ -92,7 +93,7 @@ public class MapCutSceneEventReceiver : MonoBehaviour
             if (_afterContainer)
             {
                 PlayerController.StateHandler.TranslateState("ToDialogue");
-                _ = PlayerController.Dialogue.RunDialogue(_afterContainer).ContinueWith(_ =>
+                _ = PlayerController.Dialogue.RunDialogue(_afterContainer, ProcessorData.Default).ContinueWith(_ =>
                 {
                     PlayerController.StateHandler.TranslateState("EndOfDialogue");
                 });
@@ -136,7 +137,7 @@ public class MapCutSceneEventReceiver : MonoBehaviour
             if (_beforeContainer)
             {
                 PlayerController.StateHandler.TranslateState("ToDialogue");
-                _ = PlayerController.Dialogue.RunDialogue(_beforeContainer)
+                _ = PlayerController.Dialogue.RunDialogue(_beforeContainer, ProcessorData.Default)
                     .ContinueWith(s =>LoadScene(_playerController));
             }
             else

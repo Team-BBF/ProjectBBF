@@ -1,5 +1,7 @@
-﻿
+﻿using System.Collections.Generic;
+using DS.Runtime;
 using ProjectBBF.Event;
+using ProjectBBF.Persistence;
 using UnityEngine;
 
 public abstract class ActorComFavorability : ActorComponent, IBADialogue
@@ -8,6 +10,10 @@ public abstract class ActorComFavorability : ActorComponent, IBADialogue
 
     protected Actor Owner { get; private set; }
     protected FavorabilityData FavorabilityData { get; private set; }
+    
+    private ProcessorData _processorData;
+
+    public ProcessorData ProcessorData => _processorData;
 
     public override void Init(Actor actor)
     {
@@ -29,6 +35,14 @@ public abstract class ActorComFavorability : ActorComponent, IBADialogue
         {
             Debug.LogError("유효하지 않은 ContractInfo");
         }
+
+        // 예약 바인딩 데이터
+        var table = new Dictionary<string, string>(new List<KeyValuePair<string, string>>()
+            {
+                new("player", PersistenceManager.Instance.CurrentMetadata.PlayerName)
+            }
+        );
+        _processorData = new ProcessorData(table);
     }
 
     public abstract DialogueEvent DequeueDialogueEvent();

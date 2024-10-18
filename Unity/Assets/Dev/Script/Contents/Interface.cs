@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DS.Core;
+using DS.Runtime;
 using JetBrains.Annotations;
 using ProjectBBF.Event;
 using ProjectBBF.Persistence;
@@ -214,7 +215,7 @@ public abstract class MinigameBase<T> : MonoBehaviour, IMinigameEventSignal, IMi
 
         DialogueController.Instance.ResetDialogue();
         Player.StateHandler.TranslateState("ToDialogue");
-        return Player.Dialogue.RunDialogue(container).ContinueWith(_ =>
+        return Player.Dialogue.RunDialogue(container, ProcessorData.Default).ContinueWith(_ =>
         {
             Player.StateHandler.TranslateState("EndOfDialogue");
         });

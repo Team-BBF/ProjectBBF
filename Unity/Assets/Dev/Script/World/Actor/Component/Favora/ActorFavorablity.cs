@@ -20,7 +20,8 @@ public class ActorFavorablity: ActorComFavorability
         return new DialogueEvent()
         {
             Container = eventItem.Container,
-            Type = eventItem.BranchType
+            Type = eventItem.BranchType,
+            ProcessorData = ProcessorData
         };
     }
 
@@ -32,7 +33,8 @@ public class ActorFavorablity: ActorComFavorability
         return new DialogueEvent()
         {
             Container = FavorablityContainer.Event.EventItems[0].Container,
-            Type = DialogueBranchType.Dialogue | DialogueBranchType.Exit
+            Type = DialogueBranchType.Dialogue | DialogueBranchType.Exit,
+            ProcessorData = ProcessorData
         };
     }
 

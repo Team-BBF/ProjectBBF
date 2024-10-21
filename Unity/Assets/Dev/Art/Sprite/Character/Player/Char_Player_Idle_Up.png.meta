@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char_Player_Up_Idle_0
+      name: Char_Player_Idle_Up_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055652598e62d9d469493502870f2834
-      internalID: 370472142
+      spriteID: 4c34f9679c8f8fd49b586ea2c4061678
+      internalID: -264401172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Up_Idle_1
+      name: Char_Player_Idle_Up_1
       rect:
         serializedVersion: 2
         x: 35
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52fcc63e38405414c843d432bc55f6e7
-      internalID: -1468874059
+      spriteID: 4a569159040ad244f8a43a17a5ee9f57
+      internalID: 1342071253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Up_Idle_2
+      name: Char_Player_Idle_Up_2
       rect:
         serializedVersion: 2
         x: 70
@@ -153,8 +153,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8229e524a149ed44d8c70f7223b86d8e
-      internalID: -1452657271
+      spriteID: 3c9de6e5e1fabf545a920ade6757a060
+      internalID: 384287606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Up_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b1e097a08cc8741a0f79f6dbe48420
+      internalID: -1571604131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Up_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9deae11b0d4ca3c45a6f25d3e892d2ed
+      internalID: -1826231446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Up_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cb74f5007ac064686168bb8e43fcaf
+      internalID: 192235852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Up_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cb3415436c29c4d89fc68df1830f25
+      internalID: -295969065
       vertices: []
       indices: 
       edges: []
@@ -170,9 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Char_Player_Up_Idle_0: 370472142
-      Char_Player_Up_Idle_1: -1468874059
-      Char_Player_Up_Idle_2: -1452657271
+      Char_Player_Idle_Up_0: -264401172
+      Char_Player_Idle_Up_1: 1342071253
+      Char_Player_Idle_Up_2: 384287606
+      Char_Player_Idle_Up_3: -1571604131
+      Char_Player_Idle_Up_4: -1826231446
+      Char_Player_Idle_Up_5: 192235852
+      Char_Player_Idle_Up_6: -295969065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

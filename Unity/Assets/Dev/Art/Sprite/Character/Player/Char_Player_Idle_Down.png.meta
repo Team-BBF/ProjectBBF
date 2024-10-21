@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char_Player_Down_Idle_0
+      name: Char_Player_Idle_Down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1407816b293a2ae42a258ebf7ddd4352
-      internalID: -954676118
+      spriteID: 47a6a4e070217ec45be32cdd6fba7e12
+      internalID: -887521540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Down_Idle_1
+      name: Char_Player_Idle_Down_1
       rect:
         serializedVersion: 2
         x: 35
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b643aa7f95b4e924e875f5a2626f150c
-      internalID: -1231724074
+      spriteID: 3975e9a136e347f4d90522589d15a3c7
+      internalID: -805734884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Down_Idle_2
+      name: Char_Player_Idle_Down_2
       rect:
         serializedVersion: 2
         x: 70
@@ -153,8 +153,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 539c909d3a099c840b2d91578ba1329a
-      internalID: 2007646122
+      spriteID: 63403d249863d6248a82dcbeec825aa9
+      internalID: 227359433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Down_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2c48b0fb419d64aaa83201067a2b19
+      internalID: -971604659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Down_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7176678c6f13ca43ad14604eb3134f0
+      internalID: -1493439457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Down_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658f98a3df4fb6c45afdf28ce72d6986
+      internalID: -458350716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Down_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ad4eb1abdca5c4880207bf58debf0a
+      internalID: 1457453154
       vertices: []
       indices: 
       edges: []
@@ -170,9 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Char_Player_Down_Idle_0: -954676118
-      Char_Player_Down_Idle_1: -1231724074
-      Char_Player_Down_Idle_2: 2007646122
+      Char_Player_Idle_Down_0: -887521540
+      Char_Player_Idle_Down_1: -805734884
+      Char_Player_Idle_Down_2: 227359433
+      Char_Player_Idle_Down_3: -971604659
+      Char_Player_Idle_Down_4: -1493439457
+      Char_Player_Idle_Down_5: -458350716
+      Char_Player_Idle_Down_6: 1457453154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char_Player_Right_Idle_0
+      name: Char_Player_Idle_Right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc1437ae0c7b4d446a2b8a3df94cbce6
-      internalID: -1906379384
+      spriteID: f9d7fefe77c66c74a8316a0d3f2ff1c5
+      internalID: 134045557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Right_Idle_1
+      name: Char_Player_Idle_Right_1
       rect:
         serializedVersion: 2
         x: 35
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d7983c1b87ec4249b48150dd1ad9bce
-      internalID: 1518459699
+      spriteID: 6e10f7b481d5164419c317ea8facc71c
+      internalID: -1087554661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Right_Idle_2
+      name: Char_Player_Idle_Right_2
       rect:
         serializedVersion: 2
         x: 70
@@ -153,8 +153,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b66653652cb3ed041a07144e223681fa
-      internalID: -1620174486
+      spriteID: 48235e889abf4c04d8fc3a77179ea6e0
+      internalID: -1934373739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Right_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be10d163f7d20bb498b06f7cd669dc73
+      internalID: -1888001176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Right_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428e6a044612b744c80f283250f25f5b
+      internalID: -960626359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Right_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a18d567513fe0489a6423731cd568c
+      internalID: -896129384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_Idle_Right_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ba1db0f6b27a544bfbc8a75077d99e
+      internalID: 1428244439
       vertices: []
       indices: 
       edges: []
@@ -170,9 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Char_Player_Right_Idle_0: -1906379384
-      Char_Player_Right_Idle_1: 1518459699
-      Char_Player_Right_Idle_2: -1620174486
+      Char_Player_Idle_Right_0: 134045557
+      Char_Player_Idle_Right_1: -1087554661
+      Char_Player_Idle_Right_2: -1934373739
+      Char_Player_Idle_Right_3: -1888001176
+      Char_Player_Idle_Right_4: -960626359
+      Char_Player_Idle_Right_5: -896129384
+      Char_Player_Idle_Right_6: 1428244439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

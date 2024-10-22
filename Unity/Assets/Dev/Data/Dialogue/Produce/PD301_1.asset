@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: PD301_1
+  m_EditorClassIdentifier: 
+  _guid: f9d5324a99057b04a885e6da34a8687f
+  NodeLinks:
+  - BaseNodeGuid: d79eaf25-bfb4-485f-ac14-9193bac8ddef
+    PortName: Execute
+    TargetNodeGuid: 50fc5d25-be32-459d-9042-2455e2f19808
+  - BaseNodeGuid: 0dec7d36-78d1-4678-b139-73d167d3032f
+    PortName: Next
+    TargetNodeGuid: 6b71a7b6-7a07-4745-815d-69fea6fb22ed
+  - BaseNodeGuid: 32f0bebe-270a-4915-9194-ff3785cc6a67
+    PortName: Next
+    TargetNodeGuid: 0dec7d36-78d1-4678-b139-73d167d3032f
+  - BaseNodeGuid: 50fc5d25-be32-459d-9042-2455e2f19808
+    PortName: Next
+    TargetNodeGuid: 32f0bebe-270a-4915-9194-ff3785cc6a67
+  - BaseNodeGuid: 6b71a7b6-7a07-4745-815d-69fea6fb22ed
+    PortName: Next
+    TargetNodeGuid: e0167a20-80bf-4f38-ae45-ad7b47f870ce
+  NodeData:
+  - rid: 7515592388942495898
+  - rid: 7515592388942495899
+  - rid: 7515592388942495900
+  - rid: 7515592388942495901
+  - rid: 7515592388942495902
+  references:
+    version: 2
+    RefIds:
+    - rid: 7515592388942495898
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0dec7d36-78d1-4678-b139-73d167d3032f
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1306, y: 156}
+        DialogueText: "\uC77C\uB2E8 \uC544\uB77C\uCE74\uB974 \uB9C8\uC744\uC5D0\uC11C
+          \uB098\uC624\uB294 \uAC83\uC911\uC5D0 \uC720\uBA85\uD55C\uAC8C \uBD81\uC11C\uCABD\uC758
+          \uCD94\uC6B4 \uC232\uC778 \uBCF4\uB808\uC544\uC2A4 \uC232\uC5D0\uC11C \uB098\uC624\uB294
+          \uB9CC\uB144\uC124 \uB538\uAE30\uAC00 \uC788\uB2E4\uB0E5!  \uB610 \uBC84\uC12F\uB3C4
+          \uC720\uBA85\uD558\uB2E4\uACE0 \uD55C\uB2E4\uB0E5! "
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 7515592388942495899
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 32f0bebe-270a-4915-9194-ff3785cc6a67
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 722, y: 145}
+        DialogueText: "\uC54C\uC544\uC11C \uC798 \uC900\uBE44\uD574\uC57C \uD558\uB294\uB370
+          \uC5B4\uB5A4 \uAC74 \uBBF8\uB2C8\uAC8C\uC784\uC758 \uC0C1\uD488\uC73C\uB85C
+          \uC900\uBE44\uB418\uC5B4\uC788\uB2E4\uACE0 \uD55C\uB2E4\uB0E5. "
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 7515592388942495900
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 50fc5d25-be32-459d-9042-2455e2f19808
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 216, y: 146}
+        DialogueText: "\uC774\uBC88 \uC8FC\uC81C\uB294 \uC9C0\uC5ED \uD2B9\uC0B0\uBB3C\uC774\uB2E4\uB0E5!
+          \uADFC\uB370 \uC8FC\uB294 \uBC29\uC2DD\uC774 \uC880 \uD2B9\uC774\uD558\uB2E4\uB0E5... "
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 7515592388942495901
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 6b71a7b6-7a07-4745-815d-69fea6fb22ed
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2203, y: 160}
+        DialogueText: "\uADFC\uB370 \uBC84\uC12F\uC740 \uB9DB\uC5C6\uB2E4\uB0E5!
+          \uBA54\uC774\uB098\uAC00 \uAC00\uB054 \uBC84\uC12F \uC2A4\uD29C\uB97C \uB04C\uC5EC\uC92C\uB294\uB370
+          \uB09C \uACE0\uAE30\uAC00 \uC88B\uB2E4\uB0E5! "
+        PortraitKey: Agg
+        ActorKey: Lylla_Chapter_1
+    - rid: 7515592388942495902
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e0167a20-80bf-4f38-ae45-ad7b47f870ce
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2804, y: 134}
+        DialogueText: "\uBC84\uC12F\uC774 \uB9DB\uC774 \uC5C6\uB2E4\uACE0? \uACE0\uC591\uC774
+          \uC785\uB9DB\uC73C\uB85C\uB294 \uB2F9\uC5F0\uD788 \uADF8\uB7EC\uACA0\uC9C0. "
+        PortraitKey: 
+        ActorKey: Piraeus_Chapter_2

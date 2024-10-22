@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: PD102_1
+  m_EditorClassIdentifier: 
+  _guid: 79565d6a95bafd54ea97d999fdf7456d
+  NodeLinks:
+  - BaseNodeGuid: fe5e8480-8a0f-4aae-9c37-c85c4b3c76a0
+    PortName: Execute
+    TargetNodeGuid: f3affb84-cde4-40c7-b8ae-373ff4ab0dc8
+  - BaseNodeGuid: f3affb84-cde4-40c7-b8ae-373ff4ab0dc8
+    PortName: "\uC6D0\uB798 \uCC9C\uB9AC\uAE38\uB3C4 \uD55C \uBC1C\uC790\uAD6D\uBD80\uD130\uB77C\uB294
+      \uC18D\uB2F4\uB3C4 \uBAB0\uB77C? "
+    TargetNodeGuid: e14ab905-577b-4911-b8ca-04d3e97c515e
+  - BaseNodeGuid: f3affb84-cde4-40c7-b8ae-373ff4ab0dc8
+    PortName: "\uC88B\uC740 \uAC8C \uC88B\uC740 \uAC70\uC9C0! \uD654\uC774\uD305\uD574\uBCF4\uC790! "
+    TargetNodeGuid: 8ac8b3a3-7e2d-423e-b202-256ec0116dfd
+  NodeData:
+  - rid: 7515592388942495827
+  - rid: 7515592388942495828
+  - rid: 7515592388942495829
+  references:
+    version: 2
+    RefIds:
+    - rid: 7515592388942495827
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 8ac8b3a3-7e2d-423e-b202-256ec0116dfd
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 649, y: 151}
+        DialogueText: "\uBB50\uC5B4... \uB9DE\uB2E4\uB0E5. \uC55E\uC73C\uB85C \uB354
+          \uD798\uB4E0 \uAE38\uC774 \uB420\uD14C\uB2C8 \uD654\uC774\uD305\uD574\uBCF4\uC790\uB0E5! "
+        PortraitKey: 
+        ActorKey: 'Lylla_Chapter_1 '
+    - rid: 7515592388942495828
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e14ab905-577b-4911-b8ca-04d3e97c515e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 649, y: 349}
+        DialogueText: "\uC5B4\uB824\uC6B4 \uB9D0\uC740 \uBAA8\uB978\uB2E4\uB0E5 "
+        PortraitKey: 
+        ActorKey: 'Lylla_Chapter_1 '
+    - rid: 7515592388942495829
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f3affb84-cde4-40c7-b8ae-373ff4ab0dc8
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 198, y: 213}
+        DialogueText: "\uB2F9\uC5F0\uD55C \uACB0\uACFC\uB97C \uD588\uB2E4\uB0E5!
+          \uC6B0\uCB50\uD574\uC9C0\uC9C0 \uB9D0\uB77C\uB0E5. "
+        PortraitKey: 
+        ActorKey: 'Lylla_Chapter_1 '

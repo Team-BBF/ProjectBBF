@@ -25,7 +25,7 @@ MonoBehaviour:
   _moles:
   - Key: 0
     Prefab: {fileID: 748677008473937971, guid: 487d56172221a2e4a838e6ca622d33fb, type: 3}
-    AcquisitionScore: 30
+    AcquisitionScore: 15
     AppearRate: 0.8
     WaitDuration: 4
   - Key: 1
@@ -35,13 +35,13 @@ MonoBehaviour:
     WaitDuration: 3
   - Key: 2
     Prefab: {fileID: 748677008473937971, guid: 487d56172221a2e4a838e6ca622d33fb, type: 3}
-    AcquisitionScore: 30
+    AcquisitionScore: 15
     AppearRate: 1
     WaitDuration: 4
   _rewards:
   - Item: {fileID: 11400000, guid: bc35af0e13f17f44d950a47272493273, type: 2}
     Count: 1
-    TargetScore: 250
+    TargetScore: 300
     Rank: 1
   - Item: {fileID: 11400000, guid: e99205192f28fb94aab861ba6cdaf106, type: 2}
     Count: 1

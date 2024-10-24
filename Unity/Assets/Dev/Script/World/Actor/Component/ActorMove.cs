@@ -8,7 +8,12 @@ using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ActorMove : ActorComponent
+public interface IActorMove
+{
+    public Vector2 LastMovedDirection { get; set; }
+}
+
+public class ActorMove : ActorComponent, IActorMove
 {
     private NavMeshAgent _agent;
     private ActorMovementData _data;
@@ -158,4 +163,5 @@ public class ActorMove : ActorComponent
 
     }
 
+    public Vector2 LastMovedDirection { get; set; }
 }

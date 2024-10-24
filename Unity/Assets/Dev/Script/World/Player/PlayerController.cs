@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
         Coordinate = Bind<PlayerCoordinate>();
         Interactor = Bind<PlayerInteracter>();
         Dialogue = Bind<PlayerDialogue>();
-        VisualStrategy.Init(_animator, _bodyRenderer);
+        VisualStrategy.Init(MoveStrategy, _animator, _bodyRenderer);
 
         GameObjectStorage.Instance.AddGameObject(gameObject);
 

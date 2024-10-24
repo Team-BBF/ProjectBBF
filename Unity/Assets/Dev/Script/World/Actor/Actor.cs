@@ -67,7 +67,7 @@ public class Actor : MonoBehaviour, IBANameKey
     {
         //* Strategy binding */
         MoveStrategy.Init(this);
-        Visual.Init(Animator, GetComponentInChildren<SpriteRenderer>());
+        Visual.Init(MoveStrategy, Animator, GetComponentInChildren<SpriteRenderer>());
         
         
         /* Collision interaction */

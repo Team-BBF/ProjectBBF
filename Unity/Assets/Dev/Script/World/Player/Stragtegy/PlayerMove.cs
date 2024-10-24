@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMove : MonoBehaviour, IPlayerStrategy
+public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
 {
     private InputAction _movementAction;
     private InputAction _sprintAction;

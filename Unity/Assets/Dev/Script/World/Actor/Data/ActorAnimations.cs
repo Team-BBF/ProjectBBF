@@ -39,7 +39,7 @@ public static class AnimationActorKey
     public static readonly int Bakery_Additive_Complete  = Animator.StringToHash("Bakery_Additive_Complete");
     public static readonly int Idle             = Animator.StringToHash("Idle");
     public static readonly int Move             = Animator.StringToHash("Move");
-    public static readonly int Fishing          = Animator.StringToHash("Fishing");
+    public static readonly int Plant            = Animator.StringToHash("Plant");
 
     [Serializable]
     public enum Direction
@@ -67,7 +67,7 @@ public static class AnimationActorKey
         Bakery_Additive_Complete,
         Idle,
         Move,
-        Fishing,
+        Plant,
     }
 
     public static int GetAniHash(Action action)
@@ -85,7 +85,7 @@ public static class AnimationActorKey
             case Action.Bakery_Additive_Complete: return Bakery_Additive_Complete;
             case Action.Idle: return Idle; 
             case Action.Move: return Move;
-            case Action.Fishing: return Fishing;
+            case Action.Plant: return Plant;
             default:
                 Debug.Assert(false, $"정의되지 않은 Action({action})");
                 return -1;

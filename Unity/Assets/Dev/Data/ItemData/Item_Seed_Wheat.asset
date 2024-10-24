@@ -22,7 +22,8 @@ MonoBehaviour:
     - _requireToolTypes: 5
       _requireToolRank: 1
   _actionCategoryType: 2
-  _actionAnimationType: 0
+  _actionAnimationType: 12
   _usingActionAudioInfos: []
-  _useAndWait: 0.1
+  _usePrevWait: 0.2
+  _useAndWait: 0
   _definition: {fileID: 11400000, guid: 9fdbeb2eab51603418b5a65bb36b3483, type: 2}

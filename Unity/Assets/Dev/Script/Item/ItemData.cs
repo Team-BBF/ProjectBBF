@@ -66,6 +66,8 @@ public class ItemData : ScriptableObject
     private ItemAudioInfo[] _usingActionAudioInfos;
 
     [SerializeField]
+    private float _usePrevWait;
+    [SerializeField]
     private float _useAndWait;
     
     public string ItemKey => _itemKey;
@@ -82,6 +84,8 @@ public class ItemData : ScriptableObject
     public int ActionAnimationAniHash => AnimationActorKey.GetAniHash(ActionAnimationType);
 
     public ItemAudioInfo[] UseActionUsingActionAudioInfos => _usingActionAudioInfos;
+
+    public float UsePrevWait => _usePrevWait;
 
     public float UseAndWait => _useAndWait;
 

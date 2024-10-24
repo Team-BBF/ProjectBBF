@@ -120,7 +120,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         return false;
     }
 
-    public async UniTask<bool> RunDialogue(DialogueContainer container, ProcessorData processorData)
+    public async UniTask<bool> RunDialogue(DialogueContainer container, ProcessorData processorData, Vector3? targetPosition = null)
     {
         try
         {
@@ -129,6 +129,12 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             _controller.Blackboard.IsMoveStopped = true;
             _controller.Blackboard.IsInteractionStopped = true;
             _controller.MoveStrategy.ResetVelocity();
+
+            if (targetPosition is not null)
+            {
+                Vector2 dir = (targetPosition.Value - _controller.transform.position).normalized;
+                _controller.VisualStrategy.LookAt(dir, AnimationActorKey.Action.Idle, true);
+            }
 
             var token = this.GetCancellationTokenOnDestroy();
 
@@ -186,11 +192,12 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             _controller.HudController.Visible = false;
             _controller.Blackboard.IsMoveStopped = true;
             _controller.Blackboard.IsInteractionStopped = true;
+            
 
             if (actorInfo.Interaction.Owner is Actor actor)
             {
-                actor.Visual.LookAt(_controller.transform.position - actor.transform.position,
-                    AnimationActorKey.Action.Idle);
+                Vector2 dir = (actor.transform.position - _controller.transform.position).normalized;
+                _controller.VisualStrategy.LookAt(dir, AnimationActorKey.Action.Idle, true);
             }
 
             AudioManager.Instance.PlayOneShot("SFX", "SFX_Dialogue_Call");

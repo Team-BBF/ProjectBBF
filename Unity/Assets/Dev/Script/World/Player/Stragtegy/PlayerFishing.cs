@@ -130,13 +130,17 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
     public async UniTask<bool> Fishing()
     {
         if (_blackboard.IsInteractionStopped || _blackboard.IsFishingStopped) return false;
-        
         try
         {
+            _visual.Animator.SetTrigger("Fishing");
+            
             float factor = await _view.Fishing(1f);
-            _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Fishing, AnimationActorKey.Direction.Right));
             var front = _coordinate.GetFrontPureDir();
             Direction dir;
+
+            factor = Mathf.Max(0.2f, factor);
+            
+            
 
             IsFishing = true;
 
@@ -177,12 +181,16 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
             var pos = transform.position + (front * factor * _fishingMaxDistance) + _sideOffset;
             // p1 + ((a * b * c) + d1 * d)
 
+            _visual.Animator.SetBool("IsFishing", true);
+            
             Fishing(dir, pos);
+            
 
             CancellationTokenSource cts = CancellationTokenSource.CreateLinkedTokenSource(
                 this.GetCancellationTokenOnDestroy()
             );
 
+            
             await UniTask.WaitUntil(() => _co is null, PlayerLoopTiming.Update,
                 this.GetCancellationTokenOnDestroy());
 
@@ -192,8 +200,11 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
             if ((ctx?.CanFishingGround(pos) ?? false) is false)
             {
+                _visual.Animator.SetBool("IsFishing", false);
                 await UnFishing(dir, pos, ctx?.FishTransform);
                 ctx?.Release();
+                
+                _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Right));
                 return false;
             }
 
@@ -220,6 +231,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
             }
 
 
+            _visual.Animator.SetBool("IsFishing", false);
             await UnFishing(dir, pos, ctx?.FishTransform);
 
             if (ctx.IsTiming)
@@ -245,6 +257,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
 
             IsFishing = false;
+            _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Right));
             return true;
         }
         catch (Exception e) when (e is not OperationCanceledException)
@@ -256,8 +269,10 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
             _handle.gameObject.SetActive(false);
             _line.gameObject.SetActive(false);
             IsFishing = false;
+            _visual.Animator.SetBool("IsFishing", false);
         }
 
+        _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Right));
 
         return false;
     }

@@ -17,6 +17,9 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     private PlayerMove _move;
     private PlayerCoordinate _coordinate;
 
+    private bool _isAniPrevEventRaised = false;
+    private bool _isAniNextEventRaised = false;
+
     public void Init(PlayerController controller)
     {
         _controller = controller;
@@ -36,6 +39,30 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     {
         get => _controller.Inventory.QuickInvVisible;
         set => _controller.Inventory.QuickInvVisible = value;
+    }
+
+    public void OnAnimationBeginEvent(string key)
+    {
+        if (key == "Begin")
+        {
+            _isAniPrevEventRaised = false;
+        }
+        else if (key == "End")
+        {
+            _isAniNextEventRaised = false;
+        }
+    }
+
+    public void OnAnimationEndEvent(string key)
+    {
+        if (key == "Begin")
+        {
+            _isAniPrevEventRaised = true;
+        }
+        else if (key == "End")
+        {
+            _isAniNextEventRaised = true;
+        }
     }
     
     public async UniTask<bool> OnToolAction()
@@ -60,8 +87,12 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
                 }
 
                 _move.ResetVelocity();
+                _move.IsStopped = true;
                 _blackboard.Energy--;
 
+                _isAniPrevEventRaised = false;
+                _isAniNextEventRaised = false;
+                
                 Vector2 dir = _coordinate.GetFrontPureDir();
                 _visual.LookAt(dir, currentData.ActionAnimationType);
                 
@@ -73,6 +104,13 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
             }
 
             bool success = false;
+
+            if (currentData.UsePrevWait > 0f)
+            {
+                await UniTask.Delay((int)(currentData.UsePrevWait * 1000f), DelayType.DeltaTime, PlayerLoopTiming.Update,
+                    this.GetCancellationTokenOnDestroy());
+            }
+            
 
             var interaction = FindCloserObject();
             if (interaction is null)
@@ -104,16 +142,22 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
                 PlayAudio(currentData, "Use_Fail");
             }
 
+
             if (currentData.UseAndWait > 0f)
             {
-                await UniTask.Delay((int)(currentData.UseAndWait * 1000f), DelayType.DeltaTime, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
+                await UniTask.Delay((int)(currentData.UseAndWait * 1000f), DelayType.DeltaTime, PlayerLoopTiming.Update,
+                    this.GetCancellationTokenOnDestroy());
             }
             
+            _move.IsStopped = false;
+            
+
             return success;
         }
         catch (Exception e) when (e is not OperationCanceledException)
         {
             Debug.LogException(e);
+            _move.IsStopped = false;
             return false;
         }
         
@@ -154,8 +198,11 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
             if (executedAny)
             {
                 _move.ResetVelocity();
-                _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Collect, AnimationActorKey.Direction.Down));
-                await UniTask.Delay(300, DelayType.DeltaTime, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
+                //Vector2 dir = _coordinate.GetFrontPureDir();
+
+                Vector2 dir = (interaction.transform.position - _controller.transform.position).normalized;
+                _visual.LookAt(dir, AnimationActorKey.Action.Collect);
+                await UniTask.Delay(500, DelayType.DeltaTime, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
             }
             
             return executedAny;

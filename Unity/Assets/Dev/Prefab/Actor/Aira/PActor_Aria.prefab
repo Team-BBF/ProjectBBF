@@ -69,8 +69,16 @@ PrefabInstance:
       value: Aria
       objectReference: {fileID: 0}
     - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _saveKey
+      value: Aria
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: _actorKey
       value: Aria
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967666449825327450, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Name

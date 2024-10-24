@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94576a3af06543efac7d22c9a606f6fb, type: 3}
   m_Name: Dat_Favor_Dummy3
   m_EditorClassIdentifier: 
-  _actorKey: PD201
+  _actorKey: PD201_1
   _actorName: "\uB354\uBBF8 npc"
   _defaultPortraitKey: Default
   _favorabilityEvent:
     _eventItems:
-    - _container: {fileID: 11400000, guid: 6899e3afaeb6a3342a95217081abdd13, type: 2}
+    - _container: {fileID: 11400000, guid: 0881e10e8cb13c74aa4755989f3b103e, type: 2}
       _favorablity: 0
       _once: 0
       _branchType: 2

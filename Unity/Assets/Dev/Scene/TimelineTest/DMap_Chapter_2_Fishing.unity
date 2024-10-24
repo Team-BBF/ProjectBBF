@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 35537079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 198.76, y: -161.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -298,7 +298,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.1875, y: 2.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -313,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 538499429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.2, y: -32.25, z: 0}
+  m_LocalPosition: {x: 159.42, y: -189.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -538,7 +538,7 @@ Transform:
   m_GameObject: {fileID: 848322358}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.98, y: -29.61, z: -10}
+  m_LocalPosition: {x: 175.1, y: -192.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -589,9 +589,9 @@ PlayableDirector:
   - key: {fileID: 4658484451762963313, guid: e2c79f89869630b4290e5441efcaab0f, type: 2}
     value: {fileID: 1290323961}
   - key: {fileID: -754371116985895483, guid: e07af024c98d8634994599de052fe921, type: 2}
+    value: {fileID: 1290323962}
+  - key: {fileID: 8748938620183527896, guid: e07af024c98d8634994599de052fe921, type: 2}
     value: {fileID: 538499430}
-  - key: {fileID: -3108074915126596098, guid: e07af024c98d8634994599de052fe921, type: 2}
-    value: {fileID: 1104997328}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &934792376
@@ -603,7 +603,7 @@ Transform:
   m_GameObject: {fileID: 934792374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 198.76, y: -161.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 1104997329}
   - component: {fileID: 1104997328}
   m_Layer: 0
-  m_Name: Elisa
+  m_Name: Aria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,12 +741,12 @@ SpriteRenderer:
   m_SortingLayerID: 708701679
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1258678207, guid: 10bd1d6d793c61040b2ef80a1241e6e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a579a948d131f84c97cd23257ff585e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.1875, y: 2.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -761,7 +761,7 @@ Transform:
   m_GameObject: {fileID: 1104997327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.85, y: -27.75, z: 0}
+  m_LocalPosition: {x: 173.97, y: -193.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 1290323961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.21, y: -31.04, z: 0}
+  m_LocalPosition: {x: 161.46, y: -186.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

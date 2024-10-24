@@ -264,6 +264,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Char_Player_Move_Right_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6145891ed343244198708dc0997cfc1
+      internalID: 1686662892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -283,6 +304,7 @@ TextureImporter:
       Char_Player_Move_Right_5: -1556583567
       Char_Player_Move_Right_6: 168055202
       Char_Player_Move_Right_7: -276261175
+      Char_Player_Move_Right_8: 1686662892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

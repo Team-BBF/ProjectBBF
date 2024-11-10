@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94576a3af06543efac7d22c9a606f6fb, type: 3}
+  m_Name: Dat_Favor_Explanation
+  m_EditorClassIdentifier: 
+  _actorKey: exp
+  _actorName: 
+  _defaultPortraitKey: Default
+  _favorabilityEvent:
+    _eventItems:
+    - _container: {fileID: 11400000, guid: effbbb82b06a85c409750c09a1703153, type: 2}
+      _favorablity: 0
+      _once: 0
+      _branchType: 2
+  _portraitTable:
+    _list:
+    - Key: Default
+      Portrait: {fileID: 21300000, guid: 171055555a673d74eb4ce097ea91c11d, type: 3}

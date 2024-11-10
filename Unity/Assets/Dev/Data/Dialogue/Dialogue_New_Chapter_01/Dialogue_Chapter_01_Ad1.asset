@@ -30,15 +30,15 @@ MonoBehaviour:
     PortName: "\uBB58 \uD314\uACE0 \uC788\uC5B4?"
     TargetNodeGuid: eddfad25-18a7-4702-8533-b3bdd818fd9e
   NodeData:
-  - rid: 6083855285846016348
-  - rid: 6083855285846016349
-  - rid: 6083855285846016350
-  - rid: 6083855285846016351
-  - rid: 6083855285846016352
+  - rid: 6083855353732399362
+  - rid: 6083855353732399363
+  - rid: 6083855353732399364
+  - rid: 6083855353732399365
+  - rid: 6083855353732399366
   references:
     version: 2
     RefIds:
-    - rid: 6083855285846016348
+    - rid: 6083855353732399362
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2cfa87e7-14fa-44dd-a9c2-6ec19b364810
@@ -48,7 +48,7 @@ MonoBehaviour:
         DialogueText: "\uC548\uB155\uD558\uC138\uC694!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855285846016349
+    - rid: 6083855353732399363
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c6c70529-5587-46e2-9e6a-0dcbab8975bf
@@ -59,7 +59,7 @@ MonoBehaviour:
           \uD569\uB2C8\uB2E4!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855285846016350
+    - rid: 6083855353732399364
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: eddfad25-18a7-4702-8533-b3bdd818fd9e
@@ -68,8 +68,8 @@ MonoBehaviour:
         Position: {x: 1377, y: 113}
         DialogueText: "\uAD6C\uB9E4\uCC3D \uB5A0\uC57C \uD568"
         PortraitKey: 
-        ActorKey: 
-    - rid: 6083855285846016351
+        ActorKey: exp
+    - rid: 6083855353732399365
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f6f3e788-a74a-48b4-8b22-00005e8be279
@@ -80,7 +80,7 @@ MonoBehaviour:
           \uC5B8\uC81C\uB4E0 \uC624\uC138\uC694!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855285846016352
+    - rid: 6083855353732399366
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f8aac8b9-9f68-4da7-8099-fd4a72b0fdaf

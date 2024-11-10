@@ -20,6 +20,12 @@ MonoBehaviour:
   - BaseNodeGuid: 003e6bc3-739a-4b71-a2d5-93925254f45e
     PortName: Next
     TargetNodeGuid: c3f92225-862c-47d9-8889-4378e27c6e0b
+  - BaseNodeGuid: 034c354a-0915-46d1-ab13-24405d2bd64a
+    PortName: Next
+    TargetNodeGuid: 4a7ef9c9-5f87-48b4-9e71-8053ef17e462
+  - BaseNodeGuid: 05331c6a-7da0-4265-be3d-fcf1b1984a06
+    PortName: Next
+    TargetNodeGuid: 85375dec-307d-49e3-98d4-c90b09738751
   - BaseNodeGuid: 08a9f126-36e7-46ca-96a4-c3ad575e1d0a
     PortName: Next
     TargetNodeGuid: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
@@ -29,21 +35,39 @@ MonoBehaviour:
   - BaseNodeGuid: 1a5a632e-17d3-46fd-91ee-e7cf141bc670
     PortName: Next
     TargetNodeGuid: d43dc72b-51bf-4eb1-ab35-f082f4c745fd
+  - BaseNodeGuid: 246f96d4-dc6d-4f89-84e2-ba440f38f00a
+    PortName: False
+    TargetNodeGuid: 05331c6a-7da0-4265-be3d-fcf1b1984a06
+  - BaseNodeGuid: 246f96d4-dc6d-4f89-84e2-ba440f38f00a
+    PortName: True
+    TargetNodeGuid: 034c354a-0915-46d1-ab13-24405d2bd64a
+  - BaseNodeGuid: 4379964d-7a49-4761-8180-fb41f357e724
+    PortName: False
+    TargetNodeGuid: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
+  - BaseNodeGuid: 4379964d-7a49-4761-8180-fb41f357e724
+    PortName: True
+    TargetNodeGuid: 246f96d4-dc6d-4f89-84e2-ba440f38f00a
+  - BaseNodeGuid: 4a7ef9c9-5f87-48b4-9e71-8053ef17e462
+    PortName: Next
+    TargetNodeGuid: 96549c3f-ba2f-4471-99e6-0cafe98f5120
   - BaseNodeGuid: 537a1ba8-7b84-4225-b6d3-beadfd5ab71f
     PortName: Next
     TargetNodeGuid: 1a5a632e-17d3-46fd-91ee-e7cf141bc670
   - BaseNodeGuid: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
-    PortName: "\uBBF8\uC548\uD558\uC9C0\uB9CC \uC5B4\uB824\uC6B8 \uAC83 \uAC19\uC544"
-    TargetNodeGuid: 70c3a3a2-2d44-4171-a8fa-455a99b2094d
-  - BaseNodeGuid: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
     PortName: "\uC54C\uC558\uC5B4"
     TargetNodeGuid: 71dd2f57-44c6-4811-a2d8-fc98eeee9676
+  - BaseNodeGuid: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
+    PortName: "\uBBF8\uC548\uD558\uC9C0\uB9CC \uC5B4\uB824\uC6B8 \uAC83 \uAC19\uC544"
+    TargetNodeGuid: 70c3a3a2-2d44-4171-a8fa-455a99b2094d
   - BaseNodeGuid: 70c3a3a2-2d44-4171-a8fa-455a99b2094d
     PortName: Next
     TargetNodeGuid: 049d4b1d-dc24-476f-af09-725d3b6b137a
   - BaseNodeGuid: 71dd2f57-44c6-4811-a2d8-fc98eeee9676
     PortName: Next
     TargetNodeGuid: f33def3e-8d88-443b-9244-3e73984a4f6e
+  - BaseNodeGuid: 96549c3f-ba2f-4471-99e6-0cafe98f5120
+    PortName: Next
+    TargetNodeGuid: f6c065fe-b60d-44ee-9b8d-fc19602d88e2
   - BaseNodeGuid: 97b34a74-71aa-4427-ac00-0ddfb70b8129
     PortName: Next
     TargetNodeGuid: 537a1ba8-7b84-4225-b6d3-beadfd5ab71f
@@ -73,46 +97,64 @@ MonoBehaviour:
     TargetNodeGuid: 17fd9dab-aabb-4dc3-be57-64c70aae25f8
   - BaseNodeGuid: f89c77e0-3c76-43ec-ad20-f52efc29bad3
     PortName: True
-    TargetNodeGuid: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
+    TargetNodeGuid: 4379964d-7a49-4761-8180-fb41f357e724
   NodeData:
-  - rid: 6083855353732399237
-  - rid: 6083855353732399238
-  - rid: 6083855353732399239
-  - rid: 6083855353732399240
-  - rid: 6083855353732399241
-  - rid: 6083855353732399242
-  - rid: 6083855353732399243
-  - rid: 6083855353732399244
-  - rid: 6083855353732399245
-  - rid: 6083855353732399246
-  - rid: 6083855353732399247
-  - rid: 6083855353732399248
-  - rid: 6083855353732399249
-  - rid: 6083855353732399250
-  - rid: 6083855353732399251
-  - rid: 6083855353732399252
-  - rid: 6083855353732399253
-  - rid: 6083855353732399254
+  - rid: 6083855353732399578
+  - rid: 6083855353732399579
+  - rid: 6083855353732399580
+  - rid: 6083855353732399581
+  - rid: 6083855353732399582
+  - rid: 6083855353732399583
+  - rid: 6083855353732399584
+  - rid: 6083855353732399585
+  - rid: 6083855353732399586
+  - rid: 6083855353732399587
+  - rid: 6083855353732399588
+  - rid: 6083855353732399589
+  - rid: 6083855353732399590
+  - rid: 6083855353732399591
+  - rid: 6083855353732399592
+  - rid: 6083855353732399593
+  - rid: 6083855353732399594
+  - rid: 6083855353732399595
+  - rid: 6083855353732399596
+  - rid: 6083855353732399597
+  - rid: 6083855353732399598
+  - rid: 6083855353732399599
+  - rid: 6083855353732399600
+  - rid: 6083855353732399601
+  - rid: 6083855353732399602
+  - rid: 6083855353732399603
   references:
     version: 2
     RefIds:
-    - rid: 6083855353732399237
+    - rid: 6083855353732399578
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 003e6bc3-739a-4b71-a2d5-93925254f45e
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 2472, y: 143}
+        Position: {x: 2952, y: 412}
         DialogueText: "\uC0AC\uC2E4\uC740... \uC81C\uAC00 \uB2ED\uC744 \uBB34\uC11C\uC6CC\uD574\uC11C\uC694..."
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399238
+    - rid: 6083855353732399579
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 034c354a-0915-46d1-ab13-24405d2bd64a
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1554, y: -169}
+        DialogueText: "\uAC00\uC838\uC624\uC168\uAD70\uC694!"
+        PortraitKey: 
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855353732399580
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 049d4b1d-dc24-476f-af09-725d3b6b137a
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 5228, y: 135}
+        Position: {x: 5760, y: 484}
         Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
         Warps:
         - Target: String
@@ -127,55 +169,118 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 6083855353732399239
+    - rid: 6083855353732399581
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 05331c6a-7da0-4265-be3d-fcf1b1984a06
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1567, y: 29}
+        DialogueText: "\uC774 \uB2ED\uC744 \uC8FD\uC77C \uC218\uB3C4 \uC5C6\uACE0......"
+        PortraitKey: Agg
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855353732399582
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 08a9f126-36e7-46ca-96a4-c3ad575e1d0a
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 4036, y: 140}
+        Position: {x: 4516, y: 409}
         DialogueText: "\uC8C4\uC1A1\uD558\uC9C0\uB9CC \uBD80\uD0C1 \uD558\uB098\uB9CC
           \uB4DC\uB824\uB3C4 \uB420\uAE4C\uC694?"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399240
+    - rid: 6083855353732399583
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 17fd9dab-aabb-4dc3-be57-64c70aae25f8
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 542, y: 149}
+        Position: {x: 1022, y: 418}
         DialogueText: "\uC73C\uC73C... \uC5B4\uB5A1\uD558\uC9C0..."
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399241
+    - rid: 6083855353732399584
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1a5a632e-17d3-46fd-91ee-e7cf141bc670
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1678, y: 132}
+        Position: {x: 2158, y: 401}
         DialogueText: "\uACC4\uB780\uC774 \uD544\uC694\uD55C\uB370 \uACC4\uB780\uC744
           \uAD6C\uD558\uB294 \uAC8C \uC5B4\uB835\uB124\uC694..."
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399242
+    - rid: 6083855353732399585
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 246f96d4-dc6d-4f89-84e2-ba440f38f00a
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 1145, y: -61}
+        Handler: {fileID: 11400000, guid: 28b9471e6b5357f4d9704dce3bc4427e, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 5644dbdd2235fb047a3802affdc701f6, type: 2}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 3
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855353732399586
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4379964d-7a49-4761-8180-fb41f357e724
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 801, y: 123}
+        Handler: {fileID: 11400000, guid: 249ba529da060b441b59bef7594bbe84, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Quest_Karen_Egg_1
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855353732399587
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4a7ef9c9-5f87-48b4-9e71-8053ef17e462
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1840, y: -167}
+        DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4... \uC774 \uC740\uD61C \uC78A\uC9C0
+          \uC54A\uACA0\uC2B5\uB2C8\uB2E4!!"
+        PortraitKey: 
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855353732399588
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 537a1ba8-7b84-4225-b6d3-beadfd5ab71f
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1392, y: 130}
+        Position: {x: 1872, y: 399}
         DialogueText: "\uADF8... \uBD80\uB044\uB7FD\uC9C0\uB9CC..."
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399243
+    - rid: 6083855353732399589
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 612b13f6-1b4c-4cef-960a-df428d4410a7
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 5512, y: -50}
+        Position: {x: 6044, y: 299}
         Handler: {fileID: 11400000, guid: 3384730df4eec734bb7101f3490933d1, type: 2}
         Warps:
         - Target: String
@@ -190,119 +295,160 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855353732399244
+    - rid: 6083855353732399590
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 6e2c75e6-21b8-4aa2-ad80-14c583f59bbd
         NodeTitle: Branch
         TypeName: Branch
-        Position: {x: 4418, y: 65}
+        Position: {x: 4898, y: 334}
         DialogueText: "\uB2EC\uAC40\uC744 3\uAC1C\uB9CC \uAC00\uC838\uC640\uC8FC\uC138\uC694!
           \uBCF4\uC0C1\uC740 \uAF2D \uB4DC\uB9B4\uAC8C\uC694!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399245
+    - rid: 6083855353732399591
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 70c3a3a2-2d44-4171-a8fa-455a99b2094d
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 4836, y: 129}
+        Position: {x: 5368, y: 478}
         DialogueText: "\uB124... \uADF8\uCD78... \uC81C\uAC00 \uC5F4\uC2EC\uD788
           \uC7A1\uC544\uBD10\uC57C\uACA0\uC8E0...!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399246
+    - rid: 6083855353732399592
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 71dd2f57-44c6-4811-a2d8-fc98eeee9676
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 4837, y: -50}
+        Position: {x: 5369, y: 299}
         DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399247
+    - rid: 6083855353732399593
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 85375dec-307d-49e3-98d4-c90b09738751
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1883, y: 30}
+        DialogueText: "\uC544, \uC544\uB2D9\uB2C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855353732399594
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 96549c3f-ba2f-4471-99e6-0cafe98f5120
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2237, y: -166}
+        DialogueText: "\uBCF4\uC0C1\uC73C\uB85C -----\uB97C \uB4DC\uB9AC\uACA0\uC2B5\uB2C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855353732399595
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 97b34a74-71aa-4427-ac00-0ddfb70b8129
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1125, y: 137}
+        Position: {x: 1605, y: 406}
         DialogueText: "\uC73C..."
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399248
+    - rid: 6083855353732399596
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 9a605d89-ee23-48e7-953f-390e8dc60de9
         NodeTitle: Branch
         TypeName: Branch
-        Position: {x: 3675, y: 144}
+        Position: {x: 4155, y: 413}
         DialogueText: "\uCC38 \uC5B4\uB835\uB124\uC694... \uC800\uB294 \uB2ED\uC774
           \uC2EB\uC5B4\uC694...!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399249
+    - rid: 6083855353732399597
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a1c138d2-b69e-458d-8311-ef4aa8f2666f
         NodeTitle: Branch
         TypeName: Branch
-        Position: {x: 3175, y: 146}
+        Position: {x: 3655, y: 415}
         DialogueText: "\uB9C8\uC871\uC774\uBA74 \uC8FD\uC774\uBA74 \uB418\uB294\uB370...
           \uC598\uB124\uB294 \uC8FD\uC774\uBA74 \uC548\uB418\uC796\uC544\uC694!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399250
+    - rid: 6083855353732399598
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c3f92225-862c-47d9-8889-4378e27c6e0b
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 2821, y: 144}
+        Position: {x: 3301, y: 413}
         DialogueText: "\uC800 \uC560\uB4E4\uC758 \uC54C\uC744 \uC5B4\uB5BB\uAC8C
           \uAC00\uC838\uC640\uC694!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399251
+    - rid: 6083855353732399599
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d43dc72b-51bf-4eb1-ab35-f082f4c745fd
         NodeTitle: Branch
         TypeName: Branch
-        Position: {x: 2099, y: 127}
+        Position: {x: 2579, y: 396}
         DialogueText: "\uC73C\uC73C\uC73C...!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399252
+    - rid: 6083855353732399600
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ea6ea129-4661-4893-88a2-784c22715d62
         NodeTitle: Branch
         TypeName: Branch
-        Position: {x: 837, y: 147}
+        Position: {x: 1317, y: 416}
         DialogueText: "\uC544, {player}\uB2D8!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399253
+    - rid: 6083855353732399601
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f33def3e-8d88-443b-9244-3e73984a4f6e
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 5106, y: -52}
+        Position: {x: 5638, y: 297}
         DialogueText: "\uB2EC\uAC40\uC744 \uAD6C\uD558\uC2DC\uBA74 \uC800\uC5D0\uAC8C
           \uB9D0\uC744 \uAC78\uC5B4\uC8FC\uC138\uC694!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855353732399254
+    - rid: 6083855353732399602
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f6c065fe-b60d-44ee-9b8d-fc19602d88e2
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 2597, y: -156}
+        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 04440bb28c25437438761a3289fe43a8, type: 2}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 10
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855353732399603
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f89c77e0-3c76-43ec-ad20-f52efc29bad3
         NodeTitle: Condition
         TypeName: Condition
-        Position: {x: 281, y: -155}
+        Position: {x: 318, y: 189}
         Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
         Warps:
         - Target: String

@@ -21,12 +21,12 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 4c2fcfc0-8a13-4036-990a-db45a635a05f
   NodeData:
-  - rid: 6083855310640644883
-  - rid: 6083855310640644884
+  - rid: 6083855353732399382
+  - rid: 6083855353732399383
   references:
     version: 2
     RefIds:
-    - rid: 6083855310640644883
+    - rid: 6083855353732399382
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4c2fcfc0-8a13-4036-990a-db45a635a05f
@@ -35,8 +35,8 @@ MonoBehaviour:
         Position: {x: 581, y: 203}
         DialogueText: "(\uC5B4\uB518\uAC00 \uC704\uD5D8\uD574 \uBCF4\uC778\uB2E4)"
         PortraitKey: 
-        ActorKey: 
-    - rid: 6083855310640644884
+        ActorKey: exp
+    - rid: 6083855353732399383
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d2b4397d-266a-4859-aa82-9b3fae8fbb83

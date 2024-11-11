@@ -2485,6 +2485,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnTriggerArgEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _interaction: {fileID: 325544288}
 --- !u!114 &325544288
 MonoBehaviour:
@@ -3117,6 +3120,9 @@ MonoBehaviour:
   OnTriggerEvent:
     m_PersistentCalls:
       m_Calls: []
+  OnTriggerArgEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _interaction: {fileID: 954518151}
 --- !u!114 &954518151
 MonoBehaviour:
@@ -3364,6 +3370,14 @@ PrefabInstance:
     - target: {fileID: 3853384873456405071, guid: cc1d4a49cf5697c49a6ee3b14dc6a8b5, type: 3}
       propertyPath: m_Name
       value: PActor_Piraeus_Chapter_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: cc1d4a49cf5697c49a6ee3b14dc6a8b5, type: 3}
+      propertyPath: _saveKey
+      value: Piraeus_Chapter_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: cc1d4a49cf5697c49a6ee3b14dc6a8b5, type: 3}
+      propertyPath: _actorKey
+      value: Piraeus_Chapter_3
       objectReference: {fileID: 0}
     - target: {fileID: 4654251629137900466, guid: cc1d4a49cf5697c49a6ee3b14dc6a8b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3886,6 +3900,9 @@ MonoBehaviour:
   OnTriggerEvent:
     m_PersistentCalls:
       m_Calls: []
+  OnTriggerArgEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _interaction: {fileID: 1265273221}
 --- !u!114 &1265273221
 MonoBehaviour:
@@ -4037,6 +4054,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnTriggerArgEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _interaction: {fileID: 1278062750}
 --- !u!114 &1278062750
 MonoBehaviour:

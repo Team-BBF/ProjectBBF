@@ -17,6 +17,9 @@ MonoBehaviour:
   - BaseNodeGuid: 423c33e6-c44f-42ff-bb03-2c5a8dc2727a
     PortName: Execute
     TargetNodeGuid: afed1fb2-7815-4d33-ab31-d82a51099526
+  - BaseNodeGuid: 39fa8fc4-5990-4f32-a30a-66a5cdee71f5
+    PortName: Next
+    TargetNodeGuid: bd953986-1033-4766-ade5-56a161c11e48
   - BaseNodeGuid: 4e17b7f2-bd40-47af-bbfe-18ab8ddaadca
     PortName: Next
     TargetNodeGuid: f38be2b0-cf3a-4308-830a-70e49f0f6681
@@ -25,7 +28,7 @@ MonoBehaviour:
     TargetNodeGuid: b198ddd5-4464-4f2b-a900-c3dbc4bd7f7d
   - BaseNodeGuid: 76c08daf-f967-495a-abd3-81d46cc574ac
     PortName: Next
-    TargetNodeGuid: 4e17b7f2-bd40-47af-bbfe-18ab8ddaadca
+    TargetNodeGuid: 39fa8fc4-5990-4f32-a30a-66a5cdee71f5
   - BaseNodeGuid: 9f1416a4-e9e3-457b-a85a-d6f22fcf47c5
     PortName: Next
     TargetNodeGuid: abe8f76c-6b34-449b-a4e6-f923c07e9794
@@ -41,6 +44,9 @@ MonoBehaviour:
   - BaseNodeGuid: b75b2197-248c-46df-ad50-e85ed31e0557
     PortName: Next
     TargetNodeGuid: 76c08daf-f967-495a-abd3-81d46cc574ac
+  - BaseNodeGuid: bd953986-1033-4766-ade5-56a161c11e48
+    PortName: Next
+    TargetNodeGuid: 4e17b7f2-bd40-47af-bbfe-18ab8ddaadca
   - BaseNodeGuid: f2a75759-dd71-4592-8809-1ca37a691789
     PortName: Next
     TargetNodeGuid: feb6ead6-c2f2-460c-b71f-c8417a43c698
@@ -54,23 +60,70 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 5655ed73-37b4-42d8-b3cd-3e07dadf57a3
   NodeData:
-  - rid: 6083855310640644643
-  - rid: 6083855310640644644
-  - rid: 6083855310640644645
-  - rid: 6083855310640644640
-  - rid: 6083855310640644646
-  - rid: 6083855310640644647
-  - rid: 6083855310640644641
-  - rid: 6083855310640644648
-  - rid: 6083855310640644642
-  - rid: 6083855310640644651
-  - rid: 6083855310640644649
-  - rid: 6083855310640644650
-  - rid: 6083855310640644652
+  - rid: 6083855383838589339
+  - rid: 6083855383838589340
+  - rid: 6083855383838589341
+  - rid: 6083855383838589342
+  - rid: 6083855383838589343
+  - rid: 6083855383838589344
+  - rid: 6083855383838589345
+  - rid: 6083855383838589346
+  - rid: 6083855383838589347
+  - rid: 6083855383838589348
+  - rid: 6083855383838589349
+  - rid: 6083855383838589350
+  - rid: 6083855383838589351
+  - rid: 6083855383838589352
+  - rid: 6083855383838589353
   references:
     version: 2
     RefIds:
-    - rid: 6083855310640644640
+    - rid: 6083855383838589339
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 39fa8fc4-5990-4f32-a30a-66a5cdee71f5
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1167, y: 180}
+        DialogueText: "\uADF8\uB7EC\uACE0 \uBCF4\uB2C8 \uB9C8\uC744\uC5D0 <color=#800080>\uBCC4\uC0AC\uD0D5
+          \uAC70\uBD81\uC774</color>\uB791 <color=#800080>\uD06C\uB9AC\uC2A4\uD0C8
+          \uC0AC\uC2B4</color>\uC774 \uB098\uD0C0\uB0AC\uB2E4\uB294 \uC774\uC57C\uAE30\uAC00
+          \uC788\uB2E4\uB0E5!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589340
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4640e74c-d0d2-433c-bbbc-90ab9fe8b2d3
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4029, y: 75}
+        DialogueText: "\uB108\uBB34\uD558\uB2E4\uB0E5! \uC778\uAC04 \uB9D0\uC885\uC774\uB77C\uB0E5!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589341
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4e17b7f2-bd40-47af-bbfe-18ab8ddaadca
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2442, y: 198}
+        DialogueText: "\uADF8\uAC74 \uADF8\uB807\uACE0 \uB0B4\uAC00 \uBE75 \uB9CC\uB4DC\uB294
+          \uAC70\uB294 \uB9CE\uC774 \uB3C4\uC640\uC8FC\uC9C0 \uC54A\uC558\uB0E5?"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589342
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5655ed73-37b4-42d8-b3cd-3e07dadf57a3
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3620, y: 273}
+        DialogueText: "\uB098\uB294 \uAE30\uC5B5\uB825\uC774 \uC88B\uB2E4\uB0E5!
+          \uAF2D \uC6B0\uC2B9\uD558\uBA74 \uBC1B\uC744\uAC70\uB77C\uB0E5!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589343
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 76c08daf-f967-495a-abd3-81d46cc574ac
@@ -80,7 +133,28 @@ MonoBehaviour:
         DialogueText: "\uC774\uC81C \uD55C \uBC88\uB9CC \uC774\uAE30\uBA74 \uBA85\uC7A5\uC774\uB77C\uB0E5!!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644641
+    - rid: 6083855383838589344
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9f1416a4-e9e3-457b-a85a-d6f22fcf47c5
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3354, y: 77}
+        DialogueText: "{player}\uB294 \uBC30\uC740\uB9DD\uB355\uD558\uB2E4\uB0E5!!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589345
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: abe8f76c-6b34-449b-a4e6-f923c07e9794
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3665, y: 74}
+        DialogueText: "\uD06C\uB098\uD070 \uC2A4\uC2B9\uC758 \uC740\uD61C\uB97C \uBAA8\uB974\uB294
+          \uAC70\uB2E4\uB0E5!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589346
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: afed1fb2-7815-4d33-ab31-d82a51099526
@@ -90,7 +164,19 @@ MonoBehaviour:
         DialogueText: "\uBCF8\uC120\uC740 \uC7AC\uBC0C\uC5C8\uB2E4\uB0E5!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644642
+    - rid: 6083855383838589347
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b198ddd5-4464-4f2b-a900-c3dbc4bd7f7d
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4049, y: 269}
+        DialogueText: "\uADF8\uAC74 \uADF8\uB807\uACE0 \uC774\uC81C \uB0A8\uC740
+          \uB2E4\uB978 3\uBA85\uC758 \uCC38\uAC00\uC790\uB4E4\uC740 \uC815\uB9D0
+          \uC7C1\uC7C1\uD558\uB2E4\uB0E5!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589348
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b75b2197-248c-46df-ad50-e85ed31e0557
@@ -100,109 +186,54 @@ MonoBehaviour:
         DialogueText: "\uC62C\uB77C\uAC00\uC11C \uC9C4\uC9DC \uB2E4\uD589\uC774\uC5C8\uB2E4\uB0E5!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644643
+    - rid: 6083855383838589349
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
-        GUID: 4640e74c-d0d2-433c-bbbc-90ab9fe8b2d3
+        GUID: bd953986-1033-4766-ade5-56a161c11e48
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 2673, y: 70}
-        DialogueText: "\uB108\uBB34\uD558\uB2E4\uB0E5! \uC778\uAC04 \uB9D0\uC885\uC774\uB77C\uB0E5!"
+        Position: {x: 2084, y: 180}
+        DialogueText: "\uCC3E\uC544\uBCF4\uBA74 \uC788\uC744 \uC218\uB3C4 \uC788\uB2E4\uB0E5!!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644644
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 4e17b7f2-bd40-47af-bbfe-18ab8ddaadca
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1165, y: 197}
-        DialogueText: "\uB0B4\uAC00 \uBE75 \uB9CC\uB4DC\uB294 \uAC70\uB294 \uB9CE\uC774
-          \uB3C4\uC640\uC92C\uB2E4\uB0E5."
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644645
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 5655ed73-37b4-42d8-b3cd-3e07dadf57a3
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2264, y: 268}
-        DialogueText: "\uB098\uB294 \uAE30\uC5B5\uB825\uC774 \uC88B\uB2E4\uB0E5!
-          \uAF2D \uC6B0\uC2B9\uD558\uBA74 \uBC1B\uC744\uAC70\uB77C\uB0E5!"
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644646
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 9f1416a4-e9e3-457b-a85a-d6f22fcf47c5
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1998, y: 72}
-        DialogueText: "{player}\uB294 \uBC30\uC740\uB9DD\uB355\uD558\uB2E4\uB0E5!!"
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644647
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: abe8f76c-6b34-449b-a4e6-f923c07e9794
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2309, y: 69}
-        DialogueText: "\uD06C\uB098\uD070 \uC2A4\uC2B9\uC758 \uC740\uD61C\uB97C \uBAA8\uB974\uB294
-          \uAC70\uB2E4\uB0E5!"
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644648
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: b198ddd5-4464-4f2b-a900-c3dbc4bd7f7d
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2693, y: 264}
-        DialogueText: "\uADF8\uAC74 \uADF8\uB807\uACE0 \uC774\uC81C \uB0A8\uC740
-          \uB2E4\uB978 3\uBA85\uC758 \uCC38\uAC00\uC790\uB4E4\uC740 \uC815\uB9D0
-          \uC7C1\uC7C1\uD558\uB2E4\uB0E5!"
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644649
-      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f38be2b0-cf3a-4308-830a-70e49f0f6681
-        NodeTitle: Branch
-        TypeName: Branch
-        Position: {x: 1541, y: 198}
-        DialogueText: "\uADF8\uB7EC\uB2C8, \uC6B0\uC2B9\uD558\uBA74 \uB098\uD55C\uD14C
-          \uCE04\uB974\uB97C \uC120\uBB3C\uD574\uB2EC\uB77C\uB0E5!"
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644650
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f62ab46a-2f5e-475f-b0ea-aab4e5198c52
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2001, y: 270}
-        DialogueText: "\uC57D\uC18D\uC774\uB77C\uB0E5!!"
-        PortraitKey: 
-        ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644651
+    - rid: 6083855383838589350
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f2a75759-dd71-4592-8809-1ca37a691789
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 3196, y: 266}
+        Position: {x: 4546, y: 271}
         DialogueText: "\uACB0\uC2B9\uC740 \uC815\uB9D0 \uC5B4\uB824\uC6B8\uAC70\uB77C\uB0E5...!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855310640644652
+    - rid: 6083855383838589351
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f38be2b0-cf3a-4308-830a-70e49f0f6681
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 2897, y: 203}
+        DialogueText: "\uADF8\uB7EC\uB2C8, \uC6B0\uC2B9\uD558\uBA74 \uB098\uD55C\uD14C
+          \uCE04\uB974\uB97C \uC120\uBB3C\uD574\uB2EC\uB77C\uB0E5!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589352
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f62ab46a-2f5e-475f-b0ea-aab4e5198c52
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3357, y: 275}
+        DialogueText: "\uC57D\uC18D\uC774\uB77C\uB0E5!!"
+        PortraitKey: 
+        ActorKey: Lylla_Chapter_1
+    - rid: 6083855383838589353
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: feb6ead6-c2f2-460c-b71f-c8417a43c698
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 3532, y: 268}
-        DialogueText: "\uD654\uC774\uD305\uC774\uB77C\uB0E5!!"
+        Position: {x: 4928, y: 278}
+        DialogueText: "\uADF8\uB7FC \uB300\uD68C \uD654\uC774\uD305\uC774\uB77C\uB0E5!!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1

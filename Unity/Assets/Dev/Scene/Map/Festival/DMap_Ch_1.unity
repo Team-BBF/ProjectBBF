@@ -13516,12 +13516,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4654251629137900466, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62.39
+      value: -65.94
       objectReference: {fileID: 0}
     - target: {fileID: 4654251629137900466, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.41
+      value: -19.33
       objectReference: {fileID: 0}
+    - target: {fileID: 7096942237074771261, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096942237074771261, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b0d2c390ff02f334d8efdae4a2cf8482, type: 2}
+    - target: {fileID: 7096942237074771261, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
+      propertyPath: _targetQuestList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 49517e9c609bb254b85e6b2671004a69, type: 2}
+    - target: {fileID: 7096942237074771261, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b891b7fe73b729418bb5f9de23ffda7, type: 2}
+    - target: {fileID: 7096942237074771261, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
+      propertyPath: _targetQuestList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b78789ef35ce8c1418e9086b7ccb3839, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13587,6 +13607,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 22.87
       objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: c4b4749b3502de24d89b9902b9ae0eb8, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: c4b4749b3502de24d89b9902b9ae0eb8, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 913b0a1c2df1c0140975896f2246cd5e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -105,4 +105,10 @@ public class QuestManager : MonoBehaviourSingleton<QuestManager>
         _persistence.QuestTable[questData.QuestKey] = type;
         return true;
     }
+
+    public IList<(string questKey, QuestType state)> GetAllQuestState()
+    {
+        return _persistence.QuestTable.Select(x => (x.Key, x.Value)).ToList();
+    }
+    
 }

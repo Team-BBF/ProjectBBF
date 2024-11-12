@@ -53,18 +53,22 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
             pc.HudController.Visible = false;
             pc.Inventory.QuickInvVisible = false;
             pc.Blackboard.IsInteractionStopped = true;
+            pc.QuestPresenter.Visible = false;
         }
 
     }
 
     private void OnDestroy()
     {
+        if (GameObjectStorage.Instance == false) return;
+        
         var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
         if (po && po.TryGetComponent(out PlayerController pc))
         {
             pc.HudController.Visible = true;
             pc.Inventory.QuickInvVisible = true;
             pc.Blackboard.IsInteractionStopped = false;
+            pc.QuestPresenter.Visible = true;
         }
         
         _director.stopped -= OnStopped;

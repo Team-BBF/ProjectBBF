@@ -96,7 +96,6 @@ public class QuestIndicatorUI : ActorComponent
         if (_esoQuest == false) return;
         
         _esoQuest.OnEventRaised -= OnEventRaised;
-        print(name);
     }
 
     private void OnEventRaised(QuestEvent obj)

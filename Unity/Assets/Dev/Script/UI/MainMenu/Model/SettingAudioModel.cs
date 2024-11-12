@@ -11,11 +11,6 @@ public class SettingAudioModel
         if (AudioManager.Instance == false) return;
 
         AudioManager.Instance.OnChangedVolume += _OnChangedVolume;
-
-        
-        if (ScreenManager.Instance == false) return;
-
-        ScreenManager.Instance.OnChangedResolution += OnChangedResolution;
     }
 
 
@@ -29,11 +24,6 @@ public class SettingAudioModel
     private void _OnChangedVolume(string arg1, float arg2)
     {
         OnChangedVolume?.Invoke((arg1, arg2));
-    }
-    
-    private void OnChangedResolution(Vector2Int resolution)
-    {
-        
     }
 
     public float GetVolume(string groupKey)

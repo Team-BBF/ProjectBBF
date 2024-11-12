@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace ProjectBBF.Persistence
 {
-    [Singleton(ESingletonType.Global)]
+    [Singleton(ESingletonType.Global, -999999)]
     public class PersistenceManager : MonoBehaviourSingleton<PersistenceManager>
     {
         public static readonly JsonDescriptor Descriptor = new JsonDescriptor();
@@ -23,6 +23,8 @@ namespace ProjectBBF.Persistence
         {
             _objGameDataTable = new Dictionary<string, object>();
             _objUserDataTable = new Dictionary<string, object>();
+            
+            LoadUserData();
         }
 
         public override void PostRelease()
@@ -249,14 +251,20 @@ namespace ProjectBBF.Persistence
                 $"Persistence 에러! Key({key}), cachedObject Type({cachedObj.GetType()}), Acquire Type({typeof(T)})");
         }
 
-        public bool TryLoadOrCreateUserData<T>(string key, out T value) where T : new()
+        public enum LoadType
         {
-            bool isCreated = false;
+            Created,
+            Loaded,
+        }
+
+        public LoadType TryLoadOrCreateUserData<T>(string key, out T value) where T : new()
+        {
+            LoadType type = LoadType.Loaded;
             
             object cachedObj = GetCachedPersistenceObjUserData(ref key);
             if (cachedObj is null)
             {
-                isCreated = true;
+                type = LoadType.Created;
                 cachedObj = new T();
                 Debug.Log($"PersistenceManager object 생성(key: {typeof(T)}, type: {key})");
                 
@@ -267,7 +275,7 @@ namespace ProjectBBF.Persistence
             
             value = (T)cachedObj;
 
-            return isCreated is false;
+            return type;
         }
 
         public List<KeyValuePair<string, object>> GetAllData()

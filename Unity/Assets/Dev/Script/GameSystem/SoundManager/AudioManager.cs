@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Cysharp.Threading.Tasks;
 using ProjectBBF.Persistence;
 using ProjectBBF.Singleton;
 using UnityEngine;
@@ -18,8 +19,7 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
 
     private Dictionary<string, float> _volumeTable = new();
 
-    public event Action<string, float> OnChangedVolume; 
-    
+    public event Action<string, float> OnChangedVolume;
     public override void PostInitialize()
     {
         _mixer = Resources.Load<AudioMixer>(PATH + "Master");
@@ -27,28 +27,6 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
         var list = Resources.LoadAll<AudioTable>(PATH);
 
         _audioTables = new();
-
-        PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting);
-
-        var keyValuePairs = setting
-            .GetType()
-            .GetFields(BindingFlags.Public| BindingFlags.NonPublic | BindingFlags.Instance)
-            .Where(x => x.GetCustomAttribute<GameSetting.VolumeAttribute>() is not null)
-            .Select(x =>
-            {
-                var att = x.GetCustomAttribute<GameSetting.VolumeAttribute>();
-                return new KeyValuePair<string, float>(att.Key, (float)x.GetValue(setting));
-            });
-
-        _volumeTable = new Dictionary<string, float>(keyValuePairs);
-
-        var temp = _volumeTable.ToList();
-        
-        foreach (var pair in temp)
-        {
-            SetVolume(pair.Key, pair.Value);
-        }
-        
 
         foreach (var table in list)
         {
@@ -63,6 +41,41 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
             }
         }
 
+
+        PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting);
+
+        var keyValuePairs = setting
+            .GetType()
+            .GetFields(BindingFlags.Public| BindingFlags.NonPublic | BindingFlags.Instance)
+            .Where(x => x.GetCustomAttribute<GameSetting.VolumeAttribute>() is not null)
+            .Select(x =>
+            {
+                var att = x.GetCustomAttribute<GameSetting.VolumeAttribute>();
+                return new KeyValuePair<string, float>(att.Key, (float)x.GetValue(setting));
+            }).ToList();
+
+        _volumeTable = new Dictionary<string, float>(keyValuePairs.ToList());
+        
+        foreach (KeyValuePair<string, float> pair in _volumeTable.ToList())
+        {
+            SetVolume(pair.Key, pair.Value);
+        }
+
+        StartCoroutine(CoVolumeUpdate(keyValuePairs, setting.IsCreatedAudio));
+
+        if (setting.IsCreatedAudio is false)
+        {
+            setting.IsCreatedAudio = true;
+        }
+    }
+
+    private IEnumerator CoVolumeUpdate(List<KeyValuePair<string, float>> list, bool isCreated)
+    {
+        yield return null;
+        foreach (KeyValuePair<string, float> pair in list)
+        {
+            SetVolume(pair.Key, isCreated is false ? 1f : pair.Value);
+        }
     }
 
     public void SaveSetting()

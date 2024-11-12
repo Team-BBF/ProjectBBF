@@ -30,6 +30,20 @@ namespace ProjectBBF.Persistence
         [SerializeField] private int _refreshRate;
         [SerializeField] private float _renderScale;
 
+        [SerializeField] private bool _isCreatedScreen;
+        [SerializeField] private bool _isCreatedAudio;
+
+        public bool IsCreatedScreen
+        {
+            get => _isCreatedScreen;
+            set => _isCreatedScreen = value;
+        }
+
+        public bool IsCreatedAudio
+        {
+            get => _isCreatedAudio;
+            set => _isCreatedAudio = value;
+        }
 
         public float VolumeBGM
         {

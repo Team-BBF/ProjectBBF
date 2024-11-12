@@ -188,6 +188,11 @@ public class SettingGraphicModel
         var inst = ScreenManager.Instance;
         if (inst)
         {
+            if (inst.TargetFrameRate == 0)
+            {
+                return (1f, inst.MaxFrameRate);
+            }
+            
             float normalizedValue = (float)inst.TargetFrameRate / Mathf.Max(1, inst.MaxFrameRate);
             return (normalizedValue, inst.MaxFrameRate);
         }

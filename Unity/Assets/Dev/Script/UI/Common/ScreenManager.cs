@@ -15,8 +15,6 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
     private GameSetting _setting;
     public override void PostInitialize()
     {
-        PersistenceManager.Instance.LoadUserData();
-
         var resList = new List<Vector2Int>();
         foreach (var resolution in Screen.resolutions)
         {
@@ -25,14 +23,17 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 
         MaxFrameRate = Mathf.RoundToInt((float)Screen.resolutions.Max(x => x.refreshRateRatio.value));
         AllResolutions = resList.Distinct().ToList();
+        PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting);
         
-        if (PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting) is false)
+        if (setting.IsCreatedScreen is false)
         {
+            setting.IsCreatedScreen = true;
             setting.ScreenMode = (int)FullScreenMode.MaximizedWindow;
             setting.VsyncCount = QualitySettings.vSyncCount;
             setting.Resolution = AllResolutions[^1];
             setting.RefreshRate = MaxFrameRate;
             setting.RenderScale = 1f;
+            RenderScale = 1f;
         }
         else
         {

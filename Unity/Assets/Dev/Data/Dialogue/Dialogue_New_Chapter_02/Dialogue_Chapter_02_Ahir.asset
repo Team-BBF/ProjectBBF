@@ -45,20 +45,20 @@ MonoBehaviour:
     PortName: "\uB124"
     TargetNodeGuid: 410fafe8-23c5-439c-8c24-a997e58c38d8
   NodeData:
-  - rid: 6083855402588438675
-  - rid: 6083855402588438676
-  - rid: 6083855402588438677
-  - rid: 6083855402588438678
-  - rid: 6083855402588438679
-  - rid: 6083855402588438680
-  - rid: 6083855402588438681
-  - rid: 6083855402588438682
-  - rid: 6083855402588438683
-  - rid: 6083855402588438684
+  - rid: 6556656399990652928
+  - rid: 6556656399990652929
+  - rid: 6556656399990652930
+  - rid: 6556656399990652931
+  - rid: 6556656399990652932
+  - rid: 6556656399990652933
+  - rid: 6556656399990652934
+  - rid: 6556656399990652935
+  - rid: 6556656399990652936
+  - rid: 6556656399990652937
   references:
     version: 2
     RefIds:
-    - rid: 6083855402588438675
+    - rid: 6556656399990652928
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 29a42c79-74a6-428b-b3b4-1512478ca235
@@ -68,7 +68,7 @@ MonoBehaviour:
         DialogueText: "\uBCF8\uC120\uC758 \uBE75\uC740 \uBA4B\uC9C0\uC2DC\uB358\uB370\uC694?"
         PortraitKey: Smi
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855402588438676
+    - rid: 6556656399990652929
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 29b44999-2209-49f8-9da1-3c9b66bca5e1
@@ -83,7 +83,7 @@ MonoBehaviour:
           StringValue: 'Ahir_Chapter_2_ContestResultBox '
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855402588438677
+    - rid: 6556656399990652930
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 410fafe8-23c5-439c-8c24-a997e58c38d8
@@ -98,7 +98,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 11400000, guid: aac3b39cb157ed546ad42ce2fcee3d76, type: 2}
           BoolValue: 0
-    - rid: 6083855402588438678
+    - rid: 6556656399990652931
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 6b8b1497-7790-434f-bb3d-571fe7a9ebb2
@@ -109,7 +109,7 @@ MonoBehaviour:
           \uAC78\uC5B4\uC8FC\uC138\uC694"
         PortraitKey: 
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855402588438679
+    - rid: 6556656399990652932
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 99ef99cb-49f2-4295-902a-c17e4cc21e06
@@ -119,7 +119,7 @@ MonoBehaviour:
         DialogueText: "\uBE75\uC744 \uC81C\uCD9C\uD558\uC2E4\uAC74\uAC00\uC694?"
         PortraitKey: 
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855402588438680
+    - rid: 6556656399990652933
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 9a46439d-f355-4d62-8c02-65ea3dce86e3
@@ -130,7 +130,7 @@ MonoBehaviour:
           \uBE75\uC744 \uB123\uC5B4\uC8FC\uC2DC\uACE0 \uC81C\uAC00 \uB9D0\uC744 \uAC78\uC5B4\uC8FC\uC138\uC694"
         PortraitKey: 
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855402588438681
+    - rid: 6556656399990652934
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e2635d61-0586-430a-b2e4-579fc78ea794
@@ -141,7 +141,7 @@ MonoBehaviour:
           {player}\uB2D8\uC774\uC2DC\uAD70\uC694."
         PortraitKey: Smi
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855402588438682
+    - rid: 6556656399990652935
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f62b858f-d218-458c-88dd-0adcbb343799
@@ -151,7 +151,7 @@ MonoBehaviour:
         DialogueText: "\uACB0\uC2B9\uC758 \uBE75\uAE4C\uC9C0 \uAE30\uB300\uD574\uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
         PortraitKey: Smi
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855402588438683
+    - rid: 6556656399990652936
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 48cc0326-7d9f-4cc1-8c1b-37dbad60dc29
@@ -160,7 +160,7 @@ MonoBehaviour:
         Position: {x: 1913, y: 419}
         Handler: {fileID: 11400000, guid: c469fcabfa62c5547b0afa28aed56113, type: 2}
         Warps: []
-    - rid: 6083855402588438684
+    - rid: 6556656399990652937
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 29ea8a3e-93a9-411b-8afe-81aa8edcf5d2

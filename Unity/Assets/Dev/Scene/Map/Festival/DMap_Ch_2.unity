@@ -3344,6 +3344,10 @@ PrefabInstance:
       propertyPath: _targetQuestList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 514e1f6e395f2074d8dd5390e8232e4f, type: 2}
+    - target: {fileID: 5081332623763283446, guid: be728069fdb0a8743a093a1868f5daf1, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 514e1f6e395f2074d8dd5390e8232e4f, type: 2}
     - target: {fileID: 6633940948283213399, guid: be728069fdb0a8743a093a1868f5daf1, type: 3}
       propertyPath: m_Name
       value: PActor_Ed1_Chapter_2
@@ -5264,6 +5268,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: d0fa15b877c07354bb95f883ca07820a, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: d0fa15b877c07354bb95f883ca07820a, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: bf427295583a78f4093ddf675f751e63, type: 2}
     - target: {fileID: 6633940948283213399, guid: d0fa15b877c07354bb95f883ca07820a, type: 3}
       propertyPath: m_Name
       value: PActor_Hermes_Chapter_2

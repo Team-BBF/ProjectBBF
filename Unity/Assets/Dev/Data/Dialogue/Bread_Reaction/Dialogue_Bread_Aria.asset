@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Bread_Aria
+  m_EditorClassIdentifier: 
+  _guid: 8a4e688c10a8b5f4f949c93ce05daf53
+  NodeLinks:
+  - BaseNodeGuid: 9efff114-2ac8-459a-ac96-819331ad83c3
+    PortName: Execute
+    TargetNodeGuid: 9e3d0743-5539-4bde-b9a9-5438ca2dc277
+  - BaseNodeGuid: 38011009-d788-415f-a840-8027c82bc93c
+    PortName: Next
+    TargetNodeGuid: a35f00d5-1ea4-404f-b950-744c9af7b58c
+  - BaseNodeGuid: 49a489c2-a3c1-4638-a064-a1e7d81bff1d
+    PortName: Next
+    TargetNodeGuid: 4f9ed2d5-5671-406f-b666-f83aadd23f6c
+  - BaseNodeGuid: 4a16bab3-9dc9-4f09-9681-010342e43edd
+    PortName: Next
+    TargetNodeGuid: 38011009-d788-415f-a840-8027c82bc93c
+  - BaseNodeGuid: 4f9ed2d5-5671-406f-b666-f83aadd23f6c
+    PortName: Next
+    TargetNodeGuid: cc82e8ba-4db7-4f10-bea6-6ae403467b51
+  - BaseNodeGuid: 9e3d0743-5539-4bde-b9a9-5438ca2dc277
+    PortName: Next
+    TargetNodeGuid: 49a489c2-a3c1-4638-a064-a1e7d81bff1d
+  - BaseNodeGuid: cc82e8ba-4db7-4f10-bea6-6ae403467b51
+    PortName: Next
+    TargetNodeGuid: 4a16bab3-9dc9-4f09-9681-010342e43edd
+  NodeData:
+  - rid: 6083855397742706984
+  - rid: 6083855397742706985
+  - rid: 6083855397742706986
+  - rid: 6083855397742706987
+  - rid: 6083855397742706988
+  - rid: 6083855397742706989
+  - rid: 6083855397742706990
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855397742706984
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 38011009-d788-415f-a840-8027c82bc93c
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1651, y: 205}
+        DialogueText: "\uC73C... \uC54C\uC558\uC5B4."
+        PortraitKey: 
+        ActorKey: 
+    - rid: 6083855397742706985
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 49a489c2-a3c1-4638-a064-a1e7d81bff1d
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 468, y: 202}
+        DialogueText: "\uC751. \uC798 \uBA39\uC744\uAC8C"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 6083855397742706986
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4a16bab3-9dc9-4f09-9681-010342e43edd
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1286, y: 205}
+        DialogueText: "\uADF8\uAC8C \uB05D\uC774\uB0D0\uACE0...? \uADF8\uB7FC \uBB50\uB77C
+          \uD574\uC57C \uD574?"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 6083855397742706987
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4f9ed2d5-5671-406f-b666-f83aadd23f6c
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 732, y: 203}
+        DialogueText: "(\uBE75\uC744 \uBA39\uB294\uB2E4.)"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 6083855397742706988
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9e3d0743-5539-4bde-b9a9-5438ca2dc277
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 212, y: 200}
+        DialogueText: "\uC544... \uBE75...?"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 6083855397742706989
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: a35f00d5-1ea4-404f-b950-744c9af7b58c
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1911, y: 206}
+        DialogueText: "...\uACE0\uB9C8\uC6CC"
+        PortraitKey: 
+        ActorKey: 
+    - rid: 6083855397742706990
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: cc82e8ba-4db7-4f10-bea6-6ae403467b51
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1005, y: 205}
+        DialogueText: "\uB9DB\uC788\uC5B4... \uC798 \uBA39\uC5C8\uC5B4..."
+        PortraitKey: 
+        ActorKey: 

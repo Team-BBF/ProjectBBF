@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759c6d952562c9d42ae08baec230fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePrevWorld: 0
   _scene:
     _sceneAsset: {fileID: 102900000, guid: d8a0bafe8d0c3e9459f2c6a934347d5a, type: 3}
     _sceneName: World_Festival_Ch_3
@@ -687,6 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759c6d952562c9d42ae08baec230fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePrevWorld: 0
   _scene:
     _sceneAsset: {fileID: 102900000, guid: ace2e0163fac7b64b923618a5b5533e0, type: 3}
     _sceneName: World_Festival_Ch_4
@@ -1157,6 +1159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732239405}
   - component: {fileID: 732239406}
+  - component: {fileID: 732239407}
   m_Layer: 0
   m_Name: Char_Julian_Idle_Up
   m_TagString: Untagged
@@ -1173,11 +1176,11 @@ Transform:
   m_GameObject: {fileID: 732239404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.9799995, y: 14.819999, z: 0.0053933235}
+  m_LocalPosition: {x: -32.866646, y: 33.86, z: -0.115393326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1778464099}
+  m_Father: {fileID: 7611333908059081080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &732239406
 SpriteRenderer:
@@ -1231,6 +1234,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &732239407
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732239404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &864770118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,7 +2255,6 @@ Transform:
   - {fileID: 539620983}
   - {fileID: 1022308192}
   - {fileID: 1604758509}
-  - {fileID: 732239405}
   - {fileID: 1686049953}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2819,6 +2842,7 @@ Transform:
   - {fileID: 2408993422038778356}
   - {fileID: 3209339758390884878}
   - {fileID: 7647911273203128876}
+  - {fileID: 732239405}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &7611333908059081081
@@ -2830,7 +2854,7 @@ PlayableDirector:
   m_GameObject: {fileID: 3023688105936638548}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d3749f6bee66c064abb64d2047266ad3, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: a8d52914137094642bda3974cdf7c24c, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2840,8 +2864,11 @@ PlayableDirector:
     value: {fileID: 1631499129267777746}
   - key: {fileID: 3060800182525453456, guid: d3749f6bee66c064abb64d2047266ad3, type: 2}
     value: {fileID: 5082958943583297516}
+  - key: {fileID: -4054443815400281492, guid: a8d52914137094642bda3974cdf7c24c, type: 2}
+    value: {fileID: 732239407}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - e8200cf570208ec4dbd80ac73912d0b4: {fileID: 7264794673904333502}
 --- !u!212 &7617098612231228959
 SpriteRenderer:
   m_ObjectHideFlags: 0

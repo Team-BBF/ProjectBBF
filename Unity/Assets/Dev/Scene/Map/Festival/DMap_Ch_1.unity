@@ -13949,13 +13949,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -12.62
       objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: 900f66ea1e18c2a489f244fec66d6c58, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: 900f66ea1e18c2a489f244fec66d6c58, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: bf427295583a78f4093ddf675f751e63, type: 2}
     - target: {fileID: 7236962955030520697, guid: 900f66ea1e18c2a489f244fec66d6c58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.32
+      value: -19.84
       objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 900f66ea1e18c2a489f244fec66d6c58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.12
+      value: -12.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14651,11 +14659,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1150138795288770106, guid: 1827a04f116243e438f0cdbb554acb26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.9
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 1150138795288770106, guid: 1827a04f116243e438f0cdbb554acb26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.64
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 1150138795288770106, guid: 1827a04f116243e438f0cdbb554acb26, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16243,13 +16251,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -6.78
       objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: 871f2e0ed603a8d4682d71adc5628bbf, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: 871f2e0ed603a8d4682d71adc5628bbf, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e0841a491b031524d90e1f7f2ce73b99, type: 2}
     - target: {fileID: 7236962955030520697, guid: 871f2e0ed603a8d4682d71adc5628bbf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.4
+      value: -11.98
       objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 871f2e0ed603a8d4682d71adc5628bbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.94
+      value: -6.94
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

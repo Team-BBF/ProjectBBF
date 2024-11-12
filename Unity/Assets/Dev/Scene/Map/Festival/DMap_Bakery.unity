@@ -8379,12 +8379,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 706202998647150506, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
       propertyPath: _targetQuestList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 706202998647150506, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
       propertyPath: _targetQuestList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 2fed11650ea9a0e4e8d1ead990c189b2, type: 2}
+    - target: {fileID: 706202998647150506, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0378ed541be8b344b3a7eb84447787a, type: 2}
     - target: {fileID: 851288176754533070, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8
@@ -8498,12 +8502,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230793766195311017, guid: 55f5317c610efbf40a477ee22c85370c, type: 3}
       propertyPath: _targetQuestList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4230793766195311017, guid: 55f5317c610efbf40a477ee22c85370c, type: 3}
       propertyPath: _targetQuestList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 2fed11650ea9a0e4e8d1ead990c189b2, type: 2}
+    - target: {fileID: 4230793766195311017, guid: 55f5317c610efbf40a477ee22c85370c, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0378ed541be8b344b3a7eb84447787a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9552,12 +9560,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7709738560719769118, guid: ccda84ab855e8d644b260bd76bbe6cac, type: 3}
       propertyPath: _targetQuestList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7709738560719769118, guid: ccda84ab855e8d644b260bd76bbe6cac, type: 3}
       propertyPath: _targetQuestList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 2fed11650ea9a0e4e8d1ead990c189b2, type: 2}
+    - target: {fileID: 7709738560719769118, guid: ccda84ab855e8d644b260bd76bbe6cac, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0378ed541be8b344b3a7eb84447787a, type: 2}
     - target: {fileID: 8852956053084316356, guid: ccda84ab855e8d644b260bd76bbe6cac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.16

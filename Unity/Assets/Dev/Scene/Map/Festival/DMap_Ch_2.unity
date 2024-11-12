@@ -3897,6 +3897,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 243572834}
     m_Modifications:
+    - target: {fileID: 6831985246652744609, guid: 4a96e8f1c7262c946a3c20f55f38afd8, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831985246652744609, guid: 4a96e8f1c7262c946a3c20f55f38afd8, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 57a4b6c8d19475641baaa1986ac99182, type: 2}
     - target: {fileID: 6970744409334368459, guid: 4a96e8f1c7262c946a3c20f55f38afd8, type: 3}
       propertyPath: m_Name
       value: PActor_Lylla_Chapter_2

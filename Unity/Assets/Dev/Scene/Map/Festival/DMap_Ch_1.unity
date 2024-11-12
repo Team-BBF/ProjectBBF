@@ -9356,7 +9356,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6831985246652744609, guid: 98e907586cceb9d4eaab2e66f8266b07, type: 3}
       propertyPath: _targetQuestList.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6831985246652744609, guid: 98e907586cceb9d4eaab2e66f8266b07, type: 3}
       propertyPath: _targetQuestList.Array.data[0]
@@ -9374,6 +9374,10 @@ PrefabInstance:
       propertyPath: _targetQuestList.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 2fed11650ea9a0e4e8d1ead990c189b2, type: 2}
+    - target: {fileID: 6831985246652744609, guid: 98e907586cceb9d4eaab2e66f8266b07, type: 3}
+      propertyPath: _targetQuestList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0378ed541be8b344b3a7eb84447787a, type: 2}
     - target: {fileID: 6970744409334368459, guid: 98e907586cceb9d4eaab2e66f8266b07, type: 3}
       propertyPath: m_Name
       value: PActor_Lylla_Chapter_1

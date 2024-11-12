@@ -10,6 +10,7 @@ using DG.Tweening.Core.Easing;
 using MyBox;
 using ProjectBBF.Event;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CircleCollider2D))]
@@ -21,7 +22,11 @@ public class FadeinoutObject : MonoBehaviour
     private Rigidbody2D _rigid;
     
     [SerializeField] private FadeinoutObjectData _data;
-    
+
+    [SerializeField] private UnityEvent<float> _onFade;
+    [SerializeField] private UnityEvent _onEnter;
+    [SerializeField] private UnityEvent _onStay;
+    [SerializeField] private UnityEvent _onExit;
     public event Action<float> OnFadeAlpha;
     public event Action<CollisionInteractionMono> OnEnter;
     public event Action<CollisionInteractionMono> OnStay;
@@ -113,6 +118,7 @@ public class FadeinoutObject : MonoBehaviour
         
         
         OnEnter?.Invoke(interaction);
+        _onEnter?.Invoke();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -122,6 +128,7 @@ public class FadeinoutObject : MonoBehaviour
         if (other.TryGetComponent(out CollisionInteractionMono interaction) is false) return;
         
         OnStay?.Invoke(interaction);
+        _onStay?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -145,6 +152,7 @@ public class FadeinoutObject : MonoBehaviour
         }
         
         OnExit?.Invoke(interaction);
+        _onExit?.Invoke();
     }
 
     private float _lastT = 0f;
@@ -163,6 +171,7 @@ public class FadeinoutObject : MonoBehaviour
             float evaluatedValue = EaseManager.ToEaseFunction(_data.Ease).Invoke(t, 1f, 0f, 0f);
             
             OnFadeAlpha?.Invoke(evaluatedValue);
+            _onFade?.Invoke(evaluatedValue);
 
             if (t is > 1f or < 0f)
             {

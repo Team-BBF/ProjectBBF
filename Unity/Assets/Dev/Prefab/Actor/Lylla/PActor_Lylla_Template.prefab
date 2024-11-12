@@ -52,58 +52,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 440924910647378999, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _favorablity
-      value: 
-      objectReference: {fileID: 6029884496698826169}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.1875
-      objectReference: {fileID: 0}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.8125
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _proxy
-      value: 
-      objectReference: {fileID: 7085934013024308985}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _saveKey
-      value: Lylla_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _actorKey
-      value: Lylla_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _moveStrategy
-      value: 
-      objectReference: {fileID: 7129324620113017405}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _movementData
-      value: 
-      objectReference: {fileID: 11400000, guid: c50867f167756fc4480329b680e7c43a, type: 2}
-    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: abfa55a4d4e3ca34093a2f8cfe8b8160, type: 2}
-    - target: {fileID: 7844653115320804256, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 531332085, guid: d20b5410dca6ce5438f60701e910077f, type: 3}
-    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Name
-      value: PActor_Lylla_Template
-      objectReference: {fileID: 0}
     - target: {fileID: 938820693320806241, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.43
@@ -172,6 +120,54 @@ PrefabInstance:
       propertyPath: _actorComponents.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 440924910647378999, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _favorablity
+      value: 
+      objectReference: {fileID: 6029884496698826169}
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _saveKey
+      value: Lylla_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _actorKey
+      value: Lylla_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _moveStrategy
+      value: 
+      objectReference: {fileID: 7129324620113017405}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _movementData
+      value: 
+      objectReference: {fileID: 11400000, guid: c50867f167756fc4480329b680e7c43a, type: 2}
+    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: abfa55a4d4e3ca34093a2f8cfe8b8160, type: 2}
+    - target: {fileID: 7844653115320804256, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 531332085, guid: d20b5410dca6ce5438f60701e910077f, type: 3}
+    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Name
+      value: PActor_Lylla_Template
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects:
@@ -196,16 +192,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 105fa51755c341ce80d5f3a2a9c33610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7085934013024308985 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 440924910647378999, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-  m_PrefabInstance: {fileID: 7226080232421067470}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f6592049ef4952a6df44be6fe88af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

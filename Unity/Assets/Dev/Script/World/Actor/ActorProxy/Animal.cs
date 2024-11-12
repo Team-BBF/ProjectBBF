@@ -22,10 +22,11 @@ public class Animal : ActorProxy, IBOInteractive
     private IBOInteractive _collectBehaviour;
     public void UpdateInteract(CollisionInteractionMono caller)
     {
+        if (caller.Owner is not PlayerController pc) return;
         if (_collectBehaviour is null) return;
         
         _collectBehaviour.UpdateInteract(caller);
-        _favorablity.UpdateInteract(caller);
+        _ = pc.Dialogue.RunDialogueFromInteraction(Interaction);
     }
     protected override void OnInit()
     {

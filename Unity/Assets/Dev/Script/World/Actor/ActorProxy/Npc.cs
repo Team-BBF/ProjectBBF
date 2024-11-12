@@ -1,21 +1,18 @@
-﻿using UnityEngine;
+﻿using ProjectBBF.Event;
+using UnityEngine;
 
 
-public class Npc : ActorProxy
+public abstract class Npc : ActorProxy, IBOInteractive
 {
-    [SerializeField] private ActorFavorablity _favorablity;
-        
     protected override void OnInit()
     {
-        _favorablity.Init(Owner);
-
-        ContractInfo
-            .AddBehaivour<IBODialogue>(_favorablity)
-            .AddBehaivour<IBOInteractive>(_favorablity)
-            ;
+        ContractInfo.AddBehaivour<IBOInteractive>(this);
     }
 
     protected override void OnDoDestroy()
     {
     }
+
+    public CollisionInteraction Interaction => Owner.Interaction;
+    public abstract void UpdateInteract(CollisionInteractionMono caller);
 }

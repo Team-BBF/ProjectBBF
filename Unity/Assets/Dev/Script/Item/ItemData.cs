@@ -53,6 +53,9 @@ public class ItemData : ScriptableObject
     [field: SerializeField, Header("최대 겹치기 개수")]
     private int _maxStackCount = 1;
 
+    [field: SerializeField, Header("아이템 가치")]
+    private int _price = 0;
+
     [field: SerializeField, Header("아이템 메타데이터")]
     private ItemTypeInfo _itemTypeInfo;
 
@@ -79,6 +82,9 @@ public class ItemData : ScriptableObject
 
     public Sprite ItemSprite => _itemSprite;
     public int MaxStackCount => Mathf.Max(1, _maxStackCount);
+
+    public int Price => Mathf.Max(0, _price);
+
     public ItemTypeInfo Info => _itemTypeInfo;
 
     public ActionCategoryType ActionCategoryType => _actionCategoryType;

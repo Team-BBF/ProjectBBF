@@ -725,6 +725,20 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
+--- !u!114 &-3935555571537835695
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39d7de6310443f886f701726ee558a4, type: 3}
+  m_Name: Move To Scene Marker
+  m_EditorClassIdentifier: 
+  m_Time: 7.566666666666666
+  _eso: {fileID: 11400000, guid: 8c08612741c152f4789de5d4d6cde49f, type: 2}
 --- !u!114 &-2152299693270634133
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -780,6 +794,8 @@ MonoBehaviour:
     - {fileID: -2152299693270634133}
     - {fileID: 3700714899588171340}
     - {fileID: -1867493904929556234}
+    - {fileID: -3935555571537835695}
+    - {fileID: 5288711449638607397}
 --- !u!114 &-1102309500055088759
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1703,6 +1719,22 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: e8200cf570208ec4dbd80ac73912d0b4
     defaultValue: {fileID: 0}
+--- !u!114 &5288711449638607397
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76677ae7fbb4217ac394fa3efd17455, type: 3}
+  m_Name: Contest Result Marker
+  m_EditorClassIdentifier: 
+  m_Time: 6.916666666666667
+  _chapter: 1
+  _failTimeline: {fileID: 0}
+  _successTimeline: {fileID: 0}
 --- !u!74 &5536254438614356025
 AnimationClip:
   m_ObjectHideFlags: 0

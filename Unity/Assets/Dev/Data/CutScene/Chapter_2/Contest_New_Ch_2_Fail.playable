@@ -22,22 +22,6 @@ MonoBehaviour:
   m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!114 &-6423028678637761157
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76677ae7fbb4217ac394fa3efd17455, type: 3}
-  m_Name: Contest Result Marker
-  m_EditorClassIdentifier: 
-  m_Time: 0
-  _chapter: 0
-  _failTimeline: {fileID: 0}
-  _successTimeline: {fileID: 0}
 --- !u!74 &-5385348873463406388
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -268,8 +252,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Virtual Camera
   m_Markers:
-    m_Objects:
-    - {fileID: -6423028678637761157}
+    m_Objects: []
 --- !u!114 &-4054443815400281492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,34 +295,6 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
---- !u!114 &-2152299693270634133
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
-  m_Name: Dialogue Marker
-  m_EditorClassIdentifier: 
-  m_Time: 2.55
-  _container: {fileID: 11400000, guid: 33ff5e796e6e2bd4a97601587a5755e8, type: 2}
---- !u!114 &-1867493904929556234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
-  m_Name: Dialogue Marker
-  m_EditorClassIdentifier: 
-  m_Time: 4.716666666666667
-  _container: {fileID: 11400000, guid: 3f0066b967280a643bc27d0c83b16b1c, type: 2}
 --- !u!114 &-1662678914388611388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -363,35 +318,9 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects:
-    - {fileID: 2677528626930219435}
-    - {fileID: -2152299693270634133}
-    - {fileID: 3700714899588171340}
-    - {fileID: -1867493904929556234}
-    - {fileID: 8473236544179012844}
-    - {fileID: 8491806455151079499}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: Contest_New_Ch_2
-  m_EditorClassIdentifier: 
-  m_Version: 0
-  m_Tracks:
-  - {fileID: -5331261317193781575}
-  - {fileID: -4054443815400281492}
-  m_FixedDuration: 5
-  m_EditorSettings:
-    m_Framerate: 60
-    m_ScenePreview: 1
-  m_DurationMode: 0
-  m_MarkerTrack: {fileID: -1662678914388611388}
---- !u!114 &2677528626930219435
+    - {fileID: -55396846058838647}
+    - {fileID: 526625915938400714}
+--- !u!114 &-55396846058838647
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,8 +332,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
   m_Name: Dialogue Marker
   m_EditorClassIdentifier: 
-  m_Time: 1.2333333333333334
-  _container: {fileID: 11400000, guid: f1f2e8a59ea75eb46b55f152c66bfc98, type: 2}
+  m_Time: 0.9166666666666666
+  _container: {fileID: 11400000, guid: 07de204a2ce1c4f41a87533ffff00f1f, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: Contest_New_Ch_2_Fail
+  m_EditorClassIdentifier: 
+  m_Version: 0
+  m_Tracks:
+  - {fileID: -5331261317193781575}
+  - {fileID: -4054443815400281492}
+  m_FixedDuration: 5
+  m_EditorSettings:
+    m_Framerate: 60
+    m_ScenePreview: 1
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: -1662678914388611388}
+--- !u!114 &526625915938400714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39d7de6310443f886f701726ee558a4, type: 3}
+  m_Name: Move To Scene Marker
+  m_EditorClassIdentifier: 
+  m_Time: 1.5999999999999996
+  _eso: {fileID: 11400000, guid: 7eb1708bb85585d4d9d4c27dc2147c41, type: 2}
 --- !u!114 &3486450786259946393
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,20 +462,6 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
---- !u!114 &3700714899588171340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
-  m_Name: Dialogue Marker
-  m_EditorClassIdentifier: 
-  m_Time: 3.683333333333333
-  _container: {fileID: 11400000, guid: 92796027bc47d054cab985454462f903, type: 2}
 --- !u!114 &3761945455649442805
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,32 +478,3 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: e8200cf570208ec4dbd80ac73912d0b4
     defaultValue: {fileID: 0}
---- !u!114 &8473236544179012844
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76677ae7fbb4217ac394fa3efd17455, type: 3}
-  m_Name: Contest Result Marker
-  m_EditorClassIdentifier: 
-  m_Time: 5.433333333333334
-  _chapter: 2
-  _failTimeline: {fileID: 11400000, guid: 024ac76d7b744a944ae7877175b6f744, type: 2}
-  _successTimeline: {fileID: 11400000, guid: 21719a2f082b2b64091822e0462013ba, type: 2}
---- !u!114 &8491806455151079499
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f7ff838a23a464d8ed618e8a3d2a5d6, type: 3}
-  m_Name: Branch Timeline Marker
-  m_EditorClassIdentifier: 
-  m_Time: 5.933333333333334

@@ -104,13 +104,13 @@ namespace DS.Editor
                 
                 // 종종 DialogueGraphView.Edges의 내용의 순서가 일정하지 않는 경우가 있음.
                 // 순서를 일정하게 유지하기 정렬
-                container.NodeLinks.Sort((x, y) =>
-                {
-                    if (x.BaseNodeGuid == entryNode.GUID) return -1;
-                    if (y.BaseNodeGuid == entryNode.GUID) return 1;
-                    
-                    return String.Compare(x.BaseNodeGuid, y.BaseNodeGuid, StringComparison.Ordinal);
-                });
+                //container.NodeLinks.Sort((x, y) =>
+                //{
+                //    if (x.BaseNodeGuid == entryNode.GUID) return -1;
+                //    if (y.BaseNodeGuid == entryNode.GUID) return 1;
+                //    
+                //    return String.Compare(x.BaseNodeGuid, y.BaseNodeGuid, StringComparison.Ordinal);
+                //});
             }
         }
 
@@ -126,13 +126,13 @@ namespace DS.Editor
             
             // 종종 DialogueGraphView.Edges의 내용의 순서가 일정하지 않는 경우가 있음.
             // NodeData의 경우 해당 케이스를 확인하지는 못했지만, 무결성을 유지하기 위해 정렬
-            container.NodeData.Sort((x, y) =>
-            {
-                if (x.GUID == entryNode.GUID) return -1;
-                if (y.GUID == entryNode.GUID) return 1;
-                    
-                return String.Compare(x.GUID, y.GUID, StringComparison.Ordinal);
-            });
+            //container.NodeData.Sort((x, y) =>
+            //{
+            //    if (x.GUID == entryNode.GUID) return -1;
+            //    if (y.GUID == entryNode.GUID) return 1;
+            //        
+            //    return String.Compare(x.GUID, y.GUID, StringComparison.Ordinal);
+            //});
         }
 
         public void LoadGraph(string fullPath)

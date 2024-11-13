@@ -143,6 +143,7 @@ public class DialogueView : MonoBehaviour
         _portrait.sprite = sprite;
 
         _portrait.gameObject.SetActive(sprite is not null);
+        _portrait.SetNativeSize();
     }
     
     private IEnumerator CoAnimateSkipArrow()

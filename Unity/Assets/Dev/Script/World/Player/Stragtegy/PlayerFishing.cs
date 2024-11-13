@@ -24,6 +24,8 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
         Right
     }
 
+    [SerializeField] private Animator _fishingEffectAni0;
+    [SerializeField] private Animator _fishingEffectAni1;
     [SerializeField] private Color _fishingFloatColorBelowWater;
     [SerializeField] private Transform _fishingPivot;
     [SerializeField] private SpriteRenderer _fishingStateRenderer;
@@ -73,6 +75,9 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
         _interacter = controller.Interactor;
 
         _fishingStateRenderer.enabled = false;
+
+        _fishingEffectAni0.gameObject.SetActive(false);
+        _fishingEffectAni1.gameObject.SetActive(false);
         
         _handle.gameObject.SetActive(false);
         _blackboard = PersistenceManager.Instance.LoadOrCreate<PlayerBlackboard>("Player_Blackboard");
@@ -198,6 +203,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
             await UniTask.WaitUntil(() => _co is null, PlayerLoopTiming.Update,
                 this.GetCancellationTokenOnDestroy());
+            
 
             AudioManager.Instance.PlayOneShot("SFX", "SFX_Fishing_Colliding_Bait_ToWater");
 
@@ -211,9 +217,14 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
                 _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle,
                     AnimationActorKey.Direction.Right));
+                
                 return false;
             }
 
+            _fishingEffectAni0.gameObject.SetActive(true);
+            _fishingEffectAni1.gameObject.SetActive(true);
+            _fishingEffectAni0.SetTrigger("Begin");
+            _fishingEffectAni1.SetTrigger("Begin");
             _ = ctx.Begin(cts.Token);
             ctx.OnBeginBite += (x) =>
             {
@@ -226,7 +237,9 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
             await UniTask.WaitUntil(() => InputManager.Map.Player.Fishing.triggered, PlayerLoopTiming.Update,
                 CancellationTokenSource
                     .CreateLinkedTokenSource(ctx.CancellationToken, this.GetCancellationTokenOnDestroy()).Token);
-
+            
+            _fishingEffectAni0.gameObject.SetActive(false);
+            _fishingEffectAni1.gameObject.SetActive(false);
             ctx.Pause();
             if (ctx.IsTiming)
             {

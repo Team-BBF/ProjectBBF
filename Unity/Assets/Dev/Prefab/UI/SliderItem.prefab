@@ -313,8 +313,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280367705
+  m_fontColor: {r: 0.34901962, g: 0.22745098, b: 0.12941177, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -698,7 +698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 651.2, y: 37.7}
+  m_AnchoredPosition: {x: 694, y: 38}
   m_SizeDelta: {x: 109.98999, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1735957412367051024
@@ -1182,6 +1182,8 @@ MonoBehaviour:
   _onChangedValue:
     m_PersistentCalls:
       m_Calls: []
+  _castInt: 1
+  _groupKey: 
   _key: 
   _inputField: {fileID: 4762904430354206114}
   _slider: {fileID: 8553564231977874247}

@@ -2868,6 +2868,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 292867734561201154}
     m_Modifications:
+    - target: {fileID: 1258232571983436202, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
+      propertyPath: _saveKey
+      value: Fishing_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258232571983436202, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
+      propertyPath: _actorKey
+      value: Fishing_Chapter_1
+      objectReference: {fileID: 0}
     - target: {fileID: 3026065139521650602, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 174.81
@@ -2928,6 +2936,10 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].weight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6633940948283213399, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
+      propertyPath: m_Name
+      value: PActor_Fishing_Chapter_1
+      objectReference: {fileID: 0}
     - target: {fileID: 7096942237074771261, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
       propertyPath: _targetQuestList.Array.size
       value: 1
@@ -2935,7 +2947,7 @@ PrefabInstance:
     - target: {fileID: 7096942237074771261, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
       propertyPath: _targetQuestList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 26c41b42cd96c6440b51a013031903a7, type: 2}
+      objectReference: {fileID: 11400000, guid: 006abbd1574ba51449e4a255f39dc1d9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

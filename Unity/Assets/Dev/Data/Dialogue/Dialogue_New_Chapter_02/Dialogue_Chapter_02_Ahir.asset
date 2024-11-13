@@ -30,9 +30,6 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 48cc0326-7d9f-4cc1-8c1b-37dbad60dc29
   - BaseNodeGuid: 99ef99cb-49f2-4295-902a-c17e4cc21e06
-    PortName: "\uC548\uB155\uD558\uC138\uC694!"
-    TargetNodeGuid: e2635d61-0586-430a-b2e4-579fc78ea794
-  - BaseNodeGuid: 99ef99cb-49f2-4295-902a-c17e4cc21e06
     PortName: "\uC81C\uCD9C\uD558\uB7EC \uC654\uC5B4\uC694!"
     TargetNodeGuid: 29b44999-2209-49f8-9da1-3c9b66bca5e1
   - BaseNodeGuid: e2635d61-0586-430a-b2e4-579fc78ea794
@@ -44,72 +41,24 @@ MonoBehaviour:
   - BaseNodeGuid: 29ea8a3e-93a9-411b-8afe-81aa8edcf5d2
     PortName: "\uB124"
     TargetNodeGuid: 410fafe8-23c5-439c-8c24-a997e58c38d8
+  - BaseNodeGuid: 99ef99cb-49f2-4295-902a-c17e4cc21e06
+    PortName: "\uC548\uB155\uD558\uC138\uC694!"
+    TargetNodeGuid: e2635d61-0586-430a-b2e4-579fc78ea794
   NodeData:
-  - rid: 6556656399990652928
-  - rid: 6556656399990652929
-  - rid: 6556656399990652930
-  - rid: 6556656399990652931
-  - rid: 6556656399990652932
-  - rid: 6556656399990652933
-  - rid: 6556656399990652934
-  - rid: 6556656399990652935
-  - rid: 6556656399990652936
-  - rid: 6556656399990652937
+  - rid: 6083855426511176150
+  - rid: 6083855426511176151
+  - rid: 6083855426511176152
+  - rid: 6083855426511176153
+  - rid: 6083855426511176154
+  - rid: 6083855426511176155
+  - rid: 6083855426511176156
+  - rid: 6083855426511176157
+  - rid: 6083855426511176158
+  - rid: 6083855426511176159
   references:
     version: 2
     RefIds:
-    - rid: 6556656399990652928
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 29a42c79-74a6-428b-b3b4-1512478ca235
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 971, y: 154}
-        DialogueText: "\uBCF8\uC120\uC758 \uBE75\uC740 \uBA4B\uC9C0\uC2DC\uB358\uB370\uC694?"
-        PortraitKey: Smi
-        ActorKey: Ahir_Chapter_1
-    - rid: 6556656399990652929
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 29b44999-2209-49f8-9da1-3c9b66bca5e1
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 491, y: 378}
-        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
-        Warps:
-        - Target: String
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 'Ahir_Chapter_2_ContestResultBox '
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6556656399990652930
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 410fafe8-23c5-439c-8c24-a997e58c38d8
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 1394, y: 387}
-        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
-        Warps:
-        - Target: Object
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 11400000, guid: aac3b39cb157ed546ad42ce2fcee3d76, type: 2}
-          BoolValue: 0
-    - rid: 6556656399990652931
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 6b8b1497-7790-434f-bb3d-571fe7a9ebb2
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1404, y: 627}
-        DialogueText: "\uC900\uBE44\uAC00 \uB418\uC2DC\uBA74 \uC81C\uAC8C \uB9D0\uC744
-          \uAC78\uC5B4\uC8FC\uC138\uC694"
-        PortraitKey: 
-        ActorKey: Ahir_Chapter_1
-    - rid: 6556656399990652932
+    - rid: 6083855426511176150
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 99ef99cb-49f2-4295-902a-c17e4cc21e06
@@ -119,55 +68,106 @@ MonoBehaviour:
         DialogueText: "\uBE75\uC744 \uC81C\uCD9C\uD558\uC2E4\uAC74\uAC00\uC694?"
         PortraitKey: 
         ActorKey: Ahir_Chapter_1
-    - rid: 6556656399990652933
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+    - rid: 6083855426511176151
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
-        GUID: 9a46439d-f355-4d62-8c02-65ea3dce86e3
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 866, y: 697}
-        DialogueText: "\uC81C \uC606\uC758 \uC0C1\uC790\uC5D0 \uC81C\uCD9C\uD558\uC2E4
-          \uBE75\uC744 \uB123\uC5B4\uC8FC\uC2DC\uACE0 \uC81C\uAC00 \uB9D0\uC744 \uAC78\uC5B4\uC8FC\uC138\uC694"
-        PortraitKey: 
-        ActorKey: Ahir_Chapter_1
-    - rid: 6556656399990652934
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+        GUID: 29b44999-2209-49f8-9da1-3c9b66bca5e1
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 553, y: 199}
+        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 'Ahir_Chapter_2_ContestResultBox '
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855426511176152
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
-        GUID: e2635d61-0586-430a-b2e4-579fc78ea794
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 542, y: 155}
-        DialogueText: "\uC548\uB155\uD558\uC138\uC694! \uC774\uBC88\uC5D0 \uCD9C\uC804\uD558\uC2E0
-          {player}\uB2D8\uC774\uC2DC\uAD70\uC694."
-        PortraitKey: Smi
-        ActorKey: Ahir_Chapter_1
-    - rid: 6556656399990652935
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f62b858f-d218-458c-88dd-0adcbb343799
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1302, y: 153}
-        DialogueText: "\uACB0\uC2B9\uC758 \uBE75\uAE4C\uC9C0 \uAE30\uB300\uD574\uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
-        PortraitKey: Smi
-        ActorKey: Ahir_Chapter_1
-    - rid: 6556656399990652936
+        GUID: 410fafe8-23c5-439c-8c24-a997e58c38d8
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1456, y: 208}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: aac3b39cb157ed546ad42ce2fcee3d76, type: 2}
+          BoolValue: 0
+    - rid: 6083855426511176153
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 48cc0326-7d9f-4cc1-8c1b-37dbad60dc29
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 1913, y: 419}
+        Position: {x: 1975, y: 240}
         Handler: {fileID: 11400000, guid: c469fcabfa62c5547b0afa28aed56113, type: 2}
         Warps: []
-    - rid: 6556656399990652937
+    - rid: 6083855426511176154
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 29ea8a3e-93a9-411b-8afe-81aa8edcf5d2
         NodeTitle: Branch
         TypeName: Branch
-        Position: {x: 890, y: 387}
+        Position: {x: 952, y: 208}
         DialogueText: "\uC774 \uBE75\uC73C\uB85C \uC81C\uCD9C\uD558\uC2E4\uAC74\uAC00\uC694?<color=#800080>(\uACB0\uC2B9
           \uC885\uB8CC)</color>"
         PortraitKey: 
+        ActorKey: Ahir_Chapter_1
+    - rid: 6083855426511176155
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 6b8b1497-7790-434f-bb3d-571fe7a9ebb2
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1464, y: 418}
+        DialogueText: "\uC900\uBE44\uAC00 \uB418\uC2DC\uBA74 \uC81C\uAC8C \uB9D0\uC744
+          \uAC78\uC5B4\uC8FC\uC138\uC694"
+        PortraitKey: 
+        ActorKey: Ahir_Chapter_1
+    - rid: 6083855426511176156
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9a46439d-f355-4d62-8c02-65ea3dce86e3
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 916, y: 425}
+        DialogueText: "\uC81C \uC606\uC758 \uC0C1\uC790\uC5D0 \uC81C\uCD9C\uD558\uC2E4
+          \uBE75\uC744 \uB123\uC5B4\uC8FC\uC2DC\uACE0 \uC81C\uAC00 \uB9D0\uC744 \uAC78\uC5B4\uC8FC\uC138\uC694"
+        PortraitKey: 
+        ActorKey: Ahir_Chapter_1
+    - rid: 6083855426511176157
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 29a42c79-74a6-428b-b3b4-1512478ca235
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 983, y: 646}
+        DialogueText: "\uBCF8\uC120\uC758 \uBE75\uC740 \uBA4B\uC9C0\uC2DC\uB358\uB370\uC694?"
+        PortraitKey: Smi
+        ActorKey: Ahir_Chapter_1
+    - rid: 6083855426511176158
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e2635d61-0586-430a-b2e4-579fc78ea794
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 554, y: 647}
+        DialogueText: "\uC548\uB155\uD558\uC138\uC694! \uC774\uBC88\uC5D0 \uCD9C\uC804\uD558\uC2E0
+          {player}\uB2D8\uC774\uC2DC\uAD70\uC694."
+        PortraitKey: Smi
+        ActorKey: Ahir_Chapter_1
+    - rid: 6083855426511176159
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f62b858f-d218-458c-88dd-0adcbb343799
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1314, y: 645}
+        DialogueText: "\uACB0\uC2B9\uC758 \uBE75\uAE4C\uC9C0 \uAE30\uB300\uD574\uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
+        PortraitKey: Smi
         ActorKey: Ahir_Chapter_1

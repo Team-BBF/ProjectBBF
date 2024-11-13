@@ -15,6 +15,7 @@ public class PIBWaterSpray : PIBTwoStep
         
         if (itemData && itemData.Info.Contains(ToolType.WaterSpray))
         {
+            AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_WaterSpray");
             AnimateLookAt(playerController, AnimationActorKey.Action.WaterSpray);
             return ActionResult.Continue;
         }

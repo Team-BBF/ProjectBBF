@@ -323,6 +323,8 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
         var lineSpline = new Spline();
         _fishingFloatRenderer.color = Color.white;
+        
+        AudioManager.Instance.PlayOneShot("Player", "Player_Fishing_Swing_Rod");
 
         while (t > 0f)
         {

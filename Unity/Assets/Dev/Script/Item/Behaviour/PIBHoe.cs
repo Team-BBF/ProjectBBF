@@ -15,6 +15,7 @@ public class PIBHoe : PIBTwoStep
         
         if (itemData && itemData.Info.Contains(ToolType.Hoe))
         {
+            AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_Hoe");
             AnimateLookAt(playerController, AnimationActorKey.Action.Hoe);
             return ActionResult.Continue;
         }
@@ -87,6 +88,8 @@ public class PIBHoe : PIBTwoStep
                 //});
             }
         });
+        
+        AudioManager.Instance.PlayOneShot("Player", "Player_Digging");
 
         if (list.Any())
         {

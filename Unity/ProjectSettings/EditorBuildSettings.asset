@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/Dev/Scene/Map/Festival/DMap_Festival_CutScene_Ch_2_Contest.unity
     guid: f2895d189833a324bb1d09722ae754fb
   - enabled: 1
-    path: Assets/Dev/Scene/World/World_FishingMinigame.unity
+    path: Assets/Dev/Scene/World/World_FishingMinigame_Ch_1.unity
     guid: fa471268c140bda43b59db1bf5df61e8
   - enabled: 1
     path: Assets/Dev/Scene/Map/Fishing/BMap_Fishing.unity
@@ -69,7 +69,7 @@ EditorBuildSettings:
     path: Assets/Dev/Scene/Map/Fishing/BMap_FishingDetail.unity
     guid: e2b0a9300f74e1949a96b990a30619ce
   - enabled: 1
-    path: Assets/Dev/Scene/Map/Fishing/DMap_Fishing.unity
+    path: Assets/Dev/Scene/Map/Fishing/DMap_Fishing_Ch_1.unity
     guid: aa734a717bcb12b44a50245756a67fb6
   - enabled: 1
     path: Assets/Dev/Scene/World/World_MoleMinigame.unity
@@ -110,5 +110,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dev/Scene/Map/Festival/BMap_Festival_F.unity
     guid: 1cd7a342d93a73e4c9421d57f24d65ec
+  - enabled: 1
+    path: Assets/Dev/Scene/World/World_FishingMinigame_Ch_2.unity
+    guid: 2aa533fc038450a488f0cfead2ad4bab
+  - enabled: 1
+    path: Assets/Dev/Scene/Map/Fishing/DMap_Fishing_Ch_2.unity
+    guid: f4765edfcee744549a7d65a20bbb5f08
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a62db68cd8d5e6b458c6bb98b1b16c22, type: 2}

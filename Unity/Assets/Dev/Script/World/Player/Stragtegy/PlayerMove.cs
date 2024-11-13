@@ -168,49 +168,49 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
         {
             return;
         }
-        
+
         var visual = _controller.VisualStrategy;
+        float epsilon = Mathf.Epsilon;  // 부동소수점 오차 허용 값
 
         AnimationActorKey.Direction direction;
-        
+
         // 왼쪽 위
-        if (dir is { x: < 0, y: > 0 })
+        if (dir.x < -epsilon && dir.y > epsilon)
         {
             direction = AnimationActorKey.Direction.LeftUp;
         }
         // 오른쪽 위
-        else if (dir is { x: > 0, y: > 0 })
+        else if (dir.x > epsilon && dir.y > epsilon)
         {
             direction = AnimationActorKey.Direction.RightUp;
         }
         // 왼쪽 아래
-        else if (dir is { x: < 0, y: < 0 })
+        else if (dir.x < -epsilon && dir.y < -epsilon)
         {
             direction = AnimationActorKey.Direction.Left;
         }
         // 오른쪽 아래
-        else if (dir is { x: > 0, y: < 0 })
+        else if (dir.x > epsilon && dir.y < -epsilon)
         {
             direction = AnimationActorKey.Direction.Right;
         }
-        
         // 위
-        else if (dir is { x:  0, y: > 0 })
+        else if (Mathf.Abs(dir.x) <= epsilon && dir.y > epsilon)
         {
             direction = AnimationActorKey.Direction.Up;
         }
         // 아래
-        else if (dir is { x:  0, y: < 0 })
+        else if (Mathf.Abs(dir.x) <= epsilon && dir.y < -epsilon)
         {
             direction = AnimationActorKey.Direction.Down;
         }
         // 왼쪽
-        else if (dir is { x: < 0, y:  0 })
+        else if (dir.x < -epsilon && Mathf.Abs(dir.y) <= epsilon)
         {
             direction = AnimationActorKey.Direction.Left;
         }
         // 오른쪽
-        else if (dir is { x: > 0, y: 0 })
+        else if (dir.x > epsilon && Mathf.Abs(dir.y) <= epsilon)
         {
             direction = AnimationActorKey.Direction.Right;
         }
@@ -218,13 +218,14 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
         {
             direction = AnimationActorKey.Direction.Down;
         }
-        
+
         LastDirection = direction;
         LastMovement = movementType;
         
         var tuple = AnimationActorKey.GetAniHash(movementType, direction);
         visual.ChangeClip(tuple);
     }
+
 
     public void ResetVelocity()
     {

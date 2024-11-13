@@ -91,7 +91,6 @@ public static class AnimationActorKey
                 return -1;
         }
     }
-    
     public static int GetAniHash(Direction direction)
     {
         switch (direction)
@@ -102,9 +101,11 @@ public static class AnimationActorKey
             case Direction.Right: return Right;
             case Direction.LeftUp: return LeftUp;
             case Direction.RightUp: return RightUp;
+            default:
+                Debug.Assert(false, $"정의되지 않은 Direction({direction})");
+                return -1;
         }
 
-        throw new ArgumentException($"Invalid combination of direction: {direction}");
     }
 
     public static (int action, int dir) GetAniHash(Action action, Direction direction)

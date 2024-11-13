@@ -237,9 +237,20 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         _ovenActivationUI.SetActive(false);
         GameReset();
 
-        pc.Interactor.ItemPreviewSprite = successCount >= SUCCESS_GOAL_COUNT ? tuple.resultItem.ItemSprite : tuple.failItem.ItemSprite;
+        if (tuple.resultItem)
+        {
+            pc.Interactor.ItemPreviewSprite = successCount >= SUCCESS_GOAL_COUNT
+                ? tuple.resultItem.ItemSprite
+                : tuple.failItem.ItemSprite;
+        }
+        else
+        {
+            pc.Interactor.ItemPreviewSprite = tuple.failItem.ItemSprite;
+        }
+        
         AudioManager.Instance.PlayOneShot("SFX", "SFX_Bakery_BakingComplete");
-        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Additive_Complete, AnimationActorKey.Direction.Down), true);
+        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Additive_Complete, AnimationActorKey.Direction.Left), true);
+        pc.VisualStrategy.ClearState();
         yield return new WaitForSeconds(_endWait);
 
         QuestIndicator.Visible = true;
@@ -247,10 +258,6 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         pc.Blackboard.IsMoveStopped = false;
         pc.Blackboard.IsInteractionStopped = false;
         pc.MoveStrategy.IsGhost = false;
-        pc.MoveStrategy.ResetVelocity();
-        pc.MoveStrategy.LastMovedDirection = Vector2.down;
-        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Down), true);
-
     }
 
     private void GameSetup()

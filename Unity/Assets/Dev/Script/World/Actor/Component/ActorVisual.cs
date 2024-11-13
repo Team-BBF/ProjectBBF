@@ -51,6 +51,12 @@ public class ActorVisual : ActorComponent
 
         return Mathf.Acos(Vector2.Dot(targetDir, dir)) * Mathf.Rad2Deg <= angle;
     }
+
+    public void ClearState()
+    {
+        _beforeActionHash = 0;
+        _beforeDirectionHash = 0;
+    }
     
     public virtual void ChangeClip(int actionAniHash, int directionAniHash, bool force = false)
     {

@@ -45,78 +45,78 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: cb095631-6856-451f-b23a-1c63b042d4e0
   NodeData:
-  - rid: 6083855426511175707
-  - rid: 6083855426511175708
-  - rid: 6083855426511175709
-  - rid: 6083855426511175710
-  - rid: 6083855426511175711
-  - rid: 6083855426511175712
-  - rid: 6083855426511175713
-  - rid: 6083855426511175714
-  - rid: 6083855426511175715
-  - rid: 6083855426511175716
+  - rid: 6083855426511175983
+  - rid: 6083855426511175984
+  - rid: 6083855426511175985
+  - rid: 6083855426511175986
+  - rid: 6083855426511175987
+  - rid: 6083855426511175988
+  - rid: 6083855426511175990
+  - rid: 6083855426511175991
+  - rid: 6083855426511175992
+  - rid: 6083855426511175989
   references:
     version: 2
     RefIds:
-    - rid: 6083855426511175707
+    - rid: 6083855426511175983
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2f2ac391-181c-4955-bf1d-95e887311e9d
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 493, y: 201}
+        Position: {x: 508, y: 201}
         DialogueText: "\uD558\uD558\uD56B!!! \uC774\uAC70\uC796\uC544!!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175708
+    - rid: 6083855426511175984
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 45bf9116-a09a-44af-a7da-82a1109c61c8
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 501, y: 431}
+        Position: {x: 516, y: 431}
         DialogueText: "\uC73C\uD558\uD558\uD558\uD558\uD558!!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175709
+    - rid: 6083855426511175985
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4e7440e9-3ed2-4614-8fa3-87b4f34709f1
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1018, y: 197}
+        Position: {x: 1033, y: 197}
         DialogueText: "\uB108, \uC774 \uC704\uC5D0 \uC788\uB294 \uAC1C\uAD6C\uB9AC
           \uB808\uC774\uC2A4\uC7A5\uC5D0 \uAC00\uBD24\uC5B4?"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175710
+    - rid: 6083855426511175986
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 60823082-8f7f-4ff7-993d-13cf1c4bb7ed
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 772, y: 199}
+        Position: {x: 787, y: 199}
         DialogueText: "\uB108\uBB34 \uB9DB\uC788\uC5B4!!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175711
+    - rid: 6083855426511175987
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a3c0d23b-8b85-444e-bc0b-dfcb6982e5a6
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1423, y: 200}
+        Position: {x: 1438, y: 200}
         DialogueText: "\uD6C4\uC6B1... \uD6C4\uC6B1... \uC5EC\uAE30\uC11C \uB098\uB294
           \uB3C8\uC744 5\uBC30\uB098 \uBC8C\uC5C8\uC5B4!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175712
+    - rid: 6083855426511175988
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b10090d6-d607-4c10-b55a-f8b32db46a6d
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 2682, y: 213}
+        Position: {x: 2697, y: 213}
         Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
         Warps:
         - Target: String
@@ -131,13 +131,13 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 6083855426511175713
+    - rid: 6083855426511175989
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c66d36ff-d6e6-488e-afe9-2e5e4f2760c1
         NodeTitle: Condition
         TypeName: Condition
-        Position: {x: 194, y: 202}
+        Position: {x: 196, y: 199}
         Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
         Warps:
         - Target: String
@@ -146,33 +146,33 @@ MonoBehaviour:
           StringValue: gamble_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855426511175714
+    - rid: 6083855426511175990
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: cb095631-6856-451f-b23a-1c63b042d4e0
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 2279, y: 200}
+        Position: {x: 2294, y: 200}
         DialogueText: "\uB3C8\uC744 \uB354 \uAC00\uC9C0\uACE0 \uC640\uC11C \uAD74\uB824\uBD10\uC57C\uACA0\uB2E4..."
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175715
+    - rid: 6083855426511175991
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d978883e-17cb-443e-95f7-7ffe12f22c94
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 783, y: 429}
+        Position: {x: 798, y: 429}
         DialogueText: "\uB098\uB294 \uBD80\uC790\uAC00 \uB420\uAC70\uC57C!!!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855426511175716
+    - rid: 6083855426511175992
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: edec9075-e8cd-408d-8421-20d963f3dd55
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1831, y: 199}
+        Position: {x: 1846, y: 199}
         DialogueText: "\uC774\uB300\uB85C\uB77C\uBA74 \uD3C9\uC0DD \uB3C8\uC744 \uC548
           \uBC8C\uC5B4\uB3C4 \uC0B4 \uC218 \uC788\uC744 \uAC83 \uAC19\uC544!"
         PortraitKey: 

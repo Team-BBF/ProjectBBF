@@ -24,9 +24,12 @@ public class Animal : ActorProxy, IBOInteractive
     {
         if (caller.Owner is not PlayerController pc) return;
         if (_collectBehaviour is null) return;
-        
-        _collectBehaviour.UpdateInteract(caller);
-        _ = pc.Dialogue.RunDialogueFromInteraction(Interaction);
+
+        if (InputManager.Map.Player.InteractionDialogue.triggered)
+        {
+            _collectBehaviour.UpdateInteract(caller);
+            _ = pc.Dialogue.RunDialogueFromInteraction(Interaction);
+        }
     }
     protected override void OnInit()
     {

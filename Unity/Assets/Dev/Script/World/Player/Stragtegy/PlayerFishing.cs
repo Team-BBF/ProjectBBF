@@ -81,6 +81,8 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
         
         _handle.gameObject.SetActive(false);
         _blackboard = PersistenceManager.Instance.LoadOrCreate<PlayerBlackboard>("Player_Blackboard");
+        
+        _line.gameObject.SetActive(false);
     }
 
     [ButtonMethod]

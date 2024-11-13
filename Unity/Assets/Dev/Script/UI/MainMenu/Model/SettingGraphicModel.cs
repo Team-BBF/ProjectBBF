@@ -225,8 +225,8 @@ public class SettingGraphicModel
         var inst = ScreenManager.Instance;
         if (inst)
         {
-            float v = Mathf.Clamp(normalizedValue, 0.1f, inst.MaxRenderScale);
-            inst.RenderScale = Mathf.Min(v, inst.MaxRenderScale);
+            float v = Mathf.Clamp(normalizedValue * inst.MaxRenderScale, 0.1f, inst.MaxRenderScale);
+            inst.RenderScale = v;
         }
     }
     #endregion

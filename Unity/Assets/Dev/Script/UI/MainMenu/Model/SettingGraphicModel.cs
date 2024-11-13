@@ -122,15 +122,12 @@ public class SettingGraphicModel
             switch (index)
             {
                 case 0:
-                    ScreenManager.Instance.ScreenMode = FullScreenMode.ExclusiveFullScreen;
-                    break;
-                case 1:
                     ScreenManager.Instance.ScreenMode = FullScreenMode.FullScreenWindow;
                     break;
-                case 2:
+                case 1:
                     ScreenManager.Instance.ScreenMode = FullScreenMode.MaximizedWindow;
                     break;
-                case 3:
+                case 2:
                     ScreenManager.Instance.ScreenMode = FullScreenMode.Windowed;
                     break;
             }

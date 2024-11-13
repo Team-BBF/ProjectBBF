@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using MyBox;
 using TMPro;
@@ -32,10 +33,10 @@ public class QuestView : MonoBehaviour
     private void Start()
     {
         StopAllCoroutines();
-        StartCoroutine(CoAnimate(true, false));
+        StartCoroutine(CoAnimate(true));
     }
-
-    private IEnumerator CoAnimate(bool fadein, bool fadeoutAndDestroy = false)
+    
+    private IEnumerator CoAnimate(bool fadein)
     {
         float hiddenX = transform.position.x - _target.rect.size.x;
         float appearedX = transform.position.x;
@@ -50,13 +51,8 @@ public class QuestView : MonoBehaviour
         _target.SetX(begin);
         _tweener?.Kill(true);
         _tweener = _target.DOMoveX(end, duration).SetEase(ease, amplitude, period);
-        yield return _tweener.WaitForCompletion();
 
-        if (fadeoutAndDestroy && fadein is false)
-        {
-            _tweener?.Kill(true);
-            Destroy(gameObject);
-        }
+        yield return new WaitForSeconds(duration);
     }
 
     public void SetData(QuestData data)
@@ -78,7 +74,37 @@ public class QuestView : MonoBehaviour
     public void DestroySelf()
     {
         StopAllCoroutines();
-        StartCoroutine(CoAnimate(false, true));
+        StartCoroutine(CoAnimate(false));
+        
+        /*
+         * 빌드에서 씬 넘어가기 전의 마지막 퀘스트가 Destroy가 안 되는 버그 발생
+         * 확인 결과 Coroutine, Dotween 둘 다 정상 작동하지 않았음. (WaitForCompletion or Kill)
+         * 그래서 그냥 UniTask로 지우도록 수정함
+         * */
+        _ = UniTask.Create(async () =>
+        {
+            try
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(_hideDuration), DelayType.DeltaTime, PlayerLoopTiming.Update,
+                    this.GetCancellationTokenOnDestroy());
+
+                if (this)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                if (this)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+        });
     }
 
     private void OnDestroy()

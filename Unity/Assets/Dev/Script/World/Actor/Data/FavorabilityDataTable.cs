@@ -21,7 +21,7 @@ public class FavorabilityDataTable : ScriptableObject
 }
 
 #if UNITY_EDITOR
-public class FavorabilityDataTableBuildPreProcessor : UnityEditor.Build.IPreprocessBuildWithReport
+public class FavorabilityDataTableBuild
 {
     public int callbackOrder => 0;
     public void OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
@@ -29,6 +29,7 @@ public class FavorabilityDataTableBuildPreProcessor : UnityEditor.Build.IPreproc
         Load();
     }
 
+    [MenuItem("Build/FavorabilityTable Build")]
     public static void Load()
     {
         var assetGuid = AssetDatabase.FindAssets("t:FavorabilityData", new[] { "Assets/Dev/Data/Actor" });
@@ -80,7 +81,7 @@ public class ActorDataManager : MonoBehaviourSingleton<ActorDataManager>
     private void ResourcesInit()
     {
         #if UNITY_EDITOR
-        FavorabilityDataTableBuildPreProcessor.Load();
+        FavorabilityDataTableBuild.Load();
         #endif
         
         var favorTable = Resources.Load<FavorabilityDataTable>("Data/FavorabilityTable");
@@ -95,6 +96,8 @@ public class ActorDataManager : MonoBehaviourSingleton<ActorDataManager>
         
         foreach (var favorabilityData in favorTable.List)
         {
+            if(favorabilityData == false)continue;
+            
             if (_cachedTable.TryGetValue(favorabilityData.ActorKey, out var alreadyData))
             {
                 Debug.LogError($"key({favorabilityData.ActorKey}) file({favorabilityData.name})가 이미 존재. 기존 key({alreadyData.ActorKey}) file({alreadyData.name})");

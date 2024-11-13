@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MyBox;
 using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.UI;
@@ -84,6 +85,7 @@ public class QuestPresenter : MonoBehaviour
         var obj = GameObject.Instantiate(_originPrefab, _content, false);
         obj.gameObject.SetActive(true);
         obj.SetData(data);
+        obj.name = data.QuestKey;
         _viewList.Add(obj);
     }
 
@@ -98,5 +100,4 @@ public class QuestPresenter : MonoBehaviour
         _viewList[index].DestroySelf();
         _viewList.RemoveAt(index);
     }
-    
 }

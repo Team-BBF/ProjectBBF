@@ -145,7 +145,7 @@ public class DialogueContext
             }
             else if (item is ExecutionItem executionItem)
             {
-                executionItem.Execution();
+                executionItem.Execution(_processorData);
                 CurrentNode = executionItem.Node.NextNode;
 
                 goto begin;

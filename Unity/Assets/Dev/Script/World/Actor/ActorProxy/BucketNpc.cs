@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using ProjectBBF.Event;
 using UnityEngine;
 
@@ -27,7 +29,18 @@ public class BucketNpc : Npc
         
         if (InputManager.Map.Player.InteractionDialogue.triggered)
         {
-            _ = pc.Dialogue.RunDialogueFromInteraction(Owner.Interaction);
+            _ = pc.Dialogue.RunDialogueFromInteraction(Owner.Interaction)
+                .ContinueWith(_ =>
+                {
+                    try
+                    {
+                        _favorability.ClearBucket();
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogException(e);
+                    }
+                });
         }
     }
 }

@@ -4,9 +4,9 @@ namespace DS.Runtime
 {
     public class ExecutionItem : DialogueItemT<ExecutionRuntimeNode>
     {
-        public readonly Action Execution;
+        public readonly Action<ProcessorData> Execution;
         
-        public ExecutionItem(ExecutionRuntimeNode node, Action execution) : base(node, "Default", "None")
+        public ExecutionItem(ExecutionRuntimeNode node, Action<ProcessorData> execution) : base(node, "Default", "None")
         {
             Execution = execution;
         }

@@ -20,6 +20,7 @@ public class BucketFavorability : ActorFavorablity
 
     public const string BUCKET_ITEM_0_NAME_KEY = "bucket_item_0_name";
     public const string BUCKET_ITEM_0_PRICE_KEY = "bucket_item_0_price";
+    public const string BUCKET_ITEM_0_KEY_KEY = "bucket_item_0_key";
     public bool IsValidBucketItem(ItemData itemData)
     {
         Debug.Assert(_bucketValidItemTable, "Bucket List Item이 없습니다");
@@ -56,7 +57,11 @@ public class BucketFavorability : ActorFavorablity
 
         SetBucet(null);
     }
-    
+
+    public void ClearBucket()
+    {
+        SetBucet(null);
+    }
 
     public void UpdateBucket(PlayerController playterController)
     {
@@ -109,13 +114,15 @@ public class BucketFavorability : ActorFavorablity
         
         if (IsEmpty)
         {
-            ProcessorData.BindingTable[BUCKET_ITEM_0_NAME_KEY] = "None";
-            ProcessorData.BindingTable[BUCKET_ITEM_0_PRICE_KEY] = "-1";
+            ProcessorData.BindingTable[BUCKET_ITEM_0_NAME_KEY] = "Name:None";
+            ProcessorData.BindingTable[BUCKET_ITEM_0_PRICE_KEY] = "Price:-1";
+            ProcessorData.BindingTable[BUCKET_ITEM_0_KEY_KEY] = "Key:None";
         }
         else
         {
             ProcessorData.BindingTable[BUCKET_ITEM_0_NAME_KEY] = itemData.ItemName;
             ProcessorData.BindingTable[BUCKET_ITEM_0_PRICE_KEY] = $"{itemData.Price}";
+            ProcessorData.BindingTable[BUCKET_ITEM_0_KEY_KEY] = $"{itemData.ItemKey}";
         }
     }
 }

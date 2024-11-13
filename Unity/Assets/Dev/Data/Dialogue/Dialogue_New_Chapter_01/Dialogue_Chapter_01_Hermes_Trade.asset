@@ -17,12 +17,20 @@ MonoBehaviour:
   - BaseNodeGuid: a0248559-85db-41c1-babf-ffd9956adac9
     PortName: Execute
     TargetNodeGuid: c448131d-4864-4ddb-abc1-33caac321567
+  - BaseNodeGuid: c448131d-4864-4ddb-abc1-33caac321567
+    PortName: Next
+    TargetNodeGuid: 27e77c00-15e2-47ed-8333-0e2676617815
+  - BaseNodeGuid: 27e77c00-15e2-47ed-8333-0e2676617815
+    PortName: Next
+    TargetNodeGuid: 49ccd8bf-6241-4e8f-b0bd-5e9ee3dbe65a
   NodeData:
-  - rid: 734291526179881721
+  - rid: 734291543563436036
+  - rid: 734291543563436037
+  - rid: 734291543563436038
   references:
     version: 2
     RefIds:
-    - rid: 734291526179881721
+    - rid: 734291543563436036
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c448131d-4864-4ddb-abc1-33caac321567
@@ -30,6 +38,32 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 353, y: 191}
         DialogueText: "\uD14C\uC2A4\uD2B8<br>\uC544\uC774\uD15C \uC774\uB984: {bucket_item_0_name}<br>\uC544\uC774\uD15C
-          \uAC00\uACA9: {bucket_item_0_price}"
+          \uAC00\uACA9: {bucket_item_0_price}<br>\uC544\uC774\uD15C \uD0A4: {bucket_item_0_key}"
         PortraitKey: 
         ActorKey: Hermes_Chapter_1
+    - rid: 734291543563436037
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 27e77c00-15e2-47ed-8333-0e2676617815
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1247, y: 191}
+        DialogueText: "{bucket_item_0_name}(\uC744)\uB97C \uAD6C\uB9E4\uD574\uC918\uC11C
+          \uACE0\uB9C8\uC6CC."
+        PortraitKey: 
+        ActorKey: 
+    - rid: 734291543563436038
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 49ccd8bf-6241-4e8f-b0bd-5e9ee3dbe65a
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1748, y: 191}
+        Handler: {fileID: 11400000, guid: 1aa046ed5bc3e0b4db213bc235f31e4f, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: bucket_item_0_price
+          ObjectValue: {fileID: 0}
+          BoolValue: 0

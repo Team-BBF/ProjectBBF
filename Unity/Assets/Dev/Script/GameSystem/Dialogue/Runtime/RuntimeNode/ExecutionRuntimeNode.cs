@@ -19,6 +19,6 @@ namespace DS.Runtime
         }
 
         public override DialogueItem CreateItem()
-            => new ExecutionItem(this, () => _ = Handler.Execute(Arguments));
+            => new ExecutionItem(this, x => _ = Handler.Execute(Arguments, x));
     }
 }

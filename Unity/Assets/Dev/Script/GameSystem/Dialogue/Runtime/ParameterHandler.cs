@@ -11,8 +11,10 @@ namespace  DS.Runtime
     public abstract class ParameterHandler : ScriptableObject
     {
         public abstract Type[] GetArgumentTypes();
-        
-        public object Execute(object[] args)
+
+        protected ProcessorData ProcessorData { get; private set; }
+
+        public object Execute(object[] args, ProcessorData processorData)
         {
             var types = GetArgumentTypes();
             for (int i = 0; i < Mathf.Min(args.Length, types.Length); i++)
@@ -33,7 +35,11 @@ namespace  DS.Runtime
                                      m.GetParameters().Select(p => p.ParameterType).SequenceEqual(types));
             if (method != null)
             {
-                return method.Invoke(this, args);
+                ProcessorData = processorData;
+                object result = method.Invoke(this, args);
+                ProcessorData = null;
+                
+                return result;
             }
             else
             {

@@ -4713,11 +4713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 390.4537
+      value: 340.625
       objectReference: {fileID: 0}
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 245.5804
+      value: 165.625
       objectReference: {fileID: 0}
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4766,14 +4766,6 @@ PrefabInstance:
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9115206969380997764, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: _offset.x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 9115206969380997764, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: _offset.y
-      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8594,18 +8586,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 405225928394085807}
     m_Modifications:
-    - target: {fileID: 3048867339667692097, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: m_text
-      value: ITEM_DISPLAY
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048867339667692097, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: m_fontSize
-      value: 28.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048867339667692097, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28.7
-      objectReference: {fileID: 0}
     - target: {fileID: 4914995542685920780, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_Name
       value: UIGuide_ToolTip
@@ -8640,23 +8620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 317.6492
+      value: 262.5
       objectReference: {fileID: 0}
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 73.622
-      objectReference: {fileID: 0}
-    - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.72896
-      objectReference: {fileID: 0}
-    - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.72896
-      objectReference: {fileID: 0}
-    - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.72896
+      value: 65.625
       objectReference: {fileID: 0}
     - target: {fileID: 6467337239313287524, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8706,17 +8674,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7911342960624582897, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
+    - target: {fileID: 7040098727791794278, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.9000015
+      value: -31.3
       objectReference: {fileID: 0}
+    - target: {fileID: 8808982212396707912, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 00abfb04c482e70458bacf4666216b8b, type: 3}
     - target: {fileID: 9115206969380997764, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: _offset.x
-      value: 115
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 9115206969380997764, guid: 1e3e3c484dff8fc44877cf9bc68cb4fa, type: 3}
       propertyPath: _offset.y
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

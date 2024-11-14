@@ -257,6 +257,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
             if (ctx.IsTiming)
             {
+                bool qucikInvVisible = _invPresenter.QuickInvVisible;
                 _invPresenter.QuickInvVisible = false;
 
                 var inst = DialogueController.Instance;
@@ -277,7 +278,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
                 await UniTask.NextFrame(PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
 
                 _interacter.ItemPreviewSprite = null;
-                _invPresenter.QuickInvVisible = true;
+                _invPresenter.QuickInvVisible = qucikInvVisible;
                 inst.ResetDialogue();
             }
 

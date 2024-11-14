@@ -4,17 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
+using ProjectBBF.Input;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class FishingMinigameController : MinigameBase<FishingMinigameData>
 {
+    [SerializeField] private ItemData _fishingRodItem;
     [SerializeField] private GameObject _uiPanel;
     [SerializeField] private GameTimerUI _timerUI;
     [SerializeField] private SpriteRenderer _fishRenderer;
 
     private float _timer;
 
+    private IInventorySlot _fishingSlot = null;
+    private IInventorySlot _targetSwapSlot = null;
     private float Timer
     {
         get => _timer;
@@ -39,9 +44,42 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         Player.Blackboard.IsMoveStopped = true;
         Player.Blackboard.IsFishingStopped = false;
         Player.HudController.Visible = false;
+        Player.Inventory.QuickInvVisible = false;
         Player.VisualStrategy.LookAt(Vector2.right, AnimationActorKey.Action.Idle);
         Player.MoveStrategy.LastMovedDirection = Vector2.right;
 
+        using IEnumerator<IInventorySlot> slotEnumerator = Player.Inventory.Model.GetEnumerator();
+
+        
+        
+        while (slotEnumerator.MoveNext())
+        {
+            if (slotEnumerator.Current is not null && slotEnumerator.Current.Data == _fishingRodItem)
+            {
+                _fishingSlot = slotEnumerator.Current;
+                break;
+            }
+        }
+        
+        Debug.Assert(_fishingSlot is not null, "플레이어에게서 낚시대를 찾을 수 없습니다.");
+        
+        _targetSwapSlot = Player.Inventory.Model.GetSlotSequentially(0);
+        Debug.Assert(_targetSwapSlot is not null);
+        
+        
+        if (_fishingSlot is not null && _targetSwapSlot is not null)
+        {
+            _fishingSlot.Swap(_targetSwapSlot);
+        }
+        
+        Player.Inventory.QuickView.CurrentItemIndex = 0;
+        Player.Inventory.QuickView.CursorMoveLock = true;
+
+        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
+        Player.InputController.Move.Value = null;
+        Player.InputController.Interact.Value = null;
+        Player.InputController.UI.Value = null;
+        
         float sum = Data.Rewards.Sum(x => x.Percentage);
 
         if (Mathf.Approximately(sum, 1f) is false && sum < 1f)
@@ -76,7 +114,15 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         {
             Player.HudController.Visible = true;
             Player.Blackboard.IsMoveStopped = false;
+            Player.Inventory.QuickInvVisible = true;
+            Player.Inventory.QuickView.CursorMoveLock = false;
             Player.Fishing.ReleaseFishingController();
+            Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
+            
+            if (_fishingSlot is not null && _targetSwapSlot is not null)
+            {
+                _fishingSlot.Swap(_targetSwapSlot);
+            }
         }
     }
 

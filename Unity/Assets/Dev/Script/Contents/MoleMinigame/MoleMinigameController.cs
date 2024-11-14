@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using Cinemachine;
 using Cysharp.Threading.Tasks;
+using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using TMPro;
 using UnityEngine;
@@ -169,6 +170,8 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         Player.HudController.Visible = false;
         Player.QuestPresenter.Visible = false;
         Player.RecipeSummaryView.Visible = false;
+
+        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
 
         _gameCts = CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());
         Score = 0;

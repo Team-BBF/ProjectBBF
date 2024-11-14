@@ -99,20 +99,8 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
         }
     }
 
-    private void Update()
+    public void Move(Vector2 input)
     {
-        OnMove();
-    }
-
-    public void OnMove()
-    {
-        if (IsStopped)
-        {
-            ResetVelocity();
-            return;
-        }
-        var input = _movementAction.ReadValue<Vector2>();
-        
         Vector2 dir = new Vector2(
             input.x,
             input.y
@@ -164,11 +152,6 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
 
     private void ChangeClip(Vector2 dir, AnimationActorKey.Action movementType)
     {
-        if (IsStopped)
-        {
-            return;
-        }
-
         var visual = _controller.VisualStrategy;
         float epsilon = Mathf.Epsilon;  // 부동소수점 오차 허용 값
 
@@ -230,11 +213,6 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
     public void ResetVelocity()
     {
         _rigidbody.velocity = Vector3.zero;
-
-        if (IsStopped)
-        {
-            return;
-        }
         
         ChangeClip(LastMovedDirection.normalized, AnimationActorKey.Action.Idle);
     }

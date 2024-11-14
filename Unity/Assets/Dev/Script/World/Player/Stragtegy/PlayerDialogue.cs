@@ -20,6 +20,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
     private PlayerController _controller;
     private PlayerBlackboard _blackboard;
 
+    public bool IsTalking { get; private set; }
     public void Init(PlayerController controller)
     {
         _controller = controller;
@@ -49,9 +50,6 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
 
     public async UniTask<bool> OnDialogueAction()
     {
-        
-        if (_blackboard.IsInteractionStopped) return false;
-        
         try
         {
             var interaction = FindCloserObject();
@@ -74,9 +72,6 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
     
     public async UniTask<bool> RunDialogueFromInteraction(CollisionInteractionMono caller)
     {
-        
-        if (_blackboard.IsInteractionStopped) return false;
-
         try
         {
             if (caller is null) return false;
@@ -120,6 +115,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
     {
         try
         {
+            IsTalking = true;
             _controller.Inventory.QuickInvVisible = false;
             _controller.HudController.Visible = false;
             _controller.Blackboard.IsMoveStopped = true;
@@ -162,6 +158,8 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             _controller.HudController.Visible = true;
             _controller.Blackboard.IsMoveStopped = false;
             _controller.Blackboard.IsInteractionStopped = false;
+            
+            IsTalking = false;
         }
 
         return false;

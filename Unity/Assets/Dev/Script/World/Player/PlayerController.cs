@@ -5,6 +5,7 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using MyBox;
 using ProjectBBF.Event;
+using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -125,6 +126,8 @@ public class PlayerController : MonoBehaviour
     public QuestPresenter QuestPresenter => _questPresenter;
 
     public SpriteRenderer ItemPreviewRenderer => _itemPreviewRenderer;
+    
+    public BasePlayerInputController InputController { get; private set; }
 
     #endregion
     private void Awake()
@@ -139,6 +142,9 @@ public class PlayerController : MonoBehaviour
 
         GameObjectStorage.Instance.AddGameObject(gameObject);
 
+        InputController = new DefaultBasePlayerInputController();
+        InputController.Init(this);
+        InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(this));
 
         var info = ObjectContractInfo.Create(() => gameObject);
         Interaction.SetContractInfo(info, this);
@@ -177,6 +183,11 @@ public class PlayerController : MonoBehaviour
         DataInit();
     }
 
+    private void Update()
+    {
+        InputController.Update();
+    }
+
     private void DataInit()
     {
         Blackboard = PersistenceManager.Instance.LoadOrCreate<PlayerBlackboard>("Player_Blackboard");
@@ -198,7 +209,7 @@ public class PlayerController : MonoBehaviour
             GameObjectStorage.Instance.RemoveGameObject(gameObject);
         }
         
-        
+        InputController.Release();
         Blackboard.OnSaved -= OnSaved;
     }
 

@@ -5,6 +5,7 @@ using System.Linq;
 using DG.Tweening;
 using MyBox;
 using ProjectBBF.Event;
+using ProjectBBF.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -152,6 +153,13 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         pc.transform.position = (Vector2)_playPoint.position;
         pc.MoveStrategy.ResetVelocity();
         pc.MoveStrategy.IsGhost = true;
+        
+        pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        pc.InputController.Move.Value = null;
+        pc.InputController.Interact.Value = null;
+        pc.InputController.UI.Value = null;
+        pc.InputController.Tool.Value = null;
+        
         pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Oven, AnimationActorKey.Direction.Down), true);
 
         _aniOven.SetBool("Start", true);
@@ -258,6 +266,7 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         pc.Blackboard.IsMoveStopped = false;
         pc.Blackboard.IsInteractionStopped = false;
         pc.MoveStrategy.IsGhost = false;
+        pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
     }
 
     private void GameSetup()

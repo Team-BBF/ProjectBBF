@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flowObject: {fileID: 3081621812139645997}
+  _questIndicator: {fileID: 0}
   _resolvor: 0
   _buckets:
   - {fileID: 9209129941722838342}
@@ -352,6 +353,18 @@ MonoBehaviour:
   _interaction: {fileID: 787454703130337317}
   _rigid: {fileID: 2038823585434101786}
   _data: {fileID: 11400000, guid: 28a9df2fa46154644a1069fbb23898cc, type: 2}
+  _onFade:
+    m_PersistentCalls:
+      m_Calls: []
+  _onEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  _onStay:
+    m_PersistentCalls:
+      m_Calls: []
+  _onExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2089061938575688062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,11 +391,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787990115626500048, guid: bbd1b04f33a4caa48a45ccac650ad7c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.019
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1787990115626500048, guid: bbd1b04f33a4caa48a45ccac650ad7c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.04
+      value: 1.963
       objectReference: {fileID: 0}
     - target: {fileID: 1787990115626500048, guid: bbd1b04f33a4caa48a45ccac650ad7c1, type: 3}
       propertyPath: m_LocalPosition.z

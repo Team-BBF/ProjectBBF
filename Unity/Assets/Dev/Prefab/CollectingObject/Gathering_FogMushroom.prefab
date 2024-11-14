@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463288486375155530, guid: b58c42b866e444a46af60327d4645229, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 463288486375155530, guid: b58c42b866e444a46af60327d4645229, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.43
+      objectReference: {fileID: 0}
     - target: {fileID: 3608391481754911189, guid: b58c42b866e444a46af60327d4645229, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.87
@@ -51,7 +59,7 @@ PrefabInstance:
     - target: {fileID: 5697189587717714405, guid: b58c42b866e444a46af60327d4645229, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7d4c00ce1f663514c85da53ad3e0e6c0, type: 3}
+      objectReference: {fileID: 21300000, guid: e7307be11357b274086eb34b15ebf383, type: 3}
     - target: {fileID: 8529599561176500779, guid: b58c42b866e444a46af60327d4645229, type: 3}
       propertyPath: m_Name
       value: Gathering_FogMushroom

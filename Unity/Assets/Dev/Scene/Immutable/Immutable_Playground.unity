@@ -7882,6 +7882,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8897995224042682358}
     m_Modifications:
+    - target: {fileID: 301914238947855942, guid: 0872470a7bc376a4981a0ee384126966, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a771cf43c493d854f88e599dd600ebab, type: 3}
     - target: {fileID: 3647757772520154812, guid: 0872470a7bc376a4981a0ee384126966, type: 3}
       propertyPath: m_Name
       value: PF_PlayerInventory_Slot (2)

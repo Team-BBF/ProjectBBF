@@ -45,7 +45,7 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         Player.Blackboard.IsFishingStopped = false;
         Player.HudController.Visible = false;
         Player.Inventory.QuickInvVisible = false;
-        Player.VisualStrategy.LookAt(Vector2.right, AnimationActorKey.Action.Idle);
+        Player.VisualStrategy.SetIdle(Vector2.right);
         Player.MoveStrategy.LastMovedDirection = Vector2.right;
 
         if (_fishingRodItem)
@@ -126,8 +126,8 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
             
             if (_fishingSlot is not null && _targetSwapSlot is not null)
             {
-                _fishingSlot.Clear();
                 _fishingSlot.Swap(_targetSwapSlot);
+                _fishingSlot.Clear();
             }
         }
     }

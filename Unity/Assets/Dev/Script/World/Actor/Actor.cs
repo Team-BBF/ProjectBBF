@@ -68,7 +68,7 @@ public class Actor : MonoBehaviour, IBONameKey
     {
         //* Strategy binding */
         MoveStrategy.Init(this);
-        Visual.Init(MoveStrategy, Animator, GetComponentInChildren<SpriteRenderer>());
+        Visual.Init(Animator, GetComponentInChildren<SpriteRenderer>());
         _questIndicatorUI.Init();
         
         

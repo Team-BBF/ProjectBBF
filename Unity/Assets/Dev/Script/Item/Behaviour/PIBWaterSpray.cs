@@ -38,6 +38,11 @@ public class PIBWaterSpray : PIBTwoStep
         return ActionResult.Continue;
     }
     
+
+    protected override UniTask EndAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        return UniTask.CompletedTask;
+    }
     private bool SprinkleWater(IBOSprinkleWaterTile action, PlayerController pc)
     {
         var targetPos = pc.Coordinate.GetFront();

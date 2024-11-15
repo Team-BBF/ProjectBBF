@@ -11,6 +11,8 @@ namespace ProjectBBF.Input
 
         public override void Update()
         {
+            ResetTriggerOnceVelocity();
+            
             Vector2 input = InputManager.Map.Player.Movement.ReadValue<Vector2>();
             Owner.MoveStrategy.Move(input);
         }

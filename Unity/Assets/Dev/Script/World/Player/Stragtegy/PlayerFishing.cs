@@ -138,7 +138,6 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
     public async UniTask<bool> Fishing()
     {
-        if (_blackboard.IsInteractionStopped || _blackboard.IsFishingStopped) return false;
         try
         {
             IsFishing = true;
@@ -216,9 +215,11 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
                 _visual.Animator.SetBool("IsFishing", false);
                 await UnFishing(dir, pos, ctx?.FishTransform);
                 ctx?.Release();
-
-                _visual.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle,
-                    AnimationActorKey.Direction.Right));
+                
+                _visual.MoveDir = Vector2.right;
+                _visual.MoveSqrt = 0f;
+                
+                _visual.SetIdle(Vector2.right);
                 
                 return false;
             }
@@ -265,9 +266,8 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
                 inst.DialogueText = $"\"{ctx.Reward.ItemName}\"을(를) 낚았다!";
 
                 AudioManager.Instance.PlayOneShot("SFX", "SFX_Fishing_Completion");
-                _visual.ChangeClip(
-                    AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Additive_Complete,
-                        AnimationActorKey.Direction.Down), true);
+                
+                _visual.SetAction(AnimationActorKey.Action.Bakery_Additive_Complete);
                 _interacter.ItemPreviewSprite = ctx.Reward.ItemSprite;
                 ctx.FishVisible = false;
 
@@ -288,6 +288,7 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
 
             IsFishing = false;
+            _visual.SetIdle(Vector2.right);
             return true;
         }
         catch (Exception e) when (e is not OperationCanceledException)
@@ -304,8 +305,6 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
         {
             _lockFishingLine = true;
             IsFishing = false;
-            _visual.ChangeClip(
-                AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Right), true);
         }
 
 

@@ -104,8 +104,6 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         {
             _controller.Inventory.QuickInvVisible = true;
             _controller.HudController.Visible = true;
-            _controller.Blackboard.IsMoveStopped = false;
-            _controller.Blackboard.IsInteractionStopped = false;
         }
 
         return false;
@@ -118,14 +116,13 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             IsTalking = true;
             _controller.Inventory.QuickInvVisible = false;
             _controller.HudController.Visible = false;
-            _controller.Blackboard.IsMoveStopped = true;
-            _controller.Blackboard.IsInteractionStopped = true;
+            _controller.Interactor.IsInteracting = true;
             _controller.MoveStrategy.ResetVelocity();
 
             if (targetPosition is not null)
             {
                 Vector2 dir = (targetPosition.Value - _controller.transform.position).normalized;
-                _controller.VisualStrategy.LookAt(dir, AnimationActorKey.Action.Idle, true);
+                _controller.VisualStrategy.MoveDir = dir;
             }
 
             var token = this.GetCancellationTokenOnDestroy();
@@ -156,8 +153,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         {
             _controller.Inventory.QuickInvVisible = true;
             _controller.HudController.Visible = true;
-            _controller.Blackboard.IsMoveStopped = false;
-            _controller.Blackboard.IsInteractionStopped = false;
+            _controller.Interactor.IsInteracting = false;
             
             IsTalking = false;
         }
@@ -191,7 +187,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             if (actorInfo.Interaction.Owner is Actor actor)
             {
                 Vector2 dir = (actor.transform.position - _controller.transform.position).normalized;
-                _controller.VisualStrategy.LookAt(dir, AnimationActorKey.Action.Idle, true);
+                _controller.VisualStrategy.MoveDir = dir;
             }
 
             AudioManager.Instance.PlayOneShot("SFX", "SFX_Dialogue_Call");

@@ -40,6 +40,7 @@ namespace ProjectBBF.Input
                     await behaviour.DoAction(Owner, data, Owner.GetCancellationTokenOnDestroy());
                 }
 
+                await UniTask.Yield(PlayerLoopTiming.Update, Owner.GetCancellationTokenOnDestroy());
                 IsUsingTool = false;
             }
             catch (Exception e) when (e is not OperationCanceledException)

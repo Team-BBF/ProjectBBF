@@ -15,10 +15,13 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
     private PlayerMovementData _movementData;
     private PlayerBlackboard _blackboard;
 
-    public Vector2 LastMovedDirection { get; set; }
     
     public AnimationActorKey.Direction LastDirection { get; private set; }
     public AnimationActorKey.Action LastMovement { get; private set; }
+
+
+    public Vector2 LastMovedDirection { get; set; }
+    private Vector2 _lv;
 
     public bool IsStopped
     {
@@ -99,6 +102,7 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
         }
     }
 
+    private bool _inputFlag;
     public void Move(Vector2 input)
     {
         Vector2 dir = new Vector2(
@@ -120,100 +124,29 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
         }
 
         _rigidbody.velocity = velDir;
+        _controller.VisualStrategy.MoveSqrt = velDir.sqrMagnitude;
         
-        if (Mathf.Approximately(Mathf.Abs(input.x) + Mathf.Abs(input.y), 0f) == false)
+       
+        // input이 없을 때
+        if (Mathf.Approximately(Mathf.Abs(input.x) + Mathf.Abs(input.y), 0f))
         {
-            LastMovedDirection = input.normalized;
-            ChangeClip(dir, AnimationActorKey.Action.Move);
+            if (_inputFlag is false)
+            {
+                _controller.VisualStrategy.MoveDir = _lv;
+                _inputFlag = true;
+            }
         }
-        else
+        // input이 있을 때
+        else 
         {
-            ChangeClip(LastMovedDirection, AnimationActorKey.Action.Idle);
-        }
-        
-    }
-
-    private int GetCloserFactor(float x)
-    {
-        float j = x / (1f / 16f);
-
-        float up = Mathf.Abs(Mathf.Ceil(1/j) - 1/j);
-        float down = Mathf.Abs(Mathf.Floor(1/j) - 1/j);
-
-        if (up < down)
-        {
-            return Mathf.RoundToInt(1 / up);
-        }
-        else
-        {
-            return Mathf.RoundToInt(1 / down);
+            _lv = dir;
+            _controller.VisualStrategy.MoveDir = dir;
+            _inputFlag = false;
         }
     }
-
-    private void ChangeClip(Vector2 dir, AnimationActorKey.Action movementType)
-    {
-        var visual = _controller.VisualStrategy;
-        float epsilon = Mathf.Epsilon;  // 부동소수점 오차 허용 값
-
-        AnimationActorKey.Direction direction;
-
-        // 왼쪽 위
-        if (dir.x < -epsilon && dir.y > epsilon)
-        {
-            direction = AnimationActorKey.Direction.LeftUp;
-        }
-        // 오른쪽 위
-        else if (dir.x > epsilon && dir.y > epsilon)
-        {
-            direction = AnimationActorKey.Direction.RightUp;
-        }
-        // 왼쪽 아래
-        else if (dir.x < -epsilon && dir.y < -epsilon)
-        {
-            direction = AnimationActorKey.Direction.Left;
-        }
-        // 오른쪽 아래
-        else if (dir.x > epsilon && dir.y < -epsilon)
-        {
-            direction = AnimationActorKey.Direction.Right;
-        }
-        // 위
-        else if (Mathf.Abs(dir.x) <= epsilon && dir.y > epsilon)
-        {
-            direction = AnimationActorKey.Direction.Up;
-        }
-        // 아래
-        else if (Mathf.Abs(dir.x) <= epsilon && dir.y < -epsilon)
-        {
-            direction = AnimationActorKey.Direction.Down;
-        }
-        // 왼쪽
-        else if (dir.x < -epsilon && Mathf.Abs(dir.y) <= epsilon)
-        {
-            direction = AnimationActorKey.Direction.Left;
-        }
-        // 오른쪽
-        else if (dir.x > epsilon && Mathf.Abs(dir.y) <= epsilon)
-        {
-            direction = AnimationActorKey.Direction.Right;
-        }
-        else
-        {
-            direction = AnimationActorKey.Direction.Down;
-        }
-
-        LastDirection = direction;
-        LastMovement = movementType;
-        
-        var tuple = AnimationActorKey.GetAniHash(movementType, direction);
-        visual.ChangeClip(tuple);
-    }
-
-
+    
     public void ResetVelocity()
     {
         _rigidbody.velocity = Vector3.zero;
-        
-        ChangeClip(LastMovedDirection.normalized, AnimationActorKey.Action.Idle);
     }
 }

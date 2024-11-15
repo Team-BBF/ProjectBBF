@@ -9,6 +9,18 @@ namespace ProjectBBF.Input
 
     public abstract class PlayerInputMove : BaseInput<PlayerController>
     {
+        private bool _isTriggeredOnceRsetVelocity;
+        protected void ResetTriggerOnceVelocity()
+        {
+            _isTriggeredOnceRsetVelocity = false;
+        }
+        public void TriggerOnceResetVelocity()
+        {
+            if (_isTriggeredOnceRsetVelocity) return;
+            _isTriggeredOnceRsetVelocity = true;
+            
+            Owner.MoveStrategy.ResetVelocity();
+        }
     }
 
     public abstract class PlayerInputInteract : BaseInput<PlayerController>
@@ -29,7 +41,7 @@ namespace ProjectBBF.Input
             get => _value;
             set
             {
-                if (_value != value && _value is not null)
+                if (_value is not null)
                 {
                     _value.Release();
                 }
@@ -96,9 +108,16 @@ namespace ProjectBBF.Input
                 Move.Value?.Update();
                 Tool.Value?.Update();
             }
+            else
+            {
+                Move.Value?.TriggerOnceResetVelocity();
+            }
 
-            Interact.Value?.Update();
-            UI.Value?.Update();
+            if(Owner.Interactor.IsInteracting is false)
+            {
+                Interact.Value?.Update();
+                UI.Value?.Update();
+            }
         }
     }
 

@@ -133,8 +133,7 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         pc.MoveStrategy.IsGhost = true;
 
         yield return null;
-        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(aniAction, AnimationActorKey.Direction.Down), true);
-        pc.MoveStrategy.LastMovedDirection = Vector2.down;
+        pc.VisualStrategy.SetAction(aniAction, Vector2.down);
 
         if (ResolvorType == Resolvor.Dough)
         {
@@ -163,9 +162,7 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
                 pc.MoveStrategy.IsGhost = false;
                 pc.transform.position = _revertPoint.position;
                 pc.transform.SetZ(backupPcZ);
-                pc.VisualStrategy.ChangeClip(
-                    AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Down),
-                    true);
+                pc.VisualStrategy.SetIdle(Vector2.down);
 
                 if (_activationUI.activeSelf == false)
                 {
@@ -211,15 +208,13 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         pc.transform.position = _revertPoint.position;
 
         _panel.SetActive(false);
-        pc.VisualStrategy.ChangeClip(
-            AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Additive_Complete,
-                AnimationActorKey.Direction.Down), true);
+        pc.VisualStrategy.SetAction(AnimationActorKey.Action.Bakery_Additive_Complete, Vector2.down);
+        
         pc.Interactor.ItemPreviewSprite = privewItem;
         yield return new WaitForSeconds(_endWait);
         pc.Interactor.ItemPreviewSprite = null;
 
-        pc.VisualStrategy.ChangeClip(
-            AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Down), true);
+        pc.VisualStrategy.SetIdle(Vector2.down);
 
 
         QuestIndicator.Visible = true;

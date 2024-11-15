@@ -804,7 +804,11 @@ MonoBehaviour:
   _bodyRenderer: {fileID: 7975097241645119651}
   _interactorIndicator: {fileID: 1762986570092472196}
   _itemPreviewRenderer: {fileID: 5691288595559422027}
-  _testItems: []
+  _testItems:
+  - Item: {fileID: 11400000, guid: 71b1b695fda60734da691c8b0e4464e3, type: 2}
+    Count: 1
+  - Item: {fileID: 11400000, guid: e4a919c6e0400c24593ce3eb50f6180c, type: 2}
+    Count: 1
 --- !u!50 &1588533005212955071
 Rigidbody2D:
   serializedVersion: 4
@@ -1077,7 +1081,7 @@ Animator:
   m_GameObject: {fileID: 4343325126028486478}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: fbff177bc683ae44aa5723546f748030, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4ca1e1a2de8c1af4190ab86d99c8856e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

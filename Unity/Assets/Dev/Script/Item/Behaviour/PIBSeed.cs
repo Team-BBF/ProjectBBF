@@ -44,6 +44,11 @@ public class PIBSeed : PIBTwoStep
         
         return ActionResult.Continue;
     }
+
+    protected override UniTask EndAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        return UniTask.CompletedTask;
+    }
     
     public bool PlantTile(IBOPlantTile action, PlayerController pc)
     {

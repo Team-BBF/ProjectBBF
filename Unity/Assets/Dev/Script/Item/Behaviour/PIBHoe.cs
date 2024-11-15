@@ -41,6 +41,11 @@ public class PIBHoe : PIBTwoStep
         return ActionResult.Continue;
     }
 
+    protected override UniTask EndAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        return UniTask.CompletedTask;
+    }
+
     private bool OnCultivateTile(IBOCultivateTile action, PlayerController pc)
     {
         var targetPos = pc.Coordinate.GetFront();

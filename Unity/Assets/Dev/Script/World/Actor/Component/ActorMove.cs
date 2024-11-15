@@ -102,15 +102,17 @@ public class ActorMove : ActorComponent, IActorMove
                     {
                         _agent.transform.position = (Vector2)point.Position;
                         _agent.SetDestination(point.Position);
-                        _actor.Visual.LookAt(_agent.desiredVelocity, AnimationActorKey.Action.Idle);
+                        _actor.Visual.MoveDir = _agent.desiredVelocity;
+                        _actor.Visual.MoveSqrt = _agent.desiredVelocity.sqrMagnitude;
                         break;
                     }
                 }
                 
-                _actor.Visual.SetMoveSpeed(_agent.speed);
+                _actor.Visual.MoveSpeed = _agent.speed;
 
                 bool success =_agent.SetDestination(pos);
-                _actor.Visual.LookAt(_agent.desiredVelocity, AnimationActorKey.Action.Move);
+                _actor.Visual.MoveDir = _agent.desiredVelocity;
+                _actor.Visual.MoveSqrt = _agent.desiredVelocity.sqrMagnitude;
 
                 if (Vector2.Distance(_agent.transform.position, pos) <= _agent.stoppingDistance)
                 {
@@ -146,7 +148,8 @@ public class ActorMove : ActorComponent, IActorMove
 
         _actor.Visual.IsVisible = !decoPoint.VisitAndHide;
 
-        _actor.Visual.LookAt(_agent.desiredVelocity, AnimationActorKey.Action.Idle);
+        _actor.Visual.MoveDir = _agent.desiredVelocity;
+        _actor.Visual.MoveSqrt = 0f;
         float timer = 0f;
         while (timer < decoPoint.WaitDuration)
         {

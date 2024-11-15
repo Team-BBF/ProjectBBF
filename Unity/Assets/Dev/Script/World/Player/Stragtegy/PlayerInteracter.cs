@@ -100,11 +100,10 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     {
         WaitForSecond(0.3f);
     }
-
     public void WaitForPickupAnimation(Vector2 dir)
     {
-        _visual.LookAt(dir, AnimationActorKey.Action.Collect, true);
-        WaitForSecond(0.3f);
+        WaitForSecond(0.8f);
+        _visual.SetAction(AnimationActorKey.Action.Collect, dir);
     }
 
     #endregion
@@ -150,7 +149,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
             Vector2 dir = clickPoint - (Vector2)_controller.transform.position;
             var pos =
                     (Vector2)_controller.transform.position +
-                    (Vector2)_coordinate.GetDirOffset(_visual.CalculateLookDir(dir, true))
+                    (Vector2)_coordinate.GetDirOffset(_visual.ToNormalizedVector(dir, true))
                 ;
 
             if (obj.TryGetContractInfo(out ObjectContractInfo info) &&
@@ -242,11 +241,6 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
         return minInteraction;
     }
-
-    #endregion
-
-    #region Callback Method
-
 
     #endregion
 

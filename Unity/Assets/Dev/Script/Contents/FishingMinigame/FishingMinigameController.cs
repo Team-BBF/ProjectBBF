@@ -48,6 +48,11 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         Player.VisualStrategy.LookAt(Vector2.right, AnimationActorKey.Action.Idle);
         Player.MoveStrategy.LastMovedDirection = Vector2.right;
 
+        if (_fishingRodItem)
+        {
+            Player.Inventory.Model.PushItem(_fishingRodItem, 1);
+        }
+        
         using IEnumerator<IInventorySlot> slotEnumerator = Player.Inventory.Model.GetEnumerator();
 
         
@@ -121,6 +126,7 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
             
             if (_fishingSlot is not null && _targetSwapSlot is not null)
             {
+                _fishingSlot.Clear();
                 _fishingSlot.Swap(_targetSwapSlot);
             }
         }

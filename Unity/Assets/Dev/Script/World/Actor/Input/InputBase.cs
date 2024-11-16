@@ -32,6 +32,26 @@ namespace ProjectBBF.Input
         public void Update();
     }
     
+
+    public class InputBinder<TOwner, TInput>
+        where TInput : BaseInput<TOwner>
+    {
+        private TInput _value;
+        public TInput Value
+        {
+            get => _value;
+            set
+            {
+                if (_value is not null)
+                {
+                    _value.Release();
+                }
+
+                _value = value;
+            }
+        }
+    }
+    
     public static class InputAbstractFactory
     {
         public static TFactory CreateFactory<TOwner, TFactory>(TOwner owner)

@@ -33,36 +33,15 @@ namespace ProjectBBF.Input
     }
     public abstract class PlayerInputQuestUI : BaseInput<PlayerController>
     {
-        private bool _isTriggeredOnceRsetVelocity;
-        protected void ResetTriggerOnceVelocity()
+        private bool _isTriggered;
+        protected void ResetTriggerOnceFade()
         {
-            _isTriggeredOnceRsetVelocity = false;
+            _isTriggered = false;
         }
-        public void TriggerOnceResetVelocity()
+        public virtual void TriggerOnceResetFade()
         {
-            if (_isTriggeredOnceRsetVelocity) return;
-            _isTriggeredOnceRsetVelocity = true;
-            
-            Owner.MoveStrategy.ResetVelocity();
-        }
-    }
-
-    public class InputBinder<TOwner, TInput>
-        where TInput : BaseInput<TOwner>
-    {
-        private TInput _value;
-        public TInput Value
-        {
-            get => _value;
-            set
-            {
-                if (_value is not null)
-                {
-                    _value.Release();
-                }
-
-                _value = value;
-            }
+            if (_isTriggered) return;
+            _isTriggered = true;
         }
     }
 
@@ -122,7 +101,8 @@ namespace ProjectBBF.Input
             if (Tool.Value?.IsUsingTool is false &&
                 Owner.Interactor.IsInteracting is false &&
                 Owner.Dialogue.IsTalking is false &&
-                Owner.PannelView.ViewState == PlayerPannelView.ViewType.Close)
+                Owner.PannelView.ViewState == PlayerPannelView.ViewType.Close &&
+                Owner.RecipeBookPresenter.PreviewView.Visible is false)
             {
                 Move.Value?.Update();
                 Tool.Value?.Update();
@@ -137,8 +117,16 @@ namespace ProjectBBF.Input
                 Interact.Value?.Update();
                 UI.Value?.Update();
             }
-            
-            QuestUI.Value?.Update();
+
+            if (Owner.PannelView.ViewState == PlayerPannelView.ViewType.Close &&
+                Owner.RecipeBookPresenter.PreviewView.Visible is false)
+            {
+                QuestUI.Value?.Update();
+            }
+            else
+            {
+                QuestUI.Value?.TriggerOnceResetFade();
+            }
         }
     }
 

@@ -7,6 +7,8 @@ namespace ProjectBBF.Input
     {
         private InputAction _keyAction;
         private bool _keyFlag;
+
+        private bool _triggerFlag;
         public override void OnInit()
         {
             _keyAction = InputManager.Map.UI.FocusQuestMarker;
@@ -14,6 +16,8 @@ namespace ProjectBBF.Input
 
         public override void Update()
         {
+            ResetTriggerOnceFade();
+            
             if (_keyAction.ReadValue<float>() > 0f && _keyFlag is false)
             {
                 FadeoutObstacleUI();
@@ -71,6 +75,14 @@ namespace ProjectBBF.Input
 
         public override void Release()
         {
+        }
+
+        public override void TriggerOnceResetFade()
+        {
+            base.TriggerOnceResetFade();
+            
+            FadeinIndicatorUI();
+            FadeinObstacleUI();
         }
     }
 }

@@ -31,6 +31,21 @@ namespace ProjectBBF.Input
     {
         public bool IsUsingTool { get; protected set; }
     }
+    public abstract class PlayerInputQuestUI : BaseInput<PlayerController>
+    {
+        private bool _isTriggeredOnceRsetVelocity;
+        protected void ResetTriggerOnceVelocity()
+        {
+            _isTriggeredOnceRsetVelocity = false;
+        }
+        public void TriggerOnceResetVelocity()
+        {
+            if (_isTriggeredOnceRsetVelocity) return;
+            _isTriggeredOnceRsetVelocity = true;
+            
+            Owner.MoveStrategy.ResetVelocity();
+        }
+    }
 
     public class InputBinder<TOwner, TInput>
         where TInput : BaseInput<TOwner>
@@ -57,6 +72,7 @@ namespace ProjectBBF.Input
         public InputBinder<PlayerController, PlayerInputMove> Move { get; private set; } = new();
         public InputBinder<PlayerController, PlayerInputInteract> Interact { get; private set; } = new();
         public InputBinder<PlayerController, PlayerInputTool> Tool { get; private set; } = new();
+        public InputBinder<PlayerController, PlayerInputQuestUI> QuestUI { get; private set; } = new();
     }
 
     public abstract class PlayerInputFactory : IInputFactory<PlayerController>
@@ -74,6 +90,7 @@ namespace ProjectBBF.Input
         public abstract PlayerInputInteract CreateInteract();
 
         public abstract PlayerInputTool CreateTool();
+        public abstract PlayerInputQuestUI CreateQuestUI();
     }
 
     public class DefaultBasePlayerInputController : BasePlayerInputController
@@ -84,6 +101,7 @@ namespace ProjectBBF.Input
             UI.Value = factory?.CreateUI();
             Interact.Value = factory?.CreateInteract();
             Tool.Value = factory?.CreateTool();
+            QuestUI.Value = factory?.CreateQuestUI();
         }
         public override void OnInit()
         {
@@ -96,6 +114,7 @@ namespace ProjectBBF.Input
             UI.Value = null;
             Interact.Value = null;
             Tool.Value = null;
+            QuestUI.Value = null;
         }
 
         public override void Update()
@@ -118,6 +137,8 @@ namespace ProjectBBF.Input
                 Interact.Value?.Update();
                 UI.Value?.Update();
             }
+            
+            QuestUI.Value?.Update();
         }
     }
 
@@ -141,6 +162,11 @@ namespace ProjectBBF.Input
         public override PlayerInputTool CreateTool()
         {
             return new PITODefault().Init(Owner).As<PlayerInputTool>();
+        }
+
+        public override PlayerInputQuestUI CreateQuestUI()
+        {
+            return new PIQUDefault().Init(Owner).As<PlayerInputQuestUI>();
         }
     }
 }

@@ -23,6 +23,8 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
     public Vector2 LastMovedDirection { get; set; }
     private Vector2 _lv;
 
+    public Vector2 Velocity => _rigidbody.velocity;
+
     public bool IsStopped
     {
         get => _blackboard.IsMoveStopped;

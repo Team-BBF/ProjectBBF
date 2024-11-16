@@ -24,9 +24,6 @@ public class QuestIndicatorUI : ActorComponent
     private bool _isWorldCanvas;
     private Tweener _scaleTweener;
 
-    private InputAction _keyAction;
-    private bool _keyFlag;
-
     private bool _isRaised;
 
     private HashSet<string> _createdQuestHashset = new HashSet<string>();
@@ -76,17 +73,21 @@ public class QuestIndicatorUI : ActorComponent
         
         RectTransform boundTransform = _renderer.transform as RectTransform;
         _savedScale = boundTransform.localScale;
-
-        _keyAction = InputManager.Map.UI.ForcusQuestMarker;
     }
 
-    private void OnKeyDown(InputAction.CallbackContext obj)
+    private void OnEnable()
     {
-        _keyFlag = true;
+        if (QuestManager.Instance)
+        {
+            QuestManager.Instance.IndicatorList.Add(this);
+        }
     }
-    private void OnKeyUp(InputAction.CallbackContext obj)
+    private void OnDisable()
     {
-        _keyFlag = true;
+        if (QuestManager.Instance)
+        {
+            QuestManager.Instance.IndicatorList.Remove(this);
+        }
     }
 
     private void OnDestroy()
@@ -150,30 +151,6 @@ public class QuestIndicatorUI : ActorComponent
             pos
         );
         
-        if (QuestManager.Instance)
-        {
-            if (_keyAction.ReadValue<float>() > 0f && _keyFlag is false)
-            {
-                foreach (QuestIndicatorObstacleUI obstacle in QuestManager.Instance.IndicatorObstacleList)
-                {
-                    obstacle.DoFade(0.2f, 0.2f);
-                    _scaleTweener?.Kill();
-                    _scaleTweener = boundTransform.DOScale(_savedScale * 1.5f, 0.3f).SetId(this).SetLoops(-1, LoopType.Yoyo);
-                }
-                _keyFlag = true;
-            }
-            else if(_keyAction.ReadValue<float>() <= 0f && _keyFlag)
-            {
-                foreach (QuestIndicatorObstacleUI obstacle in QuestManager.Instance.IndicatorObstacleList)
-                {
-                    obstacle.DoFade(1f, 0.2f);
-                    _scaleTweener?.Kill();
-                    _scaleTweener = boundTransform.DOScale(_savedScale, 0.3f).SetId(this);
-                }
-                _keyFlag = false;
-            }
-        }
-        
         pos = ScreenUtils.OrthogonalToScreen(pos, cameraScaledSize);
 
         if (isWorldCanvas)
@@ -184,6 +161,20 @@ public class QuestIndicatorUI : ActorComponent
 
 
         boundTransform.position = Vector2.Lerp(boundTransform.position, pos, Time.deltaTime / _duration);
+    }
+
+    public void BeginAnimateFocus()
+    {
+        RectTransform boundTransform = _renderer.transform as RectTransform;
+        _scaleTweener?.Kill();
+        _scaleTweener = boundTransform.DOScale(_savedScale * 1.5f, 0.3f).SetId(this).SetLoops(-1, LoopType.Yoyo);
+    }
+
+    public void EndAnimateFocus()
+    {
+        RectTransform boundTransform = _renderer.transform as RectTransform;
+        _scaleTweener?.Kill();
+        _scaleTweener = boundTransform.DOScale(_savedScale, 0.3f).SetId(this);
     }
 
     private void LateUpdate()

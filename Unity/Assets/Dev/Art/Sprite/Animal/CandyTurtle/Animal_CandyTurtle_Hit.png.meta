@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af22e550ff0ad464f9fff37255badd35
+guid: 90d29bc13e0ebe844ae19002a30bbec9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,22 +97,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animal_CandyTurtle_Stop_Right_0
+      name: Animal_CandyTurtle_Hit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 50
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5144113, y: 0.1628846}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48deb7c16398caa49b1107f962235403
-      internalID: -2068252575
+      spriteID: 9ab3adcec8ceaa54cb4e4d1caf75338d
+      internalID: -1777326113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_CandyTurtle_Hit_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5144113, y: 0.1628846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0846170415a6804d935783c52f626f1
+      internalID: 1680743295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_CandyTurtle_Hit_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5144113, y: 0.1628846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf5c8d50b56d234281a18f86940f0b4
+      internalID: 1841459891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_CandyTurtle_Hit_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5144113, y: 0.1628846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e49b7e7d9904e9418c5b55b4df57dad
+      internalID: -1962991828
       vertices: []
       indices: 
       edges: []
@@ -120,7 +183,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: dfcd5d00d786d064497cd717eb127e47
+    spriteID: 954e30da79e43094f937eec0f5f52a9f
     internalID: 0
     vertices: []
     indices: 
@@ -128,7 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Animal_CandyTurtle_Stop_Right_0: -2068252575
+      Animal_CandyTurtle_Hit_0: -1777326113
+      Animal_CandyTurtle_Hit_1: 1680743295
+      Animal_CandyTurtle_Hit_2: 1841459891
+      Animal_CandyTurtle_Hit_3: -1962991828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

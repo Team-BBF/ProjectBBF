@@ -120,6 +120,34 @@ PrefabInstance:
       propertyPath: _collectedPlayingAudioGroupKey
       value: Animal
       objectReference: {fileID: 0}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2323379397744268287}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnimalAnimator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165284809982388803, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+      propertyPath: _onChangedCollectingState.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1780465535857405135, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0
@@ -151,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 2767219050062274324, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
       propertyPath: _movementData
       value: 
-      objectReference: {fileID: 11400000, guid: 7ac5f4731a696f2498b0105775936f4e, type: 2}
+      objectReference: {fileID: 11400000, guid: e9a647edee5fb2f4f94ee5906f381cfd, type: 2}
     - target: {fileID: 3113770840607713074, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
       propertyPath: _targetTexts.Array.data[0]
       value: 
@@ -346,6 +374,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8612635081641424140, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
   m_PrefabInstance: {fileID: 7993221500499914939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2323379397744268287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5680145077571019588, guid: 91a3d4618d0a1f14aa1fd98a03dd2e75, type: 3}
+  m_PrefabInstance: {fileID: 7993221500499914939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfead2dc2c8c7054baefe2575e295fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8296429464342741235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,6 +447,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6059098787239991353, guid: 136a278d6d90e8f4cba365e1753c46b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214240639813629515, guid: 136a278d6d90e8f4cba365e1753c46b1, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482900620417463201, guid: 136a278d6d90e8f4cba365e1753c46b1, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932654212628746790, guid: 136a278d6d90e8f4cba365e1753c46b1, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

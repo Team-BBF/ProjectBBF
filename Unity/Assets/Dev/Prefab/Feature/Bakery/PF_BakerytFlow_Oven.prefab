@@ -293,7 +293,7 @@ Transform:
   m_GameObject: {fileID: 2724742885272440733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -38.57, z: 0}
+  m_LocalPosition: {x: 1.56, y: 27.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -349,18 +349,10 @@ MonoBehaviour:
   _activationUI: {fileID: 5300061487329478863}
   _source: {fileID: 2078856739648105593}
   _esoQuest: {fileID: 11400000, guid: 06ad3c3083ef1164f917cf17f2bacdc5, type: 2}
-  _questOvenData: {fileID: 11400000, guid: 4411a6de6c191334399382ff6a406118, type: 2}
-  _questLyllaTutorialFail: {fileID: 11400000, guid: ce2fec0a9dd3ab34bae6abd65424aa7a, type: 2}
-  _questLyllaTutorialSuccess: {fileID: 11400000, guid: f5f9c58ebde07464fa675223b90c000a, type: 2}
-  _questTutoOthers:
-  - {fileID: 11400000, guid: f908d181e8ce3cc449214eb13b4252c0, type: 2}
-  - {fileID: 11400000, guid: a1b47396b7b37e040b32038e9b5b4a54, type: 2}
-  - {fileID: 11400000, guid: 4a03d10813b0db0489e05dce2f3a379b, type: 2}
-  - {fileID: 11400000, guid: 8c295664dffefa94fbf010bc985c6028, type: 2}
-  - {fileID: 11400000, guid: ad7b1b4eeeacffa4e89f2982a4f1eb0a, type: 2}
-  - {fileID: 11400000, guid: 6dda34f88a15f7947840d17b485e74c7, type: 2}
-  - {fileID: 11400000, guid: ce2fec0a9dd3ab34bae6abd65424aa7a, type: 2}
-  - {fileID: 11400000, guid: f5f9c58ebde07464fa675223b90c000a, type: 2}
+  _questOvenData: {fileID: 0}
+  _questLyllaTutorialFail: {fileID: 0}
+  _questLyllaTutorialSuccess: {fileID: 0}
+  _questTutoOthers: []
   _roundTripInterval: 2
   _playPoint: {fileID: 3985505238317895417}
   _panel: {fileID: 3409526931302389199}
@@ -1553,12 +1545,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 405854409079707654, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: _targetQuestList.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 405854409079707654, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: _targetQuestList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 4411a6de6c191334399382ff6a406118, type: 2}
+    - target: {fileID: 405854409079707654, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
+      propertyPath: _targetQuestList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fed11650ea9a0e4e8d1ead990c189b2, type: 2}
+    - target: {fileID: 405854409079707654, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0378ed541be8b344b3a7eb84447787a, type: 2}
     - target: {fileID: 1244924277327536392, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: m_Name
       value: PF_Indicator_Quest

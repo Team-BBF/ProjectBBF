@@ -8,6 +8,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ProjectBBF/Behaviour/Item/Hoe", fileName = "Bav_Item_Hoe")]
 public class PIBHoe : PIBTwoStep
 {
+    private Vector2 _targetPos;
+    
     protected override async UniTask<ActionResult> PreAction(PlayerController playerController, ItemData itemData,
         CancellationToken token = default)
     {
@@ -17,6 +19,8 @@ public class PIBHoe : PIBTwoStep
         {
             AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_Hoe");
             AnimateLookAt(playerController, AnimationActorKey.Action.Hoe, true);
+            _targetPos = playerController.Interactor.IndicatedPosition;
+            
             return ActionResult.Continue;
         }
 
@@ -48,7 +52,6 @@ public class PIBHoe : PIBTwoStep
 
     private bool OnCultivateTile(IBOCultivateTile action, PlayerController pc)
     {
-        var targetPos = pc.Coordinate.GetFront();
         ItemData data = pc.Inventory.CurrentItemData;
 
         if (data is null) return false;
@@ -57,7 +60,7 @@ public class PIBHoe : PIBTwoStep
 
         if (data.Info.Contains(ToolType.Hoe))
         {
-            success = action.TryCultivateTile(targetPos, null);
+            success = action.TryCultivateTile(_targetPos, null);
         }
 
         pc.Inventory.Refresh();
@@ -72,11 +75,10 @@ public class PIBHoe : PIBTwoStep
 
     private bool OnDestroyTile(IBODestoryTile action, PlayerController pc)
     {
-        var targetPos = pc.Coordinate.GetFront();
         var data = pc.Inventory.CurrentItemData;
 
         if (data is null) return false;
-        var list = action.Destory(targetPos, data.Info);
+        var list = action.Destory(_targetPos, data.Info);
 
         if (list is null) return false;
 

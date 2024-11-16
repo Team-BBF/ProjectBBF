@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectingData: {fileID: 0}
+  _particle: {fileID: 0}
   _collectAndRaisingEvents: []
   _onChangedCollectingState:
     m_PersistentCalls:
@@ -395,6 +396,14 @@ PrefabInstance:
     - target: {fileID: 6694115529256732025, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: _actorComponents.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076314395520464546, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
+      propertyPath: m_Size.y
+      value: 0.72317696
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076314395520464546, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.31015873
       objectReference: {fileID: 0}
     - target: {fileID: 9156849674972998512, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_Name

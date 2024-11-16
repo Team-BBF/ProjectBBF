@@ -16,7 +16,7 @@ public class PIBHoe : PIBTwoStep
         if (itemData && itemData.Info.Contains(ToolType.Hoe))
         {
             AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_Hoe");
-            AnimateLookAt(playerController, AnimationActorKey.Action.Hoe);
+            AnimateLookAt(playerController, AnimationActorKey.Action.Hoe, true);
             return ActionResult.Continue;
         }
 

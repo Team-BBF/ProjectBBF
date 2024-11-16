@@ -78,17 +78,17 @@ public class ActorVisual : ActorComponent
         _animator.SetTrigger(aniHash);
         _animator.SetTrigger(ActionAniHash);
     }
-    public virtual void SetAction(AnimationActorKey.Action action, Vector2 vDir)
+    public virtual void SetAction(AnimationActorKey.Action action, Vector2 vDir, bool ignoreSideUp = false)
     {
-        var dir = VectorToDirection(vDir);
+        var dir = VectorToDirection(vDir, ignoreSideUp);
         SetAction(action, dir);
     }
-    public virtual void SetAction(AnimationActorKey.Action action, AnimationActorKey.Direction dir)
+    public virtual void SetAction(AnimationActorKey.Action action, AnimationActorKey.Direction dir, bool ignoreSideUp = false)
     {
         int aniHash = AnimationActorKey.GetAniHash(action);
         _animator.SetTrigger(aniHash);
         _animator.SetTrigger(ActionAniHash);
-        MoveDir = DirectionToVector(dir);
+        MoveDir = DirectionToVector(dir, ignoreSideUp);
     }
 
     public void SetIdle(AnimationActorKey.Direction dir)

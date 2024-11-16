@@ -23,7 +23,7 @@ public class PIBSeed : PIBTwoStep
                 info.TryGetBehaviour(out IBOPlantTile platTile) &&
                 platTile.CanPlant(targetPos))
             {
-                AnimateLookAt(playerController, AnimationActorKey.Action.Plant);
+                AnimateLookAt(playerController, AnimationActorKey.Action.Plant, true);
                 return ActionResult.Continue;
             }
         }

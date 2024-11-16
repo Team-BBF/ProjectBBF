@@ -112,6 +112,8 @@ namespace ProjectBBF.Input
             Owner.RecipeBookPresenter.PreviewView.Visible = true;
             IsAnyUIVisible = true;
 
+            bool backupQuickInvLock = Owner.Inventory.QuickView.CursorMoveLock;
+            Owner.Inventory.QuickView.CursorMoveLock = true;
 
             canceled = await UniTask
                 .WaitUntil(() => IsTriggeredUIAny, PlayerLoopTiming.PostLateUpdate,
@@ -123,6 +125,7 @@ namespace ProjectBBF.Input
             Owner.RecipeBookPresenter.ListView.Visible = false;
             Owner.RecipeBookPresenter.PreviewView.Visible = false;
             IsAnyUIVisible = false;
+            Owner.Inventory.QuickView.CursorMoveLock = backupQuickInvLock;
         }
     }
 }

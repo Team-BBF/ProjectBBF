@@ -134,7 +134,13 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
 
     protected override bool IsGameEnd()
     {
-        return Player.Fishing.IsFishing is false && Timer >= Data.GameDuration;
+        bool isEnd = Player.Fishing.IsFishing is false && Timer >= Data.GameDuration;
+        if (isEnd)
+        {
+            Player.InputController.Tool.Value = null;
+        }
+        
+        return isEnd;
     }
 
     protected override UniTask OnGameEnd(bool isRequestEnd)

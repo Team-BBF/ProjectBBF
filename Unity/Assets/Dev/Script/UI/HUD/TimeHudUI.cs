@@ -38,7 +38,8 @@ public class TimeHudUI : MonoBehaviour
     
     private void Awake()
     {
-        StartCoroutine(CoUpdate());
+        // TODO: 당장 사용 안 함. 기획 변경
+        //StartCoroutine(CoUpdate());
     }
 
     private IEnumerator CoUpdate()

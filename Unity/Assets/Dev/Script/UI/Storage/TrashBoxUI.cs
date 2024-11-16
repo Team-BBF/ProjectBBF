@@ -2,6 +2,7 @@
 
 
 using System;
+using System.Collections.Generic;
 using MyBox;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +12,8 @@ public class TrashBoxUI : MonoBehaviour
 {
     [field: SerializeField] private Button _button;
 
+    [SerializeField] private List<ItemData> _itemBlacklist;
+    
     private void Awake()
     {
         _button.onClick.AddListener(OnClick);
@@ -26,6 +29,11 @@ public class TrashBoxUI : MonoBehaviour
         var item = SelectItemPresenter.Instance.Model.Selected;
         if (item is null) return;
 
+        if (item.Data && _itemBlacklist.Contains(item.Data))
+        {
+            return;
+        }
+        
         SelectItemPresenter.Instance.Model.Selected.Clear();
     }
 }

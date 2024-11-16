@@ -683,9 +683,10 @@ MonoBehaviour:
   _lineHeightFactor: -1.5
   _lineIteraction: 50
   _sideOffset: {x: 0, y: -1.8, z: 0}
-  _fishingMaxDistance: 15
+  _fishingMaxDistance: 10
   _turningT: 0.9
   _sideMaxY: 3
+  _fishiRendererScale: {x: 0.63761, y: 0.63761, z: 0.63761}
   _handle: {fileID: 6363802113969981774}
   _fishingFloatRenderer: {fileID: 5881046297284461093}
   _view: {fileID: 808908259159016748}

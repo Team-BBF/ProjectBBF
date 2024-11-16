@@ -47,12 +47,15 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
     [SerializeField] private float _fishingMaxDistance;
     [SerializeField] private float _turningT;
     [SerializeField] private float _sideMaxY;
-
+//0.63761
+    [SerializeField] private Vector3 _fishiRendererScale = Vector3.one;
+    
     [SerializeField] private Transform _handle;
     [SerializeField] private SpriteRenderer _fishingFloatRenderer;
     [SerializeField] private FishingView _view;
 
     [SerializeField] private SplineContainer _splineContainer;
+    
 
     private IEnumerator _co;
 
@@ -254,6 +257,12 @@ public class PlayerFishing : MonoBehaviour, IPlayerStrategy
 
 
             _visual.Animator.SetBool("IsFishing", false);
+
+            if (ctx.FishTransform)
+            {
+                ctx.FishTransform.localScale = _fishiRendererScale;
+            }
+            
             await UnFishing(dir, pos, ctx?.FishTransform);
 
             if (ctx.IsTiming)

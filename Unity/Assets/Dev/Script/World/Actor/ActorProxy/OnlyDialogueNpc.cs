@@ -17,7 +17,9 @@ public class OnlyDialogueNpc : Npc
     public override void UpdateInteract(CollisionInteractionMono caller)
     {
         if (caller.Owner is not PlayerController pc) return;
-        if (InputManager.Map.Player.InteractionDialogue.triggered)
+        
+        var clickObj = pc.Interactor.FindClickObject();
+        if (clickObj && clickObj.ContractInfo == Interaction.ContractInfo)
         {
             _ = pc.Dialogue.RunDialogueFromInteraction(Interaction);
         }

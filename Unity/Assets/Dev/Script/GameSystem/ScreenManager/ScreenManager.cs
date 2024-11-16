@@ -9,10 +9,18 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+public enum CursorType
+{
+    Default,
+    CanClick,
+}
+
 [Singleton(ESingletonType.Global, 2)]
 public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 {
+    private CursorTable _cursorTable;
     private GameSetting _setting;
+
     public override void PostInitialize()
     {
         var resList = new List<Vector2Int>();
@@ -24,7 +32,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         MaxFrameRate = Mathf.RoundToInt((float)Screen.resolutions.Max(x => x.refreshRateRatio.value));
         AllResolutions = resList.Distinct().ToList();
         PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting);
-        
+
         if (setting.IsCreatedScreen is false)
         {
             setting.IsCreatedScreen = true;
@@ -45,6 +53,10 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         }
 
         _setting = setting;
+
+
+        _cursorTable = Resources.Load<CursorTable>("Data/Dat_CursorTable");
+        Debug.Assert(_cursorTable, "CursorTable을 찾을 수 없습니다. ");
     }
 
     public override void PostRelease()
@@ -58,7 +70,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         _setting.Resolution = CurrentResolution;
         _setting.RefreshRate = TargetFrameRate;
         _setting.RenderScale = RenderScale;
-        
+
         PersistenceManager.Instance.SaveUserData();
     }
 
@@ -67,6 +79,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
     public IReadOnlyList<Vector2Int> AllResolutions { get; private set; }
 
     private FullScreenMode _screenMode;
+
     public FullScreenMode ScreenMode
     {
         get => _screenMode;
@@ -98,6 +111,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
     public Vector2Int CurrentResolution { get; private set; }
 
     private int _targetFrameRate;
+
     public int TargetFrameRate
     {
         get => _targetFrameRate;
@@ -123,7 +137,25 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         OnChangedResolution?.Invoke(CurrentResolution);
     }
 
-    #if UNITY_EDITOR
+    private CursorType _cursor;
+
+    public CursorType CurrentCursor
+    {
+        get => _cursor;
+        set
+        {
+            _cursor = value;
+            if (_cursorTable == false) return;
+            
+            Texture2D cursorTexture = _cursorTable.List.FirstOrDefault(x => value == x.Type).Texture2D;
+            if (_cursorTable == false) return;
+            
+            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+            
+        }
+    }
+
+#if UNITY_EDITOR
     private void Update()
     {
         if (CurrentResolution.x == Screen.width &&
@@ -132,5 +164,5 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 
         SetResolution(Screen.width, Screen.height);
     }
-    #endif
+#endif
 }

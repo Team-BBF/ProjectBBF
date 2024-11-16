@@ -70,7 +70,7 @@ public class CollectingMovedActor : ActorComponent
             }
         }
     }
-    private class CollectBehaviour : IBOInteractive
+    private class CollectBehaviour : IBOInteractiveSingle
     {
         public CollectingMovedActor _actorCom;
         public CollisionInteraction Interaction { get; set; }

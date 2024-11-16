@@ -62,6 +62,9 @@ public class BakeryStoreage : BakeryFlowBehaviour
                 pc.HudController.Visible = true;
                 pc.Inventory.QuickInvVisible = true;
 
+                yield return null;
+                yield return null;
+                
                 pc.InputController.BindInput(InputAbstractFactory
                     .CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
                 break;
@@ -89,6 +92,7 @@ public class BakeryStoreage : BakeryFlowBehaviour
         pc.InputController.Move.Value = null;
         pc.InputController.Tool.Value = null;
         pc.InputController.Interact.Value = null;
+        pc.InputController.UI.Value = null;
 
         StopAllCoroutines();
         StartCoroutine(CoUpdateInteraction(activator));

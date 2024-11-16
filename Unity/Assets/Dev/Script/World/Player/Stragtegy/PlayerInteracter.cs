@@ -9,8 +9,6 @@ using ProjectBBF.Event;
 using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
@@ -31,6 +29,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     private List<CollisionInteractionMono> _closerObjects = new(5);
 
     public CollisionInteractionMono CloserObject { get; private set; }
+    public IReadOnlyList<CollisionInteractionMono> CloserObjects => _closerObjects;
     public event Action<CollisionInteractionMono> OnChangedCloserObject;
     public Vector2 IndicatedPosition => _indicator.transform.position;
     public bool IsInteracting { get; set; }
@@ -236,6 +235,38 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
         return minInteraction;
     }
 
+    public CollisionInteractionMono FindClickObject()
+    {
+        Vector2 mousePos = InputManager.Map.Player.Look.ReadValue<Vector2>();
+        Camera camera = Camera.main;
+        if (InputManager.Map.Player.InteractionMouseClick.triggered && camera)
+        {
+            Vector2 worldPos = camera.ScreenToWorldPoint(mousePos);
+
+            Collider2D[] cols = Physics2D.OverlapCircleAll(worldPos, 0.15f, ~LayerMask.GetMask("Player", "Ignore Raycast"));
+
+            float minDis = Mathf.Infinity;
+            CollisionInteractionMono minObj = null;
+            
+            foreach (Collider2D col in cols)
+            {
+                if (col && col.TryGetComponent(out CollisionInteractionMono interaction))
+                {
+                    float dis = ((Vector2)(col.transform.position - _controller.transform.position)).sqrMagnitude;
+                    if (dis < minDis)
+                    {
+                        minDis = dis;
+                        minObj = interaction;
+                    }
+                }
+            }
+            
+            return minObj;
+        }
+
+        return null;
+    }
+
     #endregion
 
     #region Unity Method
@@ -244,6 +275,18 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     {
         CalculateCloseObject();
         CalcultateIndicatorPosition();
+
+        if (ScreenManager.Instance)
+        {
+            if (FindClickObject())
+            {
+                ScreenManager.Instance.CurrentCursor = CursorType.CanClick;                
+            }
+            else
+            {
+                ScreenManager.Instance.CurrentCursor = CursorType.Default;
+            }
+        }
     }
 
     #endregion

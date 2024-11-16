@@ -27,7 +27,8 @@ public class BucketNpc : Npc
         
         _favorability.UpdateBucket(pc);
         
-        if (InputManager.Map.Player.InteractionDialogue.triggered)
+        var clickObj = pc.Interactor.FindClickObject();
+        if (clickObj && clickObj.ContractInfo == Interaction.ContractInfo)
         {
             _ = pc.Dialogue.RunDialogueFromInteraction(Owner.Interaction)
                 .ContinueWith(_ =>

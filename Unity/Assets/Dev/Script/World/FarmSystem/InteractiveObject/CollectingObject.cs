@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(CollisionInteraction))]
-public class CollectingObject : MonoBehaviour, IBOInteractive
+public class CollectingObject : MonoBehaviour, IBOInteractiveSingle
 {
     #region Properties
     [field: SerializeField, InitializationField, MustBeAssigned, AutoProperty] 
@@ -38,7 +38,7 @@ public class CollectingObject : MonoBehaviour, IBOInteractive
         var info = ObjectContractInfo.Create(() => gameObject);
         _interaction.SetContractInfo(info, this);
 
-        info.AddBehaivour<IBOInteractive>(this);
+        info.AddBehaivour<IBOInteractiveSingle>(this);
     }
     
     public void UpdateInteract(CollisionInteractionMono caller)

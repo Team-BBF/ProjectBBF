@@ -772,14 +772,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 282.0984
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 124.4552
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -806,14 +798,6 @@ PrefabInstance:
     - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -22.581787
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 1844939612985277787, guid: 3c4222fff39f9bb4488623b589b42863, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2868,6 +2852,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 292867734561201154}
     m_Modifications:
+    - target: {fileID: 1258232571983436202, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
+      propertyPath: _saveKey
+      value: Fishing_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258232571983436202, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
+      propertyPath: _actorKey
+      value: Fishing_Chapter_1
+      objectReference: {fileID: 0}
     - target: {fileID: 3026065139521650602, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 174.81
@@ -2928,6 +2920,10 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].weight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6633940948283213399, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
+      propertyPath: m_Name
+      value: PActor_Fishing_Chapter_1
+      objectReference: {fileID: 0}
     - target: {fileID: 7096942237074771261, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
       propertyPath: _targetQuestList.Array.size
       value: 1
@@ -2935,7 +2931,7 @@ PrefabInstance:
     - target: {fileID: 7096942237074771261, guid: 5c81c04754273904e8d732d7f0b78d8e, type: 3}
       propertyPath: _targetQuestList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 26c41b42cd96c6440b51a013031903a7, type: 2}
+      objectReference: {fileID: 11400000, guid: 006abbd1574ba51449e4a255f39dc1d9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3517,6 +3513,7 @@ MonoBehaviour:
       m_Calls: []
   OnESOMinigameEnd:
   - {fileID: 0}
+  _fishingRodItem: {fileID: 11400000, guid: 20e804168d99ff84f94e08bd942bf631, type: 2}
   _uiPanel: {fileID: 7847014083950878904}
   _timerUI: {fileID: 1324448622}
   _fishRenderer: {fileID: 5633430162039817015}

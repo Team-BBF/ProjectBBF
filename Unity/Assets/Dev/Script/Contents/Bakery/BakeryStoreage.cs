@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ProjectBBF.Event;
+using ProjectBBF.Input;
 using UnityEngine;
 
 public class BakeryStoreage : BakeryFlowBehaviour
@@ -13,7 +14,7 @@ public class BakeryStoreage : BakeryFlowBehaviour
     [SerializeField] private List<ItemData> _defaultItems;
 
     private IEnumerator _coObserveOpen;
-    
+
     private void Start()
     {
         _storageInventory.OnInit += _ => Init();
@@ -57,10 +58,12 @@ public class BakeryStoreage : BakeryFlowBehaviour
                 yield return null;
 
                 Visible = false;
-                pc.Blackboard.IsInteractionStopped = false;
-                pc.Blackboard.IsMoveStopped = false;
+                pc.Interactor.IsInteracting = false;
                 pc.HudController.Visible = true;
                 pc.Inventory.QuickInvVisible = true;
+
+                pc.InputController.BindInput(InputAbstractFactory
+                    .CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
                 break;
             }
 
@@ -83,20 +86,24 @@ public class BakeryStoreage : BakeryFlowBehaviour
         pc.HudController.Visible = false;
         pc.Inventory.QuickInvVisible = false;
 
+        pc.InputController.Move.Value = null;
+        pc.InputController.Tool.Value = null;
+        pc.InputController.Interact.Value = null;
+
         StopAllCoroutines();
         StartCoroutine(CoUpdateInteraction(activator));
     }
 
     protected override void OnEnter(BakeryFlowObject flowObject, CollisionInteractionMono activator)
     {
-        if(activator.Owner is not PlayerController pc) return;
+        if (activator.Owner is not PlayerController pc) return;
 
         StartCoroutine(_coObserveOpen = CoObserveOpen(flowObject, activator));
     }
 
     private IEnumerator CoObserveOpen(BakeryFlowObject flowObject, CollisionInteractionMono activator)
     {
-        if(activator.Owner is not PlayerController pc) yield break;
+        if (activator.Owner is not PlayerController pc) yield break;
 
         while (true)
         {
@@ -108,10 +115,9 @@ public class BakeryStoreage : BakeryFlowBehaviour
             {
                 _ani.SetTrigger("Close");
             }
-            
+
             yield return null;
         }
-        
     }
 
     protected override void OnExit(BakeryFlowObject flowObject, CollisionInteractionMono activator)
@@ -121,6 +127,8 @@ public class BakeryStoreage : BakeryFlowBehaviour
         pc.Blackboard.IsMoveStopped = false;
         pc.HudController.Visible = true;
         pc.Inventory.QuickInvVisible = true;
+        pc.InputController.BindInput(InputAbstractFactory
+            .CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
 
         Visible = false;
         _ani.SetTrigger("Close");

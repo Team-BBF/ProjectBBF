@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a248fe39ee4d4c338814cb8aa413604f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _useFlipLeftRenderer: 1
 --- !u!1 &225238577555844981
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +415,18 @@ MonoBehaviour:
   _interaction: {fileID: 1672321309576992059}
   _rigid: {fileID: 3285716039615882562}
   _data: {fileID: 11400000, guid: 712eee018a866c74298c126dfa5d5ce4, type: 2}
+  _onFade:
+    m_PersistentCalls:
+      m_Calls: []
+  _onEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  _onStay:
+    m_PersistentCalls:
+      m_Calls: []
+  _onExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5888231795031653727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestIndicator
       objectReference: {fileID: 0}
+    - target: {fileID: 1244924277327536392, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3023925483240910545, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -700,11 +715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023925483240910545, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2560
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3023925483240910545, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1440
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3023925483240910545, guid: 3e9aecbcb630d244aa2850581378de30, type: 3}
       propertyPath: m_LocalPosition.x

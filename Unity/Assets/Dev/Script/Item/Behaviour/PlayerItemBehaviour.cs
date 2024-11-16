@@ -8,12 +8,13 @@ public abstract class PlayerItemBehaviour : ScriptableObject
     public abstract UniTask DoAction(PlayerController playerController, ItemData itemData,
         CancellationToken token = default);
 
-    protected static void AnimateLookAt(PlayerController playerController, AnimationActorKey.Action ani)
+    protected static void AnimateLookAt(PlayerController playerController, AnimationActorKey.Action ani, bool ignoreSideUp = false)
     {
         ActorVisual visual = playerController.VisualStrategy;
 
         Vector2 clickPoint = Camera.main.ScreenToWorldPoint(InputManager.Map.Player.Look.ReadValue<Vector2>());
         Vector2 dir = clickPoint - (Vector2)playerController.transform.position;
-        visual.LookAt(dir, ani, true);
+        
+        visual.SetAction(ani, dir, ignoreSideUp);
     }
 }

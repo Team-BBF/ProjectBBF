@@ -167,6 +167,16 @@ public class GridInventoryModel : IInventoryModel
         }
         return false;
     }
+
+    public void Clear()
+    {
+        using IEnumerator<IInventorySlot> enumerator = GetEnumerator();
+
+        while (enumerator.MoveNext())
+        {
+            enumerator.Current.ForceSet(null, 0);
+        }
+    }
     
     public int PushItem(ItemData itemData, int count)
     {

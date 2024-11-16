@@ -5,6 +5,7 @@ using System.Linq;
 using DG.Tweening;
 using MyBox;
 using ProjectBBF.Event;
+using ProjectBBF.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -152,8 +153,14 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         pc.transform.position = (Vector2)_playPoint.position;
         pc.MoveStrategy.ResetVelocity();
         pc.MoveStrategy.IsGhost = true;
-        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Oven, AnimationActorKey.Direction.Down), true);
-
+        
+        pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        pc.InputController.Move.Value = null;
+        pc.InputController.Interact.Value = null;
+        pc.InputController.UI.Value = null;
+        pc.InputController.Tool.Value = null;
+        
+        pc.VisualStrategy.SetAction(AnimationActorKey.Action.Bakery_Oven, Vector2.down);
         _aniOven.SetBool("Start", true);
         
         while (true)
@@ -249,8 +256,7 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         }
         
         AudioManager.Instance.PlayOneShot("SFX", "SFX_Bakery_BakingComplete");
-        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Additive_Complete, AnimationActorKey.Direction.Left), true);
-        pc.VisualStrategy.ClearState();
+        pc.VisualStrategy.SetAction(AnimationActorKey.Action.Bakery_Additive_Complete, Vector2.down);
         yield return new WaitForSeconds(_endWait);
 
         QuestIndicator.Visible = true;
@@ -258,6 +264,8 @@ public class BakeryRhythm : BakeryFlowBehaviourBucket, IObjectBehaviour
         pc.Blackboard.IsMoveStopped = false;
         pc.Blackboard.IsInteractionStopped = false;
         pc.MoveStrategy.IsGhost = false;
+        pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        pc.VisualStrategy.SetIdle(Vector2.down);
     }
 
     private void GameSetup()

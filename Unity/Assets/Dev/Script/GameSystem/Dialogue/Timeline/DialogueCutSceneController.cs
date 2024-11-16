@@ -188,6 +188,7 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
             int secondIndex = results.FirstIndex(x => x.ActorKey is SECOND_ACTOR_KEY);
             
             Sprite itemSpr = _lastResultItem ? _lastResultItem.ItemSprite : null;
+            string itemName = _lastResultItem ? _lastResultItem.ItemName : "";
 
             if (firstIndex != -1 && secondIndex != -1)
             {
@@ -196,7 +197,7 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
                 {
                     TimelineAssetHandler.TimelineAsset = contestResultMarker.SuccessTimeline;
                 }
-                _resultUI.Set(itemSpr, results[firstIndex].Text, results[secondIndex].Text);
+                _resultUI.Set(itemSpr, itemName, results[firstIndex].Text, results[secondIndex].Text);
             }
             else
             {

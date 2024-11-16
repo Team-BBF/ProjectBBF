@@ -20,6 +20,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
     private PlayerController _controller;
     private PlayerBlackboard _blackboard;
 
+    public bool IsTalking { get; private set; }
     public void Init(PlayerController controller)
     {
         _controller = controller;
@@ -49,9 +50,6 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
 
     public async UniTask<bool> OnDialogueAction()
     {
-        
-        if (_blackboard.IsInteractionStopped) return false;
-        
         try
         {
             var interaction = FindCloserObject();
@@ -74,9 +72,6 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
     
     public async UniTask<bool> RunDialogueFromInteraction(CollisionInteractionMono caller)
     {
-        
-        if (_blackboard.IsInteractionStopped) return false;
-
         try
         {
             if (caller is null) return false;
@@ -109,8 +104,6 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         {
             _controller.Inventory.QuickInvVisible = true;
             _controller.HudController.Visible = true;
-            _controller.Blackboard.IsMoveStopped = false;
-            _controller.Blackboard.IsInteractionStopped = false;
         }
 
         return false;
@@ -120,16 +113,16 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
     {
         try
         {
+            IsTalking = true;
             _controller.Inventory.QuickInvVisible = false;
             _controller.HudController.Visible = false;
-            _controller.Blackboard.IsMoveStopped = true;
-            _controller.Blackboard.IsInteractionStopped = true;
+            _controller.Interactor.IsInteracting = true;
             _controller.MoveStrategy.ResetVelocity();
 
             if (targetPosition is not null)
             {
                 Vector2 dir = (targetPosition.Value - _controller.transform.position).normalized;
-                _controller.VisualStrategy.LookAt(dir, AnimationActorKey.Action.Idle, true);
+                _controller.VisualStrategy.MoveDir = dir;
             }
 
             var token = this.GetCancellationTokenOnDestroy();
@@ -160,8 +153,9 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
         {
             _controller.Inventory.QuickInvVisible = true;
             _controller.HudController.Visible = true;
-            _controller.Blackboard.IsMoveStopped = false;
-            _controller.Blackboard.IsInteractionStopped = false;
+            _controller.Interactor.IsInteracting = false;
+            
+            IsTalking = false;
         }
 
         return false;
@@ -193,7 +187,7 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             if (actorInfo.Interaction.Owner is Actor actor)
             {
                 Vector2 dir = (actor.transform.position - _controller.transform.position).normalized;
-                _controller.VisualStrategy.LookAt(dir, AnimationActorKey.Action.Idle, true);
+                _controller.VisualStrategy.MoveDir = dir;
             }
 
             AudioManager.Instance.PlayOneShot("SFX", "SFX_Dialogue_Call");

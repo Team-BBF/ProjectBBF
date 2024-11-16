@@ -8,6 +8,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ProjectBBF/Behaviour/Item/WaterSpray",  fileName = "Bav_Item_WaterSpray")]
 public class PIBWaterSpray : PIBTwoStep
 {
+    private Vector2 _targetPos;
+    
     protected override async UniTask<ActionResult> PreAction(PlayerController playerController, ItemData itemData,
         CancellationToken token = default)
     {
@@ -15,7 +17,9 @@ public class PIBWaterSpray : PIBTwoStep
         
         if (itemData && itemData.Info.Contains(ToolType.WaterSpray))
         {
-            AnimateLookAt(playerController, AnimationActorKey.Action.WaterSpray);
+            AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_WaterSpray");
+            AnimateLookAt(playerController, AnimationActorKey.Action.WaterSpray, true);
+            _targetPos = playerController.Interactor.IndicatedPosition;
             return ActionResult.Continue;
         }
 
@@ -37,9 +41,13 @@ public class PIBWaterSpray : PIBTwoStep
         return ActionResult.Continue;
     }
     
+
+    protected override UniTask EndAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        return UniTask.CompletedTask;
+    }
     private bool SprinkleWater(IBOSprinkleWaterTile action, PlayerController pc)
     {
-        var targetPos = pc.Coordinate.GetFront();
         ItemData data = pc.Inventory.CurrentItemData;
 
         if (data is null) return false;
@@ -48,7 +56,7 @@ public class PIBWaterSpray : PIBTwoStep
 
         if (data.Info.Contains(ToolType.WaterSpray))
         {
-            success = action.SprinkleWater(targetPos);
+            success = action.SprinkleWater(_targetPos);
         }
 
         return success;

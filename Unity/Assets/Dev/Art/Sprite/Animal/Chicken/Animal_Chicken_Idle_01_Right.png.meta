@@ -102,8 +102,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +121,10 @@ TextureImporter:
       name: Animal_Chicken_Idle_01_Right_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 31
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: Animal_Chicken_Idle_01_Right_2
       rect:
         serializedVersion: 2
-        x: 80
+        x: 62
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: Animal_Chicken_Idle_01_Right_3
       rect:
         serializedVersion: 2
-        x: 120
+        x: 93
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Animal_Chicken_Idle_01_Right_4
       rect:
         serializedVersion: 2
-        x: 160
+        x: 124
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd236ab08f37c7f4a946d4a6ee6af7f5
+      spriteID: f2189e615b46cdc4bb690bd696f5ea1d
       internalID: -1386711329
       vertices: []
       indices: 
@@ -205,10 +205,10 @@ TextureImporter:
       name: Animal_Chicken_Idle_01_Right_5
       rect:
         serializedVersion: 2
-        x: 200
+        x: 155
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,7 +216,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b431f0d37de5644b9024fa48c169350
+      spriteID: 98056c0fecb24634880262b04ad95592
       internalID: -1947054974
       vertices: []
       indices: 
@@ -226,10 +226,10 @@ TextureImporter:
       name: Animal_Chicken_Idle_01_Right_6
       rect:
         serializedVersion: 2
-        x: 240
+        x: 186
         y: 0
-        width: 40
-        height: 50
+        width: 31
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +237,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e531ac9403037af4f8840d54a1da13b8
+      spriteID: c2ede586d095edb4fbc671d63a55feb3
       internalID: -2126199897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Chicken_Idle_01_Right_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 31
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bfb35b337af3c43997e75a32e90663
+      internalID: -375461107
       vertices: []
       indices: 
       edges: []
@@ -261,6 +282,7 @@ TextureImporter:
       Animal_Chicken_Idle_01_Right_4: -1386711329
       Animal_Chicken_Idle_01_Right_5: -1947054974
       Animal_Chicken_Idle_01_Right_6: -2126199897
+      Animal_Chicken_Idle_01_Right_7: -375461107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

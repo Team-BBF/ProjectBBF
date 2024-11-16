@@ -6,6 +6,7 @@ using Cinemachine;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Triggers;
 using DS.Runtime;
+using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using UnityEngine;
 using DialogueBranchField = DS.Runtime.DialogueBranchField;
@@ -64,6 +65,11 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
         Player.Inventory.QuickInvVisible = false;
         Player.QuestPresenter.Visible = false;
         Player.RecipeSummaryView.Visible = false;
+
+        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
+        Player.InputController.Move.Value = null;
+        Player.InputController.Interact.Value = null;
+        Player.InputController.Tool.Value = null;
     }
 
     protected override async UniTask OnTutorial()
@@ -218,6 +224,7 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
         Player.HudController.SetAllHudVisible(true);
         Player.QuestPresenter.Visible = true;
         Player.RecipeSummaryView.Visible = true;
+        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
         
         inst.ResetDialogue();
     }

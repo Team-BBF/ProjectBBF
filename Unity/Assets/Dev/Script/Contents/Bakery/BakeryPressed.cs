@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MyBox;
 using ProjectBBF.Event;
+using ProjectBBF.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -98,6 +99,12 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         _activationUI.SetActive(false);
 
 
+        pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        pc.InputController.Move.Value = null;
+        pc.InputController.Interact.Value = null;
+        pc.InputController.UI.Value = null;
+        pc.InputController.Tool.Value = null;
+
         SetParticleVisible(true);
 
         switch (ResolvorType)
@@ -126,9 +133,7 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         pc.MoveStrategy.IsGhost = true;
 
         yield return null;
-        pc.VisualStrategy.ChangeClip(AnimationActorKey.GetAniHash(aniAction, AnimationActorKey.Direction.Down), true);
-        pc.MoveStrategy.LastMovedDirection = Vector2.down;
-
+        pc.VisualStrategy.SetAction(aniAction, Vector2.down);
 
         if (ResolvorType == Resolvor.Dough)
         {
@@ -157,9 +162,7 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
                 pc.MoveStrategy.IsGhost = false;
                 pc.transform.position = _revertPoint.position;
                 pc.transform.SetZ(backupPcZ);
-                pc.VisualStrategy.ChangeClip(
-                    AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Down),
-                    true);
+                pc.VisualStrategy.SetIdle(Vector2.down);
 
                 if (_activationUI.activeSelf == false)
                 {
@@ -167,6 +170,7 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
                 }
 
                 _audioSource.loop = false;
+                pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
                 yield break;
             }
 
@@ -204,15 +208,13 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         pc.transform.position = _revertPoint.position;
 
         _panel.SetActive(false);
-        pc.VisualStrategy.ChangeClip(
-            AnimationActorKey.GetAniHash(AnimationActorKey.Action.Bakery_Additive_Complete,
-                AnimationActorKey.Direction.Down), true);
+        pc.VisualStrategy.SetAction(AnimationActorKey.Action.Bakery_Additive_Complete, Vector2.down);
+        
         pc.Interactor.ItemPreviewSprite = privewItem;
         yield return new WaitForSeconds(_endWait);
         pc.Interactor.ItemPreviewSprite = null;
 
-        pc.VisualStrategy.ChangeClip(
-            AnimationActorKey.GetAniHash(AnimationActorKey.Action.Idle, AnimationActorKey.Direction.Down), true);
+        pc.VisualStrategy.SetIdle(Vector2.down);
 
 
         QuestIndicator.Visible = true;
@@ -220,9 +222,13 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         pc.Blackboard.IsInteractionStopped = false;
         pc.MoveStrategy.ResetVelocity();
         pc.transform.SetZ(backupPcZ);
+        
+        pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        
         _audioSource.Stop();
 
         _activationUI.SetActive(false);
+        
         GameReset();
     }
 

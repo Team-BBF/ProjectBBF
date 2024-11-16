@@ -28,9 +28,29 @@ PrefabInstance:
       propertyPath: _startDelay.Min
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6789543631099050694, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789543631099050694, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.895
+      objectReference: {fileID: 0}
     - target: {fileID: 7253351403424410758, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
       propertyPath: m_Name
       value: PAnimal_Goat_Good
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114719865835706810, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544115235689255227, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544115235689255227, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 8574195695805637371, guid: a40293022f9a4b84e988586acb0c2a63, type: 3}
       propertyPath: _collectingData

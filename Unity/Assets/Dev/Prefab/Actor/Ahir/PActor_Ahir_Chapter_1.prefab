@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _saveKey
+      value: Ahir_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _actorKey
+      value: Ahir_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 4a2fd6d9e719186478cff5aefdb7ecce, type: 2}
+    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Name
+      value: PActor_Ahir_Chapter_1
+      objectReference: {fileID: 0}
     - target: {fileID: 657897982702387281, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_Controller
       value: 
@@ -68,19 +84,7 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Ahir_Chapter_1
       objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _saveKey
-      value: Ahir_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _actorKey
-      value: Ahir_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 4a2fd6d9e719186478cff5aefdb7ecce, type: 2}
-    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+    - target: {fileID: 6633940948283213399, guid: af209c14f2ddf7b49a6885125dcaf4ff, type: 3}
       propertyPath: m_Name
       value: PActor_Ahir_Chapter_1
       objectReference: {fileID: 0}

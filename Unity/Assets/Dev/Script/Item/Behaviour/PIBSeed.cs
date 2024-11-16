@@ -8,6 +8,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ProjectBBF/Behaviour/Item/Seed",  fileName = "Bav_Item_Seed")]
 public class PIBSeed : PIBTwoStep
 {
+    private Vector2 _targetPos;
+    
     protected override async UniTask<ActionResult> PreAction(PlayerController playerController, ItemData itemData,
         CancellationToken token = default)
     {
@@ -18,12 +20,12 @@ public class PIBSeed : PIBTwoStep
             var interaction = playerController.Interactor.FindCloserObject();
             if (interaction == false) return ActionResult.Continue;
             
-            var targetPos = playerController.Coordinate.GetFront();
+            _targetPos = playerController.Interactor.IndicatedPosition;
             if (interaction.TryGetContractInfo(out ObjectContractInfo info) &&
                 info.TryGetBehaviour(out IBOPlantTile platTile) &&
-                platTile.CanPlant(targetPos))
+                platTile.CanPlant(_targetPos))
             {
-                AnimateLookAt(playerController, AnimationActorKey.Action.Plant);
+                AnimateLookAt(playerController, AnimationActorKey.Action.Plant, true);
                 return ActionResult.Continue;
             }
         }
@@ -44,16 +46,20 @@ public class PIBSeed : PIBTwoStep
         
         return ActionResult.Continue;
     }
+
+    protected override UniTask EndAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        return UniTask.CompletedTask;
+    }
     
     public bool PlantTile(IBOPlantTile action, PlayerController pc)
     {
-        var targetPos = pc.Coordinate.GetFront();
         ItemData data = pc.Inventory.CurrentItemData;
         IInventorySlot slot = pc.Inventory.CurrentItemSlot;
 
         bool success = false;
 
-        if (data is PlantItemData grownData && action.Plant(targetPos, grownData.Definition))
+        if (data is PlantItemData grownData && action.Plant(_targetPos, grownData.Definition))
         {
             success = slot.TryAdd(-1, true) is SlotStatus.Success;
         }

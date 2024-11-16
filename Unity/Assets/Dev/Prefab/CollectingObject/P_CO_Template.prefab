@@ -112,6 +112,18 @@ MonoBehaviour:
   _interaction: {fileID: 1688215273339848521}
   _rigid: {fileID: 6528192049176815048}
   _data: {fileID: 11400000, guid: 712eee018a866c74298c126dfa5d5ce4, type: 2}
+  _onFade:
+    m_PersistentCalls:
+      m_Calls: []
+  _onEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  _onStay:
+    m_PersistentCalls:
+      m_Calls: []
+  _onExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6524478311727925939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4628887281252109305, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.188
+      value: 0.023
       objectReference: {fileID: 0}
     - target: {fileID: 4628887281252109305, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.282
+      value: 1.154
       objectReference: {fileID: 0}
     - target: {fileID: 4628887281252109305, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
       propertyPath: m_LocalPosition.z

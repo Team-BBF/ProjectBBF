@@ -40,6 +40,7 @@ public static class AnimationActorKey
     public static readonly int Idle             = Animator.StringToHash("Idle");
     public static readonly int Move             = Animator.StringToHash("Move");
     public static readonly int Plant            = Animator.StringToHash("Plant");
+    public static readonly int Fishing            = Animator.StringToHash("Fishing");
 
     [Serializable]
     public enum Direction
@@ -68,6 +69,7 @@ public static class AnimationActorKey
         Idle,
         Move,
         Plant,
+        Fishing,
     }
 
     public static int GetAniHash(Action action)

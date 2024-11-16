@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ContestResultUI : MonoBehaviour
 {
     [SerializeField] private Image _itemImage;
+    [SerializeField] private TMP_Text _itemName;
     [SerializeField] private TMP_Text _firstDesc;
     [SerializeField] private TMP_Text _secondDesc;
 
@@ -14,9 +15,10 @@ public class ContestResultUI : MonoBehaviour
         Visible = false;
     }
 
-    public void Set(Sprite itemIcon, string firstDesc, string secondDesc)
+    public void Set(Sprite itemIcon, string itemName, string firstDesc, string secondDesc)
     {
         _itemImage.sprite = itemIcon;
+        _itemName.text = itemName;
         _firstDesc.text = firstDesc;
         _secondDesc.text = secondDesc;
     }

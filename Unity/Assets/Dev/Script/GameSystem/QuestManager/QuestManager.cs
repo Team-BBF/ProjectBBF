@@ -7,6 +7,7 @@ using System.Linq;
 using ProjectBBF.Persistence;
 using ProjectBBF.Singleton;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 [Serializable]
@@ -32,6 +33,7 @@ public class QuestManager : MonoBehaviourSingleton<QuestManager>
     public ESOQuest ESO { get; private set; }
     
     public List<QuestIndicatorObstacleUI> IndicatorObstacleList { get; private set; }
+    public List<QuestIndicatorUI> IndicatorList { get; private set; }
 
     private QuestPersistence _persistence;
 
@@ -51,6 +53,7 @@ public class QuestManager : MonoBehaviourSingleton<QuestManager>
         Debug.Assert(ESO);
 
         IndicatorObstacleList = new(5);
+        IndicatorList = new(5);
     }
 
     private void OnLoaded(PersistenceManager obj)
@@ -110,5 +113,4 @@ public class QuestManager : MonoBehaviourSingleton<QuestManager>
     {
         return _persistence.QuestTable.Select(x => (x.Key, x.Value)).ToList();
     }
-    
 }

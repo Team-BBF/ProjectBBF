@@ -11,7 +11,9 @@ public class PlayerInventoryPresenter : IInventoryPresenter<GridInventoryModel>
     
     private InteractableInventoryView _mainView;
     private PlayerPannelView _pannelView;
-    
+
+    public PlayerQuickInventoryView QuickView => _quickView;
+
     public bool QuickInvVisible
     {
         get => _quickView.Visible;

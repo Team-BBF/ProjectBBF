@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MyBox;
 using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,10 +13,26 @@ public class PlayerQuickInventoryView : MonoBehaviour, IInventoryView
     [SerializeField] private RectTransform _cursor;
     private int _currentCursor;
 
-    public int CurrentItemIndex => _currentCursor;
+    public int CurrentItemIndex
+    {
+        get => _currentCursor;
+        set
+        {
+            _cursor.gameObject.SetActive(true);
+            _currentCursor = Mathf.Clamp(value, 0, _slots.Length - 1);
+            _cursor.position = _slots[_currentCursor].transform.As<RectTransform>().position;
+        }
+
+    }
+    public bool CursorMoveLock { get; set; }
     public int MaxSlotCount => _slots.Length;
 
     private PlayerBlackboard _blackboard;
+
+    public IInventorySlot GetSlotAt(int cursorIndex)
+    {
+        return _slots[cursorIndex].SlotController;
+    }
 
     private void Awake()
     {
@@ -54,10 +71,7 @@ public class PlayerQuickInventoryView : MonoBehaviour, IInventoryView
 
     private void MoveCursorScroll(InputAction.CallbackContext ctx)
     {
-        if (_blackboard?.IsInteractionStopped ?? true)
-        {
-            return;
-        }
+        if (CursorMoveLock) return;
         
         float fscrollValue = ctx.ReadValue<float>();
 
@@ -69,27 +83,34 @@ public class PlayerQuickInventoryView : MonoBehaviour, IInventoryView
         
         
         _cursor.gameObject.SetActive(true);
+
+        if (value + CurrentItemIndex >= _slots.Length)
+        {
+            CurrentItemIndex = 0;
+        }
+        else if (value + CurrentItemIndex < 0)
+        {
+            CurrentItemIndex = 1;
+        }
+        else
+        {
+            CurrentItemIndex += value;
+        }
         
-        _currentCursor = Mathf.Clamp(_currentCursor + value, 0, _slots.Length - 1);
 
         AudioManager.Instance.PlayOneShot("UI", "UI_Tool_Swap");
-        
-        _cursor.position = (_slots[_currentCursor].transform as RectTransform)!.position;
     }
 
     private void MoveCursorButton(InputAction.CallbackContext ctx)
     {
-        if (_blackboard?.IsInteractionStopped ?? true)
-        {
-            return;
-        }
+        if (CursorMoveLock) return;
         
         float fscrollValue = ctx.ReadValue<float>();
 
         int value = Mathf.RoundToInt(fscrollValue);
 
         _cursor.gameObject.SetActive(true);
-        _currentCursor = Mathf.Clamp(value - 1, 0, _slots.Length - 1);
+        CurrentItemIndex = value -1 ;
 
         AudioManager.Instance.PlayOneShot("UI", "UI_Tool_Swap");
         

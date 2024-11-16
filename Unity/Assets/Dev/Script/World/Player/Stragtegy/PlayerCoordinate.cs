@@ -63,6 +63,18 @@ public class PlayerCoordinate : MonoBehaviour, IPlayerStrategy
         
         return dir.normalized;
     }
+
+    public Vector2 GetLookAtDir()
+    {
+        Vector2 clickPoint = Camera.main.ScreenToWorldPoint(InputManager.Map.Player.Look.ReadValue<Vector2>());
+        Vector2 dir = clickPoint - (Vector2)_controller.transform.position;
+
+        return GetDirOffset(_controller.VisualStrategy.ToNormalizedVector(dir, true));
+    }
+    public Vector2 GetLookAtPosition()
+    { 
+        return (Vector2)_controller.transform.position + GetLookAtDir();
+    }
     
     private Vector2 RotateVector(Vector2 vector, float angleRadians)
     {
@@ -79,6 +91,6 @@ public class PlayerCoordinate : MonoBehaviour, IPlayerStrategy
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(GetFront(), _data.Radius);
+        Gizmos.DrawWireSphere(GetLookAtPosition(), _data.Radius);
     }
 }

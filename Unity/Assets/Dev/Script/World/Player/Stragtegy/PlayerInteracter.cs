@@ -6,6 +6,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using MyBox;
 using ProjectBBF.Event;
+using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -25,7 +26,6 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     private PlayerCoordinate _coordinate;
     private SpriteRenderer _indicator;
     private SpriteRenderer _itemPreviewRenderer;
-    private bool _isAnyUIVisible;
 
     /** Interaction 필드 */
     private List<CollisionInteractionMono> _closerObjects = new(5);
@@ -33,6 +33,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     public CollisionInteractionMono CloserObject { get; private set; }
     public event Action<CollisionInteractionMono> OnChangedCloserObject;
     public Vector2 IndicatedPosition => _indicator.transform.position;
+    public bool IsInteracting { get; set; }
 
     public void Init(PlayerController controller)
     {
@@ -81,15 +82,13 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
         token = CancellationTokenSource.CreateLinkedTokenSource(token, this.GetCancellationTokenOnDestroy()).Token;
 
         _move.ResetVelocity();
-        _blackboard.IsInteractionStopped = true;
-        _blackboard.IsMoveStopped = true;
+        IsInteracting = true;
 
         _ = await UniTask
             .Delay((int)(sec * 1000f), DelayType.DeltaTime, PlayerLoopTiming.Update, token)
             .SuppressCancellationThrow();
 
-        _blackboard.IsInteractionStopped = false;
-        _blackboard.IsMoveStopped = false;
+        IsInteracting = false;
     }
 
     public void WaitForSecond(float sec)
@@ -101,11 +100,10 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     {
         WaitForSecond(0.3f);
     }
-
     public void WaitForPickupAnimation(Vector2 dir)
     {
-        _visual.LookAt(dir, AnimationActorKey.Action.Collect, true);
-        WaitForSecond(0.3f);
+        WaitForSecond(0.8f);
+        _visual.SetAction(AnimationActorKey.Action.Collect, dir);
     }
 
     #endregion
@@ -146,13 +144,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
             var obj = FindCloserObject();
             if (obj == false) return;
 
-
-            Vector2 clickPoint = Camera.main.ScreenToWorldPoint(InputManager.Map.Player.Look.ReadValue<Vector2>());
-            Vector2 dir = clickPoint - (Vector2)_controller.transform.position;
-            var pos =
-                    (Vector2)_controller.transform.position +
-                    (Vector2)_coordinate.GetDirOffset(_visual.CalculateLookDir(dir, true))
-                ;
+            var pos = _coordinate.GetLookAtPosition();
 
             if (obj.TryGetContractInfo(out ObjectContractInfo info) &&
                 info.TryGetBehaviour(out IBOInteractIndicator interactIndicator) &&
@@ -220,7 +212,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
     public CollisionInteractionMono FindCloserObject()
     {
-        var targetPos = _controller.Coordinate.GetFront();
+        var targetPos = _controller.Coordinate.GetLookAtPosition();
         var colliders =
             Physics2D.OverlapCircleAll(targetPos, _controller.CoordinateData.Radius,
                 ~LayerMask.GetMask("Player", "Ignore Raycast"));
@@ -246,177 +238,12 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
     #endregion
 
-    #region Callback Method
-
-    public async UniTask<bool> OnToolAction()
-    {
-        if (_blackboard.IsInteractionStopped) return false;
-
-        try
-        {
-            ItemData data = _controller.Inventory.CurrentItemData;
-            if (data == false) return false;
-
-            foreach (PlayerItemBehaviour behaviour in data.PlayerItemBehaviours)
-            {
-                await behaviour.DoAction(_controller, data, this.GetCancellationTokenOnDestroy());
-            }
-        }
-        catch (Exception e) when (e is not OperationCanceledException)
-        {
-            Debug.LogException(e);
-        }
-        finally
-        {
-        }
-
-        return false;
-    }
-
-    private void OnInteractObject(IBOInteractive obj) => obj.UpdateInteract(_controller.Interaction);
-
-    private bool IsTriggeredUIAny =>
-        InputManager.Map.UI.Inventory.triggered ||
-        InputManager.Map.UI.Setting.triggered ||
-        InputManager.Map.UI.RecipeBook.triggered ||
-        InputManager.Map.UI.CloseUI.triggered;
-
-    private async UniTask OnUIInventory()
-    {
-        bool canceled = false;
-
-        canceled = await UniTask
-            .NextFrame(PlayerLoopTiming.PostLateUpdate, this.GetCancellationTokenOnDestroy())
-            .SuppressCancellationThrow();
-
-        if (canceled) return;
-
-        _controller.PannelView.ViewState = PlayerPannelView.ViewType.Inv;
-        _controller.Blackboard.IsMoveStopped = true;
-        _controller.Blackboard.IsInteractionStopped = true;
-        _controller.QuestPresenter.Visible = true;
-        _isAnyUIVisible = true;
-
-        canceled = await UniTask
-            .WaitUntil(() => IsTriggeredUIAny, PlayerLoopTiming.PostLateUpdate,
-                this.GetCancellationTokenOnDestroy())
-            .SuppressCancellationThrow();
-
-        if (canceled) return;
-
-        _controller.PannelView.ViewState = PlayerPannelView.ViewType.Close;
-        _controller.Blackboard.IsMoveStopped = false;
-        _controller.Blackboard.IsInteractionStopped = false;
-        _isAnyUIVisible = false;
-    }
-
-    private async UniTask OnUISetting()
-    {
-        bool canceled = false;
-
-        canceled = await UniTask
-            .NextFrame(PlayerLoopTiming.PostLateUpdate, this.GetCancellationTokenOnDestroy())
-            .SuppressCancellationThrow();
-
-        if (canceled) return;
-
-        _controller.PannelView.ViewState = PlayerPannelView.ViewType.Setting;
-        _controller.Blackboard.IsMoveStopped = true;
-        _controller.Blackboard.IsInteractionStopped = true;
-        _controller.RecipeBookPresenter.PreviewSummaryView.Visible = false;
-        _controller.QuestPresenter.Visible = false;
-        _isAnyUIVisible = true;
-
-
-        canceled = await UniTask
-            .WaitUntil(() => IsTriggeredUIAny, PlayerLoopTiming.PostLateUpdate,
-                this.GetCancellationTokenOnDestroy())
-            .SuppressCancellationThrow();
-
-        if (canceled) return;
-
-        _controller.PannelView.ViewState = PlayerPannelView.ViewType.Close;
-        _controller.Blackboard.IsMoveStopped = false;
-        _controller.Blackboard.IsInteractionStopped = false;
-        if (_controller.RecipeBookPresenter.PreviewSummaryView.Data is not null)
-            _controller.RecipeBookPresenter.PreviewSummaryView.Visible = true;
-        _controller.QuestPresenter.Visible = true;
-        _isAnyUIVisible = false;
-    }
-
-    private async UniTask OnUIRecipe()
-    {
-        bool canceled = false;
-
-        canceled = await UniTask
-            .NextFrame(PlayerLoopTiming.PostLateUpdate, this.GetCancellationTokenOnDestroy())
-            .SuppressCancellationThrow();
-
-        if (canceled) return;
-
-        _controller.PannelView.ViewState = PlayerPannelView.ViewType.Close;
-        _controller.Blackboard.IsMoveStopped = true;
-        _controller.Blackboard.IsInteractionStopped = true;
-        _controller.RecipeBookPresenter.ListView.Visible = true;
-        _controller.RecipeBookPresenter.PreviewView.Visible = true;
-        _isAnyUIVisible = true;
-
-
-        canceled = await UniTask
-            .WaitUntil(() => IsTriggeredUIAny, PlayerLoopTiming.PostLateUpdate,
-                this.GetCancellationTokenOnDestroy())
-            .SuppressCancellationThrow();
-
-        if (canceled) return;
-
-        _controller.Blackboard.IsMoveStopped = false;
-        _controller.Blackboard.IsInteractionStopped = false;
-        _controller.RecipeBookPresenter.ListView.Visible = false;
-        _controller.RecipeBookPresenter.PreviewView.Visible = false;
-        _isAnyUIVisible = false;
-    }
-
-    #endregion
-
     #region Unity Method
 
     private void Update()
     {
         CalculateCloseObject();
         CalcultateIndicatorPosition();
-
-        if (_blackboard.IsInteractionStopped) return;
-
-        if (CloserObject)
-        {
-            CollisionInteractionUtil
-                .CreateState()
-                .Bind<IBOInteractive>(OnInteractObject)
-                .Execute(CloserObject.ContractInfo);
-        }
-
-        if (_isAnyUIVisible is false)
-        {
-            if (InputManager.Map.UI.Inventory.triggered)
-            {
-                _ = OnUIInventory();
-            }
-
-            if (InputManager.Map.UI.Setting.triggered)
-            {
-                _ = OnUISetting();
-            }
-
-            if (InputManager.Map.UI.RecipeBook.triggered)
-            {
-                _ = OnUIRecipe();
-            }
-        }
-
-        if (InputManager.Map.Player.UseTool.triggered)
-        {
-            _ = OnToolAction();
-        }
     }
 
     #endregion

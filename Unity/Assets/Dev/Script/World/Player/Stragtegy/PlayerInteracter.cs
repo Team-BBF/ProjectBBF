@@ -144,13 +144,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
             var obj = FindCloserObject();
             if (obj == false) return;
 
-
-            Vector2 clickPoint = Camera.main.ScreenToWorldPoint(InputManager.Map.Player.Look.ReadValue<Vector2>());
-            Vector2 dir = clickPoint - (Vector2)_controller.transform.position;
-            var pos =
-                    (Vector2)_controller.transform.position +
-                    (Vector2)_coordinate.GetDirOffset(_visual.ToNormalizedVector(dir, true))
-                ;
+            var pos = _coordinate.GetLookAtPosition();
 
             if (obj.TryGetContractInfo(out ObjectContractInfo info) &&
                 info.TryGetBehaviour(out IBOInteractIndicator interactIndicator) &&
@@ -218,7 +212,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
     public CollisionInteractionMono FindCloserObject()
     {
-        var targetPos = _controller.Coordinate.GetFront();
+        var targetPos = _controller.Coordinate.GetLookAtPosition();
         var colliders =
             Physics2D.OverlapCircleAll(targetPos, _controller.CoordinateData.Radius,
                 ~LayerMask.GetMask("Player", "Ignore Raycast"));

@@ -2,11 +2,11 @@
 using UnityEngine;
 
 
-public abstract class Npc : ActorProxy, IBOInteractive
+public abstract class Npc : ActorProxy, IBOInteractiveMulti
 {
     protected override void OnInit()
     {
-        ContractInfo.AddBehaivour<IBOInteractive>(this);
+        ContractInfo.AddBehaivour<IBOInteractiveMulti>(this);
     }
 
     protected override void OnDoDestroy()

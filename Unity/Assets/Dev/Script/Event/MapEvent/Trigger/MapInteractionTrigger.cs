@@ -6,7 +6,7 @@ using ProjectBBF.Event;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MapInteractionTrigger : MapTriggerBase, IBOInteractive
+public class MapInteractionTrigger : MapTriggerBase, IBOInteractiveSingle
 {
     [SerializeField] private InputAction _triggerInput;
 
@@ -14,7 +14,7 @@ public class MapInteractionTrigger : MapTriggerBase, IBOInteractive
     {
         base.Awake();
 
-        ContractInfo.AddBehaivour<IBOInteractive>(this);
+        ContractInfo.AddBehaivour<IBOInteractiveSingle>(this);
     }
 
     public void UpdateInteract(CollisionInteractionMono caller)

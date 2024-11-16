@@ -104,13 +104,21 @@ PrefabInstance:
       propertyPath: _rigid
       value: 
       objectReference: {fileID: 4967666449825327450}
+    - target: {fileID: 2644794913307512708, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644794913307512708, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -778095025
+      objectReference: {fileID: 0}
     - target: {fileID: 3103052961793379524, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3103052961793379524, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 2.622
       objectReference: {fileID: 0}
     - target: {fileID: 6694115529256732025, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: _proxy

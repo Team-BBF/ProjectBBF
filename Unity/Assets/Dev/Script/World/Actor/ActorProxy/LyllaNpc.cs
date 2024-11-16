@@ -14,7 +14,7 @@ public class LyllaNpc : ActorProxy
 
         ContractInfo
             .AddBehaivour<IBODialogue>(_favorability)
-            .AddBehaivour<IBOInteractive>(_favorability)
+            .AddBehaivour<IBOInteractiveSingle>(_favorability)
             ;
     }
 

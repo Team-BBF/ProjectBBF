@@ -326,6 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeObject: {fileID: 7388536307049265949}
   _interruptPlayerControl: 0
+  _isInteractingByClick: 0
 --- !u!114 &8156453996260339185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +803,7 @@ MonoBehaviour:
   _interaction: {fileID: 4850935891676782232}
   _rigid: {fileID: 6900496745081411018}
   _data: {fileID: 11400000, guid: 712eee018a866c74298c126dfa5d5ce4, type: 2}
+  _isSingleCloser: 1
   _onFade:
     m_PersistentCalls:
       m_Calls: []

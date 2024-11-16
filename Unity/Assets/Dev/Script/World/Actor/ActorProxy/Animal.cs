@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class Animal : ActorProxy, IBOInteractive
+public class Animal : ActorProxy, IBOInteractiveSingle
 {
     [SerializeField] private ActorFavorablity _favorablity;
     [SerializeField] private CollectingMovedActor _collectingMovedActor;
@@ -19,13 +19,14 @@ public class Animal : ActorProxy, IBOInteractive
 
 
     public CollisionInteraction Interaction => Owner.Interaction;
-    private IBOInteractive _collectBehaviour;
+    private IBOInteractiveSingle _collectBehaviour;
     public void UpdateInteract(CollisionInteractionMono caller)
     {
         if (caller.Owner is not PlayerController pc) return;
         if (_collectBehaviour is null) return;
 
-        if (InputManager.Map.Player.InteractionDialogue.triggered)
+        var clickObj = pc.Interactor.FindClickObject();
+        if (clickObj && clickObj.ContractInfo == Interaction.ContractInfo)
         {
             _collectBehaviour.UpdateInteract(caller);
             _ = pc.Dialogue.RunDialogueFromInteraction(Interaction);
@@ -46,10 +47,10 @@ public class Animal : ActorProxy, IBOInteractive
         {
             ContractInfo.AddBehaivour<IBOInteractiveTool>(collect);
         }
-        else if (collect is IBOInteractive)
+        else if (collect is IBOInteractiveSingle)
         {
-            _collectBehaviour = collect as IBOInteractive;
-            ContractInfo.AddBehaivour<IBOInteractive>(this);
+            _collectBehaviour = collect as IBOInteractiveSingle;
+            ContractInfo.AddBehaivour<IBOInteractiveSingle>(this);
         }
         
         

@@ -23,9 +23,9 @@ namespace DS.Runtime
         }
 
         public override DialogueItem CreateItem()
-            => new ConditionItem(this, () =>
+            => new ConditionItem(this, processorData =>
             {
-                var rtv = Handler.Execute(Args, null);
+                var rtv = Handler.Execute(Args, processorData);
                 Debug.Assert(rtv is bool, $"rtv is not bool ({rtv?.GetType().ToString() ?? "it is null"})");
 
                 return (bool)rtv ? TrueNode : FalseNode;

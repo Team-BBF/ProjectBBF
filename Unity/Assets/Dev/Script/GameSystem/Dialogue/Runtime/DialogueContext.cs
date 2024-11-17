@@ -152,7 +152,7 @@ public class DialogueContext
             }
             else if (item is ConditionItem conditionItem)
             {
-                CurrentNode = conditionItem.GetNextNode();
+                CurrentNode = conditionItem.GetNextNode(_processorData);
                 goto begin;
             }
         }

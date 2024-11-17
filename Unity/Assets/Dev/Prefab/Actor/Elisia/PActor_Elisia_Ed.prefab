@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1550380509533740692
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1258232571983436202, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: _saveKey
+      value: Elisia_Chapter_Ed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258232571983436202, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: _actorKey
+      value: Elisia_Chapter_Ed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654251629137900466, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949799012376779906, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 7021d785fa6a12f45bf60e7a6f756888, type: 2}
+    - target: {fileID: 5198328482305078123, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1690357312, guid: 016a9ab04494a874fa46797a09062ff6, type: 3}
+    - target: {fileID: 6633940948283213399, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}
+      propertyPath: m_Name
+      value: PActor_Elisia_Ed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2afddadbfbf59d947a94f0043ffd38fa, type: 3}

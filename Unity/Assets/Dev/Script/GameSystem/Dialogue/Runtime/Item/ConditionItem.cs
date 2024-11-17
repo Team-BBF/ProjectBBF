@@ -5,9 +5,9 @@ namespace DS.Runtime
 {
     public class ConditionItem : DialogueItemT<ConditionRuntimeNode>
     {
-        public readonly Func<DialogueRuntimeNode> GetNextNode;
+        public readonly Func<ProcessorData, DialogueRuntimeNode> GetNextNode;
         
-        public ConditionItem(ConditionRuntimeNode node, Func<DialogueRuntimeNode> getNextNode) : base(node, "Default", "None")
+        public ConditionItem(ConditionRuntimeNode node, Func<ProcessorData,DialogueRuntimeNode> getNextNode) : base(node, "Default", "None")
         {
             GetNextNode = getNextNode;
         }

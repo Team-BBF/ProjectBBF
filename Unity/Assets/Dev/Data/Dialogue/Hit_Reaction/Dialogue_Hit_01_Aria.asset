@@ -18,17 +18,17 @@ MonoBehaviour:
     PortName: Execute
     TargetNodeGuid: 6f350f84-9702-434e-9398-ee9718d298ec
   NodeData:
-  - rid: 6083855310640644602
+  - rid: 6083855520745652324
   references:
     version: 2
     RefIds:
-    - rid: 6083855310640644602
+    - rid: 6083855520745652324
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 6f350f84-9702-434e-9398-ee9718d298ec
         NodeTitle: Text
         TypeName: Text
         Position: {x: 223, y: 201}
-        DialogueText: "\uC544\uD30C..."
+        DialogueText: "\uC544\uD30C......"
         PortraitKey: 
         ActorKey: Aria

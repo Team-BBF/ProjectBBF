@@ -509,6 +509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 243572834}
     m_Modifications:
+    - target: {fileID: 1378004640854771644, guid: 35b0c3958d56ccb48ba92cf60931c070, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: d94bf6b8e8252984f9a0033ff7d927af, type: 2}
     - target: {fileID: 3026065139521650602, guid: 35b0c3958d56ccb48ba92cf60931c070, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.083
@@ -9434,6 +9438,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 243572834}
     m_Modifications:
+    - target: {fileID: 3437045672157743392, guid: 98e907586cceb9d4eaab2e66f8266b07, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: a4517bb43da89a34fa38958944998e5c, type: 2}
     - target: {fileID: 6831985246652744609, guid: 98e907586cceb9d4eaab2e66f8266b07, type: 3}
       propertyPath: _targetQuestList.Array.size
       value: 5
@@ -9698,6 +9706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PActor_Julian_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: 30351b92093bb5a47a9862e4da821d2d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 71fce2d270ac1c34aab40d90da78b990, type: 2}
     - target: {fileID: 4654251629137900466, guid: 30351b92093bb5a47a9862e4da821d2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4
@@ -10971,6 +10983,10 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Elisia_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: e1d0dbf4cf4502d40a8dcc3dadaad2f8, type: 2}
     - target: {fileID: 7236962955030520697, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.03
@@ -11493,6 +11509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 243572834}
     m_Modifications:
+    - target: {fileID: 1378004640854771644, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 47587ea54e2bcc648b2c9ea5f2faf67e, type: 2}
     - target: {fileID: 3026065139521650602, guid: 7b6b5fd5f91a41f4480b52bdf678e179, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.36
@@ -11622,6 +11642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PActor_Ahir
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: c4b4749b3502de24d89b9902b9ae0eb8, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ee5d7d235ac1864992d641951d4f908, type: 2}
     - target: {fileID: 4654251629137900466, guid: c4b4749b3502de24d89b9902b9ae0eb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.15
@@ -11981,6 +12005,10 @@ PrefabInstance:
       propertyPath: _targetQuestList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: bf427295583a78f4093ddf675f751e63, type: 2}
+    - target: {fileID: 5929473368788322081, guid: 900f66ea1e18c2a489f244fec66d6c58, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 30ac125c87c7d3946a7290258e7aee55, type: 2}
     - target: {fileID: 7236962955030520697, guid: 900f66ea1e18c2a489f244fec66d6c58, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.61
@@ -13123,6 +13151,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 243572834}
     m_Modifications:
+    - target: {fileID: 4027983535149176695, guid: cc1d4a49cf5697c49a6ee3b14dc6a8b5, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: a2e463c96928955458bb44244d303d2f, type: 2}
     - target: {fileID: 7236962955030520697, guid: cc1d4a49cf5697c49a6ee3b14dc6a8b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.34
@@ -14721,6 +14753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5770cff4e34806883489677b403511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hittedDialogue: {fileID: 0}
   _bucketDialogueContainer: {fileID: 11400000, guid: 523aefdd0adc7d94dbac17f89b3cf34d, type: 2}
   _bucketValidItemTable: {fileID: 11400000, guid: 93678d85c7ea5fe42810f88d0cd2035f, type: 2}
   _bucket: {fileID: 2030805572}

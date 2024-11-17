@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94576a3af06543efac7d22c9a606f6fb, type: 3}
-  m_Name: Dat_Favor_Chicken_Normal
+  m_Name: Dat_Favor_Goat_Sick_Chapter_2_1
   m_EditorClassIdentifier: 
-  _actorKey: Chicken_Normal
-  _actorName: "\uB2ED"
+  _actorKey: Goat_Sick_2_1
+  _actorName: "\uC5FC\uC18C"
   _defaultPortraitKey: Default
   _favorabilityEvent:
     _eventItems:
-    - _container: {fileID: 11400000, guid: 8c225cc1be1960f41845e53ae339ae4c, type: 2}
+    - _container: {fileID: 11400000, guid: ee3eea9e1bc566d49a0399982e97ceb7, type: 2}
       _favorablity: 0
       _once: 0
       _branchType: 2
   _portraitTable:
     _list:
     - Key: Default
-      Portrait: {fileID: 21300000, guid: 171055555a673d74eb4ce097ea91c11d, type: 3}
+      Portrait: {fileID: -218412290, guid: eb669b61ab889a941a4349b1ad9b1e5d, type: 3}

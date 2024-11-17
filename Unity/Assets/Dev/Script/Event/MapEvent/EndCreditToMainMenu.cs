@@ -1,8 +1,14 @@
+using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class EndCreditToMainMenu : MonoBehaviour
 {
+    private void Awake()
+    {
+        ScreenManager.Instance.CurrentCursor = CursorType.None;
+    }
+
     public void ToMainMenu()
     {
         if (SceneLoader.Instance)

@@ -13,6 +13,7 @@ public enum CursorType
 {
     Default,
     CanClick,
+    None,
 }
 
 [Singleton(ESingletonType.Global, 2)]
@@ -57,6 +58,8 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 
         _cursorTable = Resources.Load<CursorTable>("Data/Dat_CursorTable");
         Debug.Assert(_cursorTable, "CursorTable을 찾을 수 없습니다. ");
+
+        CurrentCursor = CursorType.Default;
     }
 
     public override void PostRelease()
@@ -146,6 +149,17 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         {
             _cursor = value;
             if (_cursorTable == false) return;
+
+            if (_cursor == CursorType.None)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                return;
+            }
+            
+            
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             
             Texture2D cursorTexture = _cursorTable.List.FirstOrDefault(x => value == x.Type).Texture2D;
             if (_cursorTable == false) return;

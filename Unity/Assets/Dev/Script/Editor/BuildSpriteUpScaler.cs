@@ -2,11 +2,8 @@ using System.IO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
+using System.Linq;
 using UnityEditor;
-using UnityEditor.Build;
-using UnityEditor.Build.Reporting;
 using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
@@ -18,14 +15,14 @@ public class BuildSpriteUpScaler
 
     public static readonly string[] Targets = new[]
     {
-       "Assets/Dev/Art/Sprite/Building",
-       "Assets/Dev/Art/Sprite/Character",
-       "Assets/Dev/Art/Sprite/Animal",
-       "Assets/Dev/Art/Sprite/Exterior",
-       "Assets/Dev/Art/Sprite/Insoo",
-       "Assets/Dev/Art/Sprite/Interior",
-       "Assets/Dev/Art/Sprite/Object",
-       "Assets/Dev/Art/Sprite/Tile",
+        "Assets/Dev/Art/Sprite/Building",
+        "Assets/Dev/Art/Sprite/Character",
+        "Assets/Dev/Art/Sprite/Animal",
+        "Assets/Dev/Art/Sprite/Exterior",
+        "Assets/Dev/Art/Sprite/Insoo",
+        "Assets/Dev/Art/Sprite/Interior",
+        "Assets/Dev/Art/Sprite/Object",
+        "Assets/Dev/Art/Sprite/Tile",
     };
 
     [MenuItem("Build/UpscaleTexture")]
@@ -60,25 +57,42 @@ public class BuildSpriteUpScaler
             importer.spritePixelsPerUnit *= size.scale;
             importer.maxTextureSize = GetCloserSize(Mathf.Max(size.newHeight, size.newWidth));
             importer.filterMode = FilterMode.Trilinear;
+            
+            ISpriteEditorDataProvider dataProvider = factory.GetSpriteEditorDataProviderFromObject(importer);
+            dataProvider.InitSpriteEditorDataProvider();
+            ISpriteOutlineDataProvider outlineProvider = dataProvider.GetDataProvider<ISpriteOutlineDataProvider>();
+            
+            SpriteRect[] spriteRects = dataProvider.GetSpriteRects();
+
+            foreach (SpriteRect spriteRect in spriteRects)
+            {
+                List<Vector2[]> outlines  = outlineProvider.GetOutlines(spriteRect.spriteID);
+
+                outlines = outlines.Select(arr =>
+                {
+                    return arr.Select(v => v * (float)size.scale).ToArray();
+                }).ToList();
+                
+                
+                outlineProvider.SetOutlines(spriteRect.spriteID, outlines);
+            }
+            
             if (importer.spriteImportMode == SpriteImportMode.Multiple)
             {
-                ISpriteEditorDataProvider dataProvider = factory.GetSpriteEditorDataProviderFromObject(importer);
-                dataProvider.InitSpriteEditorDataProvider();
-
-                SpriteRect[] arr = dataProvider.GetSpriteRects();
-
-                for (int i = 0; i < arr.Length; i++)
+                for (int i = 0; i < spriteRects.Length; i++)
                 {
-                    Rect rect = arr[i].rect;
+                    Rect rect = spriteRects[i].rect;
                     rect.x *= size.scale;
                     rect.y *= size.scale;
                     rect.width *= size.scale;
                     rect.height *= size.scale;
-                    arr[i].rect = rect;
+                    spriteRects[i].rect = rect;
                 }
-                dataProvider.SetSpriteRects(arr);
-                dataProvider.Apply();
+                dataProvider.SetSpriteRects(spriteRects);
             }
+            
+            dataProvider.Apply();
+            importer.SaveAndReimport();
         }
         
         AssetDatabase.Refresh();

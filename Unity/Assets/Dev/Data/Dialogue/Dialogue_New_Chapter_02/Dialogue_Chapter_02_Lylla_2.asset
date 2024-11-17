@@ -17,24 +17,15 @@ MonoBehaviour:
   - BaseNodeGuid: 423c33e6-c44f-42ff-bb03-2c5a8dc2727a
     PortName: 
     TargetNodeGuid: 
-  - BaseNodeGuid: 461fb71f-3588-43a4-9eba-ed18c3f068d6
-    PortName: Next
-    TargetNodeGuid: 4f942664-181a-4e92-82a3-b81023366d35
-  - BaseNodeGuid: 62bff508-9d79-464f-990b-0a1068d5102a
-    PortName: Next
-    TargetNodeGuid: f2ac2047-63dc-49b5-bcd1-e6ec94dfa83a
-  - BaseNodeGuid: f2ac2047-63dc-49b5-bcd1-e6ec94dfa83a
-    PortName: Next
-    TargetNodeGuid: 461fb71f-3588-43a4-9eba-ed18c3f068d6
   NodeData:
-  - rid: 6083855397742707043
-  - rid: 6083855397742707044
-  - rid: 6083855397742707045
-  - rid: 6083855397742707047
+  - rid: 6083855518545478089
+  - rid: 6083855518545478090
+  - rid: 6083855518545478091
+  - rid: 6083855518545478092
   references:
     version: 2
     RefIds:
-    - rid: 6083855397742707043
+    - rid: 6083855518545478089
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 461fb71f-3588-43a4-9eba-ed18c3f068d6
@@ -45,7 +36,7 @@ MonoBehaviour:
           \uC81C\uCD9C\uD558\uBA74 \uB41C\uB2E4\uB0E5!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855397742707044
+    - rid: 6083855518545478090
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4f942664-181a-4e92-82a3-b81023366d35
@@ -56,7 +47,7 @@ MonoBehaviour:
           \uBE75\uC744 \uC81C\uCD9C\uD558\uB77C\uB0E5!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855397742707045
+    - rid: 6083855518545478091
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 62bff508-9d79-464f-990b-0a1068d5102a
@@ -67,7 +58,7 @@ MonoBehaviour:
           \uBE75\uC744 \uAD6C\uC6B8 \uC218 \uC788\uB2E4\uB0E5!"
         PortraitKey: 
         ActorKey: Lylla_Chapter_1
-    - rid: 6083855397742707047
+    - rid: 6083855518545478092
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f2ac2047-63dc-49b5-bcd1-e6ec94dfa83a

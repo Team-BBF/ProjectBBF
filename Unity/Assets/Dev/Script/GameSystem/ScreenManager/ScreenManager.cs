@@ -147,7 +147,10 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         get => _cursor;
         set
         {
+            if (_cursor == value) return;
+            
             _cursor = value;
+            
             if (_cursorTable == false) return;
 
             if (_cursor == CursorType.None)

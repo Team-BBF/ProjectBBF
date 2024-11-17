@@ -47,6 +47,15 @@ namespace ProjectBBF.Input
 
     public abstract class BasePlayerInputController : BaseInputController<PlayerController, PlayerInputFactory>
     {
+        public override void InActivateInput()
+        {
+            UI.Value = null;
+            Move.Value = null;
+            Interact.Value = null;
+            Tool.Value = null;
+            QuestUI.Value = null;
+        }
+
         public InputBinder<PlayerController, PlayerInputUI> UI { get; private set; } = new();
         public InputBinder<PlayerController, PlayerInputMove> Move { get; private set; } = new();
         public InputBinder<PlayerController, PlayerInputInteract> Interact { get; private set; } = new();

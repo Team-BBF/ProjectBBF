@@ -100,10 +100,6 @@ public class MoveToWorld : MonoBehaviour
         if (pc)
         {
             pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
-            pc.InputController.UI.Value = null;
-            pc.InputController.Move.Value = null;
-            pc.InputController.Tool.Value = null;
-            pc.InputController.QuestUI.Value = null;
         }
     }
 }

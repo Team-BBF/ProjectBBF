@@ -2666,7 +2666,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 292867734561201154}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3026065139521650602, guid: 8e425badfc8b974449ca0a2a511cedf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2712,6 +2712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PActor_Karen_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: 8e425badfc8b974449ca0a2a511cedf3, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b92f5adedb909541bbc9b8c7f328e75, type: 2}
     - target: {fileID: 4654251629137900466, guid: 8e425badfc8b974449ca0a2a511cedf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.19
@@ -2745,11 +2749,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e425badfc8b974449ca0a2a511cedf3, type: 3}
---- !u!4 &1854445645 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7236962955030520697, guid: 8e425badfc8b974449ca0a2a511cedf3, type: 3}
-  m_PrefabInstance: {fileID: 1854445644}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1939860956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3183,6 @@ Transform:
   - {fileID: 2364145953397367494}
   - {fileID: 201376998}
   - {fileID: 1974302681}
-  - {fileID: 1854445645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627419514278351565
@@ -3635,6 +3633,7 @@ SceneRoots:
   - {fileID: 391830950}
   - {fileID: 1552859893}
   - {fileID: 767037197}
+  - {fileID: 1854445644}
   - {fileID: 633382695}
   - {fileID: 1407211532}
   - {fileID: 900043878}

@@ -19,8 +19,7 @@ public class BucketNpc : Npc
         ContractInfo.AddBehaivour<IBODialogue>(Favorability);
     }
 
-
-    public override void UpdateInteract(CollisionInteractionMono caller)
+    protected override void UpdateDefaultInteract(CollisionInteractionMono caller)
     {
         if (caller.Owner is not PlayerController pc) return;
         if (pc.Interactor.CloserObject != Owner.Interaction) return;
@@ -43,5 +42,13 @@ public class BucketNpc : Npc
                     }
                 });
         }
+    }
+
+
+
+    protected override void UpdateHittedInteract(CollisionInteractionMono caller)
+    {
+        if (caller.Owner is not PlayerController pc) return;
+        _ = pc.Dialogue.RunDialogue(_favorability.HittedDialogue, _favorability.ProcessorData, Owner.transform.position);
     }
 }

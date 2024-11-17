@@ -2,11 +2,16 @@
 using UnityEngine;
 
 
-public abstract class Npc : ActorProxy, IBOInteractiveMulti
+public abstract class Npc : ActorProxy, IBOInteractiveMulti, IBOInteractiveTool
 {
+    [SerializeField] private ParticlePlayer _hittedEffect;
+    [SerializeField] private string _hittedAudioGroup;
+    [SerializeField] private string _hittedAudioKey;
+    
     protected override void OnInit()
     {
         ContractInfo.AddBehaivour<IBOInteractiveMulti>(this);
+        ContractInfo.AddBehaivour<IBOInteractiveTool>(this);
     }
 
     protected override void OnDoDestroy()
@@ -14,5 +19,26 @@ public abstract class Npc : ActorProxy, IBOInteractiveMulti
     }
 
     public CollisionInteraction Interaction => Owner.Interaction;
-    public abstract void UpdateInteract(CollisionInteractionMono caller);
+    public bool IsVaildTool(ToolRequireSet toolSet)
+    {
+        return toolSet.RequireToolType == ToolType.Hoe;
+    }
+
+    void IBOInteractiveMulti.UpdateInteract(CollisionInteractionMono caller)
+    {
+        UpdateDefaultInteract(caller);
+    }
+    void IBOInteractiveTool.UpdateInteract(CollisionInteractionMono caller)
+    {
+        if (_hittedEffect)
+        {
+            _hittedEffect.Play();
+        }
+
+        AudioManager.Instance.PlayOneShot(_hittedAudioGroup, _hittedAudioKey);
+        UpdateHittedInteract(caller);
+    }
+
+    protected abstract void UpdateDefaultInteract(CollisionInteractionMono caller);
+    protected abstract void UpdateHittedInteract(CollisionInteractionMono caller);
 }

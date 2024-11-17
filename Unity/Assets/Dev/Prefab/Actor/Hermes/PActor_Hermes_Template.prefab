@@ -188,7 +188,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79363269662463c8103653f59164279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hittedEffect: {fileID: 7770948574986082762}
+  _hittedAudioGroup: Player
+  _hittedAudioKey: Player_Mole_Hit
   _favorability: {fileID: 8552435578728683498}
+--- !u!114 &7770948574986082762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5705522838565472513, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+  m_PrefabInstance: {fileID: 2664409437884469451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1f8840053b409ca4c435cc556f22b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8665086375428048919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6681495090440575196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
@@ -206,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5770cff4e34806883489677b403511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hittedDialogue: {fileID: 0}
   _bucketDialogueContainer: {fileID: 11400000, guid: 523aefdd0adc7d94dbac17f89b3cf34d, type: 2}
   _bucketValidItemTable: {fileID: 11400000, guid: 93678d85c7ea5fe42810f88d0cd2035f, type: 2}
   _bucket: {fileID: 3709037730286503027}

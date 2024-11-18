@@ -19,7 +19,7 @@ public class RecipeBookListView : MonoBehaviour
     [SerializeField] private ESOVoid _closeReadyEvent;
     
     public event Action<object> OnSlotClick;
-    public event Action OnExit;
+    //public event Action OnExit;
 
     private List<RecipeBookSlotView> _slots = new();
 

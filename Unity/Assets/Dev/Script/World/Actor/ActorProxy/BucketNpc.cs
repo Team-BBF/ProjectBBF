@@ -9,7 +9,6 @@ public class BucketNpc : Npc
 {
     [SerializeField] private BucketFavorability _favorability;
     public BucketFavorability Favorability => _favorability;
-    public CollisionInteraction Interaction => Owner.Interaction;
 
     protected override void OnInit()
     {

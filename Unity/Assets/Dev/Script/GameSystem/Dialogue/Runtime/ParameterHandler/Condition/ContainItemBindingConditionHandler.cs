@@ -25,17 +25,10 @@ namespace DS.Runtime
                 Debug.LogError($"유효하지 않는 BindingKey({arg0})");
                 return null;
             }
-            
-            AsyncOperationHandle<IList<ItemData>> itemHandle = Addressables.LoadAssetsAsync<ItemData>
-            (
-                new object[] { key },
-                null,
-                Addressables.MergeMode.Union
-            );
-            itemHandle.WaitForCompletion();
 
-            var itemData = itemHandle.Result.FirstOrDefault();
-            if (itemData == false)
+            IItemDataResolver resolver = DataManager.Instance.GetResolver<IItemDataResolver>();
+            
+            if (resolver.TryGetData(arg0, out ItemData itemData))
             {
                 Debug.LogError($"찾을 수 없는 BindingKey({arg0}), DataKey({key})");
                 return null;

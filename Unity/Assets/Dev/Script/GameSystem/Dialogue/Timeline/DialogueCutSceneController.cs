@@ -72,6 +72,19 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
 
     private void OnDestroy()
     {
+        if (GameObjectStorage.Instance)
+        {
+            var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
+            if (po && po.TryGetComponent(out PlayerController pc))
+            {
+                pc.HudController.Visible = true;
+                pc.Inventory.QuickInvVisible = true;
+                pc.QuestPresenter.Visible = true;
+            
+                pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+            }
+
+        }
         
         _director.stopped -= OnStopped;
         if (_esoResultPush)

@@ -32,6 +32,17 @@ public class QuestView : MonoBehaviour
 
     private void Start()
     {
+        if (this == false)
+        {
+            return;
+        }
+
+        if (gameObject.activeInHierarchy is false)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         StopAllCoroutines();
         StartCoroutine(CoAnimate(true));
     }
@@ -73,6 +84,17 @@ public class QuestView : MonoBehaviour
 
     public void DestroySelf()
     {
+        if (this == false)
+        {
+            return;
+        }
+
+        if (gameObject.activeInHierarchy is false)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         StopAllCoroutines();
         StartCoroutine(CoAnimate(false));
         

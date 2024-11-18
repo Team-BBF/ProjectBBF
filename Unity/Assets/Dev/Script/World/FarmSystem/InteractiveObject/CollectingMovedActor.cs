@@ -8,6 +8,7 @@ using Cysharp.Threading.Tasks.Triggers;
 using JetBrains.Annotations;
 using ProjectBBF.Event;
 using MyBox;
+using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -31,15 +32,33 @@ public class CollectingMovedActor : ActorComponent
     
     //[SerializeField] private GameObject  
 
-    private int _collectCount;
     private PatrolPointPath _currentPath;
     private Actor _masterActor;
-    public bool CanCollect => _collectCount < _collectingData.MaxCollectCount;
+    public bool CanCollect => CollectCount < _collectingData.MaxCollectCount;
 
     public CollectingObjectData CollectingData => _collectingData;
     public CollisionInteraction Interaction => _masterActor.Interaction;
 
     public UnityEvent<CollectState> OnChangedCollectingState => _onChangedCollectingState;
+    private int _collectCount;
+
+    public int CollectCount
+    {
+        get => _collectCount;
+        set
+        {
+            _collectCount = value;
+
+            if (CanCollect)
+            {
+                Refill(false);
+            }
+            else
+            {
+                ChangeCollected();
+            }
+        }
+    }
 
     private class ToolBehaviour : IBOInteractiveTool
     {
@@ -123,7 +142,35 @@ public class CollectingMovedActor : ActorComponent
             if (refillEvent == false) continue;
             refillEvent.OnSignal += Refill;
         }
+        
+        var obj = PersistenceManager.Instance.LoadOrCreate<CollectPersistenceObject>(_collectingData.PersistenceKey);
+
+        PersistenceManager.Instance.OnGameDataLoaded += OnLoaded;
+        obj.Actor = this;
+        
+        if (obj.Saved is false)
+        {
+            obj.Saved = true;
+        }
+        else
+        {
+            obj.Load(this);
+        }
     }
+
+    private void OnLoaded(PersistenceManager inst)
+    {
+        if (this == false)
+        {
+            inst.OnGameDataLoaded -= OnLoaded;
+            return;
+        }
+        
+        var obj = PersistenceManager.Instance.LoadOrCreate<CollectPersistenceObject>(_collectingData.PersistenceKey);
+        obj.Actor = this;
+        obj.Load(this);
+    }
+
     private void OnDestroy()
     {
         foreach (var refillEvent in _refillEvents)
@@ -131,19 +178,43 @@ public class CollectingMovedActor : ActorComponent
             if (refillEvent == false) continue;
             refillEvent.OnSignal -= Refill;
         }
+
+        if (PersistenceManager.Instance)
+        {
+            PersistenceManager.Instance.OnGameDataLoaded -= OnLoaded;
+            var obj = PersistenceManager.Instance.LoadOrCreate<CollectPersistenceObject>(_collectingData.PersistenceKey);
+
+            obj.Actor = this;
+            obj.Save(this);
+        }
     }
 
-    private void Refill(GameTime obj = default)
+    public void Refill(GameTime obj = default)
     {
-        _onChangedCollectingState.Invoke(CollectState.Normal);
         _collectCount = 0;
+        _onChangedCollectingState?.Invoke(CollectState.Normal);
+    }
+    public void Refill(bool isSetCountZero)
+    {
+        if (isSetCountZero)
+        {
+            _collectCount = 0;
+        }
+
+        _onChangedCollectingState?.Invoke(CollectState.Normal);
+    }
+
+    public void ChangeCollected()
+    {
+        _collectCount = CollectingData.MaxCollectCount;
+        _onChangedCollectingState?.Invoke(CollectState.Collected);
     }
     
     public List<ItemData> Collect()
     {
         
         if (_collectingData == false) return null;
-        if (_collectCount >= CollectingData.MaxCollectCount) return null;
+        if (CollectCount >= CollectingData.MaxCollectCount) return null;
             
         var list = new List<ItemData>();
         if (CanCollect is false) return null;
@@ -182,7 +253,7 @@ public class CollectingMovedActor : ActorComponent
 
         if (_collectCount >= CollectingData.MaxCollectCount)
         {
-            _onChangedCollectingState.Invoke(CollectState.Collected);
+            _onChangedCollectingState?.Invoke(CollectState.Collected);
         }
 
         return list;

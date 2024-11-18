@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c846c0c231a3ae418d5a898aceaca45, type: 3}
-  m_Name: Dat_CO_Goat_Normal
+  m_Name: Dat_CO_Ch_2_Chicken_Normal_1
   m_EditorClassIdentifier: 
+  _persistenceKey: CO_Ch_2_Chicken_Good
   _defaultSprite: {fileID: 21300000, guid: 738f0ce526ff2e44b825f6023ab7f9c6, type: 3}
   _collectedSprite: {fileID: 21300000, guid: 5b01b78f91bc49e4faa5338c2b5890b8, type: 3}
   _maxCollectCount: 1
@@ -20,5 +21,5 @@ MonoBehaviour:
     _requireToolTypes: 0
     _requireToolRank: 1
   _dropItems:
-  - Data: {fileID: 11400000, guid: 4e508e3678b58ff48aa779437da6b13f, type: 2}
+  - Data: {fileID: 11400000, guid: 5644dbdd2235fb047a3802affdc701f6, type: 2}
     Count: 1

@@ -14,6 +14,8 @@ public class CollectingObjectData : ScriptableObject
         public int Count;
     }
 
+    [field: SerializeField, Header("세이브 키")]
+    private string _persistenceKey;
 
     [field: SerializeField, Header("수집 가능한 상태의 스프라이트")]
     private Sprite _defaultSprite;
@@ -31,6 +33,8 @@ public class CollectingObjectData : ScriptableObject
 
     [field: SerializeField, Header("수집했을 때 드랍하는 아이템 테이블")]
     private List<Item> _dropItems;
+
+    public string PersistenceKey => _persistenceKey;
 
     public Sprite DefaultSprite => _defaultSprite;
     public Sprite CollectedSprite => _collectedSprite;

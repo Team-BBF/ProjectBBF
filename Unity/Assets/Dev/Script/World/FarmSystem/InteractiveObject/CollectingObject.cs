@@ -5,6 +5,7 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using ProjectBBF.Event;
 using MyBox;
+using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,7 +22,7 @@ public class CollectingObject : MonoBehaviour, IBOInteractiveSingle
     [SerializeField] private UnityEvent _onStateRecovered;
     [SerializeField] private UnityEvent _onStateCollected;
 
-    [field: SerializeField, Separator("커스텀"), OverrideLabel("데이터"), InitializationField, MustBeAssigned, DisplayInspector]
+    [field: SerializeField, Separator("커스텀"), OverrideLabel("데이터"), InitializationField, MustBeAssigned]
     private CollectingObjectData _data;
 
     #endregion
@@ -33,6 +34,27 @@ public class CollectingObject : MonoBehaviour, IBOInteractiveSingle
 
     private bool _isCollected;
 
+    public bool IsCollected
+    {
+        get => _isCollected;
+        set
+        {
+            
+            _isCollected = value;
+            
+            if (value)
+            {
+                _renderer.sprite = _data.CollectedSprite;
+                _onStateCollected?.Invoke();
+            }
+            else
+            {
+                _renderer.sprite = _data.DefaultSprite;
+                _onStateRecovered?.Invoke();
+            }
+        }
+    }
+
     private void Awake()
     {
         var info = ObjectContractInfo.Create(() => gameObject);
@@ -40,7 +62,47 @@ public class CollectingObject : MonoBehaviour, IBOInteractiveSingle
 
         info.AddBehaivour<IBOInteractiveSingle>(this);
     }
-    
+
+    private void Start()
+    {
+        var obj = PersistenceManager.Instance.LoadOrCreate<CollectPersistenceObject>(Data.PersistenceKey);
+        PersistenceManager.Instance.OnGameDataLoaded += OnLoaded;
+        obj.Object = this;
+        
+        if (obj.Saved is false)
+        {
+            obj.Saved = true;
+        }
+        else
+        {
+            obj.Load(this);
+        }
+    }
+
+    private void OnLoaded(PersistenceManager inst)
+    {
+        if (this == false)
+        {
+            inst.OnGameDataLoaded -= OnLoaded;
+            return;
+        }
+        
+        var obj = PersistenceManager.Instance.LoadOrCreate<CollectPersistenceObject>(Data.PersistenceKey);
+        obj.Object = this;
+        obj.Load(this);
+    }
+
+    private void OnDestroy()
+    {
+        if (PersistenceManager.Instance)
+        {
+            var obj = PersistenceManager.Instance.LoadOrCreate<CollectPersistenceObject>(Data.PersistenceKey);
+            PersistenceManager.Instance.OnGameDataLoaded -= OnLoaded;
+            obj.Object = this;
+            obj.Save(this);
+        }
+    }
+
     public void UpdateInteract(CollisionInteractionMono caller)
     {
         if (caller.Owner is not PlayerController pc) return;

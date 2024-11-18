@@ -23,6 +23,7 @@ public class BuildSpriteUpScaler
         "Assets/Dev/Art/Sprite/Interior",
         "Assets/Dev/Art/Sprite/Object",
         "Assets/Dev/Art/Sprite/Tile",
+        "Assets/Dev/Art/Sprite/UGUI",
     };
 
     [MenuItem("Build/UpscaleTexture")]

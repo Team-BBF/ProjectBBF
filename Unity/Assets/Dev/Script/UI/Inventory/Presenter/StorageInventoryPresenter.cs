@@ -19,8 +19,9 @@ public class StorageInventoryPresenter : MonoBehaviour, IInventoryPresenter<Grid
 
     private int _recentSelection;
     
-    public void Init()
+    public void Init(GridInventoryModel model)
     {
+        Model = model;
         StartCoroutine(CoInit());
     }
 
@@ -40,7 +41,6 @@ public class StorageInventoryPresenter : MonoBehaviour, IInventoryPresenter<Grid
             PlayerModel = blackboard.Inventory.Model;
         }
         
-        Model = new GridInventoryModel(new Vector2Int(10, 2));
         Model.OnChanged += StorageView.Refresh;
         PlayerModel.OnChanged += PlayerView.Refresh;
 
@@ -111,7 +111,12 @@ public class StorageInventoryPresenter : MonoBehaviour, IInventoryPresenter<Grid
         if (Model is not null)
         {
             Model.OnChanged -= StorageView.Refresh;
-            PlayerModel.OnChanged -= PlayerView.Refresh;
+
+            if (PlayerModel is not null)
+            {
+                PlayerModel.OnChanged -= PlayerView.Refresh;
+            }
+            Model.Release();
         }
     }
 }

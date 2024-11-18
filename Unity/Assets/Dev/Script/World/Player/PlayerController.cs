@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
         Blackboard = PersistenceManager.Instance.LoadOrCreate<PlayerBlackboard>("Player_Blackboard");
         Blackboard.OnSaved += OnSaved;
 
-        GridInventoryModel model = Blackboard.CreateInventoryModelModel();
+        GridInventoryModel model = new GridInventoryModel(new Vector2Int(10, 2), "Player_Inventory");
         
         Inventory = new PlayerInventoryPresenter(
             model,
@@ -211,6 +211,7 @@ public class PlayerController : MonoBehaviour
         
         InputController.Release();
         Blackboard.OnSaved -= OnSaved;
+        Inventory.Model.Release();
     }
 
     private T Bind<T>() where T : MonoBehaviour, IPlayerStrategy

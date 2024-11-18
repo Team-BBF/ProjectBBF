@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using ProjectBBF.Event;
 using ProjectBBF.Input;
+using ProjectBBF.Persistence;
 using UnityEngine;
 
 public class BakeryStoreage : BakeryFlowBehaviour
 {
+    [SerializeField] private BakeryStorageData _data;
     [SerializeField] private GameObject _panel;
     [SerializeField] private StorageInventoryPresenter _storageInventory;
     [SerializeField] private Animator _ani;
@@ -17,17 +19,44 @@ public class BakeryStoreage : BakeryFlowBehaviour
 
     private void Start()
     {
+        if (_data == false)
+        {
+            Debug.LogError($"Data가 없습니다. scene name({gameObject.scene.name}), obj name({gameObject.name})");
+            return;
+        }
+        
         _storageInventory.OnInit += _ => Init();
-        _storageInventory.Init();
+        _storageInventory.Init(new GridInventoryModel(new Vector2Int(10, 2), _data.PersistenceKey));
     }
 
     private void Init()
     {
         Visible = false;
 
-        foreach (ItemData item in _defaultItems)
+        if (PersistenceManager.Instance)
         {
-            _storageInventory.Model.PushItem(item, item.MaxStackCount);
+            var obj = PersistenceManager.Instance.LoadOrCreate<GridModelPersistenceObject>(_data.PersistenceKey);
+            
+            if (obj.Saved is false)
+            {
+                foreach (ItemDataSerializedSet itemSet in _data.DefaultItemList)
+                {
+                    _storageInventory.Model.PushItem(itemSet.Item, itemSet.Count <= 0 ? itemSet.Item.MaxStackCount : itemSet.Count);
+                }
+
+                obj.Saved = true;
+            }
+        }
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        
+        if (_data && PersistenceManager.Instance)
+        {
+            var obj = PersistenceManager.Instance.LoadOrCreate<GridModelPersistenceObject>(_data.PersistenceKey);
+            obj.SaveModle(_storageInventory.Model);
         }
     }
 

@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Bread_Aria_Bad
+  m_EditorClassIdentifier: 
+  _guid: 878b65e9203ac50418f7c429eb83f314
+  NodeLinks:
+  - BaseNodeGuid: 0ed4b202-1923-4dc2-8bfc-c5103376da1a
+    PortName: Execute
+    TargetNodeGuid: 8555816d-99f9-4ecd-823c-ced8486d59a5
+  - BaseNodeGuid: 8555816d-99f9-4ecd-823c-ced8486d59a5
+    PortName: Next
+    TargetNodeGuid: 411fb3af-cad9-4195-b978-a94df62475c9
+  - BaseNodeGuid: add94d06-dca2-4e99-bf51-0fb68a125997
+    PortName: Next
+    TargetNodeGuid: b071139f-08c6-4026-a626-6827f10d2379
+  - BaseNodeGuid: b49a01f8-746d-410d-9894-51befb94e6aa
+    PortName: Next
+    TargetNodeGuid: add94d06-dca2-4e99-bf51-0fb68a125997
+  - BaseNodeGuid: 411fb3af-cad9-4195-b978-a94df62475c9
+    PortName: Next
+    TargetNodeGuid: b49a01f8-746d-410d-9894-51befb94e6aa
+  - BaseNodeGuid: b071139f-08c6-4026-a626-6827f10d2379
+    PortName: Next
+    TargetNodeGuid: 07fde763-28a1-4435-9bbe-ae383744faf0
+  NodeData:
+  - rid: 6083855535537651825
+  - rid: 6083855535537651826
+  - rid: 6083855535537651827
+  - rid: 6083855535537651828
+  - rid: 6083855535537651829
+  - rid: 6083855535537651830
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855535537651825
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 8555816d-99f9-4ecd-823c-ced8486d59a5
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 210, y: 200}
+        DialogueText: "...\uBE75?"
+        PortraitKey: 
+        ActorKey: Aria
+    - rid: 6083855535537651826
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 411fb3af-cad9-4195-b978-a94df62475c9
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 424, y: 199}
+        DialogueText: "\uC798 \uBA39\uC744\uAC8C. \uB0E0"
+        PortraitKey: Smi
+        ActorKey: Aria
+    - rid: 6083855535537651827
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b49a01f8-746d-410d-9894-51befb94e6aa
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 683, y: 200}
+        DialogueText: "(\uC544\uB9AC\uC544\uAC00 \uD55C\uC785 \uD06C\uAC8C \uBCA0\uC5B4\uBB38\uB2E4)"
+        PortraitKey: Smi
+        ActorKey: Aria
+    - rid: 6083855535537651828
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: add94d06-dca2-4e99-bf51-0fb68a125997
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1022, y: 200}
+        DialogueText: "\uC6B0\uC6E8\uC5D1...!"
+        PortraitKey: Ave
+        ActorKey: Aria
+    - rid: 6083855535537651829
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b071139f-08c6-4026-a626-6827f10d2379
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1254, y: 200}
+        DialogueText: "\uC774\uAC8C \uBB50\uC57C..."
+        PortraitKey: Agg
+        ActorKey: Aria
+    - rid: 6083855535537651830
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 07fde763-28a1-4435-9bbe-ae383744faf0
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1498, y: 201}
+        DialogueText: ......
+        PortraitKey: Agg
+        ActorKey: Aria

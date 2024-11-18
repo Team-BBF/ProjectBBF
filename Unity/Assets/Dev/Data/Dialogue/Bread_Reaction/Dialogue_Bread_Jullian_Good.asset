@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Bread_Jullian_Good
+  m_EditorClassIdentifier: 
+  _guid: 58d857b8058961643ba9a81afba664d2
+  NodeLinks:
+  - BaseNodeGuid: 0ed4b202-1923-4dc2-8bfc-c5103376da1a
+    PortName: Execute
+    TargetNodeGuid: 97dc265f-e5a2-48bc-99f1-ed21a70c4e2f
+  - BaseNodeGuid: 97dc265f-e5a2-48bc-99f1-ed21a70c4e2f
+    PortName: Next
+    TargetNodeGuid: a551eb34-49e7-4bc2-ad57-bca6ef9077a1
+  - BaseNodeGuid: a551eb34-49e7-4bc2-ad57-bca6ef9077a1
+    PortName: Next
+    TargetNodeGuid: b48836fb-78d2-4b1b-80b7-c8f6b17b90e4
+  - BaseNodeGuid: b48836fb-78d2-4b1b-80b7-c8f6b17b90e4
+    PortName: Next
+    TargetNodeGuid: 549d983e-e23c-4e5f-9bfb-2ed8e60a9970
+  - BaseNodeGuid: 549d983e-e23c-4e5f-9bfb-2ed8e60a9970
+    PortName: Next
+    TargetNodeGuid: 43003c8e-d8ba-4974-a426-660bb565bf89
+  - BaseNodeGuid: 43003c8e-d8ba-4974-a426-660bb565bf89
+    PortName: Next
+    TargetNodeGuid: 60c1731f-0385-43a1-8ec7-6cf679c1cc39
+  NodeData:
+  - rid: 6083855535537651736
+  - rid: 6083855535537651737
+  - rid: 6083855535537651738
+  - rid: 6083855535537651739
+  - rid: 6083855535537651740
+  - rid: 6083855535537651741
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855535537651736
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 97dc265f-e5a2-48bc-99f1-ed21a70c4e2f
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 213, y: 197}
+        DialogueText: "\uC6B0\uC640\uC544! \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: Julian_Chapter_1
+    - rid: 6083855535537651737
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: a551eb34-49e7-4bc2-ad57-bca6ef9077a1
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 503, y: 196}
+        DialogueText: "\uC798 \uBA39\uC744\uAC8C\uC694!"
+        PortraitKey: 
+        ActorKey: Julian_Chapter_1
+    - rid: 6083855535537651738
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b48836fb-78d2-4b1b-80b7-c8f6b17b90e4
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 782, y: 200}
+        DialogueText: "\uC774 \uADC0\uD55C \uBE75\uC744 \uC8FC\uC2DC\uB2E4\uB2C8
+          \uB108\uBB34 \uC88B\uC740\uAC78\uC694?"
+        PortraitKey: 
+        ActorKey: Julian_Chapter_1
+    - rid: 6083855535537651739
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 549d983e-e23c-4e5f-9bfb-2ed8e60a9970
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1178, y: 191}
+        DialogueText: "\uC6B0\uB9AC \uB3D9\uC0DD\uB4E4\uD55C\uD14C \uC790\uB791\uD560
+          \uAC70\uB9AC\uAC00 \uC0DD\uACA8\uC11C \uC88B\uB124\uC694! "
+        PortraitKey: 
+        ActorKey: Julian_Chapter_1
+    - rid: 6083855535537651740
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 43003c8e-d8ba-4974-a426-660bb565bf89
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1599, y: 192}
+        DialogueText: "\uC800\uB294 \uC774 \uC55E\uC5D0\uC11C \uAF43\uC9D1\uC744
+          \uD558\uACE0 \uC788\uC73C\uB2C8 \uB2E4\uC74C\uBC88\uC5D0 \uAF2D \uCC3E\uC544\uC640\uC8FC\uC138\uC694!"
+        PortraitKey: 
+        ActorKey: Julian_Chapter_1
+    - rid: 6083855535537651741
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 60c1731f-0385-43a1-8ec7-6cf679c1cc39
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2091, y: 196}
+        DialogueText: "\uB2E4\uC74C\uBC88\uC5D0 \uC624\uC2DC\uBA74 \uBA4B\uC9C4 \uAF43\uC73C\uB85C
+          \uBCF4\uB2F5\uD560\uAC8C\uC694!"
+        PortraitKey: 
+        ActorKey: Julian_Chapter_1

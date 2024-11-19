@@ -29,7 +29,6 @@ public class ItemDataAddressableResolver : IItemDataResolver
             null
             );
         locations.WaitForCompletion();
-        locations.Result.ForEach(x => Debug.Log(x.Data));
         
         
         AsyncOperationHandle<IList<ItemData>> itemHandle = Addressables.LoadAssetsAsync<ItemData>(locations.Result, null);

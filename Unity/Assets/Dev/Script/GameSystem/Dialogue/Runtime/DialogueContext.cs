@@ -193,8 +193,15 @@ public class DialogueContext
         _tree = tree;
         _textInput = str =>
         {
-            controller.DialogueText = str;
-            AudioManager.Instance.PlayOneShot("SFX", "SFX_Dialogue_Text");
+            if (controller)
+            {
+                controller.DialogueText = str;
+            }
+
+            if (AudioManager.Instance)
+            {
+                AudioManager.Instance.PlayOneShot("SFX", "SFX_Dialogue_Text");
+            }
         };
         _duration = duration;
         _controller = controller;

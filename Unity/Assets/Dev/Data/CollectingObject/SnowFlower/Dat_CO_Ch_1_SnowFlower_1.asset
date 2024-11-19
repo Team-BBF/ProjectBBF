@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c846c0c231a3ae418d5a898aceaca45, type: 3}
-  m_Name: Dat_CO_Ch_1_FogMushroom_0
+  m_Name: Dat_CO_Ch_1_SnowFlower_1
   m_EditorClassIdentifier: 
-  _persistenceKey: CO_Ch_1_FogMushroom_0
-  _defaultSprite: {fileID: 21300000, guid: e7307be11357b274086eb34b15ebf383, type: 3}
+  _persistenceKey: CO_Ch_1_SnowFlower_1
+  _defaultSprite: {fileID: 21300000, guid: 522300cff2b010a4ea9327855966202d, type: 3}
   _collectedSprite: {fileID: 0}
   _maxCollectCount: 1
   _onlyTool: 0
@@ -21,5 +21,5 @@ MonoBehaviour:
     _requireToolTypes: 0
     _requireToolRank: 1
   _dropItems:
-  - Data: {fileID: 11400000, guid: 9e31f63f30973424498f859094b6b9f5, type: 2}
+  - Data: {fileID: 11400000, guid: e84aa00678934be438b902880b7836f7, type: 2}
     Count: 1

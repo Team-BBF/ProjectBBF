@@ -105,8 +105,11 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
         pc.InputController.UI.Value = null;
         pc.InputController.Tool.Value = null;
 
+        yield return null;
+        yield return null;
+            
         SetParticleVisible(true);
-
+        
         switch (ResolvorType)
         {
             case Resolvor.Dough:

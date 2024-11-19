@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using DS.Runtime;
 using Mobsoft.PixelStyleWaterShader;
 using MyBox;
+using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -43,32 +44,46 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
             new("player", PersistenceManager.Instance.CurrentMetadata.PlayerName),
             new(CONTEST_RESULT_BINDING_KEY, "None"),
         }));
+
+        StartCoroutine(CoPlayerSetup());
+
     }
 
-    private void Start()
+    private IEnumerator CoPlayerSetup()
     {
-        var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
-        if (po && po.TryGetComponent(out PlayerController pc))
+        while (true)
         {
-            pc.HudController.Visible = false;
-            pc.Inventory.QuickInvVisible = false;
-            pc.Blackboard.IsInteractionStopped = true;
-            pc.QuestPresenter.Visible = false;
+            var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
+            if (po && po.TryGetComponent(out PlayerController pc))
+            {
+                pc.HudController.Visible = false;
+                pc.Inventory.QuickInvVisible = false;
+                pc.QuestPresenter.Visible = false;
+
+                pc.InputController.InActivateInput();
+
+                break;
+            }
+
+            yield return null;
         }
 
     }
 
     private void OnDestroy()
     {
-        if (GameObjectStorage.Instance == false) return;
-        
-        var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
-        if (po && po.TryGetComponent(out PlayerController pc))
+        if (GameObjectStorage.Instance)
         {
-            pc.HudController.Visible = true;
-            pc.Inventory.QuickInvVisible = true;
-            pc.Blackboard.IsInteractionStopped = false;
-            pc.QuestPresenter.Visible = true;
+            var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
+            if (po && po.TryGetComponent(out PlayerController pc))
+            {
+                pc.HudController.Visible = true;
+                pc.Inventory.QuickInvVisible = true;
+                pc.QuestPresenter.Visible = true;
+            
+                pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+            }
+
         }
         
         _director.stopped -= OnStopped;
@@ -111,7 +126,21 @@ public class DialogueCutSceneController : MonoBehaviour, INotificationReceiver
                     })
                     .ContinueWith(_ => loaderInst.LoadWorldAsync(scene))
                     .ContinueWith(_ => loaderInst.WorkDirectorAsync(true, _fadeinDirectorKey))
-                    .ContinueWith(_ => TimeManager.Instance.Resume())
+                    .ContinueWith(_ =>
+                    {
+                        if (GameObjectStorage.Instance == false) return;
+        
+                        var po = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Player"));
+                        if (po && po.TryGetComponent(out PlayerController pc))
+                        {
+                            pc.HudController.Visible = true;
+                            pc.Inventory.QuickInvVisible = true;
+                            pc.QuestPresenter.Visible = true;
+            
+                            pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+                        }
+                    })
+                    .ContinueWith(() => TimeManager.Instance.Resume())
                 ;
         }
     }

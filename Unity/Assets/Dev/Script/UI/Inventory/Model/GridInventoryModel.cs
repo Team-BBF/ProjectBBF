@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ProjectBBF.Persistence;
 using UnityEngine;
 
 
@@ -14,6 +15,7 @@ public class GridInventorySlot : DefaultInventorySlot
     }
 }
 
+
 public class GridInventoryModel : IInventoryModel
 {
     public GridInventorySlot[,] Slots { get; private set; }
@@ -24,26 +26,37 @@ public class GridInventoryModel : IInventoryModel
     public event Action<ItemData, GridInventoryModel> OnPopItem;
 
     public event Action<IInventoryModel> OnChanged;
+
+    public readonly string PersistenceKey;
+
+    private GridModelPersistenceObject _persistenceObject;
     
-    public GridInventoryModel(Vector2Int defaultSize)
+    
+    public GridInventoryModel(Vector2Int defaultSize, string persistenceKey)
     {
         Alloc(defaultSize);
+
+        PersistenceKey = persistenceKey;
+
+        OnGameLoaded(PersistenceManager.Instance);
+
+        PersistenceManager.Instance.OnGameDataLoaded += OnGameLoaded;
     }
 
-    public GridInventoryModel(List<(Vector2Int pos, ItemData itemData, int count)> items, Vector2Int defaultSize)
+    public void Release()
     {
-        Alloc(defaultSize);
-
-        foreach (var tuple in items)
+        if (PersistenceManager.Instance)
         {
-            if (tuple.pos.x > defaultSize.x || tuple.pos.y > defaultSize.y)
-            {
-                Debug.LogError("인벤토리 사이즈를 초과하는 시도");
-                continue;
-            }
-            
-            Slots[tuple.pos.y, tuple.pos.x].ForceSet(tuple.itemData, tuple.count);
+            PersistenceManager.Instance.OnGameDataLoaded -= OnGameLoaded;
         }
+    }
+
+    private void OnGameLoaded(PersistenceManager inst)
+    {
+        _persistenceObject = inst.LoadOrCreate<GridModelPersistenceObject>(PersistenceKey);
+        _persistenceObject.Model = this;
+        _persistenceObject.LoadModel(this);
+        ApplyChanged();
     }
 
     public void ApplyChanged()
@@ -296,4 +309,6 @@ public class GridInventoryModel : IInventoryModel
 
         return false;
     } 
+    
+
 }

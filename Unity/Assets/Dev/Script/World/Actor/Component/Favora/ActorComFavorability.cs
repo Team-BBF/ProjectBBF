@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DS.Core;
 using DS.Runtime;
 using ProjectBBF.Event;
 using ProjectBBF.Persistence;
@@ -6,6 +7,10 @@ using UnityEngine;
 
 public abstract class ActorComFavorability : ActorComponent, IBODialogue
 {
+    [SerializeField] private DialogueContainer _hittedDialogue;
+
+    public DialogueContainer HittedDialogue => _hittedDialogue;
+
     public CollisionInteraction Interaction { get; private set; }
 
     protected Actor Owner { get; private set; }

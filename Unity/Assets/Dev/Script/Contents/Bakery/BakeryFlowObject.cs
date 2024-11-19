@@ -7,12 +7,13 @@ using ProjectBBF.Event;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class BakeryFlowObject : MonoBehaviour, IBOInteractive
+public class BakeryFlowObject : MonoBehaviour, IBOInteractiveSingle, IBOInteractiveMulti
 {
     [field: SerializeField, AutoProperty, MustBeAssigned, InitializationField]
     private FadeinoutObject _fadeObject;
 
     [SerializeField] private bool _interruptPlayerControl;
+    [SerializeField] private bool _isInteractingByClick;
 
     public event Action<BakeryFlowObject, CollisionInteractionMono> OnActivate;
     public event Action<BakeryFlowObject, CollisionInteractionMono> OnInteraction;
@@ -30,7 +31,14 @@ public class BakeryFlowObject : MonoBehaviour, IBOInteractive
         var info = ObjectContractInfo.Create(() => gameObject);
         _fadeObject.Interaction.SetContractInfo(info, this);
 
-        info.AddBehaivour<IBOInteractive>(this);
+        if (_isInteractingByClick)
+        {
+            info.AddBehaivour<IBOInteractiveMulti>(this);
+        }
+        else
+        {
+            info.AddBehaivour<IBOInteractiveSingle>(this);
+        }
 
         _fadeObject.OnEnter += x =>
         {
@@ -45,11 +53,26 @@ public class BakeryFlowObject : MonoBehaviour, IBOInteractive
 
     public void UpdateInteract(CollisionInteractionMono caller)
     {
-        if (InputManager.Map.Player.Interaction.triggered)
+        if (_isInteractingByClick)
         {
-            Interact(caller);
+            if (caller.Owner is PlayerController pc)
+            {
+                var clickObj = pc.Interactor.FindClickObject();
+                if (clickObj && clickObj.ContractInfo == Interaction.ContractInfo)
+                {
+                    Interact(caller);
+                }
+            }
         }
-        else if (InputManager.Map.Minigame.BakeryKeyPressed.triggered)
+        else
+        {
+            if (InputManager.Map.Player.Interaction.triggered)
+            {
+                Interact(caller);
+            }
+        }
+        
+        if (InputManager.Map.Minigame.BakeryKeyPressed.triggered)
         {
             Activate(caller);
         }

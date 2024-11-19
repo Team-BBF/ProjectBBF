@@ -48,6 +48,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.071
       objectReference: {fileID: 0}
+    - target: {fileID: 2019657910530661020, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2019657910530661020, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.6363636
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585192982158931336, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e60a62f030d913d409525dba5f4d8111, type: 3}
     - target: {fileID: 4628887281252109305, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -92,8 +104,17 @@ PrefabInstance:
       propertyPath: m_text
       value: F
       objectReference: {fileID: 0}
+    - target: {fileID: 5735735148796987577, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735735148796987577, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -778095025
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3691033266570135196, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}

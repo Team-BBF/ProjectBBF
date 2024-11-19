@@ -23,30 +23,12 @@ MonoBehaviour:
   - BaseNodeGuid: 10b6c842-3d28-48e8-8e5e-6caaa07a4e39
     PortName: "\uC544\uB2C8..."
     TargetNodeGuid: 5e7d6382-3c11-4a80-a773-b24c3b9a0ca9
-  - BaseNodeGuid: 265148b8-44b0-43b6-a4da-0faa1ee00167
-    PortName: Next
-    TargetNodeGuid: 927b42ff-083f-47e8-9042-96599fbe503d
-  - BaseNodeGuid: 2d5ac2b3-7ed0-4775-944a-8735ed46e48d
-    PortName: Next
-    TargetNodeGuid: 506c2a31-79af-4715-8e8a-fc699f8a4933
   - BaseNodeGuid: 506c2a31-79af-4715-8e8a-fc699f8a4933
     PortName: Next
     TargetNodeGuid: c685cc50-55b1-426e-b6e7-0a3ed9f4f38d
-  - BaseNodeGuid: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
-    PortName: "\uAC8C\uC784 \uD560\uB798!"
-    TargetNodeGuid: 265148b8-44b0-43b6-a4da-0faa1ee00167
-  - BaseNodeGuid: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
-    PortName: "\uC544\uB2C8 \uC548\uD560\uB798"
-    TargetNodeGuid: 5e7d6382-3c11-4a80-a773-b24c3b9a0ca9
-  - BaseNodeGuid: 66322edf-1938-4ea3-9def-5c6897396785
-    PortName: Next
-    TargetNodeGuid: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
   - BaseNodeGuid: 8c352882-4877-49f4-9d2c-831b2169d7e4
     PortName: Next
-    TargetNodeGuid: 66322edf-1938-4ea3-9def-5c6897396785
-  - BaseNodeGuid: 927b42ff-083f-47e8-9042-96599fbe503d
-    PortName: Next
-    TargetNodeGuid: 2d5ac2b3-7ed0-4775-944a-8735ed46e48d
+    TargetNodeGuid: 265148b8-44b0-43b6-a4da-0faa1ee00167
   - BaseNodeGuid: 99b04a53-4572-4b29-a270-0df277b1a2fb
     PortName: True
     TargetNodeGuid: 10b6c842-3d28-48e8-8e5e-6caaa07a4e39
@@ -68,27 +50,45 @@ MonoBehaviour:
   - BaseNodeGuid: f9cb5c30-b819-4299-bdbe-f0e8a6b5f431
     PortName: Next
     TargetNodeGuid: a69a9874-b63a-4dd1-995e-9f6ddefbe648
+  - BaseNodeGuid: 265148b8-44b0-43b6-a4da-0faa1ee00167
+    PortName: Next
+    TargetNodeGuid: 927b42ff-083f-47e8-9042-96599fbe503d
+  - BaseNodeGuid: 2d5ac2b3-7ed0-4775-944a-8735ed46e48d
+    PortName: Next
+    TargetNodeGuid: 66322edf-1938-4ea3-9def-5c6897396785
+  - BaseNodeGuid: 927b42ff-083f-47e8-9042-96599fbe503d
+    PortName: Next
+    TargetNodeGuid: 2d5ac2b3-7ed0-4775-944a-8735ed46e48d
+  - BaseNodeGuid: 66322edf-1938-4ea3-9def-5c6897396785
+    PortName: Next
+    TargetNodeGuid: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
+  - BaseNodeGuid: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
+    PortName: "\uAC8C\uC784 \uD560\uB798!"
+    TargetNodeGuid: 506c2a31-79af-4715-8e8a-fc699f8a4933
+  - BaseNodeGuid: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
+    PortName: "\uC544\uB2C8 \uC548\uD560\uB798"
+    TargetNodeGuid: 5e7d6382-3c11-4a80-a773-b24c3b9a0ca9
   NodeData:
-  - rid: 6083855426511176046
-  - rid: 6083855426511176047
-  - rid: 6083855426511176048
-  - rid: 6083855426511176049
-  - rid: 6083855426511176050
-  - rid: 6083855426511176051
-  - rid: 6083855426511176052
-  - rid: 6083855426511176053
-  - rid: 6083855426511176054
-  - rid: 6083855426511176055
-  - rid: 6083855426511176056
-  - rid: 6083855426511176057
-  - rid: 6083855426511176058
-  - rid: 6083855426511176059
-  - rid: 6083855426511176060
-  - rid: 6083855426511176061
+  - rid: 6083855517750657642
+  - rid: 6083855517750657644
+  - rid: 6083855517750657645
+  - rid: 6083855517750657646
+  - rid: 6083855517750657647
+  - rid: 6083855517750657648
+  - rid: 6083855517750657650
+  - rid: 6083855517750657651
+  - rid: 6083855517750657653
+  - rid: 6083855517750657654
+  - rid: 6083855517750657655
+  - rid: 6083855517750657656
+  - rid: 6083855517750657643
+  - rid: 6083855517750657649
+  - rid: 6083855517750657652
+  - rid: 6083855517750657657
   references:
     version: 2
     RefIds:
-    - rid: 6083855426511176046
+    - rid: 6083855517750657642
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 10b6c842-3d28-48e8-8e5e-6caaa07a4e39
@@ -96,51 +96,19 @@ MonoBehaviour:
         TypeName: Branch
         Position: {x: 581, y: -49}
         DialogueText: "\uAC8C\uC784 \uB2E4\uC2DC \uD574\uBCFC \uAC70\uC57C?"
-        PortraitKey: 
-        ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176047
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 265148b8-44b0-43b6-a4da-0faa1ee00167
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2844, y: 199}
-        DialogueText: "\uB8F0\uC744 \uC124\uBA85\uD574\uC904\uAC8C"
-        PortraitKey: 
-        ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176048
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 2d5ac2b3-7ed0-4775-944a-8735ed46e48d
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4031, y: 199}
-        DialogueText: "\uBC30\uB2F9\uC774 \uB192\uC740 \uC560\uB4E4\uC774 \uC798
-          \uB6F0\uC9C0\uB9CC \uAC00\uB054 \uB4A4\uC9D1\uB294 \uC77C\uB3C4 \uC0DD\uAE34\uB2E4\uACE0.
-          \uC544\uD558\uD558!"
         PortraitKey: Smi
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176049
+    - rid: 6083855517750657643
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 506c2a31-79af-4715-8e8a-fc699f8a4933
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 4524, y: 198}
+        Position: {x: 4475, y: 234}
         DialogueText: "\uADF8\uB7FC \uD589\uC6B4\uC744 \uBE4C\uAC8C!"
         PortraitKey: Smi
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176050
-      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
-        NodeTitle: Branch
-        TypeName: Branch
-        Position: {x: 2521, y: 214}
-        DialogueText: "\uAC8C\uC784 \uD574\uBCFC\uB798?"
-        PortraitKey: Smi
-        ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176051
+    - rid: 6083855517750657644
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 5e7d6382-3c11-4a80-a773-b24c3b9a0ca9
@@ -151,17 +119,7 @@ MonoBehaviour:
           \uCC3E\uC544\uC918."
         PortraitKey: 
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176052
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 66322edf-1938-4ea3-9def-5c6897396785
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2153, y: 209}
-        DialogueText: "\uC5B4\uB54C \uC7AC\uBC0C\uC5B4\uBCF4\uC774\uC9C0 \uC54A\uC544?"
-        PortraitKey: Smi
-        ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176053
+    - rid: 6083855517750657645
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 675d3fa0-7b8a-4347-8c6d-d82c61376e36
@@ -176,7 +134,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 11400000, guid: 09d9ee0cb10df0c46815b86692e8f96a, type: 2}
           BoolValue: 0
-    - rid: 6083855426511176054
+    - rid: 6083855517750657646
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8c352882-4877-49f4-9d2c-831b2169d7e4
@@ -187,20 +145,7 @@ MonoBehaviour:
           \uB3C8\uC744 \uBC30\uB85C \uC5BB\uC744 \uC218 \uC788\uB294 \uAD6C\uC870\uC9C0."
         PortraitKey: 
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176055
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 927b42ff-083f-47e8-9042-96599fbe503d
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3127, y: 199}
-        DialogueText: "\uAC1C\uAD6C\uB9AC\uB294 3\uB9C8\uB9AC\uAC00 \uC788\uC5B4.
-          \uBC30\uD305\uD55C \uAC1C\uAD6C\uB9AC\uB4E4\uC758 \uBC30\uB2F9\uC740 \uCC28\uB840\uB300\uB85C<br><color=#800080>\uAC1C\uAD6C\uB9AC
-          1 : 2\uBC30<br>\uAC1C\uAD6C\uB9AC 2: 3\uBC30<br>\uAC1C\uAD6C\uB9AC 3 :
-          4\uBC30</color>\uC57C. "
-        PortraitKey: 
-        ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176056
+    - rid: 6083855517750657647
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 99b04a53-4572-4b29-a270-0df277b1a2fb
@@ -215,7 +160,7 @@ MonoBehaviour:
           StringValue: Piraeus_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855426511176057
+    - rid: 6083855517750657648
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a69a9874-b63a-4dd1-995e-9f6ddefbe648
@@ -226,13 +171,13 @@ MonoBehaviour:
           \uB808\uC774\uC2A4\uB97C \uD558\uACE0 \uC788\uC5B4"
         PortraitKey: 
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176058
+    - rid: 6083855517750657649
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c685cc50-55b1-426e-b6e7-0a3ed9f4f38d
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 4821, y: 196}
+        Position: {x: 4762, y: 232}
         Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
         Warps:
         - Target: Object
@@ -241,7 +186,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 11400000, guid: 09d9ee0cb10df0c46815b86692e8f96a, type: 2}
           BoolValue: 0
-    - rid: 6083855426511176059
+    - rid: 6083855517750657650
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: cb33b549-9431-47f3-aaf6-77a770f47c79
@@ -252,7 +197,7 @@ MonoBehaviour:
           \uBC30\uD305\uD558\uBA74 \uB3FC."
         PortraitKey: 
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176060
+    - rid: 6083855517750657651
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f9cb5c30-b819-4299-bdbe-f0e8a6b5f431
@@ -262,13 +207,13 @@ MonoBehaviour:
         DialogueText: "\uC548\uB155. \uC774 \uC678\uC9C4 \uACF3\uC744 \uC798 \uCC3E\uC544\uC654\uB124."
         PortraitKey: 
         ActorKey: Piraeus_Chapter_2
-    - rid: 6083855426511176061
+    - rid: 6083855517750657652
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 5286171f-310e-41dd-8faa-99c006e9b5ef
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 5278, y: 194}
+        Position: {x: 5219, y: 230}
         Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
         Warps:
         - Target: String
@@ -283,3 +228,58 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
+    - rid: 6083855517750657653
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 265148b8-44b0-43b6-a4da-0faa1ee00167
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2186, y: 201}
+        DialogueText: "\uB8F0\uC744 \uC124\uBA85\uD574\uC904\uAC8C"
+        PortraitKey: 
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855517750657654
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 2d5ac2b3-7ed0-4775-944a-8735ed46e48d
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3373, y: 201}
+        DialogueText: "\uBC30\uB2F9\uC774 \uB192\uC740 \uC560\uB4E4\uC774 \uC798
+          \uB6F0\uC9C0\uB9CC \uAC00\uB054 \uB4A4\uC9D1\uB294 \uC77C\uB3C4 \uC0DD\uAE34\uB2E4\uACE0.
+          \uC544\uD558\uD558!"
+        PortraitKey: Smi
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855517750657655
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 927b42ff-083f-47e8-9042-96599fbe503d
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2469, y: 201}
+        DialogueText: "\uAC1C\uAD6C\uB9AC\uB294 3\uB9C8\uB9AC\uAC00 \uC788\uC5B4.
+          \uBC30\uD305\uD55C \uAC1C\uAD6C\uB9AC\uB4E4\uC758 \uBC30\uB2F9\uC740 \uCC28\uB840\uB300\uB85C<br><color=#800080>\uAC1C\uAD6C\uB9AC
+          1 : 2\uBC30<br>\uAC1C\uAD6C\uB9AC 2: 3\uBC30<br>\uAC1C\uAD6C\uB9AC 3 :
+          4\uBC30</color>\uC57C. "
+        PortraitKey: 
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855517750657656
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 66322edf-1938-4ea3-9def-5c6897396785
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3880, y: 198}
+        DialogueText: "\uC5B4\uB54C \uC7AC\uBC0C\uC5B4\uBCF4\uC774\uC9C0 \uC54A\uC544?"
+        PortraitKey: Smi
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855517750657657
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5ba52c13-7a4d-4536-8836-16b8fc98f6ad
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 4184, y: 204}
+        DialogueText: "\uAC8C\uC784 \uD574\uBCFC\uB798?"
+        PortraitKey: Smi
+        ActorKey: Piraeus_Chapter_2

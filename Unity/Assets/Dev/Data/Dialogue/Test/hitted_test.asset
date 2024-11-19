@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: hitted_test
+  m_EditorClassIdentifier: 
+  _guid: f7f42e333faaf1e4d87128367019465a
+  NodeLinks:
+  - BaseNodeGuid: a79d82b6-d795-4945-9cfc-5c3107c86b46
+    PortName: Execute
+    TargetNodeGuid: 98980707-fc72-4ed5-b63e-8e4a60bf0763
+  - BaseNodeGuid: 98980707-fc72-4ed5-b63e-8e4a60bf0763
+    PortName: Next
+    TargetNodeGuid: 082d1705-8ecf-4563-b646-68b4f97934d3
+  - BaseNodeGuid: 082d1705-8ecf-4563-b646-68b4f97934d3
+    PortName: Next
+    TargetNodeGuid: e9cf506e-4aa7-4640-b8c7-e3d433b4b593
+  NodeData:
+  - rid: 734291647112937475
+  - rid: 734291647112937476
+  - rid: 734291647112937477
+  references:
+    version: 2
+    RefIds:
+    - rid: 734291647112937475
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 98980707-fc72-4ed5-b63e-8e4a60bf0763
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 353, y: 165}
+        DialogueText: "\uC9C0\uAE08 \uCCE4\uB0D0 {player}?"
+        PortraitKey: Agg
+        ActorKey: Aria
+    - rid: 734291647112937476
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 082d1705-8ecf-4563-b646-68b4f97934d3
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 690, y: 176}
+        DialogueText: "\uBA54\uC778 \uD654\uBA74\uC73C\uB85C \uD295\uACA8\uB7B4 \uC58D"
+        PortraitKey: Agg
+        ActorKey: Aria
+    - rid: 734291647112937477
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e9cf506e-4aa7-4640-b8c7-e3d433b4b593
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1269, y: 165}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 9de7f64e55373be4aa7550ca830f817a, type: 2}
+          BoolValue: 0

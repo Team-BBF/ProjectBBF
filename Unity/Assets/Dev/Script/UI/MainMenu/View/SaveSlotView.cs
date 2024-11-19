@@ -51,6 +51,8 @@ public class SaveSlotView : MonoBehaviour
 
                 var scene = PersistenceManager.Instance.LoadOrCreate<PlayerBlackboard>("Player_Blackboard")
                     .CurrentWorld;
+
+                _btn.interactable = false;
                 
                 SceneLoader.Instance.WorkDirectorAsync(false, "BlackAlpha")
                     .ContinueWith(_ => SceneLoader.Instance.LoadWorldAsync(string.IsNullOrEmpty(scene) ? "World_Festival_Ch_0" : scene))

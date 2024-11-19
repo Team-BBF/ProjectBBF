@@ -52,12 +52,15 @@ public class AnimalAnimator : ActorComponent
     public void PlayHit(CollectState state)
     {
         if (state is CollectState.Normal) return;
-        
-        _animator.SetTrigger("Hit");
 
-        foreach (ValueSlider slider in _slider)
+        if (_animator)
         {
-            _animator.ResetTrigger(slider.Key);
+            _animator.SetTrigger("Hit");
+
+            foreach (ValueSlider slider in _slider)
+            {
+                _animator.ResetTrigger(slider.Key);
+            }
         }
         
     }

@@ -16,20 +16,95 @@ MonoBehaviour:
   NodeLinks:
   - BaseNodeGuid: 423c33e6-c44f-42ff-bb03-2c5a8dc2727a
     PortName: Execute
+    TargetNodeGuid: e2e8d971-a4a7-4af7-a622-9257c221f84a
+  - BaseNodeGuid: b0ec7b55-7f16-4fd3-b4e1-85e4d4464b94
+    PortName: Next
     TargetNodeGuid: 954c7f47-f93a-4ba1-a2ea-e2cb36de3d71
+  - BaseNodeGuid: 954c7f47-f93a-4ba1-a2ea-e2cb36de3d71
+    PortName: Next
+    TargetNodeGuid: 52341f3f-3d82-4e15-95ac-ac6f00c7fde9
+  - BaseNodeGuid: e2e8d971-a4a7-4af7-a622-9257c221f84a
+    PortName: False
+    TargetNodeGuid: b0ec7b55-7f16-4fd3-b4e1-85e4d4464b94
+  - BaseNodeGuid: e2e8d971-a4a7-4af7-a622-9257c221f84a
+    PortName: True
+    TargetNodeGuid: 61e99849-54e7-48c8-b7b8-bed57a9c5067
   NodeData:
-  - rid: 6083855310640644601
+  - rid: 6083855535537651882
+  - rid: 6083855535537651881
+  - rid: 6083855535537651883
+  - rid: 6083855535537651884
+  - rid: 6083855535537651885
   references:
     version: 2
     RefIds:
-    - rid: 6083855310640644601
+    - rid: 6083855535537651881
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b0ec7b55-7f16-4fd3-b4e1-85e4d4464b94
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 558, y: 184}
+        DialogueText: "\uC704\uB300\uD55C \uC874\uC7AC\uC778 \uC6A9\uD55C\uD14C \uBB34\uC2A8
+          \uC9D3\uC774\uC9C0...?"
+        PortraitKey: Agg
+        ActorKey: Elisia_Chapter_1
+    - rid: 6083855535537651882
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 954c7f47-f93a-4ba1-a2ea-e2cb36de3d71
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 207, y: 199}
-        DialogueText: "\uCEAC\uD558\uD558\uD558\uD558! {player} \uC591\uBC18. \uC704\uD5D8\uD55C
-          \uAC70\uB294 \uD718\uB450\uB974\uC9C0 \uB9C8!"
+        Position: {x: 915, y: 185}
+        DialogueText: "\uCEAC\uD558\uD558\uD558\uD558! \uB18D\uB2F4\uC774\uC57C!
+          {player} \uC591\uBC18. \uC704\uD5D8\uD55C \uAC70\uB294 \uD718\uB450\uB974\uC9C0
+          \uB9C8!"
         PortraitKey: Smi
         ActorKey: Elisia_Chapter_1
+    - rid: 6083855535537651883
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 52341f3f-3d82-4e15-95ac-ac6f00c7fde9
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1445, y: 204}
+        Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Elisia_hit
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Bool
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 1
+    - rid: 6083855535537651884
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 61e99849-54e7-48c8-b7b8-bed57a9c5067
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 558, y: 408}
+        DialogueText: "{player} \uC591\uBC18. \uC704\uD5D8\uD55C \uAC70\uB294 \uD718\uB450\uB974\uC9C0
+          \uB9C8!"
+        PortraitKey: Smi
+        ActorKey: Elisia_Chapter_1
+    - rid: 6083855535537651885
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e2e8d971-a4a7-4af7-a622-9257c221f84a
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 235, y: 192}
+        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Elisia_hit
+          ObjectValue: {fileID: 0}
+          BoolValue: 0

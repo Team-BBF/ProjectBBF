@@ -190,6 +190,7 @@ public class SceneLoader : MonoBehaviourSingleton<SceneLoader>
 
     public async UniTask<bool> WorkDirectorAsync(bool fadeIn, string key = null)
     {
+        IsProgress = true;
         try
         {
             if (key is null)
@@ -224,6 +225,10 @@ public class SceneLoader : MonoBehaviourSingleton<SceneLoader>
         catch (Exception e) when (e is not OperationCanceledException)
         {
             Debug.LogException(e);
+        }
+        finally
+        {
+            IsProgress = false;
         }
 
         return false;

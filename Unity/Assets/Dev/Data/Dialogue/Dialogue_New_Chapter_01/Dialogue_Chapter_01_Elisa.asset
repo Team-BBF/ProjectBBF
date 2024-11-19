@@ -27,53 +27,54 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 2d05c2ef-b100-4c48-ae9d-740a9cff2a38
   NodeData:
-  - rid: 6083855380973617305
-  - rid: 6083855380973617306
-  - rid: 6083855380973617307
-  - rid: 6083855380973617308
+  - rid: 6083855517352722557
+  - rid: 6083855517352722554
+  - rid: 6083855517352722555
+  - rid: 6083855517352722556
   references:
     version: 2
     RefIds:
-    - rid: 6083855380973617305
+    - rid: 6083855517352722554
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 0f708eab-b03d-4723-a6ea-1ae5378ded86
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 1443, y: 198}
+        Position: {x: 1632, y: 198}
         DialogueText: "...\uACB0\uC2B9 \uB54C\uB294 \uB450\uB354\uC9C0 \uB178\uC870\uB97C
           \uC774\uAE38 \uD14C\uB2C8 \uD55C \uBC88 \uCC3E\uC544\uC640\uC8FC\uC138\uC694!"
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855380973617306
+    - rid: 6083855517352722555
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 11f5638e-29b8-436b-a9b2-4d22b18c8d04
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 985, y: 196}
+        Position: {x: 1174, y: 196}
         DialogueText: "\uB450\uB354\uC9C0 \uB178\uC870\uAC00 \uD30C\uC5C5\uC744 \uC120\uC5B8\uD574\uC11C
           \uD611\uC0C1\uD558\uACE0 \uC788\uC5B4\uC694..."
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855380973617307
+    - rid: 6083855517352722556
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2d05c2ef-b100-4c48-ae9d-740a9cff2a38
         NodeTitle: Text
         TypeName: Text
-        Position: {x: 583, y: 196}
+        Position: {x: 772, y: 196}
         DialogueText: "\uC8C4\uC1A1\uD558\uC9C0\uB9CC \uC544\uC9C1 \uC900\uBE44\uAC00
           \uB418\uC9C0 \uC54A\uC558\uC5B4\uC694..."
         PortraitKey: 
         ActorKey: 
-    - rid: 6083855380973617308
+    - rid: 6083855517352722557
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 3f32d721-7342-4083-9b97-efb1f935500c
         NodeTitle: Text
         TypeName: Text
         Position: {x: 213, y: 197}
-        DialogueText: "\uC548\uB155\uD558\uC138\uC694! \uCCB4\uD5D8\uD558\uB7EC \uC624\uC168\uB098\uC694?"
+        DialogueText: "\uC548\uB155\uD558\uC138\uC694! <color=#800080>\uB450\uB354\uC9C0
+          \uAC8C\uC784</color>\uC744 \uCCB4\uD5D8\uD558\uB7EC \uC624\uC168\uB098\uC694?"
         PortraitKey: 
         ActorKey: 

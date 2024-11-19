@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using ProjectBBF.Input;
 using ProjectBBF.Persistence;
 using UnityEngine;
 
@@ -39,20 +40,23 @@ public class MoveToWorld : MonoBehaviour
         }
 
         Debug.Assert(string.IsNullOrEmpty(scene) is false);
-        
+
         if (_savePosAndWorld)
         {
             pc.Blackboard.CurrentPosition = pos;
             pc.Blackboard.CurrentWorld = scene;
         }
 
-        
+
         var loaderInst = SceneLoader.Instance;
         var PersistenceInst = PersistenceManager.Instance;
 
-        pc.Blackboard.IsMoveStopped = true;
-        pc.Blackboard.IsInteractionStopped = true;
-            
+        pc.InputController.Interact.Value = null;
+        pc.InputController.UI.Value = null;
+        pc.InputController.Move.Value = null;
+        pc.InputController.Tool.Value = null;
+        pc.InputController.QuestUI.Value = null;
+
         if (_fadeOut)
         {
             _ = await loaderInst.WorkDirectorAsync(false, _directorKey);
@@ -66,7 +70,7 @@ public class MoveToWorld : MonoBehaviour
         if (_load)
         {
             _ = await loaderInst.UnloadImmutableScenesAsync();
-                
+
             PersistenceInst.LoadGameDataCurrentFileName();
 
             if (_unloadImmutable is false)
@@ -84,16 +88,18 @@ public class MoveToWorld : MonoBehaviour
         {
             _ = await loaderInst.UnloadImmutableScenesAsync();
         }
-            
+
 
         _ = await loaderInst.LoadWorldAsync(scene);
-            
+
         if (_fadeIn)
         {
             _ = await loaderInst.WorkDirectorAsync(true, _directorKey);
         }
 
-        pc.Blackboard.IsMoveStopped = false;
-        pc.Blackboard.IsInteractionStopped = false;
+        if (pc)
+        {
+            pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        }
     }
 }

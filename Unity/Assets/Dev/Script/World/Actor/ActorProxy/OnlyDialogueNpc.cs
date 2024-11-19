@@ -12,14 +12,20 @@ public class OnlyDialogueNpc : Npc
         _favorablity.Init(Owner);
         ContractInfo.AddBehaivour<IBODialogue>(_favorablity);
     }
-
-
-    public override void UpdateInteract(CollisionInteractionMono caller)
+    protected override void UpdateDefaultInteract(CollisionInteractionMono caller)
     {
         if (caller.Owner is not PlayerController pc) return;
-        if (InputManager.Map.Player.InteractionDialogue.triggered)
+        
+        var clickObj = pc.Interactor.FindClickObject();
+        if (clickObj && clickObj.ContractInfo == Interaction.ContractInfo)
         {
             _ = pc.Dialogue.RunDialogueFromInteraction(Interaction);
         }
+    }
+
+    protected override void UpdateHittedInteract(CollisionInteractionMono caller)
+    {
+        if (caller.Owner is not PlayerController pc) return;
+        _ = pc.Dialogue.RunDialogue(_favorablity.HittedDialogue, _favorablity.ProcessorData, Owner.transform.position);
     }
 }

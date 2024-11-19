@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Bread_Piraeus_Bad
+  m_EditorClassIdentifier: 
+  _guid: c7d14dba83760cb47833264dc805d0db
+  NodeLinks:
+  - BaseNodeGuid: 0ed4b202-1923-4dc2-8bfc-c5103376da1a
+    PortName: Execute
+    TargetNodeGuid: 9e3da1b4-45a9-471e-b052-ed98420031f5
+  - BaseNodeGuid: 9e3da1b4-45a9-471e-b052-ed98420031f5
+    PortName: Next
+    TargetNodeGuid: 5f94e1bb-6a25-49fe-960c-9cfc4c55bf00
+  - BaseNodeGuid: 22dcf12a-0ea1-41a7-b593-ff0c98d0a06a
+    PortName: Next
+    TargetNodeGuid: d2f35d94-5973-4944-b37d-278621b3148b
+  - BaseNodeGuid: 2e6829a3-58c4-4887-a2b9-94e46b902ac1
+    PortName: Next
+    TargetNodeGuid: 22dcf12a-0ea1-41a7-b593-ff0c98d0a06a
+  - BaseNodeGuid: b8fe986c-b23d-43c7-96c3-3542917b3506
+    PortName: Next
+    TargetNodeGuid: 2e6829a3-58c4-4887-a2b9-94e46b902ac1
+  - BaseNodeGuid: 5f94e1bb-6a25-49fe-960c-9cfc4c55bf00
+    PortName: Next
+    TargetNodeGuid: b8fe986c-b23d-43c7-96c3-3542917b3506
+  - BaseNodeGuid: d2f35d94-5973-4944-b37d-278621b3148b
+    PortName: Next
+    TargetNodeGuid: 6053e3a0-d7ac-4e19-9bfe-57a13fb09afd
+  - BaseNodeGuid: 6053e3a0-d7ac-4e19-9bfe-57a13fb09afd
+    PortName: Next
+    TargetNodeGuid: eeea00d1-527d-4131-be40-8c2efcd5f679
+  NodeData:
+  - rid: 6083855535537651765
+  - rid: 6083855535537651766
+  - rid: 6083855535537651767
+  - rid: 6083855535537651768
+  - rid: 6083855535537651769
+  - rid: 6083855535537651770
+  - rid: 6083855535537651771
+  - rid: 6083855535537651772
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855535537651765
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5f94e1bb-6a25-49fe-960c-9cfc4c55bf00
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 519, y: 197}
+        DialogueText: "\uB098 \uBC09\uBCF4\uC600\uC5C8\uB098?"
+        PortraitKey: Ave
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651766
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b8fe986c-b23d-43c7-96c3-3542917b3506
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 828, y: 194}
+        DialogueText: "\uB0B4\uAC00 \uB108\uD55C\uD14C \uBB58 \uC798\uBABB\uD588\uB098?"
+        PortraitKey: 
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651767
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9e3da1b4-45a9-471e-b052-ed98420031f5
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 244, y: 198}
+        DialogueText: "\uC5B4\uB77C...?"
+        PortraitKey: Ave
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651768
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 2e6829a3-58c4-4887-a2b9-94e46b902ac1
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1137, y: 195}
+        DialogueText: "\uC544, \uC7A5\uB09C\uC774\uAD6C\uB098!"
+        PortraitKey: Smi
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651769
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 22dcf12a-0ea1-41a7-b593-ff0c98d0a06a
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1437, y: 194}
+        DialogueText: "\uC774\uC81C \uC9C4\uC9DC \uC120\uBB3C\uC744 \uC8FC\uB294
+          \uAC70\uC9C0?"
+        PortraitKey: Smi
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651770
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: d2f35d94-5973-4944-b37d-278621b3148b
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1766, y: 195}
+        DialogueText: "\uC544\uB2C8\uC57C?"
+        PortraitKey: Ave
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651771
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: eeea00d1-527d-4131-be40-8c2efcd5f679
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2344, y: 200}
+        DialogueText: "\uADF8\uB798... \uACE0\uB9C8\uC6CC..."
+        PortraitKey: Ave
+        ActorKey: Piraeus_Chapter_2
+    - rid: 6083855535537651772
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 6053e3a0-d7ac-4e19-9bfe-57a13fb09afd
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2063, y: 198}
+        DialogueText: "\uC774\uAC8C \uC9C4\uC9DC\uB77C\uACE0...?"
+        PortraitKey: Ave
+        ActorKey: Piraeus_Chapter_2

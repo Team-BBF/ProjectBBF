@@ -2,7 +2,6 @@ using System;
 using ProjectBBF.Event;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace ProjectBBF.Input
 {

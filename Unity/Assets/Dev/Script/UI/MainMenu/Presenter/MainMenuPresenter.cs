@@ -42,10 +42,8 @@ public class MainMenuPresenter : MonoBehaviour
         
         PersistenceManager.Instance.NewGameDataCurrentFileName();
         
-        //TODO: 축제 씬 완성되면 여기를 수정
         SceneLoader.Instance.WorkDirectorAsync(false, "BlackAlpha")
-            .ContinueWith(_ => SceneLoader.Instance.LoadWorldAsync("World_Festival_Ch_0"))
-            .ContinueWith(_ => SceneLoader.Instance.LoadImmutableScenesAsync())
+            .ContinueWith(_ => SceneLoader.Instance.LoadWorldAsync("World_Opening"))
             .ContinueWith(_ => SceneLoader.Instance.WorkDirectorAsync(true, "BlackAlpha"))
             .Forget();
     }

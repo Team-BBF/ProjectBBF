@@ -1312,6 +1312,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6248554789038685869, guid: be17a5cd149d287479454cb28d24979c, type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 828919e57f926db4599550c6aa9040dc, type: 2}
+    - target: {fileID: 6248554789038685869, guid: be17a5cd149d287479454cb28d24979c, type: 3}
       propertyPath: _defaultItems.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -2082,6 +2086,7 @@ GameObject:
   - component: {fileID: 1439822250}
   - component: {fileID: 1439822249}
   - component: {fileID: 1439822248}
+  - component: {fileID: 1439822251}
   m_Layer: 0
   m_Name: Begin
   m_TagString: Untagged
@@ -2137,7 +2142,19 @@ MonoBehaviour:
       m_Calls: []
   OnTriggerArgEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1439822251}
+        m_TargetAssemblyTypeName: MapInventoryClear, Assembly-CSharp
+        m_MethodName: Clear
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _interaction: {fileID: 1439822250}
   _saveKey: Ch_0_Tutorial_Begin
 --- !u!114 &1439822250
@@ -2158,6 +2175,18 @@ MonoBehaviour:
     m_Bits: 0
   _listeningOnly: 0
   _detectedOnly: 0
+--- !u!114 &1439822251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439822246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9969c3e27742a3af14de6ff6a33058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1473615941
 GameObject:
   m_ObjectHideFlags: 0

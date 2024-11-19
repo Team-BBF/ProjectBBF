@@ -79,6 +79,7 @@ namespace ProjectBBF.Input
         }
 
         public abstract void BindInput(TFactory factory);
+        public abstract void InActivateInput();
         
         public abstract void OnInit();
         public abstract void Release();

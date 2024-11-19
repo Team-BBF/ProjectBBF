@@ -98,6 +98,15 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InteractionMouseClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""e6f693f8-ffca-43ce-9242-18eeefbcdd14"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -230,6 +239,17 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""WinPCScheme"",
                     ""action"": ""UseTool"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f5a8d5ae-5a19-4450-ae7c-58de0dd283d8"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WinPCScheme"",
+                    ""action"": ""InteractionMouseClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -622,6 +642,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_InteractionDialogue = m_Player.FindAction("InteractionDialogue", throwIfNotFound: true);
         m_Player_UseTool = m_Player.FindAction("UseTool", throwIfNotFound: true);
+        m_Player_InteractionMouseClick = m_Player.FindAction("InteractionMouseClick", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_DialogueSkip = m_UI.FindAction("DialogueSkip", throwIfNotFound: true);
@@ -706,6 +727,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_InteractionDialogue;
     private readonly InputAction m_Player_UseTool;
+    private readonly InputAction m_Player_InteractionMouseClick;
     public struct PlayerActions
     {
         private @DefaultKeymap m_Wrapper;
@@ -718,6 +740,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @InteractionDialogue => m_Wrapper.m_Player_InteractionDialogue;
         public InputAction @UseTool => m_Wrapper.m_Player_UseTool;
+        public InputAction @InteractionMouseClick => m_Wrapper.m_Player_InteractionMouseClick;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -751,6 +774,9 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
             @UseTool.started += instance.OnUseTool;
             @UseTool.performed += instance.OnUseTool;
             @UseTool.canceled += instance.OnUseTool;
+            @InteractionMouseClick.started += instance.OnInteractionMouseClick;
+            @InteractionMouseClick.performed += instance.OnInteractionMouseClick;
+            @InteractionMouseClick.canceled += instance.OnInteractionMouseClick;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -779,6 +805,9 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
             @UseTool.started -= instance.OnUseTool;
             @UseTool.performed -= instance.OnUseTool;
             @UseTool.canceled -= instance.OnUseTool;
+            @InteractionMouseClick.started -= instance.OnInteractionMouseClick;
+            @InteractionMouseClick.performed -= instance.OnInteractionMouseClick;
+            @InteractionMouseClick.canceled -= instance.OnInteractionMouseClick;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -979,6 +1008,7 @@ public partial class @DefaultKeymap: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnInteractionDialogue(InputAction.CallbackContext context);
         void OnUseTool(InputAction.CallbackContext context);
+        void OnInteractionMouseClick(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

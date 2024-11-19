@@ -111,6 +111,8 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
 
     public async UniTask<bool> RunDialogue(DialogueContainer container, ProcessorData processorData, Vector3? targetPosition = null)
     {
+        if (container == false) return false;
+        
         try
         {
             IsTalking = true;

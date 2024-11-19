@@ -5,6 +5,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using DG.Tweening.Core.Easing;
 using MyBox;
@@ -22,7 +23,7 @@ public class FadeinoutObject : MonoBehaviour
     private Rigidbody2D _rigid;
     
     [SerializeField] private FadeinoutObjectData _data;
-
+    [SerializeField] private bool _isSingleCloser;
     [SerializeField] private UnityEvent<float> _onFade;
     [SerializeField] private UnityEvent _onEnter;
     [SerializeField] private UnityEvent _onStay;
@@ -92,9 +93,23 @@ public class FadeinoutObject : MonoBehaviour
     private void OnChangedCloserObject(CollisionInteractionMono changed)
     {
         if (gameObject == false) return;
-        
-        StopAllCoroutines();
-        StartCoroutine(CoFade(changed == Interaction));
+
+        if (_isSingleCloser)
+        {
+            StopAllCoroutines();
+            StartCoroutine(CoFade(changed.ContractInfo == Interaction.ContractInfo));
+        }
+    }
+
+    public bool IsCloser(PlayerInteracter interactor)
+    {
+        if (_isSingleCloser)
+        {
+            if (interactor.CloserObject == false) return false;
+            return interactor.CloserObject.ContractInfo == Interaction.ContractInfo;
+        }
+
+        return true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -109,7 +124,7 @@ public class FadeinoutObject : MonoBehaviour
             pc.Interactor.AddCloserObject(Interaction);
             pc.Interactor.OnChangedCloserObject += OnChangedCloserObject;
 
-            if (pc.Interactor.CloserObject == Interaction)
+            if (IsCloser(pc.Interactor))
             {
                 StopAllCoroutines();
                 StartCoroutine(CoFade(true));
@@ -165,22 +180,25 @@ public class FadeinoutObject : MonoBehaviour
         {
             t = _lastT;
         }
-        
+
+        bool flag = false;
         while (true)
         {
             float evaluatedValue = EaseManager.ToEaseFunction(_data.Ease).Invoke(t, 1f, 0f, 0f);
             
             OnFadeAlpha?.Invoke(evaluatedValue);
             _onFade?.Invoke(evaluatedValue);
-
-            if (t is > 1f or < 0f)
+            
+            if (t is >= 1f or <= 0f && flag)
             {
-                t = Mathf.Clamp01(t);
                 _lastT = t;
                 break;
             }
             
+            flag = true;
+            
             t += dir * Time.deltaTime / _data.FadeDuration;
+            t = Mathf.Clamp01(t);
             _lastT = t;
             
             yield return null;

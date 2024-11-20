@@ -17,28 +17,36 @@ MonoBehaviour:
   - BaseNodeGuid: fbd6df75-f77d-4b83-9cb3-2f685f9d2458
     PortName: Execute
     TargetNodeGuid: e4a109b4-c101-4d2a-b1b7-391a386283bb
-  - BaseNodeGuid: 8df4c982-e2e2-4652-80ef-c812f3f15054
-    PortName: Next
-    TargetNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
   - BaseNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
     PortName: Next
     TargetNodeGuid: 117726c8-88b1-40d3-98ef-66909d64c527
+  - BaseNodeGuid: 8df4c982-e2e2-4652-80ef-c812f3f15054
+    PortName: Next
+    TargetNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
   - BaseNodeGuid: e4a109b4-c101-4d2a-b1b7-391a386283bb
     PortName: False
     TargetNodeGuid: 8df4c982-e2e2-4652-80ef-c812f3f15054
   - BaseNodeGuid: e4a109b4-c101-4d2a-b1b7-391a386283bb
     PortName: True
     TargetNodeGuid: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
+  - BaseNodeGuid: 3feab968-8b12-4387-8e6b-70f79326c57c
+    PortName: Next
+    TargetNodeGuid: 0d5db803-8b67-47c2-9b69-de4ee0f2c6d0
+  - BaseNodeGuid: 117726c8-88b1-40d3-98ef-66909d64c527
+    PortName: Next
+    TargetNodeGuid: 3feab968-8b12-4387-8e6b-70f79326c57c
   NodeData:
-  - rid: 6083855515203403807
-  - rid: 6083855515203403808
-  - rid: 6083855515203403809
-  - rid: 6083855515203403811
-  - rid: 6083855515203403810
+  - rid: 6556656576578977812
+  - rid: 6556656576578977813
+  - rid: 6556656576578977814
+  - rid: 6556656576578977815
+  - rid: 6556656576578977816
+  - rid: 6556656576578977818
+  - rid: 6556656576578977817
   references:
     version: 2
     RefIds:
-    - rid: 6083855515203403807
+    - rid: 6556656576578977812
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2c190c48-ddd3-4682-8730-add55d9ac5c2
@@ -48,7 +56,7 @@ MonoBehaviour:
         DialogueText: "\uB2EC\uAC40\uC744 \uC5BB\uC5C8\uB2E4!"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403808
+    - rid: 6556656576578977813
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8df4c982-e2e2-4652-80ef-c812f3f15054
@@ -58,28 +66,18 @@ MonoBehaviour:
         DialogueText: "\uB2ED\uC774 \uBB38\uC81C \uC5C6\uC774 \uAC74\uAC15\uD574\uBCF4\uC778\uB2E4"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403809
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+    - rid: 6556656576578977814
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
-        GUID: 117726c8-88b1-40d3-98ef-66909d64c527
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 1171, y: 210}
-        Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
-        Warps:
-        - Target: String
-          IntValue: 0
-          FloatValue: 0
-          StringValue: chicken_normal_1_1
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-        - Target: Bool
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 1
-    - rid: 6083855515203403810
+        GUID: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 534, y: 401}
+        DialogueText: "\uC774\uBBF8 \uC544\uC774\uD15C\uC744 \uC5BB\uC740 \uAC83
+          \uAC19\uB2E4."
+        PortraitKey: 
+        ActorKey: exp
+    - rid: 6556656576578977815
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e4a109b4-c101-4d2a-b1b7-391a386283bb
@@ -94,14 +92,66 @@ MonoBehaviour:
           StringValue: chicken_normal_1_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855515203403811
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+    - rid: 6556656576578977816
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
-        GUID: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 534, y: 401}
-        DialogueText: "\uC774\uBBF8 \uC544\uC774\uD15C\uC744 \uC5BB\uC740 \uAC83
-          \uAC19\uB2E4."
-        PortraitKey: 
-        ActorKey: exp
+        GUID: 117726c8-88b1-40d3-98ef-66909d64c527
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1143, y: 205}
+        Handler: {fileID: 11400000, guid: b1b7f1f320357bc41955eee57df95c8d, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: chicken_normal_1_1
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Bool
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 1
+    - rid: 6556656576578977817
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3feab968-8b12-4387-8e6b-70f79326c57c
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1431, y: 204}
+        Handler: {fileID: 11400000, guid: 3384730df4eec734bb7101f3490933d1, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Quest_Lylla_egg_1
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6556656576578977818
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0d5db803-8b67-47c2-9b69-de4ee0f2c6d0
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1729, y: 205}
+        Handler: {fileID: 11400000, guid: 3384730df4eec734bb7101f3490933d1, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Quest_Lylla_egg_2
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0

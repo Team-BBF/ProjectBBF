@@ -65,12 +65,6 @@ MonoBehaviour:
   - BaseNodeGuid: bb2850a6-442a-4a3f-babd-8788035f8f72
     PortName: Next
     TargetNodeGuid: a1520ccb-18ab-4ccf-a00b-ea2c65b5608b
-  - BaseNodeGuid: c3e746c9-e940-4e48-a031-08ddf4d18b55
-    PortName: "\uC54C\uC558\uC5B4!"
-    TargetNodeGuid: 78ee931e-5d99-4e6e-be7a-9b8be5bdb4aa
-  - BaseNodeGuid: c3e746c9-e940-4e48-a031-08ddf4d18b55
-    PortName: "\uC5B4\uB824\uC6B8 \uAC83 \uAC19\uC544..."
-    TargetNodeGuid: da824e22-a24c-4b58-b3df-72acbc1a18d1
   - BaseNodeGuid: d477f238-534c-49fb-9395-cc7344c7002c
     PortName: False
     TargetNodeGuid: 3ab5d2e9-c8b3-4845-a73f-65d546865e20
@@ -101,40 +95,46 @@ MonoBehaviour:
   - BaseNodeGuid: dde80057-4e9f-4e36-a593-cd17f8e5fec5
     PortName: "\uACE0\uB9C8\uC6CC!"
     TargetNodeGuid: aa2d4e0d-897f-4ae7-925c-aa0d5fe302b4
+  - BaseNodeGuid: c3e746c9-e940-4e48-a031-08ddf4d18b55
+    PortName: "\uC54C\uC558\uC5B4!"
+    TargetNodeGuid: 78ee931e-5d99-4e6e-be7a-9b8be5bdb4aa
+  - BaseNodeGuid: c3e746c9-e940-4e48-a031-08ddf4d18b55
+    PortName: "\uC5B4\uB824\uC6B8 \uAC83 \uAC19\uC544..."
+    TargetNodeGuid: da824e22-a24c-4b58-b3df-72acbc1a18d1
   NodeData:
-  - rid: 6083855518545478464
-  - rid: 6083855518545478465
-  - rid: 6083855518545478466
-  - rid: 6083855518545478467
-  - rid: 6083855518545478468
-  - rid: 6083855518545478469
-  - rid: 6083855518545478470
-  - rid: 6083855518545478471
-  - rid: 6083855518545478472
-  - rid: 6083855518545478473
-  - rid: 6083855518545478474
-  - rid: 6083855518545478475
-  - rid: 6083855518545478476
-  - rid: 6083855518545478477
-  - rid: 6083855518545478478
-  - rid: 6083855518545478479
-  - rid: 6083855518545478480
-  - rid: 6083855518545478481
-  - rid: 6083855518545478482
-  - rid: 6083855518545478483
-  - rid: 6083855518545478484
-  - rid: 6083855518545478485
-  - rid: 6083855518545478486
-  - rid: 6083855518545478487
-  - rid: 6083855518545478488
-  - rid: 6083855518545478489
-  - rid: 6083855518545478490
-  - rid: 6083855518545478491
-  - rid: 6083855518545478492
+  - rid: 2853395894280913070
+  - rid: 2853395894280913071
+  - rid: 2853395894280913072
+  - rid: 2853395894280913073
+  - rid: 2853395894280913074
+  - rid: 2853395894280913075
+  - rid: 2853395894280913076
+  - rid: 2853395894280913077
+  - rid: 2853395894280913078
+  - rid: 2853395894280913079
+  - rid: 2853395894280913080
+  - rid: 2853395894280913081
+  - rid: 2853395894280913082
+  - rid: 2853395894280913083
+  - rid: 2853395894280913084
+  - rid: 2853395894280913085
+  - rid: 2853395894280913086
+  - rid: 2853395894280913087
+  - rid: 2853395894280913088
+  - rid: 2853395894280913089
+  - rid: 2853395894280913090
+  - rid: 2853395894280913091
+  - rid: 2853395894280913092
+  - rid: 2853395894280913093
+  - rid: 2853395894280913094
+  - rid: 2853395894280913095
+  - rid: 2853395894280913096
+  - rid: 2853395894280913097
+  - rid: 2853395894280913098
   references:
     version: 2
     RefIds:
-    - rid: 6083855518545478464
+    - rid: 2853395894280913070
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 126f8373-7413-4f3a-92c2-bb7174581624
@@ -144,7 +144,7 @@ MonoBehaviour:
         DialogueText: "\uC774 \uC232\uC5D0\uB294 \uC57D\uCD08\uAC00 \uCC38 \uB9CE\uB2F5\uB2C8\uB2E4."
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478465
+    - rid: 2853395894280913071
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 148033cc-18d9-4f62-807a-5651eb27952d
@@ -154,7 +154,7 @@ MonoBehaviour:
         DialogueText: "\uADF8\uAC70 \uC544\uC2DC\uB098\uC694...?"
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478466
+    - rid: 2853395894280913072
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1c1dde93-7d55-4901-a94c-916c1ad18488
@@ -164,7 +164,7 @@ MonoBehaviour:
         DialogueText: "\uC774\uAC78 \uC815\uB9D0 \uCC3E\uC73C\uC168\uB124\uC694!"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478467
+    - rid: 2853395894280913073
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1d5b4b44-1d76-454c-bc44-9ecee1ce9b19
@@ -175,7 +175,7 @@ MonoBehaviour:
           \uAF64\uB098 \uD488\uC9C8 \uC88B\uC740 \uC57D\uCD08\uAC00 \uC790\uC0DD\uD574\uC694!"
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478468
+    - rid: 2853395894280913074
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 20400434-7cc1-4085-b268-ca56653ddc52
@@ -186,7 +186,7 @@ MonoBehaviour:
           \uC606\uC758 \uAC00\uAC8C\uC5D0\uC11C \uBCD1\uC6D0\uC744 \uD558\uACE0 \uC788\uAC70\uB4E0\uC694."
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478469
+    - rid: 2853395894280913075
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 269c6089-70d8-4e6c-9ddd-28ca32ce2cff
@@ -197,18 +197,18 @@ MonoBehaviour:
           \uC788\uB294 \uC544\uC774\uD15C\uC774 \uC788\uC5B4\uC694!"
         PortraitKey: Smi
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478470
+    - rid: 2853395894280913076
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 3929281d-ddf4-42a9-b0f4-62f7849388c6
         NodeTitle: Text
         TypeName: Text
         Position: {x: 2789, y: -347}
-        DialogueText: "\uD574\uD30C\uB9AC \uC824\uB9AC\uC5D0\uC694! \uACE0\uAE09
+        DialogueText: "\uD574\uD30C\uB9AC \uC824\uB9AC\uC608\uC694! \uACE0\uAE09
           \uC2DD\uC7AC\uB8CC\uB2C8\uAE4C \uC798 \uC4F0\uC2DC\uAE38 \uBC14\uB784\uAC8C\uC694!"
         PortraitKey: Smi
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478471
+    - rid: 2853395894280913077
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 3ab5d2e9-c8b3-4845-a73f-65d546865e20
@@ -219,18 +219,18 @@ MonoBehaviour:
           \uC544\uC9C1\uC77C\uAE4C\uC694...?"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478472
+    - rid: 2853395894280913078
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 74e47e87-8a95-4b5d-9f85-0c0a9fa0e046
         NodeTitle: Text
         TypeName: Text
         Position: {x: 1528, y: -351}
-        DialogueText: "\uADC0\uD55C \uBB3C\uAC74\uC744 \uAC00\uC838\uB2E4\uC8FC\uC168\uC73C\uB2C8
+        DialogueText: "\uADC0\uD55C \uBB3C\uAC74\uC744 \uAC00\uC838\uB2E4 \uC8FC\uC168\uC73C\uB2C8
           \uC800\uB3C4 \uBCF4\uC0C1\uC744 \uB4DC\uB824\uC57C\uACA0\uC8E0?"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478473
+    - rid: 2853395894280913079
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 78ee931e-5d99-4e6e-be7a-9b8be5bdb4aa
@@ -251,7 +251,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478474
+    - rid: 2853395894280913080
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8d46edfc-63b6-490a-800d-5606f1fb56b8
@@ -272,7 +272,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478475
+    - rid: 2853395894280913081
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 900e3531-4524-46cb-8a5c-894af7d3eb4d
@@ -282,7 +282,7 @@ MonoBehaviour:
         DialogueText: "\uADF8 \uC57D\uCD08\uB97C \uAD6C\uD558\uACE0 \uC788\uC5B4\uC694!"
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478476
+    - rid: 2853395894280913082
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 90507a70-9f04-428b-ad15-9ac1f9713dd7
@@ -290,20 +290,21 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 3829, y: 256}
         DialogueText: "\uB2E4\uC74C\uC5D0 \uB2E4\uCE58\uC2E4 \uC77C\uC774 \uC788\uC73C\uBA74
-          \uC81C\uAC00 \uCE58\uB8CC\uD574\uB4DC\uB9B4\uD14C\uB2C8 \uAF2D \uCC3E\uC544\uC640\uC8FC\uC138\uC694!"
+          \uC81C\uAC00 \uCE58\uB8CC\uD574 \uB4DC\uB9B4\uD14C\uB2C8 \uAF2D \uCC3E\uC544\uC640
+          \uC8FC\uC138\uC694!"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478477
+    - rid: 2853395894280913083
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 9fa7047e-3e3f-4f16-a77a-a09b2eda57ec
         NodeTitle: Text
         TypeName: Text
         Position: {x: 1987, y: -353}
-        DialogueText: "\uAC10\uC0AC\uC758 \uC99D\uD45C\uC5D0\uC694!!"
+        DialogueText: "\uAC10\uC0AC\uC758 \uC99D\uD45C\uC608\uC694!!"
         PortraitKey: Smi
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478478
+    - rid: 2853395894280913084
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a1520ccb-18ab-4ccf-a00b-ea2c65b5608b
@@ -324,7 +325,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478479
+    - rid: 2853395894280913085
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a5fde673-18e6-4e9f-bf43-23a7d606b838
@@ -334,7 +335,7 @@ MonoBehaviour:
         DialogueText: "\uC815\uB9D0 \uAC10\uC0AC\uD569\uB2C8\uB2E4!!"
         PortraitKey: Lov
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478480
+    - rid: 2853395894280913086
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: aa2d4e0d-897f-4ae7-925c-aa0d5fe302b4
@@ -345,7 +346,7 @@ MonoBehaviour:
           \uC788\uC744\uAC8C\uC694!"
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478481
+    - rid: 2853395894280913087
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b6c25fcb-16f6-4954-b35d-a02d79be0229
@@ -366,7 +367,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478482
+    - rid: 2853395894280913088
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b9be760c-3151-4926-a606-96ff1a33b043
@@ -374,10 +375,10 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 1181, y: 62}
         DialogueText: "(\uD53C\uB808\uB124\uAC00 \uD480\uC232\uC744 \uC5F4\uC2EC\uD788
-          \uB4A4\uC9C0\uACE0 \uC788\uB2E4)"
+          \uB4A4\uC9C0\uACE0 \uC788\uB2E4.)"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855518545478483
+    - rid: 2853395894280913089
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: bb2850a6-442a-4a3f-babd-8788035f8f72
@@ -398,7 +399,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478484
+    - rid: 2853395894280913090
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d477f238-534c-49fb-9395-cc7344c7002c
@@ -419,7 +420,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478485
+    - rid: 2853395894280913091
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d9e45dd7-e2c6-45aa-9e71-667668f7a800
@@ -434,7 +435,7 @@ MonoBehaviour:
           StringValue: Pirene_Ch_02
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855518545478486
+    - rid: 2853395894280913092
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: da824e22-a24c-4b58-b3df-72acbc1a18d1
@@ -444,7 +445,7 @@ MonoBehaviour:
         DialogueText: "\uC54C\uACA0\uC2B5\uB2C8\uB2E4... \uC81C\uAC00 \uCC3E\uC544\uBCFC\uAC8C\uC694!"
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478487
+    - rid: 2853395894280913093
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: eaab9815-aaf2-4891-b738-d123260a4368
@@ -455,7 +456,7 @@ MonoBehaviour:
           \uCC38 \uC5B4\uB835\uB124\uC694..."
         PortraitKey: 
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478488
+    - rid: 2853395894280913094
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ec961c0d-ffbf-499a-8b8d-3981cfb5f736
@@ -466,7 +467,7 @@ MonoBehaviour:
           \uAC00\uC9C0\uACE0 \uACC4\uC2E4\uC9C0\uB294 \uBAA8\uB974\uACA0\uB124\uC694!"
         PortraitKey: Smi
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478489
+    - rid: 2853395894280913095
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ef22cace-22d8-4472-a45a-3281f77ecb4d
@@ -477,7 +478,7 @@ MonoBehaviour:
           \uB4DC\uB824\uB3C4 \uB420\uAE4C\uC694?"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478490
+    - rid: 2853395894280913096
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f2792573-b03a-41ce-8c06-ee1176c12959
@@ -487,7 +488,7 @@ MonoBehaviour:
         DialogueText: "\uC548\uB155\uD558\uC138\uC694!"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478491
+    - rid: 2853395894280913097
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: dde80057-4e9f-4e36-a593-cd17f8e5fec5
@@ -495,10 +496,10 @@ MonoBehaviour:
         TypeName: Branch
         Position: {x: 1437, y: 268}
         DialogueText: "\uB300\uD68C\uB294 \uC7AC\uBC0C\uAC8C \uBD24\uC5B4\uC694!
-          \uC815\uB9D0 \uB9DB\uC788\uC5B4 \uBCF4\uC774\uB358 \uAC78\uC694?"
+          \uC815\uB9D0 \uB9DB\uC788\uC5B4 \uBCF4\uC774\uB358\uAC78\uC694?"
         PortraitKey: Lol
         ActorKey: Pirene_Chapter_1
-    - rid: 6083855518545478492
+    - rid: 2853395894280913098
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c3e746c9-e940-4e48-a031-08ddf4d18b55

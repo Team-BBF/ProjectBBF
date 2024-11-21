@@ -57,24 +57,24 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 3b4e29f3-9f4e-4c48-9f70-8443ee468edb
   NodeData:
-  - rid: 6083855353732399604
-  - rid: 6083855353732399605
-  - rid: 6083855353732399606
-  - rid: 6083855353732399607
-  - rid: 6083855353732399608
-  - rid: 6083855353732399609
-  - rid: 6083855353732399610
-  - rid: 6083855353732399611
-  - rid: 6083855353732399612
-  - rid: 6083855353732399613
-  - rid: 6083855353732399614
-  - rid: 6083855353732399615
-  - rid: 6083855353732399616
-  - rid: 6083855353732399617
+  - rid: 2853395894280912984
+  - rid: 2853395894280912985
+  - rid: 2853395894280912986
+  - rid: 2853395894280912987
+  - rid: 2853395894280912988
+  - rid: 2853395894280912989
+  - rid: 2853395894280912990
+  - rid: 2853395894280912991
+  - rid: 2853395894280912992
+  - rid: 2853395894280912993
+  - rid: 2853395894280912994
+  - rid: 2853395894280912995
+  - rid: 2853395894280912996
+  - rid: 2853395894280912997
   references:
     version: 2
     RefIds:
-    - rid: 6083855353732399604
+    - rid: 2853395894280912984
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 101b01ce-61c3-4c7d-b36e-594b827e714e
@@ -84,17 +84,18 @@ MonoBehaviour:
         DialogueText: "\uBE75\uC744 \uB2E4 \uD0DC\uC6CC\uBA39\uC5C8\uB354\uB77C!"
         PortraitKey: 
         ActorKey: Kid2_Chapter_2
-    - rid: 6083855353732399605
+    - rid: 2853395894280912985
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 3b4e29f3-9f4e-4c48-9f70-8443ee468edb
         NodeTitle: Text
         TypeName: Text
         Position: {x: 3786, y: 154}
-        DialogueText: "\uC544\uB2C8 \uD5E4\uB974\uBA54\uC2A4\uAC00 \uC9C4\uC9DC \uC798\uC0DD\uACBC\uB2E4\uACE0...!"
+        DialogueText: "\uC544\uB2C8, \uD5E4\uB974\uBA54\uC2A4\uAC00 \uC9C4\uC9DC
+          \uC798\uC0DD\uACBC\uB2E4\uACE0...!"
         PortraitKey: 
         ActorKey: Kid3_Chapter_2
-    - rid: 6083855353732399606
+    - rid: 2853395894280912986
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 7a75614a-c0de-4098-8328-0b1612f64d43
@@ -105,7 +106,7 @@ MonoBehaviour:
           \uB5A8\uC5B4\uC84C\uC5B4!"
         PortraitKey: 
         ActorKey: Kid1_Chapter_2
-    - rid: 6083855353732399607
+    - rid: 2853395894280912987
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 7f662f35-d363-41b6-a9f4-c3933248530f
@@ -120,7 +121,7 @@ MonoBehaviour:
           StringValue: Kids_2
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855353732399608
+    - rid: 2853395894280912988
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 7f82bfd4-c6b7-44a9-b74a-a05670fe0c1c
@@ -130,18 +131,18 @@ MonoBehaviour:
         DialogueText: "\uADF8\uB798\uC11C?"
         PortraitKey: 
         ActorKey: Kid2_Chapter_2
-    - rid: 6083855353732399609
+    - rid: 2853395894280912989
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8165ec95-a311-48af-aca0-dfccd107aac9
         NodeTitle: Text
         TypeName: Text
         Position: {x: 1241, y: 157}
-        DialogueText: "\uC774\uBC88 \uB300\uD68C\uAC00 \uB354 \uAE30\uB300\uAC00
-          \uB41C\uB2E4\uB294 \uAC70\uC9C0!"
+        DialogueText: "\uC774\uBC88 \uB300\uD68C\uAC00 \uB354 \uAE30\uB300\uB41C\uB2E4\uB294
+          \uAC70\uC9C0!"
         PortraitKey: 
         ActorKey: Kid1_Chapter_2
-    - rid: 6083855353732399610
+    - rid: 2853395894280912990
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 853dc642-b1d4-47f7-8ee3-28567f7801c9
@@ -152,7 +153,7 @@ MonoBehaviour:
           \uB108\uD76C \uC544\uBE60..."
         PortraitKey: 
         ActorKey: Kid2_Chapter_2
-    - rid: 6083855353732399611
+    - rid: 2853395894280912991
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: af03e722-fe5d-4f80-b628-4dd5f4f08e94
@@ -163,7 +164,7 @@ MonoBehaviour:
           \uBE75\uC744 \uBA39\uC5C8\uACA0\uC9C0!!"
         PortraitKey: 
         ActorKey: Kid1_Chapter_2
-    - rid: 6083855353732399612
+    - rid: 2853395894280912992
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c522f1ab-93a7-4a35-b453-6c894a1e53e2
@@ -171,21 +172,21 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 645, y: -65}
         DialogueText: "(\uBD88\uC18D\uC131\uC758 \uD6A8\uC790\uB4E4\uC774 \uB5A0\uB4E4\uACE0
-          \uC788\uB2E4)"
+          \uC788\uB2E4.)"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855353732399613
+    - rid: 2853395894280912993
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ca71d859-c530-48a3-8846-2f5e8e550603
         NodeTitle: Text
         TypeName: Text
         Position: {x: 4139, y: 155}
-        DialogueText: "(\uC5F4\uC2EC\uD788 \uC560\uB4E4\uC774 \uB5A0\uB4E4\uACE0
-          \uC788\uB2E4)"
+        DialogueText: "(\uC5F4\uC2EC\uD788 \uC544\uC774\uB4E4\uC774 \uB5A0\uB4E4\uACE0
+          \uC788\uB2E4.)"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855353732399614
+    - rid: 2853395894280912994
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d490d8e4-bbeb-42d6-ad7d-4dd8050d7338
@@ -196,7 +197,7 @@ MonoBehaviour:
           \uC788\uC5B4!!"
         PortraitKey: 
         ActorKey: Kid3_Chapter_2
-    - rid: 6083855353732399615
+    - rid: 2853395894280912995
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: dbc894ee-7f7c-425d-b04b-74dae2f28971
@@ -204,21 +205,21 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 1949, y: 153}
         DialogueText: "\uC544\uBB34\uD2BC \uC798\uC0DD\uAE34 \uD5E4\uB974\uBA54\uC2A4\uAC00
-          \uC6B0\uC2B9\uD560\uAC70\uC57C!"
+          \uC6B0\uC2B9\uD560 \uAC70\uC57C!"
         PortraitKey: 
         ActorKey: Kid3_Chapter_2
-    - rid: 6083855353732399616
+    - rid: 2853395894280912996
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e2c82807-234e-4d5d-9457-5d39f0ba458d
         NodeTitle: Text
         TypeName: Text
         Position: {x: 3406, y: 151}
-        DialogueText: "\uADF8\uB798\uB3C4 \uBC25 \uC798 \uC0AC\uC8FC\uC2DC\uB294
+        DialogueText: "\uADF8\uB798\uB3C4 \uBC25 \uC798 \uC0AC \uC8FC\uC2DC\uB294
           \uC88B\uC740 \uC544\uBE60\uC796\uC544!"
         PortraitKey: 
         ActorKey: Kid1_Chapter_2
-    - rid: 6083855353732399617
+    - rid: 2853395894280912997
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: fe51f6c1-c0ed-4481-a059-f5a4b8544ecc

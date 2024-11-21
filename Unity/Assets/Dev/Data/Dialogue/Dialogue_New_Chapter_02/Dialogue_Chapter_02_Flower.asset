@@ -45,20 +45,20 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 41f17f86-87bd-426a-94b8-0df4f5f527d9
   NodeData:
-  - rid: 6083855353732399543
-  - rid: 6083855353732399544
-  - rid: 6083855353732399545
-  - rid: 6083855353732399546
-  - rid: 6083855353732399547
-  - rid: 6083855353732399548
-  - rid: 6083855353732399549
-  - rid: 6083855353732399552
-  - rid: 6083855353732399550
-  - rid: 6083855353732399551
+  - rid: 2853395894280912898
+  - rid: 2853395894280912899
+  - rid: 2853395894280912900
+  - rid: 2853395894280912901
+  - rid: 2853395894280912902
+  - rid: 2853395894280912903
+  - rid: 2853395894280912904
+  - rid: 2853395894280912905
+  - rid: 2853395894280912906
+  - rid: 2853395894280912907
   references:
     version: 2
     RefIds:
-    - rid: 6083855353732399543
+    - rid: 2853395894280912898
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 066a2b4c-f6bf-4362-ba90-f7b2bdaaaf1d
@@ -68,7 +68,7 @@ MonoBehaviour:
         DialogueText: "\uC544, \uADF8\uB7AC\uB098..."
         PortraitKey: 
         ActorKey: Flower_Chapter_1
-    - rid: 6083855353732399544
+    - rid: 2853395894280912899
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 20c19593-d110-4e89-a4a0-4e8ee9022687
@@ -78,7 +78,7 @@ MonoBehaviour:
         DialogueText: "\uB108 \uC608\uC120 \uAD11\uD0C8\uD588\uC796\uC544!"
         PortraitKey: 
         ActorKey: Hospital_Chapter_1
-    - rid: 6083855353732399545
+    - rid: 2853395894280912900
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 41f17f86-87bd-426a-94b8-0df4f5f527d9
@@ -86,20 +86,21 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 2736, y: 209}
         DialogueText: "(\uCE68\uC744 \uB2E6\uC73C\uBA70 \uBB34\uC12D\uAC8C \uB5A0\uB4E4\uACE0
-          \uC788\uB2E4)"
+          \uC788\uB2E4.)"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855353732399546
+    - rid: 2853395894280912901
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4fb47bac-7b1b-4ccc-99af-0a52d0e945b8
         NodeTitle: Text
         TypeName: Text
         Position: {x: 566, y: 209}
-        DialogueText: "\uC774\uBC88 \uB300\uD68C\uB294 \uCE74\uB80C\uC774 \uC6B0\uC2B9\uD560\uAC70\uC57C!!"
+        DialogueText: "\uC774\uBC88 \uB300\uD68C\uB294 \uCE74\uB80C\uC774 \uC6B0\uC2B9\uD560
+          \uAC70\uC57C!!"
         PortraitKey: 
         ActorKey: Hospital_Chapter_1
-    - rid: 6083855353732399547
+    - rid: 2853395894280912902
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 5b6d3306-599b-41cb-98e8-0edbbf06907c
@@ -110,7 +111,7 @@ MonoBehaviour:
           \uC811\uC218\uD569\uB2C8\uB2E4!!"
         PortraitKey: 
         ActorKey: Flower_Chapter_1
-    - rid: 6083855353732399548
+    - rid: 2853395894280912903
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 65384d81-b490-4b7c-b8dd-f9046bd665b4
@@ -119,10 +120,10 @@ MonoBehaviour:
         Position: {x: 622, y: -31}
         DialogueText: "(\uD55C \uBA85\uC740 \uCE68\uC744 \uD758\uB9AC\uACE0 \uC788\uACE0,
           \uD55C \uBA85\uC740 \uC790\uAE30\uAC00 \uD560 \uB9D0\uB9CC \uD558\uACE0
-          \uC788\uB2E4)"
+          \uC788\uB2E4.)"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855353732399549
+    - rid: 2853395894280912904
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: bdd50b1d-ae70-4fe9-a0c4-12fa365df6f9
@@ -133,33 +134,7 @@ MonoBehaviour:
           \uC0AC\uD68C\uD558\uB294 \uAC70 \uBD24\uC5B4?"
         PortraitKey: 
         ActorKey: Hospital_Chapter_1
-    - rid: 6083855353732399550
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: cd6b2c4e-2200-46a3-aa33-264df589585a
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 216, y: 184}
-        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
-        Warps:
-        - Target: String
-          IntValue: 0
-          FloatValue: 0
-          StringValue: Flower_2
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855353732399551
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f6ca1b73-3b90-467c-958d-2973493e6936
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2252, y: 211}
-        DialogueText: "\uADF8 \uC18C\uB144\uAC19\uC740 \uAFC0 \uBCF4\uC774\uC2A4...
-          \uC5EC\uC7A5\uC2DC\uD0A4\uBA74 \uC644\uBCBD\uD55C... \uD5E4\uD5E4... \uD5E4\uD5E4\uD5E4....!"
-        PortraitKey: 
-        ActorKey: Hospital_Chapter_1
-    - rid: 6083855353732399552
+    - rid: 2853395894280912905
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c02a5747-23dc-4ada-ba13-1d50063103a9
@@ -180,3 +155,29 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
+    - rid: 2853395894280912906
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: cd6b2c4e-2200-46a3-aa33-264df589585a
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 216, y: 184}
+        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Flower_2
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 2853395894280912907
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f6ca1b73-3b90-467c-958d-2973493e6936
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2252, y: 211}
+        DialogueText: "\uADF8 \uC18C\uB144\uAC19\uC740 \uAFC0 \uBCF4\uC774\uC2A4...
+          \uC5EC\uC7A5 \uC2DC\uD0A4\uBA74 \uC644\uBCBD\uD55C... \uD5E4\uD5E4... \uD5E4\uD5E4\uD5E4....!"
+        PortraitKey: 
+        ActorKey: Hospital_Chapter_1

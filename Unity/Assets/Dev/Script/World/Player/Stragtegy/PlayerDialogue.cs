@@ -145,6 +145,8 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
 
             instance.Visible = false;
 
+            await UniTask.Yield(PlayerLoopTiming.Update, token);
+
             return true;
         }
         catch (Exception e) when (e is not OperationCanceledException)

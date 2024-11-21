@@ -167,7 +167,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
             Texture2D cursorTexture = _cursorTable.List.FirstOrDefault(x => value == x.Type).Texture2D;
             if (_cursorTable == false) return;
             
-            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
             
         }
     }

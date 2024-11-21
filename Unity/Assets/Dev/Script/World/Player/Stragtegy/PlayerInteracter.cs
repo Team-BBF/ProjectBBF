@@ -237,9 +237,19 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
     public CollisionInteractionMono FindClickObject()
     {
+        if (InputManager.Map.Player.InteractionMouseClick.triggered)
+        {
+            return FindClickObjectWithoutClick();
+        }
+
+        return null;
+    }
+
+    public CollisionInteractionMono FindClickObjectWithoutClick()
+    {
         Vector2 mousePos = InputManager.Map.Player.Look.ReadValue<Vector2>();
         Camera camera = Camera.main;
-        if (InputManager.Map.Player.InteractionMouseClick.triggered && camera)
+        if (camera)
         {
             Vector2 worldPos = camera.ScreenToWorldPoint(mousePos);
 
@@ -278,7 +288,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
         if (ScreenManager.Instance)
         {
-            if (FindClickObject())
+            if (FindClickObjectWithoutClick())
             {
                 ScreenManager.Instance.CurrentCursor = CursorType.CanClick;                
             }

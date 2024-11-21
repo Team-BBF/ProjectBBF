@@ -3134,6 +3134,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: d0386ecfbf358074b8e04d435e894290, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: d0386ecfbf358074b8e04d435e894290, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dec15e1d4d440ce4aa9023c7c30586b4, type: 2}
     - target: {fileID: 6633940948283213399, guid: d0386ecfbf358074b8e04d435e894290, type: 3}
       propertyPath: m_Name
       value: PActor_Karen_Chapter_2

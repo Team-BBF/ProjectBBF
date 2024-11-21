@@ -58,8 +58,6 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
 
         _cursorTable = Resources.Load<CursorTable>("Data/Dat_CursorTable");
         Debug.Assert(_cursorTable, "CursorTable을 찾을 수 없습니다. ");
-
-        CurrentCursor = CursorType.Default;
     }
 
     public override void PostRelease()
@@ -140,7 +138,7 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         OnChangedResolution?.Invoke(CurrentResolution);
     }
 
-    private CursorType _cursor;
+    private CursorType _cursor = CursorType.None;
 
     public CursorType CurrentCursor
     {
@@ -148,28 +146,32 @@ public class ScreenManager : MonoBehaviourSingleton<ScreenManager>
         set
         {
             if (_cursor == value) return;
-            
-            _cursor = value;
-            
-            if (_cursorTable == false) return;
 
-            if (_cursor == CursorType.None)
-            {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                return;
-            }
-            
-            
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            
-            Texture2D cursorTexture = _cursorTable.List.FirstOrDefault(x => value == x.Type).Texture2D;
-            if (_cursorTable == false) return;
-            
-            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
-            
+            SetCursorForce(value);
         }
+    }
+
+    public void SetCursorForce(CursorType type)
+    {
+        _cursor = type;
+            
+        if (_cursorTable == false) return;
+
+        if (_cursor == CursorType.None)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            return;
+        }
+            
+            
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+            
+        Texture2D cursorTexture = _cursorTable.List.FirstOrDefault(x => type == x.Type).Texture2D;
+        if (_cursorTable == false) return;
+            
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
     }
 
 #if UNITY_EDITOR

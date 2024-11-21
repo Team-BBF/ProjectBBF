@@ -90,7 +90,7 @@ public class PlayerQuickInventoryView : MonoBehaviour, IInventoryView
         }
         else if (value + CurrentItemIndex < 0)
         {
-            CurrentItemIndex = 1;
+            CurrentItemIndex = _slots.Length - 1;
         }
         else
         {

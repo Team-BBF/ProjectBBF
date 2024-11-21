@@ -54,6 +54,15 @@ public class SelectItemView : MonoBehaviour, IInventoryView
 
     public void OnChanged(IInventorySlot slot)
     {
+        if (slot.Data)
+        {
+            _countText.enabled = slot.Data.ActionCategoryType != ActionCategoryType.Tool;
+        }
+        else
+        {
+            _countText.enabled = false;
+        }
+        
         Sprite = slot.Data?.ItemSprite;
         Count = slot.Count;
         UpdatePosition();

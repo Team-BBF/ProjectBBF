@@ -11,6 +11,8 @@ using MyBox; // DOTween 네임스페이스 추가
 [RequireComponent(typeof(RectTransform))]
 public class QuestIndicatorObstacleUI : MonoBehaviour
 {
+    [SerializeField] private bool _ignore;
+    
     private Tween _currentTextTween;
     private Tween _currentImageTween;
 
@@ -51,6 +53,8 @@ public class QuestIndicatorObstacleUI : MonoBehaviour
 
     public void DoFade(float fadeAlpha, float duration)
     {
+        if (_ignore) return;
+        
         StopAllCoroutines();
         StartCoroutine(CoDoFade(fadeAlpha, duration));
     }

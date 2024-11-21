@@ -60,6 +60,7 @@ public class RecipeBookListView : MonoBehaviour
         }
         
         _selectRect.gameObject.SetActive(false);
+        _hoverRect.gameObject.SetActive(false);
     }
 
     private void OnDestroy()

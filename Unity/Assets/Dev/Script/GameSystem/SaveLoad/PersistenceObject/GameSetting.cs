@@ -33,6 +33,14 @@ namespace ProjectBBF.Persistence
         [SerializeField] private bool _isCreatedScreen;
         [SerializeField] private bool _isCreatedAudio;
 
+        [SerializeField] private bool _autoSaveReset;
+
+        public bool AutoSaveReset
+        {
+            get => _autoSaveReset;
+            set => _autoSaveReset = value;
+        }
+
         public bool IsCreatedScreen
         {
             get => _isCreatedScreen;

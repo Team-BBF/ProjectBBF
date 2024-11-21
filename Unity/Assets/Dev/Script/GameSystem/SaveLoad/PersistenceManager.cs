@@ -184,6 +184,33 @@ namespace ProjectBBF.Persistence
             
             return metadatas.ToArray();
         }
+
+        public static bool RemoveSaveFile(Metadata metadata)
+        {
+            bool flag = true;
+            
+            flag &= RemoveFile(metadata.SaveFileName, GameDataExtension);
+            flag &= RemoveFile(metadata.SaveFileName, MetadataExtension);
+
+            return flag;
+        }
+
+        public static bool RemoveFile(string fileName, string extension)
+        {
+            string path = CombinePathAndFile(fileName, extension);
+            
+            try
+            {
+                File.Delete(path);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+                return false;
+            }
+
+            return true;
+        }
         
         public static void SaveFile(string fileName, string extension, byte[] data)
         {

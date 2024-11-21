@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ProjectBBF.Persistence;
 using UnityEngine;
 
 
@@ -23,6 +24,9 @@ public class SettingGraphicModel
         _sliderCallbackDict = new();
         _sliderCallbackDict["Frame"] = (GetFrame, SetFrame);
         _sliderCallbackDict["RenderScale"] = (GetRenderScale, SetRenderScale);
+        
+        // 크로니클용 임시 세이브파일 리셋 기능
+        _dropdownCallbackDict["AutoSaveReset"] = (GetIndexCount_AutoSaveReset, GetIndex_AutoSaveReset, GetItemName_AutoSaveReset, SetIndex_AutoSaveReset);
     }
 
     #region Resolution Callback
@@ -229,6 +233,43 @@ public class SettingGraphicModel
             inst.RenderScale = v;
         }
     }
+    #endregion
+
+    
+    // 크로니클용 임시 세이브파일 리셋 기능
+    #region AutoSaveReset 
+
+    private int GetIndexCount_AutoSaveReset()
+    {
+        return 2;
+    }
+
+    private void SetIndex_AutoSaveReset(int obj)
+    {
+        PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting);
+
+        setting.AutoSaveReset = obj == 1;
+    }
+
+    private string GetItemName_AutoSaveReset(int arg)
+    {
+        if (arg == 1)
+        {
+            return "활성화";
+        }
+        else
+        {
+            return "비활성화";
+        }
+    }
+
+    private int GetIndex_AutoSaveReset()
+    {
+        PersistenceManager.Instance.TryLoadOrCreateUserData("GameSetting", out GameSetting setting);
+
+        return setting.AutoSaveReset ? 1 : 0;
+    }
+
     #endregion
     public void Release()
     {

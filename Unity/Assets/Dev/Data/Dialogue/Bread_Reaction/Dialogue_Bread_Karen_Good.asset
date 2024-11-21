@@ -29,38 +29,38 @@ MonoBehaviour:
   - BaseNodeGuid: e664e2fe-e0fe-48de-9abd-781c5c132595
     PortName: Next
     TargetNodeGuid: f2f49218-32d2-40b7-91c0-370eb9ee5ffc
-  - BaseNodeGuid: f2f49218-32d2-40b7-91c0-370eb9ee5ffc
-    PortName: Next
-    TargetNodeGuid: 76bb08aa-7da8-4475-9e47-0daf23ee60d1
   - BaseNodeGuid: 76bb08aa-7da8-4475-9e47-0daf23ee60d1
     PortName: Next
     TargetNodeGuid: abc8fab4-c380-4645-ae3e-2ef68cdcdc3e
   - BaseNodeGuid: abc8fab4-c380-4645-ae3e-2ef68cdcdc3e
     PortName: Next
     TargetNodeGuid: 08d17a1c-2dcd-4092-8f9d-d4f7eeb5d1ce
+  - BaseNodeGuid: f2f49218-32d2-40b7-91c0-370eb9ee5ffc
+    PortName: Next
+    TargetNodeGuid: 76bb08aa-7da8-4475-9e47-0daf23ee60d1
   NodeData:
-  - rid: 6083855535537651720
-  - rid: 6083855535537651721
-  - rid: 6083855535537651722
-  - rid: 6083855535537651723
-  - rid: 6083855535537651725
-  - rid: 6083855535537651726
-  - rid: 6083855535537651727
-  - rid: 6083855535537651724
+  - rid: 2853395892925104265
+  - rid: 2853395892925104266
+  - rid: 2853395892925104267
+  - rid: 2853395892925104268
+  - rid: 2853395892925104269
+  - rid: 2853395892925104270
+  - rid: 2853395892925104271
+  - rid: 2853395892925104272
   references:
     version: 2
     RefIds:
-    - rid: 6083855535537651720
+    - rid: 2853395892925104265
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 55391e61-b025-4768-a5d1-501df2f579ab
         NodeTitle: Text
         TypeName: Text
         Position: {x: 231, y: 200}
-        DialogueText: "\uC774\uAC70\uB294...!"
+        DialogueText: "\uC774\uAC74...!"
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651721
+    - rid: 2853395892925104266
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ef4af2aa-871f-4cbb-a7fb-54b822ab0357
@@ -70,7 +70,7 @@ MonoBehaviour:
         DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4!"
         PortraitKey: Smi
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651722
+    - rid: 2853395892925104267
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8edf0deb-cc6b-4e1b-98c0-ee9f0e7e0cc9
@@ -81,7 +81,7 @@ MonoBehaviour:
           \uCD94\uC5B5\uC774 \uB420 \uAC83 \uAC19\uB124\uC694."
         PortraitKey: Smi
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651723
+    - rid: 2853395892925104268
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e664e2fe-e0fe-48de-9abd-781c5c132595
@@ -92,18 +92,7 @@ MonoBehaviour:
           \uC88B\uAC8C \uACB0\uC2B9\uB3C4 \uAC14\uC5B4\uC694!"
         PortraitKey: Smi
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651724
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f2f49218-32d2-40b7-91c0-370eb9ee5ffc
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1564, y: 204}
-        DialogueText: "\uADF8\uB9AC\uACE0 \uC774\uB807\uAC8C \uBA4B\uC9C4 \uBE75\uB3C4
-          \uBC1B\uC558\uB124\uC694."
-        PortraitKey: Smi
-        ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651725
+    - rid: 2853395892925104269
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 76bb08aa-7da8-4475-9e47-0daf23ee60d1
@@ -114,7 +103,7 @@ MonoBehaviour:
           \uD798\uB0BC \uC218 \uC788\uC744 \uAC83 \uAC19\uC544\uC694!"
         PortraitKey: Smi
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651726
+    - rid: 2853395892925104270
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: abc8fab4-c380-4645-ae3e-2ef68cdcdc3e
@@ -125,7 +114,7 @@ MonoBehaviour:
           \uC2F6\uC740\uB370 \uADF8\uB7F0 \uC5B4\uD718\uAC00 \uC5C6\uB124\uC694... "
         PortraitKey: 
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651727
+    - rid: 2853395892925104271
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 08d17a1c-2dcd-4092-8f9d-d4f7eeb5d1ce
@@ -133,5 +122,16 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 2826, y: 201}
         DialogueText: "\uC815\uB9D0 \uAC10\uC0AC\uD788 \uC798 \uBA39\uACA0\uC2B5\uB2C8\uB2E4!"
+        PortraitKey: Smi
+        ActorKey: Karen_Chapter_1
+    - rid: 2853395892925104272
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f2f49218-32d2-40b7-91c0-370eb9ee5ffc
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1564, y: 204}
+        DialogueText: "\uADF8\uB9AC\uACE0 \uC774\uB807\uAC8C \uBA4B\uC9C4 \uBE75\uB3C4
+          \uBC1B\uC558\uB124\uC694."
         PortraitKey: Smi
         ActorKey: Karen_Chapter_1

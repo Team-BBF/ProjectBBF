@@ -23,26 +23,26 @@ MonoBehaviour:
   - BaseNodeGuid: abbada10-ea3f-4736-b04f-5510573bdf35
     PortName: Next
     TargetNodeGuid: 1a1f5711-3b9d-4f7e-9fa6-c088b4ea43ea
+  - BaseNodeGuid: bff0739d-2e1b-4c7e-a593-e995cbab0333
+    PortName: Next
+    TargetNodeGuid: 9f902b9e-eb39-49ca-922c-f1eaa5ccde2e
   - BaseNodeGuid: 1a1f5711-3b9d-4f7e-9fa6-c088b4ea43ea
     PortName: Next
     TargetNodeGuid: 618f3d1b-8f6a-4386-9812-67e1aeee6315
   - BaseNodeGuid: 618f3d1b-8f6a-4386-9812-67e1aeee6315
     PortName: Next
     TargetNodeGuid: bff0739d-2e1b-4c7e-a593-e995cbab0333
-  - BaseNodeGuid: bff0739d-2e1b-4c7e-a593-e995cbab0333
-    PortName: Next
-    TargetNodeGuid: 9f902b9e-eb39-49ca-922c-f1eaa5ccde2e
   NodeData:
-  - rid: 6083855535537651759
-  - rid: 6083855535537651764
-  - rid: 6083855535537651760
-  - rid: 6083855535537651763
-  - rid: 6083855535537651761
-  - rid: 6083855535537651762
+  - rid: 2853395892925104259
+  - rid: 2853395892925104260
+  - rid: 2853395892925104261
+  - rid: 2853395892925104262
+  - rid: 2853395892925104263
+  - rid: 2853395892925104264
   references:
     version: 2
     RefIds:
-    - rid: 6083855535537651759
+    - rid: 2853395892925104259
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2681462c-7aab-475b-b71c-a37c17c69685
@@ -52,17 +52,37 @@ MonoBehaviour:
         DialogueText: "\uC74C... \uC774\uAC70\uB294... \uC544..."
         PortraitKey: Emb
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651760
+    - rid: 2853395892925104260
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9f902b9e-eb39-49ca-922c-f1eaa5ccde2e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1925, y: 195}
+        DialogueText: "(\uCE74\uB80C\uC774 \uBA39\uB294 \uCC99\uC744 \uD55C\uB2E4.)"
+        PortraitKey: Ave
+        ActorKey: Karen_Chapter_1
+    - rid: 2853395892925104261
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: abbada10-ea3f-4736-b04f-5510573bdf35
         NodeTitle: Text
         TypeName: Text
         Position: {x: 545, y: 196}
-        DialogueText: "...\uC120\uBB3C...\uC774\uC694?"
+        DialogueText: "... \uC120\uBB3C... \uC774\uC694?"
         PortraitKey: Emb
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651761
+    - rid: 2853395892925104262
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: bff0739d-2e1b-4c7e-a593-e995cbab0333
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1619, y: 195}
+        DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4..."
+        PortraitKey: Ave
+        ActorKey: Karen_Chapter_1
+    - rid: 2853395892925104263
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1a1f5711-3b9d-4f7e-9fa6-c088b4ea43ea
@@ -73,7 +93,7 @@ MonoBehaviour:
           \uC9C0\uAE08 \uBA39\uC5B4\uC57C \uD558\uB294 \uAC78\uAE4C\uC694?"
         PortraitKey: Emb
         ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651762
+    - rid: 2853395892925104264
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 618f3d1b-8f6a-4386-9812-67e1aeee6315
@@ -82,24 +102,4 @@ MonoBehaviour:
         Position: {x: 1275, y: 192}
         DialogueText: "\uC544, \uC544\uB15C\uC694! \uB9DB\uC788\uAC8C \uBA39\uC744\uAC8C\uC694!"
         PortraitKey: Emb
-        ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651763
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: bff0739d-2e1b-4c7e-a593-e995cbab0333
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1619, y: 195}
-        DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4..."
-        PortraitKey: Ave
-        ActorKey: Karen_Chapter_1
-    - rid: 6083855535537651764
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 9f902b9e-eb39-49ca-922c-f1eaa5ccde2e
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 1925, y: 195}
-        DialogueText: "(\uCE74\uB80C\uC774 \uBA39\uB294 \uCC99\uC744 \uD55C\uB2E4)"
-        PortraitKey: Ave
         ActorKey: Karen_Chapter_1

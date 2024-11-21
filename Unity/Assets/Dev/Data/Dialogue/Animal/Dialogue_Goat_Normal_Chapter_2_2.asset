@@ -30,15 +30,15 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 516c5892-7a83-4d73-a199-3e28c78508c6
   NodeData:
-  - rid: 6083855515203403837
-  - rid: 6083855515203403838
-  - rid: 6083855515203403839
-  - rid: 6083855515203403840
-  - rid: 6083855515203403841
+  - rid: 2853395892925104172
+  - rid: 2853395892925104173
+  - rid: 2853395892925104174
+  - rid: 2853395892925104175
+  - rid: 2853395892925104176
   references:
     version: 2
     RefIds:
-    - rid: 6083855515203403837
+    - rid: 2853395892925104172
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8ef281e6-caeb-4ba3-a338-5126a576a267
@@ -53,7 +53,7 @@ MonoBehaviour:
           StringValue: goat_normal_2_2
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855515203403838
+    - rid: 2853395892925104173
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 516c5892-7a83-4d73-a199-3e28c78508c6
@@ -63,7 +63,7 @@ MonoBehaviour:
         DialogueText: "\uC6B0\uC720\uB97C \uC5BB\uC5C8\uB2E4!"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403839
+    - rid: 2853395892925104174
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c9bf1feb-b920-4def-b2b1-ea6ecc54744a
@@ -73,7 +73,7 @@ MonoBehaviour:
         DialogueText: "\uAC74\uAC15\uD574 \uBCF4\uC774\uB294 \uC5FC\uC18C\uC774\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403840
+    - rid: 2853395892925104175
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 351f130b-d24f-4161-a2e0-201447a02d95
@@ -84,7 +84,7 @@ MonoBehaviour:
           \uAC19\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403841
+    - rid: 2853395892925104176
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1cfe26b0-73fd-4bf8-8491-38287cfe7f47

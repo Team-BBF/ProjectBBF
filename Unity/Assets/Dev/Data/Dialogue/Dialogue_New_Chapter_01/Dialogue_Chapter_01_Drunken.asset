@@ -45,41 +45,41 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: b304142b-5f97-4f58-ba96-57b82bf3de25
   NodeData:
-  - rid: 6083855353732399427
-  - rid: 6083855353732399428
-  - rid: 6083855353732399429
-  - rid: 6083855353732399430
-  - rid: 6083855353732399431
-  - rid: 6083855353732399432
-  - rid: 6083855353732399433
-  - rid: 6083855353732399434
-  - rid: 6083855353732399436
-  - rid: 6083855353732399435
+  - rid: 2853395892925104522
+  - rid: 2853395892925104523
+  - rid: 2853395892925104524
+  - rid: 2853395892925104525
+  - rid: 2853395892925104526
+  - rid: 2853395892925104527
+  - rid: 2853395892925104528
+  - rid: 2853395892925104529
+  - rid: 2853395892925104530
+  - rid: 2853395892925104531
   references:
     version: 2
     RefIds:
-    - rid: 6083855353732399427
+    - rid: 2853395892925104522
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 34c3b2f9-4a41-4889-aa14-28c36e458cee
         NodeTitle: Text
         TypeName: Text
         Position: {x: 1323, y: 163}
-        DialogueText: "\uB450 \uBC88 \uB2E4\uC2DC\uB294 \uC220\uB85C \uC548\uC9C4\uB2E4\uAD6C...!!"
+        DialogueText: "\uB450 \uBC88 \uB2E4\uC2DC\uB294 \uC220\uB85C \uC548 \uC9C4\uB2E4\uAD6C...!!"
         PortraitKey: 
         ActorKey: Drunken2_Chapter_1
-    - rid: 6083855353732399428
+    - rid: 2853395892925104523
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 48f87477-3fe9-4f60-b870-dd1f04b4ff88
         NodeTitle: Text
         TypeName: Text
         Position: {x: 1680, y: 161}
-        DialogueText: "\uADF8\uB798\uB193\uACE0\uC11C \uB610 \uC9C0\uB09C \uBC88\uCC98\uB7FC
-          \uC9D1\uC5D0 \uBABB\uB4E4\uC5B4\uAC00\uB824\uACE0!"
+        DialogueText: "\uADF8\uB798 \uB193\uACE0\uC11C \uB610 \uC9C0\uB09C \uBC88\uCC98\uB7FC
+          \uC9D1\uC5D0 \uBABB \uB4E4\uC5B4\uAC00\uB824\uACE0!"
         PortraitKey: 
         ActorKey: Drunken1_Chapter_2
-    - rid: 6083855353732399429
+    - rid: 2853395892925104524
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4da0266d-fcae-4fac-9956-a7f5819bb2d1
@@ -94,7 +94,7 @@ MonoBehaviour:
           StringValue: Drunken_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855353732399430
+    - rid: 2853395892925104525
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 5c0a69c0-41f0-4744-8b38-15bb3dadac02
@@ -115,7 +115,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 6083855353732399431
+    - rid: 2853395892925104526
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 81fcb0e6-44f3-4190-895d-97491895a598
@@ -125,7 +125,7 @@ MonoBehaviour:
         DialogueText: "\uB0B4\uAC00... \uC774, \uB0B4\uAC00! \uC5BC\uB9C8\uB098 \uB178\uB825\uD588\uB294\uB370!!"
         PortraitKey: 
         ActorKey: Drunken2_Chapter_1
-    - rid: 6083855353732399432
+    - rid: 2853395892925104527
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b304142b-5f97-4f58-ba96-57b82bf3de25
@@ -136,7 +136,7 @@ MonoBehaviour:
           \uC880 \uCDE8\uD588\uB124\uC694."
         PortraitKey: 
         ActorKey: Drunken1_Chapter_2
-    - rid: 6083855353732399433
+    - rid: 2853395892925104528
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: cd45a4d3-2397-4b48-9aa6-408a2780e4e7
@@ -145,10 +145,10 @@ MonoBehaviour:
         Position: {x: 2842, y: 157}
         DialogueText: "(\uC606 \uD14C\uC774\uBE14\uC5D0\uC11C \uC5D8\uB9AC\uC2DC\uC544\uAC00
           \uBCF4\uBA74\uC11C \uAC00\uC18C\uB86D\uB2E4\uB294 \uB4EF\uC774 \uC6C3\uACE0
-          \uC788\uB2E4)"
+          \uC788\uB2E4.)"
         PortraitKey: Smi
         ActorKey: Elisia_Chapter_1
-    - rid: 6083855353732399434
+    - rid: 2853395892925104529
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: dd9c5480-aaa9-40d2-80e6-6887fafea31f
@@ -159,7 +159,18 @@ MonoBehaviour:
           \uB0B4\uAC00 \uC774\uACA8!!"
         PortraitKey: 
         ActorKey: Drunken2_Chapter_1
-    - rid: 6083855353732399435
+    - rid: 2853395892925104530
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f350e92c-802b-429d-b47a-6a992d0b8c4e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 588, y: -55}
+        DialogueText: "(\uC5F4\uC2EC\uD788 \uD589\uD328\uB97C \uBD80\uB9AC\uBA70
+          \uC220\uC744 \uB9C8\uC2DC\uACE0 \uC788\uB2E4.)"
+        PortraitKey: 
+        ActorKey: exp
+    - rid: 2853395892925104531
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f74bfc05-54db-4109-8410-68561a98cc40
@@ -170,14 +181,3 @@ MonoBehaviour:
           \uC5D8\uB9AC\uC2DC\uC544 \uB204\uB2D8!"
         PortraitKey: 
         ActorKey: Drunken2_Chapter_1
-    - rid: 6083855353732399436
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f350e92c-802b-429d-b47a-6a992d0b8c4e
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 588, y: -55}
-        DialogueText: "(\uC5F4\uC2EC\uD788 \uAE7D\uD310\uC744 \uBD80\uB9AC\uBA70
-          \uC220\uC744 \uB9C8\uC2DC\uACE0 \uC788\uB2E4)"
-        PortraitKey: 
-        ActorKey: exp

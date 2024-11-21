@@ -17,34 +17,34 @@ MonoBehaviour:
   - BaseNodeGuid: 672cc6b7-fd7c-4c84-8330-dcad70531a29
     PortName: Execute
     TargetNodeGuid: cc0417ae-af04-42ee-980c-abf6c865a042
-  - BaseNodeGuid: ccb12182-1a04-43a3-8354-3c03dda73f3f
-    PortName: Next
-    TargetNodeGuid: e542d560-faa7-4575-aa52-bed7280db706
   - BaseNodeGuid: e542d560-faa7-4575-aa52-bed7280db706
     PortName: Next
     TargetNodeGuid: a20c8cbc-55b3-4801-b3bb-16b8a0c34014
   - BaseNodeGuid: cc0417ae-af04-42ee-980c-abf6c865a042
     PortName: Next
     TargetNodeGuid: ccb12182-1a04-43a3-8354-3c03dda73f3f
+  - BaseNodeGuid: ccb12182-1a04-43a3-8354-3c03dda73f3f
+    PortName: Next
+    TargetNodeGuid: e542d560-faa7-4575-aa52-bed7280db706
   NodeData:
-  - rid: 6083855517750657922
-  - rid: 6083855517750657923
-  - rid: 6083855517750657924
-  - rid: 6083855517750657925
+  - rid: 2853395892925104420
+  - rid: 2853395892925104421
+  - rid: 2853395892925104422
+  - rid: 2853395892925104423
   references:
     version: 2
     RefIds:
-    - rid: 6083855517750657922
+    - rid: 2853395892925104420
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e542d560-faa7-4575-aa52-bed7280db706
         NodeTitle: Text
         TypeName: Text
         Position: {x: 764, y: 194}
-        DialogueText: "...\uBA39\uAE30 \uD798\uB4E4\uC5B4!!"
+        DialogueText: "... \uBA39\uAE30 \uD798\uB4E4\uC5B4!!"
         PortraitKey: Agg
         ActorKey: Elisia_Chapter_1
-    - rid: 6083855517750657923
+    - rid: 2853395892925104421
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a20c8cbc-55b3-4801-b3bb-16b8a0c34014
@@ -54,7 +54,7 @@ MonoBehaviour:
         DialogueText: "\uADF8\uB7FC \uC2EC\uC0AC \uC885\uB8CC\uD558\uACA0\uC2B5\uB2C8\uB2E4!"
         PortraitKey: 
         ActorKey: Julian_Chapter_1
-    - rid: 6083855517750657924
+    - rid: 2853395892925104422
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: cc0417ae-af04-42ee-980c-abf6c865a042
@@ -64,7 +64,7 @@ MonoBehaviour:
         DialogueText: "\uD760..."
         PortraitKey: Agg
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855517750657925
+    - rid: 2853395892925104423
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ccb12182-1a04-43a3-8354-3c03dda73f3f

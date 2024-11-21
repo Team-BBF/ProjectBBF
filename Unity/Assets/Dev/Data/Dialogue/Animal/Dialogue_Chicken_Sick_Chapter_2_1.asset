@@ -30,15 +30,15 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 6388cb5c-8e58-4ca7-9db9-ee4705713d64
   NodeData:
-  - rid: 6083855515203403877
-  - rid: 6083855515203403878
-  - rid: 6083855515203403879
-  - rid: 6083855515203403880
-  - rid: 6083855515203403881
+  - rid: 2853395892925104150
+  - rid: 2853395892925104151
+  - rid: 2853395892925104152
+  - rid: 2853395892925104153
+  - rid: 2853395892925104154
   references:
     version: 2
     RefIds:
-    - rid: 6083855515203403877
+    - rid: 2853395892925104150
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: bdb80347-3030-46c7-81c4-76156c20e94e
@@ -53,7 +53,7 @@ MonoBehaviour:
           StringValue: chicken_sick_2_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855515203403878
+    - rid: 2853395892925104151
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 82772dac-a7c3-48b7-b2e0-18c5cc6b1d31
@@ -63,17 +63,17 @@ MonoBehaviour:
         DialogueText: "\uB2ED\uC774 \uC544\uD30C \uBCF4\uC778\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403879
+    - rid: 2853395892925104152
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8e8d6794-57f3-45e4-b33a-013811ddacca
         NodeTitle: Text
         TypeName: Text
         Position: {x: 797, y: 205}
-        DialogueText: "\uC544\uBB34\uAC83\uB3C4 \uC5BB\uC9C0 \uBABB\uD588\uB2E4..."
+        DialogueText: "\uC544\uBB34\uAC83\uB3C4 \uC5BB\uC9C0 \uBABB \uD588\uB2E4..."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403880
+    - rid: 2853395892925104153
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4984494f-3a39-4647-a0e6-d4305acf677f
@@ -83,7 +83,7 @@ MonoBehaviour:
         DialogueText: "\uB2ED\uC774 \uC544\uD30C \uBCF4\uC778\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855515203403881
+    - rid: 2853395892925104154
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 6388cb5c-8e58-4ca7-9db9-ee4705713d64

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using MyBox;
 using TMPro;
 using UniRx;
 using UnityEngine;
@@ -22,7 +23,12 @@ namespace DS.Runtime
         public string Text
         {
             get => _text.text;
-            set => _text.text = value;
+            set
+            {
+                _text.text = value;
+                
+                LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent.As<RectTransform>());
+            }
         }
 
         public BranchFieldButton Init(string text)

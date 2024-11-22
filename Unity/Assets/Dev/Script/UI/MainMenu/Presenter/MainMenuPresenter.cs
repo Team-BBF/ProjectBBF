@@ -23,6 +23,8 @@ public class MainMenuPresenter : MonoBehaviour
         _settingView.Visible = true;
 
         SetActivePanels(false);
+
+        ScreenManager.Instance.SetCursorForce(CursorType.Default);
     }
 
     public void Quit()

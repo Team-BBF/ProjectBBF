@@ -20,6 +20,14 @@ public class MapEd : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (_applySilhouette)
+        {
+            ScreenManager.Instance.SetCursorForce(CursorType.None);
+        }
+    }
+
     public void ApplyEdSilhouette()
     {
         if (PersistenceManager.Instance)

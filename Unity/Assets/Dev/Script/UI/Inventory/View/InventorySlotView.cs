@@ -65,7 +65,7 @@ public class InventorySlotView : MonoBehaviour, IPointerDownHandler, IPointerEnt
         
         _slotImage.sprite = slot.Data != null ? slot.Data.ItemSprite : null;
 
-        _slotImage.SetAlpha(_slotImage.sprite ? 1f : 0f);
+        _slotImage.SetAlpha(slot.Data ? 1f : 0f);
 
         if (slot.Data is not null && slot.Data.ActionCategoryType == ActionCategoryType.Tool)
         {

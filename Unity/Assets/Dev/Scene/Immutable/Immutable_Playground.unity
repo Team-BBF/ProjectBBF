@@ -4100,6 +4100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c992c6b29e21420d8f2b6eeb8bead963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ignore: 0
   _renderComList:
   - {fileID: 528441354308440294}
   - {fileID: 1080034922101882938}
@@ -4153,26 +4154,6 @@ MonoBehaviour:
   - {fileID: 1867686962}
   - {fileID: 1326401641}
   - {fileID: 1338609761}
-  - {fileID: 3319183949527250488}
-  - {fileID: 2134910222}
-  - {fileID: 1968090613}
-  - {fileID: 1790824251}
-  - {fileID: 1469558712}
-  - {fileID: 1626855967}
-  - {fileID: 1869599976}
-  - {fileID: 1231449602}
-  - {fileID: 706198274}
-  - {fileID: 1426383686}
-  - {fileID: 1982014367}
-  - {fileID: 883049871}
-  - {fileID: 990834333}
-  - {fileID: 1134816392}
-  - {fileID: 1654828467}
-  - {fileID: 927585264}
-  - {fileID: 716440648}
-  - {fileID: 1646667960}
-  - {fileID: 1644341335}
-  - {fileID: 1873609616}
   - {fileID: 7741635908672749286}
   - {fileID: 1759738028419292738}
   - {fileID: 6698905202852276590}
@@ -4208,26 +4189,6 @@ MonoBehaviour:
   - {fileID: 1746494928}
   - {fileID: 1447335378}
   - {fileID: 892623464}
-  - {fileID: 1128263047}
-  - {fileID: 433915286}
-  - {fileID: 1942648286}
-  - {fileID: 1945362841}
-  - {fileID: 629107777}
-  - {fileID: 446411042}
-  - {fileID: 2016919389}
-  - {fileID: 785086788}
-  - {fileID: 602030161}
-  - {fileID: 660891553}
-  - {fileID: 1278067755}
-  - {fileID: 1756971970}
-  - {fileID: 1400205378}
-  - {fileID: 973901452}
-  - {fileID: 517063410}
-  - {fileID: 2106107908}
-  - {fileID: 340242131}
-  - {fileID: 1514419849}
-  - {fileID: 915406461}
-  - {fileID: 1687606899}
   - {fileID: 2095660728133139940}
   - {fileID: 3381798163540125198}
   - {fileID: 1998863503}
@@ -13818,6 +13779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8897995224042682358}
   - component: {fileID: 1854843198077042240}
+  - component: {fileID: 8897995224042682359}
   m_Layer: 6
   m_Name: SlotFrame
   m_TagString: Untagged
@@ -18152,6 +18114,60 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0012789, y: 0}
   m_SizeDelta: {x: 1184.4, y: 321.4626}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &8897995224042682359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893662889955339624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c992c6b29e21420d8f2b6eeb8bead963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ignore: 1
+  _renderComList:
+  - {fileID: 3319183949527250488}
+  - {fileID: 2134910222}
+  - {fileID: 1968090613}
+  - {fileID: 1790824251}
+  - {fileID: 1469558712}
+  - {fileID: 1626855967}
+  - {fileID: 1869599976}
+  - {fileID: 1231449602}
+  - {fileID: 706198274}
+  - {fileID: 1426383686}
+  - {fileID: 1982014367}
+  - {fileID: 883049871}
+  - {fileID: 990834333}
+  - {fileID: 1134816392}
+  - {fileID: 1654828467}
+  - {fileID: 927585264}
+  - {fileID: 716440648}
+  - {fileID: 1646667960}
+  - {fileID: 1644341335}
+  - {fileID: 1873609616}
+  - {fileID: 1128263047}
+  - {fileID: 433915286}
+  - {fileID: 1942648286}
+  - {fileID: 1945362841}
+  - {fileID: 629107777}
+  - {fileID: 446411042}
+  - {fileID: 2016919389}
+  - {fileID: 785086788}
+  - {fileID: 602030161}
+  - {fileID: 660891553}
+  - {fileID: 1278067755}
+  - {fileID: 1756971970}
+  - {fileID: 1400205378}
+  - {fileID: 973901452}
+  - {fileID: 517063410}
+  - {fileID: 2106107908}
+  - {fileID: 340242131}
+  - {fileID: 1514419849}
+  - {fileID: 915406461}
+  - {fileID: 1687606899}
 --- !u!224 &8911251816882662005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18338,6 +18354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c992c6b29e21420d8f2b6eeb8bead963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ignore: 0
   _renderComList:
   - {fileID: 1386635120004146099}
   - {fileID: 4099853419156535876}

@@ -54,6 +54,8 @@ namespace ProjectBBF.Input
 
             Owner.PannelView.ViewState = PlayerPannelView.ViewType.Inv;
             Owner.QuestPresenter.Visible = true;
+            bool quickLock = Owner.Inventory.QuickView.CursorMoveLock; 
+            Owner.Inventory.QuickView.CursorMoveLock = true;
             IsAnyUIVisible = true;
 
             canceled = await UniTask
@@ -64,6 +66,7 @@ namespace ProjectBBF.Input
             if (canceled) return;
 
             Owner.PannelView.ViewState = PlayerPannelView.ViewType.Close;
+            Owner.Inventory.QuickView.CursorMoveLock = quickLock;
             IsAnyUIVisible = false;
         }
 
@@ -80,6 +83,8 @@ namespace ProjectBBF.Input
             Owner.PannelView.ViewState = PlayerPannelView.ViewType.Setting;
             Owner.RecipeBookPresenter.PreviewSummaryView.Visible = false;
             Owner.QuestPresenter.Visible = false;
+            bool quickLock = Owner.Inventory.QuickView.CursorMoveLock; 
+            Owner.Inventory.QuickView.CursorMoveLock = true;
             IsAnyUIVisible = true;
 
 
@@ -94,6 +99,7 @@ namespace ProjectBBF.Input
             if (Owner.RecipeBookPresenter.PreviewSummaryView.Data is not null)
                 Owner.RecipeBookPresenter.PreviewSummaryView.Visible = true;
             Owner.QuestPresenter.Visible = true;
+            Owner.Inventory.QuickView.CursorMoveLock = quickLock;
             IsAnyUIVisible = false;
         }
 

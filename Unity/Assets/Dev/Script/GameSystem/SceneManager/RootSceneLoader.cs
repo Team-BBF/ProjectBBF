@@ -53,6 +53,20 @@ public class RootSceneLoader : MonoBehaviour
         return loadedScenes;
     }
 
+    private void Update()
+    {
+        // DO NOT DELETE keep this so we can enable/disable this script... (used in ChildSceneLoader)
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (GameObjectStorage.Instance && GameObjectStorage.Instance.TryGetPlayerController(out var pc))
+            {
+                pc.transform.position = (Vector2)transform.position;
+            }
+        }
+    }
+
+
 #if UNITY_EDITOR
     [SerializeField] public List<SceneAsset> ChildScenesToLoadConfig;
 
@@ -129,12 +143,6 @@ public class RootSceneLoader : MonoBehaviour
             });
         }
     }
-
-    private void Update()
-    {
-        // DO NOT DELETE keep this so we can enable/disable this script... (used in ChildSceneLoader)
-    }
-
     private void OnValidate()
     {
         if (Application.isPlaying) return;

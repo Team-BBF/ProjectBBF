@@ -13187,6 +13187,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1684772705}
     m_Modifications:
+    - target: {fileID: 76436536146445195, guid: e0fb82d61b904a5488962fec10bf7477, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 76436536146445195, guid: e0fb82d61b904a5488962fec10bf7477, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1747604869
+      objectReference: {fileID: 0}
     - target: {fileID: 3557177319344203216, guid: e0fb82d61b904a5488962fec10bf7477, type: 3}
       propertyPath: m_Name
       value: Ext_paperpiece_01 (1)
@@ -16277,6 +16285,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1684772705}
     m_Modifications:
+    - target: {fileID: 76436536146445195, guid: e0fb82d61b904a5488962fec10bf7477, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 76436536146445195, guid: e0fb82d61b904a5488962fec10bf7477, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1747604869
+      objectReference: {fileID: 0}
     - target: {fileID: 3557177319344203216, guid: e0fb82d61b904a5488962fec10bf7477, type: 3}
       propertyPath: m_Name
       value: Ext_paperpiece_01
@@ -20016,6 +20032,14 @@ PrefabInstance:
     - target: {fileID: 3603898158629401523, guid: 4a4f71c9ff739de49b638d9c51272074, type: 3}
       propertyPath: m_Name
       value: Ext_paperpiece_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736090103880833637, guid: 4a4f71c9ff739de49b638d9c51272074, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736090103880833637, guid: 4a4f71c9ff739de49b638d9c51272074, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1747604869
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

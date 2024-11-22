@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Kid1
       objectReference: {fileID: 0}
+    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: e8c75a969e13efb40a7d9dd7fa0a5ae8, type: 2}
     - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -55,7 +59,7 @@ PrefabInstance:
     - target: {fileID: 7844653115320804256, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6623333be0e919641942b78f8349ca15, type: 3}
+      objectReference: {fileID: 72587237, guid: 9085ce0b5152e0e45b74e9a27636d389, type: 3}
     - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Name
       value: PF_Actor_Kid1_Template

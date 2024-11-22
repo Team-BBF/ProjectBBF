@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1243832d2570114696c04863436efbd
+guid: c4d04c4eeb542024197e8f377215f30b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char_Player_Dough_0
+      name: Char_Player_Dough_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e238eac18c2d63449af4447102f4153
-      internalID: 892836625
+      spriteID: 9e4e1a0814a7c9a47a7a21a309bfe4ce
+      internalID: 505892439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Dough_1
+      name: Char_Player_Dough_1_1
       rect:
         serializedVersion: 2
         x: 35
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1cb0cfcc09bc1b42ad71494bfc6d9f0
-      internalID: -2084289914
+      spriteID: 61daa7b2180fbec4cb1b4861dc5879a3
+      internalID: -252159698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Dough_2
+      name: Char_Player_Dough_1_2
       rect:
         serializedVersion: 2
         x: 70
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84a3e7b979fd1c24da646f8e5248aab5
-      internalID: -1290502237
+      spriteID: c84be3454e940f74cbff370f0566740b
+      internalID: 1443901572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Dough_3
+      name: Char_Player_Dough_1_3
       rect:
         serializedVersion: 2
         x: 105
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b7d6e18bc61b804c99b923a418f3750
-      internalID: 1675775483
+      spriteID: e161ccf0dee47824b96e0bfcb850492e
+      internalID: 1389804911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Char_Player_Dough_4
+      name: Char_Player_Dough_1_4
       rect:
         serializedVersion: 2
         x: 140
@@ -195,134 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee04d10d031a7164bbb7eaecc27f6f3d
-      internalID: 2060859389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Char_Player_Dough_5
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 0
-        width: 35
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a56d5fba8432e9241b9e89749d0ed21e
-      internalID: -1552042722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Char_Player_Dough_6
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 35
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56ba24ac6ce4d784d8b2a328e54b49a8
-      internalID: 994416352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Char_Player_Dough_7
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 0
-        width: 35
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35afa63a983f64f4b9ebcadde6fae067
-      internalID: -1453902985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Char_Player_Dough_8
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 35
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2da8bd0cda5d3fb49a63c705f24db67f
-      internalID: -1429086491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Char_Player_Dough_9
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 0
-        width: 35
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f9b03c100319c5438e22a58dce31892
-      internalID: -408494639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Char_Player_Dough_10
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 0
-        width: 35
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6211f57aada9014f9dcd3ab9d359a1f
-      internalID: 1371153211
+      spriteID: abfbdb4b2f0cb97479c8df370c256d10
+      internalID: -620334485
       vertices: []
       indices: 
       edges: []
@@ -330,7 +204,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6cf2441706b6262439788c91afdd0c23
+    spriteID: 2cea38038a031004eb33e1398e3188ba
     internalID: 0
     vertices: []
     indices: 
@@ -338,17 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Char_Player_Dough_0: 892836625
-      Char_Player_Dough_1: -2084289914
-      Char_Player_Dough_10: 1371153211
-      Char_Player_Dough_2: -1290502237
-      Char_Player_Dough_3: 1675775483
-      Char_Player_Dough_4: 2060859389
-      Char_Player_Dough_5: -1552042722
-      Char_Player_Dough_6: 994416352
-      Char_Player_Dough_7: -1453902985
-      Char_Player_Dough_8: -1429086491
-      Char_Player_Dough_9: -408494639
+      Char_Player_Dough_1_0: 505892439
+      Char_Player_Dough_1_1: -252159698
+      Char_Player_Dough_1_2: 1443901572
+      Char_Player_Dough_1_3: 1389804911
+      Char_Player_Dough_1_4: -620334485
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,15 +15,15 @@ public class BuildSpriteUpScaler
 
     public static readonly string[] Targets = new[]
     {
-        "Assets/Dev/Art/Sprite/Building",
-        "Assets/Dev/Art/Sprite/Character",
-        "Assets/Dev/Art/Sprite/Animal",
-        "Assets/Dev/Art/Sprite/Exterior",
-        "Assets/Dev/Art/Sprite/Insoo",
-        "Assets/Dev/Art/Sprite/Interior",
-        "Assets/Dev/Art/Sprite/Object",
-        "Assets/Dev/Art/Sprite/Tile",
-        "Assets/Dev/Art/Sprite/UGUI",
+        "Assets/Dev/Art/Sprite",
+        //"Assets/Dev/Art/Sprite/Character",
+        //"Assets/Dev/Art/Sprite/Animal",
+        //"Assets/Dev/Art/Sprite/Exterior",
+        //"Assets/Dev/Art/Sprite/Insoo",
+        //"Assets/Dev/Art/Sprite/Interior",
+        //"Assets/Dev/Art/Sprite/Object",
+        //"Assets/Dev/Art/Sprite/Tile",
+        "Assets/Dev/Art/UGUI",
     };
 
     [MenuItem("Build/UpscaleTexture")]

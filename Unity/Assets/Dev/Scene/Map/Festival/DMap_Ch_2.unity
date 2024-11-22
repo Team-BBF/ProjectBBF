@@ -3742,9 +3742,9 @@ MonoBehaviour:
   _directorKey: BlackAlpha
   _fadeOut: 1
   _fadeIn: 1
-  _save: 0
+  _save: 1
   _load: 0
-  _savePosAndWorld: 0
+  _savePosAndWorld: 1
   _unloadImmutable: 0
   _initPlayerPosition: {fileID: 255386927}
 --- !u!114 &1044814032
@@ -5794,6 +5794,14 @@ PrefabInstance:
     - target: {fileID: 1631483546104585229, guid: d27111c4700014a4dac9bd89fb1be512, type: 3}
       propertyPath: doOnceKey
       value: Ahir_Chapter_2_ContestResultBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631483546104585229, guid: d27111c4700014a4dac9bd89fb1be512, type: 3}
+      propertyPath: _ahirBoxKey
+      value: AhirBox_Ch_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631483546104585229, guid: d27111c4700014a4dac9bd89fb1be512, type: 3}
+      propertyPath: _passItemToNextCh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5920697498246566118, guid: d27111c4700014a4dac9bd89fb1be512, type: 3}
       propertyPath: m_Name

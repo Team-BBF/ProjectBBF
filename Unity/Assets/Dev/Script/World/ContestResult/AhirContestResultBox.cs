@@ -7,7 +7,9 @@ using UnityEngine;
 
 public class AhirContestResultBox : BakeryFlowBehaviourBucket
 {
+    [SerializeField] private bool _passItemToNextCh;
     [SerializeField] private string doOnceKey;
+    [SerializeField] private string _ahirBoxKey;
     [SerializeField] private Animator _ani;
 
     public static ItemData ResultItem { get; private set; }
@@ -25,6 +27,40 @@ public class AhirContestResultBox : BakeryFlowBehaviourBucket
         if (_ani == false)
         {
             _ani = GetComponentInChildren<Animator>();
+        }
+        
+        
+        var ahirBox = PersistenceManager.Instance.LoadOrCreate<AhirBoxPersistenceObject>(_ahirBoxKey);
+
+        PersistenceManager.Instance.OnGameDataLoaded += OnLoaded;
+
+        if (string.IsNullOrEmpty(ahirBox.ItemKey) is false)
+        {
+            var resolver = DataManager.Instance.GetResolver<IItemDataResolver>();
+
+            if (resolver.TryGetData(ahirBox.ItemKey, out var itemData))
+            {
+                SetBucket(0, itemData);
+                TEMP_BucketIndex = 1;
+            }
+        }
+    }
+
+    private void OnLoaded(PersistenceManager obj)
+    {
+        if (this == false)
+        {
+            obj.OnGameDataLoaded -= OnLoaded;
+            return;
+        }
+        
+        var ahirBox = obj.LoadOrCreate<AhirBoxPersistenceObject>(_ahirBoxKey);
+        var resolver = DataManager.Instance.GetResolver<IItemDataResolver>();
+
+        if (resolver.TryGetData(ahirBox.ItemKey, out var itemData))
+        {
+            SetBucket(0, itemData);
+            TEMP_BucketIndex = 1;
         }
     }
 
@@ -44,6 +80,25 @@ public class AhirContestResultBox : BakeryFlowBehaviourBucket
     {
         base.OnChangedBuket(index, itemData);
         ResultItem = itemData;
+        
+        var ahirBox = PersistenceManager.Instance.LoadOrCreate<AhirBoxPersistenceObject>(_ahirBoxKey);
+
+        if (itemData)
+        {
+            ahirBox.ItemKey = itemData.ItemKey;
+            if (_passItemToNextCh)
+            {
+                ahirBox.PassItemKey = itemData.ItemKey;
+            }
+        }
+        else
+        {
+            ahirBox.ItemKey = "";
+            if (_passItemToNextCh)
+            {
+                ahirBox.PassItemKey = "";
+            }
+        }
         
         var blackboard = PersistenceManager.Instance.LoadOrCreate<DoOnceHandlerPersistenceObject>("DoOnce");
         if (itemData)

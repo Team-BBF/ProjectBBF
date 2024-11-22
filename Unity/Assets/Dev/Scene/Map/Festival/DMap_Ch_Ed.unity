@@ -192,7 +192,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 46774134}
 --- !u!114 &46774137
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: bac5acaeeb7710941a3f1921416fa2a6, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -306,7 +306,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 81800848}
 --- !u!114 &81800851
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: 8b8315a10a4425749b2c3e8bf9cc65b6, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -452,7 +452,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 216967539}
 --- !u!114 &216967542
@@ -832,9 +832,9 @@ MonoBehaviour:
   _directorKey: BlackAlpha
   _fadeOut: 1
   _fadeIn: 1
-  _save: 1
-  _load: 1
-  _savePosAndWorld: 1
+  _save: 0
+  _load: 0
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 686351763}
 --- !u!114 &686351766
@@ -948,7 +948,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 844958397}
 --- !u!114 &844958400
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: a4d582b8d763a6544ae1ff5ea5a7d120, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 963184599}
 --- !u!114 &963184602
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: c7fc8ff4af970f34cb7187653e9479e9, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1050035964}
 --- !u!114 &1050035967
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: fc9b4e08a7dced349b25ef2b424de2ff, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -1505,7 +1505,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1290716237}
 --- !u!114 &1290716240
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: 5b99d1f43ebfde44cad6704667cb05c6, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -2831,7 +2831,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1588774672}
 --- !u!114 &1588774675
@@ -2846,7 +2846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: d7640dc4fae551f4cb860eed73a53ea4, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -3288,7 +3288,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1898658884}
 --- !u!114 &1898658887
@@ -3303,7 +3303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064e36b40a924202b1ca3faeea1d6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventChannel: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+  _eventChannel: {fileID: 11400000, guid: cd6d227f6bf1f56438069f4478bfe219, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:

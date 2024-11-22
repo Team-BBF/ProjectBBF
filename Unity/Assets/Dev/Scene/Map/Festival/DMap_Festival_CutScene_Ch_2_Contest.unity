@@ -263,7 +263,7 @@ MonoBehaviour:
   _fadeIn: 1
   _save: 0
   _load: 1
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
   _unloadImmutable: 0
   _initPlayerPosition: {fileID: 547749613}
 --- !u!1 &158385774
@@ -544,15 +544,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _usePrevWorld: 0
   _scene:
-    _sceneAsset: {fileID: 102900000, guid: 0b7f0d7b09a2aa54184ea103f92d061b, type: 3}
-    _sceneName: World_MainMenu
+    _sceneAsset: {fileID: 102900000, guid: 71d3f9a25c7e0ab48878a457a88226a1, type: 3}
+    _sceneName: World_Festival_Ch_Ed
   _directorKey: BlackAlpha
   _fadeOut: 1
   _fadeIn: 1
-  _save: 1
-  _load: 1
+  _save: 0
+  _load: 0
   _savePosAndWorld: 1
-  _unloadImmutable: 1
+  _unloadImmutable: 0
   _initPlayerPosition: {fileID: 1845554706}
 --- !u!1 &431518570
 GameObject:

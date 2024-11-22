@@ -26,7 +26,7 @@ public abstract class ActorComFavorability : ActorComponent, IBODialogue
         Interaction = actor.Interaction;
         if (ActorDataManager.Instance.CachedDict.TryGetValue(actor.ActorKey, out var favora) is false)
         {
-            Debug.LogError("유효하지 않은 ActorKey");
+            Debug.LogError($"유효하지 않은 ActorKey({actor.ActorKey})");
             return;
         }
         

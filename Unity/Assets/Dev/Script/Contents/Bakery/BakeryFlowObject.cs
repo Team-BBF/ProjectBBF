@@ -233,6 +233,12 @@ public abstract class BakeryFlowBehaviourBucket : BakeryFlowBehaviour
         }
     }
 
+    protected int TEMP_BucketIndex
+    {
+        get => _currentBucketIndex;
+        set => _currentBucketIndex = value;
+    }
+
     public bool SetBucket(int index, ItemData itemData)
     {
         if (index < 0 || index >= BucketLength) return false;

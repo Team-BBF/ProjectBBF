@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 277089402218975201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9, y: 2.37, z: 0}
+  m_LocalPosition: {x: 3.9, y: 1.665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc13b65dc52e70488afa8dac66781a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactingPivot: {x: 25.074509, y: -23.125044}
+  _interactingPivot: {x: 25.122128, y: -23.801214}
   _waitDuration: 2
   _teleport: 0
   _visitAndHide: 0
@@ -145,22 +145,22 @@ MonoBehaviour:
     - 8420eb95983641843a82b7643f7631d3
     Guid: 7b122a38e2f6283468fd636d08043cff
     IsStartPoint: 1
-    Position: {x: 27.666319, y: -24.122684, z: 0}
+    Position: {x: 28.489965, y: -24.335695, z: 0}
     _interactiveDecoratedPoint: {fileID: 5610890160885432421}
   - Neighbors:
     - 7b122a38e2f6283468fd636d08043cff
     Guid: 8420eb95983641843a82b7643f7631d3
     IsStartPoint: 0
-    Position: {x: 25.074509, y: -23.125044, z: 0}
+    Position: {x: 25.122128, y: -23.801214, z: 0}
     _interactiveDecoratedPoint: {fileID: 2772317365862238813}
   SelectedGuid: 8420eb95983641843a82b7643f7631d3
   Edit: 1
   _patrollPoints:
   - _interactiveDecoratedPoint: {fileID: 5610890160885432421}
-    _position: {x: 27.666319, y: -24.122684, z: 0}
-    _nextPosition: {x: 25.074509, y: -23.125044, z: 0}
+    _position: {x: 28.489965, y: -24.335695, z: 0}
+    _nextPosition: {x: 25.122128, y: -23.801214, z: 0}
   - _interactiveDecoratedPoint: {fileID: 2772317365862238813}
-    _position: {x: 25.074509, y: -23.125044, z: 0}
+    _position: {x: 25.122128, y: -23.801214, z: 0}
     _nextPosition: {x: 0, y: 0, z: 0}
   _loop: 1
 --- !u!1 &4782773180111693188

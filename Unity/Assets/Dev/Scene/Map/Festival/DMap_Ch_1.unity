@@ -15071,8 +15071,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8458338698405247530, guid: 4aa4b4f4068be824bbfb48ccdbe2efd1, type: 3}
+      propertyPath: _loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458338698405247530, guid: 4aa4b4f4068be824bbfb48ccdbe2efd1, type: 3}
       propertyPath: SelectedGuid
-      value: b2f705f71fa13fd439b6e2fc8dbccf50
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15090,10 +15094,6 @@ PrefabInstance:
     - target: {fileID: 6720843218793498949, guid: deaef4572c6d4e0458378d6cdf4da222, type: 3}
       propertyPath: m_Name
       value: PF_Chicken_Sick
-      objectReference: {fileID: 0}
-    - target: {fileID: 6720843218793498949, guid: deaef4572c6d4e0458378d6cdf4da222, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7793049288037802478, guid: deaef4572c6d4e0458378d6cdf4da222, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15156,10 +15156,6 @@ PrefabInstance:
     - target: {fileID: 1128926013959239165, guid: 4a9043532f6836d41ae0345195295fcf, type: 3}
       propertyPath: m_Name
       value: PF_Chicken_Good
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128926013959239165, guid: 4a9043532f6836d41ae0345195295fcf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2418073469791801691, guid: 4a9043532f6836d41ae0345195295fcf, type: 3}
       propertyPath: m_LocalPosition.x

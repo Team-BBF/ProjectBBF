@@ -102,10 +102,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 67
-        height: 55
+        width: 81
+        height: 80
       alignment: 9
-      pivot: {x: 0.3453608, y: 0}
+      pivot: {x: 0.3859684, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: Char_Player_FishingCharge_Right_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 81
         y: 0
-        width: 67
-        height: 55
+        width: 81
+        height: 80
       alignment: 9
-      pivot: {x: 0.3453608, y: 0}
+      pivot: {x: 0.3859684, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: Char_Player_FishingCharge_Right_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 162
         y: 0
-        width: 67
-        height: 55
+        width: 81
+        height: 80
       alignment: 9
-      pivot: {x: 0.3453608, y: 0}
+      pivot: {x: 0.3859684, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: Char_Player_FishingCharge_Right_3
       rect:
         serializedVersion: 2
-        x: 201
+        x: 243
         y: 0
-        width: 67
-        height: 55
+        width: 81
+        height: 80
       alignment: 9
-      pivot: {x: 0.3453608, y: 0}
+      pivot: {x: 0.3859684, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: Char_Player_FishingCharge_Right_4
       rect:
         serializedVersion: 2
-        x: 268
+        x: 324
         y: 0
-        width: 67
-        height: 55
+        width: 81
+        height: 80
       alignment: 9
-      pivot: {x: 0.3453608, y: 0}
+      pivot: {x: 0.3859684, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: Char_Player_FishingCharge_Right_5
       rect:
         serializedVersion: 2
-        x: 335
+        x: 405
         y: 0
-        width: 67
-        height: 55
+        width: 81
+        height: 80
       alignment: 9
-      pivot: {x: 0.3453608, y: 0}
+      pivot: {x: 0.3859684, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,6 +218,48 @@ TextureImporter:
       bones: []
       spriteID: 39aa2cf8de0cdd848bdfdcc7eea578f8
       internalID: -653888500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_FishingCharge_Right_6
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 81
+        height: 80
+      alignment: 9
+      pivot: {x: 0.3859684, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe1d2ddce0bef64f92c83a3869bcd50
+      internalID: -1785114464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Char_Player_FishingCharge_Right_7
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 0
+        width: 81
+        height: 80
+      alignment: 9
+      pivot: {x: 0.3859684, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c4ab484598312478167434633b77ab
+      internalID: 1547602354
       vertices: []
       indices: 
       edges: []
@@ -239,6 +281,8 @@ TextureImporter:
       Char_Player_FishingCharge_Right_3: -515864044
       Char_Player_FishingCharge_Right_4: 1296117239
       Char_Player_FishingCharge_Right_5: -653888500
+      Char_Player_FishingCharge_Right_6: -1785114464
+      Char_Player_FishingCharge_Right_7: 1547602354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

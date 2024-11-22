@@ -29,24 +29,31 @@ MonoBehaviour:
   - BaseNodeGuid: c9bf1feb-b920-4def-b2b1-ea6ecc54744a
     PortName: Next
     TargetNodeGuid: 516c5892-7a83-4d73-a199-3e28c78508c6
+  - BaseNodeGuid: 351f130b-d24f-4161-a2e0-201447a02d95
+    PortName: Next
+    TargetNodeGuid: 3d528b85-eec0-4817-a96e-a33c71f9ac6d
   - BaseNodeGuid: 1cfe26b0-73fd-4bf8-8491-38287cfe7f47
     PortName: Next
     TargetNodeGuid: 3d528b85-eec0-4817-a96e-a33c71f9ac6d
   - BaseNodeGuid: 3d528b85-eec0-4817-a96e-a33c71f9ac6d
     PortName: Next
+    TargetNodeGuid: 74969891-759d-4e8f-b7e4-ba56854e5ac0
+  - BaseNodeGuid: 74969891-759d-4e8f-b7e4-ba56854e5ac0
+    PortName: False
     TargetNodeGuid: 7c83e857-6670-48f0-8bea-1fc92c7f4192
   NodeData:
-  - rid: 2853395892925104160
-  - rid: 2853395892925104161
-  - rid: 2853395892925104162
-  - rid: 2853395892925104163
-  - rid: 2853395892925104164
-  - rid: 2853395892925104165
-  - rid: 2853395892925104166
+  - rid: 6556656625862049816
+  - rid: 6556656625862049817
+  - rid: 6556656625862049818
+  - rid: 6556656625862049819
+  - rid: 6556656625862049820
+  - rid: 6556656625862049821
+  - rid: 6556656625862049822
+  - rid: 6556656625862049823
   references:
     version: 2
     RefIds:
-    - rid: 2853395892925104160
+    - rid: 6556656625862049816
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8ef281e6-caeb-4ba3-a338-5126a576a267
@@ -61,7 +68,7 @@ MonoBehaviour:
           StringValue: goat_normal_1_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 2853395892925104161
+    - rid: 6556656625862049817
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 516c5892-7a83-4d73-a199-3e28c78508c6
@@ -71,7 +78,7 @@ MonoBehaviour:
         DialogueText: "\uC6B0\uC720\uB97C \uC5BB\uC5C8\uB2E4!"
         PortraitKey: 
         ActorKey: exp
-    - rid: 2853395892925104162
+    - rid: 6556656625862049818
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c9bf1feb-b920-4def-b2b1-ea6ecc54744a
@@ -81,7 +88,7 @@ MonoBehaviour:
         DialogueText: "\uAC74\uAC15\uD574 \uBCF4\uC774\uB294 \uC5FC\uC18C\uC774\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 2853395892925104163
+    - rid: 6556656625862049819
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 351f130b-d24f-4161-a2e0-201447a02d95
@@ -92,7 +99,7 @@ MonoBehaviour:
           \uAC19\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 2853395892925104164
+    - rid: 6556656625862049820
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1cfe26b0-73fd-4bf8-8491-38287cfe7f47
@@ -113,7 +120,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 2853395892925104165
+    - rid: 6556656625862049821
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 3d528b85-eec0-4817-a96e-a33c71f9ac6d
@@ -134,13 +141,13 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 2853395892925104166
+    - rid: 6556656625862049822
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 7c83e857-6670-48f0-8bea-1fc92c7f4192
         NodeTitle: Execution
         TypeName: Execution
-        Position: {x: 1792, y: 200}
+        Position: {x: 2107, y: 213}
         Handler: {fileID: 11400000, guid: 3384730df4eec734bb7101f3490933d1, type: 2}
         Warps:
         - Target: String
@@ -151,6 +158,27 @@ MonoBehaviour:
           BoolValue: 0
         - Target: Int
           IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6556656625862049823
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 74969891-759d-4e8f-b7e4-ba56854e5ac0
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 1783, y: 197}
+        Handler: {fileID: 11400000, guid: 249ba529da060b441b59bef7594bbe84, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Quest_Lylla_milk_2
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 0
           FloatValue: 0
           StringValue: 
           ObjectValue: {fileID: 0}

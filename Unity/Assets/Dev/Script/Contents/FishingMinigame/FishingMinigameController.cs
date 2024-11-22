@@ -130,6 +130,9 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
                 _fishingSlot.Clear();
             }
         }
+        
+        _fishingSlot = null;
+        _targetSwapSlot = null;
     }
 
     protected override bool IsGameEnd()

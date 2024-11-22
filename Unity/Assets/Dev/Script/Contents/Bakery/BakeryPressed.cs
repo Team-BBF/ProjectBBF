@@ -154,6 +154,11 @@ public class BakeryPressed : BakeryFlowBehaviourBucket
 
         while (true)
         {
+            pc.InputController.Move.Value = null;
+            pc.InputController.Interact.Value = null;
+            pc.InputController.UI.Value = null;
+            pc.InputController.Tool.Value = null;
+            
             if (keyAction.IsPressed() is false)
             {
                 GameReset();

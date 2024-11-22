@@ -1,8 +1,6 @@
-
-
-
 using System;
 using System.Collections;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using ProjectBBF.Persistence;
 using UnityEngine;
@@ -13,10 +11,21 @@ public class OpeningToWorld : MonoBehaviour
 
     private void Awake()
     {
-        UniTask
-            .Delay(TimeSpan.FromSeconds(_waitDuration), DelayType.Realtime, PlayerLoopTiming.Update,
-                this.GetCancellationTokenOnDestroy())
-            .ContinueWith(async () =>
+        var task0 = UniTask.WaitUntil(
+            () => Input.GetKeyDown(KeyCode.Return),
+            PlayerLoopTiming.Update,
+            this.GetCancellationTokenOnDestroy()
+        );
+
+        var task1 = UniTask.Delay(
+            TimeSpan.FromSeconds(_waitDuration),
+            DelayType.Realtime,
+            PlayerLoopTiming.Update,
+            this.GetCancellationTokenOnDestroy()
+        );
+
+        UniTask.WhenAny(task0, task1)
+            .ContinueWith(async __ =>
             {
                 string scene = "World_Festival_Ch_0";
 
@@ -24,7 +33,11 @@ public class OpeningToWorld : MonoBehaviour
                 _ = await SceneLoader.Instance.LoadWorldAsync(scene);
                 _ = await SceneLoader.Instance.LoadImmutableScenesAsync();
                 _ = await SceneLoader.Instance.WorkDirectorAsync(true, "BlackAlpha");
-            }).Forget(Debug.LogError);
+            }).Forget(e=>{
+                if (e is not OperationCanceledException)
+                {
+                    Debug.LogException(e);
+                }
+            });
     }
-    
 }

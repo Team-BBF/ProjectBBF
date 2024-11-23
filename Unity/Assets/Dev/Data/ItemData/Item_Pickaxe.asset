@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Item_Pickaxe
   m_EditorClassIdentifier: 
   _itemKey: Item_Pickaxe
-  _itemName: "\uACE1\uAC31\uC774"
-  _itemDescription: "\uAD11\uC11D\uC744 \uCE98 \uC218 \uC788\uB294 \uACE1\uAC31\uC774!"
+  _itemName: "\uACE1\uAD2D\uC774"
+  _itemDescription: "\uAD11\uC11D\uC744 \uCE98 \uC218 \uC788\uB294 \uACE1\uAD2D\uC774!"
   _itemSprite: {fileID: 21300000, guid: f86aa2b922e12c344a1d0e01d1fa6e4c, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets:
     - _requireToolTypes: 6
@@ -27,4 +28,6 @@ MonoBehaviour:
   - _usingKey: Use
     _mixerGroupKey: Player
     _audioKey: Player_Tool_Using_Pickaxe
+  _playerItemBehaviours: []
+  _usePrevWait: 0
   _useAndWait: 0.5

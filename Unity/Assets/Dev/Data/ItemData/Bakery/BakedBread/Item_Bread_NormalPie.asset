@@ -15,11 +15,15 @@ MonoBehaviour:
   _itemKey: Item_Bread_NormalPie
   _itemName: "\uC77C\uBC18 \uD30C\uC774"
   _itemDescription: "\uAC00\uC7A5 \uC77C\uBC18\uC801\uC778 \uD30C\uC774!<br> \uD3EC\uADFC\uD558\uACE0
-    \uB2EC\uD55C\uB9DB\uC774 \uB098\uB97C \uAC10\uC2F8 \uC548\uB294\uB2E4"
+    \uB2EC\uCF64\uD55C \uB9DB\uC774 \uB098\uB97C \uAC10\uC2F8 \uC548\uB294\uB2E4."
   _itemSprite: {fileID: 21300000, guid: 900c8832b6a8bca4d9edf25379a33e27, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets: []
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

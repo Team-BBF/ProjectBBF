@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Item_Bread_JellyfishPie
   m_EditorClassIdentifier: 
   _itemKey: Item_Bread_JellyfishPie
-  _itemName: "\uC624\uC158\uC824\uB9AC \uD30C\uC774"
+  _itemName: "\uC624\uC158 \uC824\uB9AC \uD30C\uC774"
   _itemDescription: "\uC544\uD788\uB974\uC5D0\uAC8C \uC81C\uCD9C\uD558\uC790!"
   _itemSprite: {fileID: 21300000, guid: 175cbf13c57a90b409fb43a5e811b6fd, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets: []
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

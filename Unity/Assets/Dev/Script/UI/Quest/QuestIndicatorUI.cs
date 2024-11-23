@@ -107,7 +107,7 @@ public class QuestIndicatorUI : ActorComponent
             return;
         }
         
-        if (_targetQuestList.FirstOrDefault(x => x.QuestKey == obj.QuestKey) == false) return;
+        if (_targetQuestList.FirstOrDefault(x => x && x.QuestKey == obj.QuestKey) == false) return;
         
         if (obj.Type is QuestType.Create)
         {

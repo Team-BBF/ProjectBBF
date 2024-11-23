@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _saveKey
+      value: Pirene_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _actorKey
+      value: Pirene_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 0731cd313b389774a88182b0e2558cf4, type: 2}
+    - target: {fileID: 7844653115320804256, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -508569099, guid: c45a1e03419b4a64798957160fe1f65a, type: 3}
+    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Name
+      value: PActor_Pirene_Chapter_1
+      objectReference: {fileID: 0}
     - target: {fileID: 657897982702387281, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_Controller
       value: 
@@ -67,22 +87,6 @@ PrefabInstance:
     - target: {fileID: 6694115529256732025, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: _actorKey
       value: Pirene_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _saveKey
-      value: Pirene_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _actorKey
-      value: Pirene_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 0731cd313b389774a88182b0e2558cf4, type: 2}
-    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Name
-      value: PActor_Pirene_Chapter_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

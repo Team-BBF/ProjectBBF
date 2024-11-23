@@ -17,6 +17,9 @@ MonoBehaviour:
   - BaseNodeGuid: fbd6df75-f77d-4b83-9cb3-2f685f9d2458
     PortName: Execute
     TargetNodeGuid: e4a109b4-c101-4d2a-b1b7-391a386283bb
+  - BaseNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
+    PortName: Next
+    TargetNodeGuid: 4eb81a47-d6c5-4b3f-907f-a56509049bc1
   - BaseNodeGuid: 8df4c982-e2e2-4652-80ef-c812f3f15054
     PortName: Next
     TargetNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
@@ -29,30 +32,27 @@ MonoBehaviour:
   - BaseNodeGuid: 4eb81a47-d6c5-4b3f-907f-a56509049bc1
     PortName: Next
     TargetNodeGuid: 117726c8-88b1-40d3-98ef-66909d64c527
-  - BaseNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
-    PortName: Next
-    TargetNodeGuid: 4eb81a47-d6c5-4b3f-907f-a56509049bc1
   NodeData:
-  - rid: 6083855648063226413
-  - rid: 6083855648063226414
-  - rid: 6083855648063226415
-  - rid: 6083855648063226416
-  - rid: 6083855648063226417
-  - rid: 6083855648063226418
+  - rid: 6083855648063226523
+  - rid: 6083855648063226524
+  - rid: 6083855648063226525
+  - rid: 6083855648063226526
+  - rid: 6083855648063226527
+  - rid: 6083855648063226528
   references:
     version: 2
     RefIds:
-    - rid: 6083855648063226413
+    - rid: 6083855648063226523
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2c190c48-ddd3-4682-8730-add55d9ac5c2
         NodeTitle: Text
         TypeName: Text
         Position: {x: 869, y: 205}
-        DialogueText: "\uB2EC\uAC40\uC744 \uC5BB\uC5C8\uB2E4!"
+        DialogueText: "\uB2EC\uAC40\uC744 2\uAC1C \uC5BB\uC5C8\uB2E4!"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855648063226414
+    - rid: 6083855648063226524
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8df4c982-e2e2-4652-80ef-c812f3f15054
@@ -63,7 +63,7 @@ MonoBehaviour:
           \uBCF4\uC778\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855648063226415
+    - rid: 6083855648063226525
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
@@ -74,7 +74,7 @@ MonoBehaviour:
           \uAC19\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855648063226416
+    - rid: 6083855648063226526
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e4a109b4-c101-4d2a-b1b7-391a386283bb
@@ -89,7 +89,7 @@ MonoBehaviour:
           StringValue: chicken_normal_2_2
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226417
+    - rid: 6083855648063226527
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 117726c8-88b1-40d3-98ef-66909d64c527
@@ -110,7 +110,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 6083855648063226418
+    - rid: 6083855648063226528
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4eb81a47-d6c5-4b3f-907f-a56509049bc1
@@ -126,7 +126,7 @@ MonoBehaviour:
           ObjectValue: {fileID: 11400000, guid: 5644dbdd2235fb047a3802affdc701f6, type: 2}
           BoolValue: 0
         - Target: Int
-          IntValue: 1
+          IntValue: 2
           FloatValue: 0
           StringValue: 
           ObjectValue: {fileID: 0}

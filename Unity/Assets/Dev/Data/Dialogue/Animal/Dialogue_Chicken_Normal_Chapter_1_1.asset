@@ -17,6 +17,9 @@ MonoBehaviour:
   - BaseNodeGuid: fbd6df75-f77d-4b83-9cb3-2f685f9d2458
     PortName: Execute
     TargetNodeGuid: e4a109b4-c101-4d2a-b1b7-391a386283bb
+  - BaseNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
+    PortName: Next
+    TargetNodeGuid: 15e8438c-87b9-47d2-a759-9418a0fe31ec
   - BaseNodeGuid: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
     PortName: Next
     TargetNodeGuid: a51801a7-09b1-4ed4-bc5d-bb3ae05d0788
@@ -26,48 +29,45 @@ MonoBehaviour:
   - BaseNodeGuid: e4a109b4-c101-4d2a-b1b7-391a386283bb
     PortName: True
     TargetNodeGuid: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
+  - BaseNodeGuid: 8df4c982-e2e2-4652-80ef-c812f3f15054
+    PortName: Next
+    TargetNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
   - BaseNodeGuid: 117726c8-88b1-40d3-98ef-66909d64c527
     PortName: Next
     TargetNodeGuid: 3feab968-8b12-4387-8e6b-70f79326c57c
   - BaseNodeGuid: 3feab968-8b12-4387-8e6b-70f79326c57c
     PortName: Next
     TargetNodeGuid: a51801a7-09b1-4ed4-bc5d-bb3ae05d0788
-  - BaseNodeGuid: 8df4c982-e2e2-4652-80ef-c812f3f15054
-    PortName: Next
-    TargetNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
   - BaseNodeGuid: a51801a7-09b1-4ed4-bc5d-bb3ae05d0788
     PortName: False
     TargetNodeGuid: 0d5db803-8b67-47c2-9b69-de4ee0f2c6d0
-  - BaseNodeGuid: 2c190c48-ddd3-4682-8730-add55d9ac5c2
-    PortName: Next
-    TargetNodeGuid: 15e8438c-87b9-47d2-a759-9418a0fe31ec
   - BaseNodeGuid: 15e8438c-87b9-47d2-a759-9418a0fe31ec
     PortName: Next
     TargetNodeGuid: 117726c8-88b1-40d3-98ef-66909d64c527
   NodeData:
-  - rid: 6083855648063226398
-  - rid: 6083855648063226399
-  - rid: 6083855648063226400
-  - rid: 6083855648063226401
-  - rid: 6083855648063226402
-  - rid: 6083855648063226403
-  - rid: 6083855648063226404
-  - rid: 6083855648063226405
-  - rid: 6083855648063226406
+  - rid: 6083855648063226514
+  - rid: 6083855648063226515
+  - rid: 6083855648063226516
+  - rid: 6083855648063226517
+  - rid: 6083855648063226518
+  - rid: 6083855648063226519
+  - rid: 6083855648063226520
+  - rid: 6083855648063226521
+  - rid: 6083855648063226522
   references:
     version: 2
     RefIds:
-    - rid: 6083855648063226398
+    - rid: 6083855648063226514
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2c190c48-ddd3-4682-8730-add55d9ac5c2
         NodeTitle: Text
         TypeName: Text
         Position: {x: 869, y: 205}
-        DialogueText: "\uB2EC\uAC40\uC744 \uC5BB\uC5C8\uB2E4!"
+        DialogueText: "\uB2EC\uAC40\uC744 2\uAC1C \uC5BB\uC5C8\uB2E4!"
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855648063226399
+    - rid: 6083855648063226515
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ebaddcdf-c121-4b3b-9b47-9ac579b0338e
@@ -78,7 +78,7 @@ MonoBehaviour:
           \uAC19\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855648063226400
+    - rid: 6083855648063226516
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e4a109b4-c101-4d2a-b1b7-391a386283bb
@@ -93,7 +93,7 @@ MonoBehaviour:
           StringValue: chicken_normal_1_1
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226401
+    - rid: 6083855648063226517
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8df4c982-e2e2-4652-80ef-c812f3f15054
@@ -104,7 +104,7 @@ MonoBehaviour:
           \uBCF4\uC778\uB2E4."
         PortraitKey: 
         ActorKey: exp
-    - rid: 6083855648063226402
+    - rid: 6083855648063226518
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 0d5db803-8b67-47c2-9b69-de4ee0f2c6d0
@@ -125,7 +125,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226403
+    - rid: 6083855648063226519
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 117726c8-88b1-40d3-98ef-66909d64c527
@@ -146,7 +146,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 6083855648063226404
+    - rid: 6083855648063226520
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 3feab968-8b12-4387-8e6b-70f79326c57c
@@ -167,7 +167,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226405
+    - rid: 6083855648063226521
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a51801a7-09b1-4ed4-bc5d-bb3ae05d0788
@@ -188,7 +188,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226406
+    - rid: 6083855648063226522
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 15e8438c-87b9-47d2-a759-9418a0fe31ec
@@ -204,7 +204,7 @@ MonoBehaviour:
           ObjectValue: {fileID: 11400000, guid: 5644dbdd2235fb047a3802affdc701f6, type: 2}
           BoolValue: 0
         - Target: Int
-          IntValue: 1
+          IntValue: 2
           FloatValue: 0
           StringValue: 
           ObjectValue: {fileID: 0}

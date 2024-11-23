@@ -41,6 +41,13 @@ public class BuildSpriteUpScaler
             Debug.Assert(texture);
 
             (int newWidth, int newHeight, int scale) size = GetNewSize(SCALE, texture);
+
+            if (size.newWidth > 16384 || size.newHeight > 16384)
+            {
+                Debug.LogError($"path({path}) is too large to upscale texture)");
+                continue;
+            }
+            
             texture = RescaleTexture(texture, size.newWidth, size.newHeight, computeShader);
             
             SaveTextureAsPNG(texture, path);

@@ -17,9 +17,15 @@ MonoBehaviour:
   - BaseNodeGuid: 9b0c3bcf-2503-4f86-b823-485c7b2262b2
     PortName: Execute
     TargetNodeGuid: cff202f8-7f57-4cdd-8115-fcf9c3951bdb
-  - BaseNodeGuid: 0d18885c-c3cb-45a5-93e1-c41fe16b708e
+  - BaseNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
     PortName: Next
-    TargetNodeGuid: 6e74bc42-ce58-41fb-9c5e-fb589ae103fb
+    TargetNodeGuid: 955edd82-764b-4fa4-8d29-d70bc94e459a
+  - BaseNodeGuid: 955edd82-764b-4fa4-8d29-d70bc94e459a
+    PortName: Next
+    TargetNodeGuid: 56044cfe-9f91-4445-8741-8429148c3e9c
+  - BaseNodeGuid: c899be3b-b459-4bff-b3fb-cd59e0317c32
+    PortName: Next
+    TargetNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
   - BaseNodeGuid: 239b8f81-840f-40f0-97a1-8df91fc5dd67
     PortName: Next
     TargetNodeGuid: 670ae2ad-7c7c-470b-b5a4-bbfb3476702c
@@ -29,9 +35,6 @@ MonoBehaviour:
   - BaseNodeGuid: 3d380e9c-65d2-49b0-a321-0a1b256609e2
     PortName: "\uB108\uBB34\uD574..."
     TargetNodeGuid: 239b8f81-840f-40f0-97a1-8df91fc5dd67
-  - BaseNodeGuid: 44947289-7b5d-4d6e-afd9-68fd0a5d3a08
-    PortName: Next
-    TargetNodeGuid: 19485853-81d8-4aa6-97d5-f4ada3e7ede8
   - BaseNodeGuid: 4b5a8135-326a-42ab-88bb-e0d76aacf6e9
     PortName: Next
     TargetNodeGuid: 0d18885c-c3cb-45a5-93e1-c41fe16b708e
@@ -41,9 +44,6 @@ MonoBehaviour:
   - BaseNodeGuid: 4b88b482-084c-43b6-82df-e64a0695976f
     PortName: False
     TargetNodeGuid: af35fb05-816d-4d1c-a9b2-5bec08c75c03
-  - BaseNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
-    PortName: Next
-    TargetNodeGuid: 955edd82-764b-4fa4-8d29-d70bc94e459a
   - BaseNodeGuid: 594081af-f01c-465b-9ccf-655a559d585e
     PortName: Next
     TargetNodeGuid: dc3e277a-b3ac-488d-8fd1-f0799a8bb4da
@@ -53,12 +53,6 @@ MonoBehaviour:
   - BaseNodeGuid: 639d2b5b-bedf-4ced-9e77-25b81f1a22dc
     PortName: False
     TargetNodeGuid: af35fb05-816d-4d1c-a9b2-5bec08c75c03
-  - BaseNodeGuid: 670ae2ad-7c7c-470b-b5a4-bbfb3476702c
-    PortName: Next
-    TargetNodeGuid: c2ac65c7-e447-4404-8a66-7b1370175ede
-  - BaseNodeGuid: 6e74bc42-ce58-41fb-9c5e-fb589ae103fb
-    PortName: Next
-    TargetNodeGuid: d87acba2-4c48-4628-af40-1b61a11dc278
   - BaseNodeGuid: 72a83df1-34bd-42d6-b350-1f06a7a7cce9
     PortName: Next
     TargetNodeGuid: fd472d94-b716-43b0-a4bb-ac113a85c793
@@ -83,12 +77,6 @@ MonoBehaviour:
   - BaseNodeGuid: c762ed80-511a-459a-98be-c551148d1c31
     PortName: True
     TargetNodeGuid: 72a83df1-34bd-42d6-b350-1f06a7a7cce9
-  - BaseNodeGuid: c899be3b-b459-4bff-b3fb-cd59e0317c32
-    PortName: Next
-    TargetNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
-  - BaseNodeGuid: cff202f8-7f57-4cdd-8115-fcf9c3951bdb
-    PortName: False
-    TargetNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
   - BaseNodeGuid: d622dc08-b9ab-41a5-85ff-3404d809c895
     PortName: Next
     TargetNodeGuid: 4b5a8135-326a-42ab-88bb-e0d76aacf6e9
@@ -143,6 +131,12 @@ MonoBehaviour:
   - BaseNodeGuid: b22cff4a-8081-480b-b401-8fa24611d38f
     PortName: "\uC548 \uC0B4\uB798."
     TargetNodeGuid: 3d605ef0-6845-4887-9645-f15d55cadc34
+  - BaseNodeGuid: 56044cfe-9f91-4445-8741-8429148c3e9c
+    PortName: Next
+    TargetNodeGuid: 08876b05-db12-4869-afc5-1a7416d474d5
+  - BaseNodeGuid: cff202f8-7f57-4cdd-8115-fcf9c3951bdb
+    PortName: False
+    TargetNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
   - BaseNodeGuid: cff202f8-7f57-4cdd-8115-fcf9c3951bdb
     PortName: True
     TargetNodeGuid: 3c2e1d73-6c95-46ca-a73b-d2c549184c43
@@ -152,156 +146,46 @@ MonoBehaviour:
   - BaseNodeGuid: 3c2e1d73-6c95-46ca-a73b-d2c549184c43
     PortName: False
     TargetNodeGuid: 4d6c1864-2e4c-441c-b761-51e551bc0b86
-  - BaseNodeGuid: 56044cfe-9f91-4445-8741-8429148c3e9c
-    PortName: Next
-    TargetNodeGuid: 08876b05-db12-4869-afc5-1a7416d474d5
-  - BaseNodeGuid: 955edd82-764b-4fa4-8d29-d70bc94e459a
-    PortName: Next
-    TargetNodeGuid: 56044cfe-9f91-4445-8741-8429148c3e9c
   NodeData:
-  - rid: 6083855648063226672
-  - rid: 6083855648063226679
-  - rid: 6083855648063226700
-  - rid: 6083855648063226668
-  - rid: 6083855648063226665
-  - rid: 6083855648063226666
-  - rid: 6083855648063226667
-  - rid: 6083855648063226669
-  - rid: 6083855648063226670
-  - rid: 6083855648063226671
-  - rid: 6083855648063226673
-  - rid: 6083855648063226674
-  - rid: 6083855648063226675
-  - rid: 6083855648063226676
-  - rid: 6083855648063226677
-  - rid: 6083855648063226678
-  - rid: 6083855648063226680
-  - rid: 6083855648063226681
-  - rid: 6083855648063226682
-  - rid: 6083855648063226683
-  - rid: 6083855648063226684
-  - rid: 6083855648063226685
-  - rid: 6083855648063226686
-  - rid: 6083855648063226687
-  - rid: 6083855648063226688
-  - rid: 6083855648063226689
-  - rid: 6083855648063226690
-  - rid: 6083855648063226691
-  - rid: 6083855648063226692
-  - rid: 6083855648063226693
-  - rid: 6083855648063226694
-  - rid: 6083855648063226695
-  - rid: 6083855648063226696
-  - rid: 6083855648063226697
-  - rid: 6083855648063226698
-  - rid: 6083855648063226699
-  - rid: 6083855648063226702
-  - rid: 6083855648063226664
-  - rid: 6083855648063226701
+  - rid: 6083855653500354728
+  - rid: 6083855653500354729
+  - rid: 6083855653500354730
+  - rid: 6083855653500354732
+  - rid: 6083855653500354733
+  - rid: 6083855653500354734
+  - rid: 6083855653500354735
+  - rid: 6083855653500354737
+  - rid: 6083855653500354738
+  - rid: 6083855653500354739
+  - rid: 6083855653500354742
+  - rid: 6083855653500354743
+  - rid: 6083855653500354744
+  - rid: 6083855653500354745
+  - rid: 6083855653500354747
+  - rid: 6083855653500354748
+  - rid: 6083855653500354749
+  - rid: 6083855653500354751
+  - rid: 6083855653500354752
+  - rid: 6083855653500354753
+  - rid: 6083855653500354754
+  - rid: 6083855653500354755
+  - rid: 6083855653500354756
+  - rid: 6083855653500354757
+  - rid: 6083855653500354758
+  - rid: 6083855653500354760
+  - rid: 6083855653500354761
+  - rid: 6083855653500354762
+  - rid: 6083855653500354763
+  - rid: 6083855653500354764
+  - rid: 6083855653500354765
+  - rid: 6083855653500354740
+  - rid: 6083855653500354759
+  - rid: 6083855653500354731
+  - rid: 6083855653500354736
   references:
     version: 2
     RefIds:
-    - rid: 6083855648063226664
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: cff202f8-7f57-4cdd-8115-fcf9c3951bdb
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 229, y: 169}
-        Handler: {fileID: 11400000, guid: 249ba529da060b441b59bef7594bbe84, type: 2}
-        Warps:
-        - Target: String
-          IntValue: 0
-          FloatValue: 0
-          StringValue: Quest_Lylla_buy_1
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-        - Target: Int
-          IntValue: 1
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226665
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 0d18885c-c3cb-45a5-93e1-c41fe16b708e
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3247, y: 416}
-        DialogueText: "\uC6A9\uAE30\uB294 \uC88B\uB2E4\uACE0 \uC774\uC57C\uAE30\uD574\uC904\uAC8C."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226666
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 239b8f81-840f-40f0-97a1-8df91fc5dd67
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2850, y: 207}
-        DialogueText: "\uB108\uBB34\uD558\uB2E4\uACE0? \uC774\uAC74 \uB2F9\uC5F0\uD55C
-          \uAC70\uC57C."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226667
-      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 3d380e9c-65d2-49b0-a321-0a1b256609e2
-        NodeTitle: Branch
-        TypeName: Branch
-        Position: {x: 2504, y: 22}
-        DialogueText: "\uC0B4 \uAC70 \uC544\uB2C8\uBA74 \uB9D0 \uAC78\uC9C0 \uB9C8."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226668
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 3d605ef0-6845-4887-9645-f15d55cadc34
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2403, y: 677}
-        DialogueText: "\uB098\uB3C4 \uBB3C\uAC74\uC744 \uBCFC \uC904 \uBAA8\uB974\uB294
-          \uC0AC\uB78C\uC5D0\uAC8C \uD314 \uC0DD\uAC01\uC740 \uC5C6\uC5B4."
-        PortraitKey: Agg
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226669
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 44947289-7b5d-4d6e-afd9-68fd0a5d3a08
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2846, y: 22}
-        DialogueText: "\uBB3C\uAC74\uC744 \uC0C0\uB2E4\uACE0 \uB0B4 \uCE5C\uAD6C\uAC00
-          \uB418\uB294 \uAC74 \uC544\uB2C8\uC57C. \uD558\uC9C0\uB9CC \uD544\uC694\uD55C
-          \uC77C\uC774 \uC788\uB2E4\uBA74 \uB9D0 \uAC78\uC5B4\uB3C4 \uB3FC."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226670
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 4b5a8135-326a-42ab-88bb-e0d76aacf6e9
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2937, y: 416}
-        DialogueText: "\uBB50\uC57C, \uB108\uB3C4 \uCD9C\uC804\uD588\uB098 \uBD10?"
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226671
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 4b88b482-084c-43b6-82df-e64a0695976f
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 2910, y: -628}
-        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: 100
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226672
+    - rid: 6083855653500354728
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 4d6c1864-2e4c-441c-b761-51e551bc0b86
@@ -312,94 +196,7 @@ MonoBehaviour:
           \uC0C1\uD68C\uC57C."
         PortraitKey: 
         ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226673
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 594081af-f01c-465b-9ccf-655a559d585e
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3404, y: -657}
-        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: -100
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226674
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 639d2b5b-bedf-4ced-9e77-25b81f1a22dc
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 2925, y: -299}
-        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: 300
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226675
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 670ae2ad-7c7c-470b-b5a4-bbfb3476702c
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3178, y: 208}
-        DialogueText: "\uB0B4 \uC2DC\uAC04\uC740 \uBB34\uCC99\uC774\uB098 \uBE44\uC2F8\uB2E4\uACE0."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226676
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 6e74bc42-ce58-41fb-9c5e-fb589ae103fb
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3582, y: 416}
-        DialogueText: "\uACBD\uC7C1\uC790\uAC00 \uD558\uB098 \uC904\uC5C8\uC73C\uB2C8
-          \uC88B\uC740 \uAC74\uAC00?"
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226677
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 72a83df1-34bd-42d6-b350-1f06a7a7cce9
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3397, y: -505}
-        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: -200
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226678
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 750c8fde-caa4-43cd-8a06-6c93b4c94f2d
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3731, y: -167}
-        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
-        Warps:
-        - Target: Object
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 11400000, guid: 8075c403d02aa3443a8f676753438c61, type: 2}
-          BoolValue: 0
-        - Target: Int
-          IntValue: 1
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226679
+    - rid: 6083855653500354729
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 955edd82-764b-4fa4-8d29-d70bc94e459a
@@ -409,268 +206,7 @@ MonoBehaviour:
         DialogueText: "\uB3C8\uC740 \uC788\uC5B4?"
         PortraitKey: 
         ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226680
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: ae480e01-f66c-49f4-a80c-7eb58e04e163
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3405, y: -328}
-        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: -300
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226681
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: b72766f3-b6ae-4d3b-b7cd-7a3a9fab5620
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3406, y: -181}
-        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: -700
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226682
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: c2ac65c7-e447-4404-8a66-7b1370175ede
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3502, y: 210}
-        DialogueText: "......\uB2E4\uB9CC, \uC790\uC8FC \uC640\uC11C \uB2E8\uACE8\uC774
-          \uB418\uBA74 \uB354 \uCE5C\uC808\uD574\uC9C8 \uC218\uB3C4 \uC788\uC9C0."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226683
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: c684c01f-53c5-4555-a330-3f6497f81296
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 2923, y: -148}
-        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: 700
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226684
-      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: c762ed80-511a-459a-98be-c551148d1c31
-        NodeTitle: Condition
-        TypeName: Condition
-        Position: {x: 2924, y: -459}
-        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
-        Warps:
-        - Target: Int
-          IntValue: 200
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226685
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: d622dc08-b9ab-41a5-85ff-3404d809c895
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 2552, y: 416}
-        DialogueText: "\uBB3C\uB860\uC774\uC9C0. \uBE75\uC73C\uB85C \uB204\uAD6C\uD55C\uD14C
-          \uC9C0\uC9C0 \uC54A\uAC70\uB4E0."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226686
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: d87acba2-4c48-4628-af40-1b61a11dc278
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3934, y: 420}
-        DialogueText: "\uB9DD\uC2E0\uC740 \uC548\uB2F9\uD558\uAE38 \uBC14\uB77C\uACE0
-          \uC788\uC744\uAC8C."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226687
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: fd472d94-b716-43b0-a4bb-ac113a85c793
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3735, y: -508}
-        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
-        Warps:
-        - Target: Object
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 11400000, guid: e99205192f28fb94aab861ba6cdaf106, type: 2}
-          BoolValue: 0
-        - Target: Int
-          IntValue: 1
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226688
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: c702a77d-8240-443d-925d-cd17449e3e35
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4128, y: -681}
-        DialogueText: "\uC591\uC0C1\uCD94\uB97C 1\uAC1C \uC5BB\uC5C8\uB2E4!"
-        PortraitKey: 
-        ActorKey: exp
-    - rid: 6083855648063226689
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: e7a1a748-ed40-4b88-99fb-985602693d7d
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4119, y: -502}
-        DialogueText: "\uCEE4\uD53C\uC5F4\uB9E4\uB97C 1\uAC1C \uC5BB\uC5C8\uB2E4!"
-        PortraitKey: 
-        ActorKey: exp
-    - rid: 6083855648063226690
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 19e5bb62-f905-4fb3-a8a7-6957a90550eb
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3750, y: -338}
-        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
-        Warps:
-        - Target: Object
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 11400000, guid: 2620554768cfd2041a74e90fcbdb3759, type: 2}
-          BoolValue: 0
-        - Target: Int
-          IntValue: 1
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226691
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: f1169750-561b-4b87-9feb-8149c5f5b73b
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4163, y: -326}
-        DialogueText: "\uBA5C\uB860\uC744 1\uAC1C \uC5BB\uC5C8\uB2E4!"
-        PortraitKey: 
-        ActorKey: exp
-    - rid: 6083855648063226692
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 9dceee75-3ad8-42a5-a1b0-43734a370536
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4170, y: -142}
-        DialogueText: "\uBCF4\uC11D \uC625\uC218\uC218\uB97C 1\uAC1C \uC5BB\uC5C8\uB2E4!"
-        PortraitKey: 
-        ActorKey: exp
-    - rid: 6083855648063226693
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: c01dd489-15fa-4263-808f-82af399da57c
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4577, y: -623}
-        DialogueText: "\uC790 \uC5EC\uAE30 \uC788\uC5B4"
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226694
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: a893fd4a-2c38-4ea7-85fb-d6b9ff3c48fa
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4860, y: -623}
-        DialogueText: "\uC815\uB9D0 \uD488\uC9C8\uC740 \uBCF4\uC99D\uB41C \uBB3C\uAC74\uC774\uC57C.
-          \uC2F8\uAC8C \uD314 \uC0DD\uAC01\uC740 \uC5C6\uC73C\uB2C8 \uD765\uC815\uC740
-          \uC0DD\uAC01\uD558\uC9C0 \uB9C8."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226695
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: af35fb05-816d-4d1c-a9b2-5bec08c75c03
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 4240, y: 60}
-        DialogueText: "\uB3C8\uB3C4 \uC5C6\uB294\uB370 \uC0AC\uB824\uACE0 \uD55C\uAC70\uC57C?
-          \uBB50\uD558\uB294\uAC70\uC57C. \uC2DC\uAC04 \uC544\uAE5D\uAC8C..."
-        PortraitKey: Agg
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226696
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 19485853-81d8-4aa6-97d5-f4ada3e7ede8
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3434, y: 25}
-        DialogueText: "\uADF8\uAC8C \uB0B4 \uC2DC\uAC04 \uB0AD\uBE44\uB9CC \uC544\uB2C8\uBA74
-          \uB9D0\uC774\uC9C0."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226697
-      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: dc3e277a-b3ac-488d-8fd1-f0799a8bb4da
-        NodeTitle: Execution
-        TypeName: Execution
-        Position: {x: 3724, y: -678}
-        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
-        Warps:
-        - Target: Object
-          IntValue: 0
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 11400000, guid: d10bc65957a6bb5409d495d0931ec422, type: 2}
-          BoolValue: 0
-        - Target: Int
-          IntValue: 1
-          FloatValue: 0
-          StringValue: 
-          ObjectValue: {fileID: 0}
-          BoolValue: 0
-    - rid: 6083855648063226698
-      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 08876b05-db12-4869-afc5-1a7416d474d5
-        NodeTitle: Branch
-        TypeName: Branch
-        Position: {x: 2043, y: 74}
-        DialogueText: "\uC5EC\uAE30\uC11C \uCDE8\uAE09\uD558\uB294 \uAC74 \uB808\uC774\uBE10
-          \uC0C1\uD68C\uC758 \uACE0\uAE09 \uC2DD\uC790\uC7AC\uB77C\uACE0."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226699
-      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: b22cff4a-8081-480b-b401-8fa24611d38f
-        NodeTitle: Branch
-        TypeName: Branch
-        Position: {x: 2552, y: -313}
-        DialogueText: "\uC790, \uB108\uC5D0\uAC8C\uB294 \uC544\uAE4C\uC6B4 \uBB3C\uAC74\uC774\uC57C."
-        PortraitKey: 
-        ActorKey: Hermes_Chapter_1
-    - rid: 6083855648063226700
+    - rid: 6083855653500354730
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c899be3b-b459-4bff-b3fb-cd59e0317c32
@@ -691,22 +227,389 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226701
+    - rid: 6083855653500354731
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3d605ef0-6845-4887-9645-f15d55cadc34
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2545, y: 657}
+        DialogueText: "\uB098\uB3C4 \uBB3C\uAC74\uC744 \uBCFC \uC904 \uBAA8\uB974\uB294
+          \uC0AC\uB78C\uC5D0\uAC8C \uD314 \uC0DD\uAC01\uC740 \uC5C6\uC5B4."
+        PortraitKey: Agg
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354732
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0d18885c-c3cb-45a5-93e1-c41fe16b708e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3247, y: 416}
+        DialogueText: "\uB0A0 \uC774\uAE38 \uC218 \uC788\uC744\uC9C4 \uBAA8\uB974\uACA0\uC9C0\uB9CC
+          \uC5F4\uC2EC\uD788 \uD574\uBD10."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354733
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 239b8f81-840f-40f0-97a1-8df91fc5dd67
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2850, y: 207}
+        DialogueText: "\uC774\uAC74 \uB2F9\uC5F0\uD55C \uAC70\uC57C."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354734
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3d380e9c-65d2-49b0-a321-0a1b256609e2
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 2504, y: 22}
+        DialogueText: "\uC0B4 \uAC70 \uC544\uB2C8\uBA74 \uB9D0 \uAC78\uC9C0 \uB9C8."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354735
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 44947289-7b5d-4d6e-afd9-68fd0a5d3a08
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2846, y: 22}
+        DialogueText: "\uC74C... \uC7A0\uAE50\uC740 \uB4E4\uC5B4\uC904\uAC8C. \uADF8\uB798\uB3C4
+          \uB0B4 \uACE0\uAC1D\uC774\uB2C8\uAE4C."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354736
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4b5a8135-326a-42ab-88bb-e0d76aacf6e9
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2929, y: 416}
+        DialogueText: "\uBB50\uC57C, \uB108\uB3C4 \uCD9C\uC804\uD588\uB098 \uBD10?"
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354737
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
-        GUID: 3c2e1d73-6c95-46ca-a73b-d2c549184c43
+        GUID: 4b88b482-084c-43b6-82df-e64a0695976f
         NodeTitle: Condition
         TypeName: Condition
-        Position: {x: 521, y: 75}
-        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
+        Position: {x: 2910, y: -628}
+        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
         Warps:
-        - Target: String
-          IntValue: 0
+        - Target: Int
+          IntValue: 100
           FloatValue: 0
-          StringValue: sell_2
+          StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855648063226702
+    - rid: 6083855653500354738
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 594081af-f01c-465b-9ccf-655a559d585e
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3404, y: -657}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -100
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354739
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 639d2b5b-bedf-4ced-9e77-25b81f1a22dc
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 2925, y: -299}
+        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: 300
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354740
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 670ae2ad-7c7c-470b-b5a4-bbfb3476702c
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3133, y: 209}
+        DialogueText: "\uB0B4 \uC2DC\uAC04\uC740 \uBB34\uCC99\uC774\uB098 \uBE44\uC2F8\uB2E4\uACE0."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354742
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 72a83df1-34bd-42d6-b350-1f06a7a7cce9
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3397, y: -505}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -200
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354743
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 750c8fde-caa4-43cd-8a06-6c93b4c94f2d
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3731, y: -167}
+        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 8075c403d02aa3443a8f676753438c61, type: 2}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354744
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ae480e01-f66c-49f4-a80c-7eb58e04e163
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3405, y: -328}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -300
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354745
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b72766f3-b6ae-4d3b-b7cd-7a3a9fab5620
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3406, y: -181}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -700
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354747
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c684c01f-53c5-4555-a330-3f6497f81296
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 2923, y: -148}
+        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: 700
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354748
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c762ed80-511a-459a-98be-c551148d1c31
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 2924, y: -459}
+        Handler: {fileID: 11400000, guid: 79e335a2c8527b342b35968ac2060871, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: 200
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354749
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: d622dc08-b9ab-41a5-85ff-3404d809c895
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2552, y: 416}
+        DialogueText: "\uBB3C\uB860\uC774\uC9C0. \uBE75\uC73C\uB85C \uB204\uAD6C\uD55C\uD14C
+          \uC9C0\uC9C0 \uC54A\uAC70\uB4E0."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354751
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: fd472d94-b716-43b0-a4bb-ac113a85c793
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3735, y: -508}
+        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: e99205192f28fb94aab861ba6cdaf106, type: 2}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354752
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c702a77d-8240-443d-925d-cd17449e3e35
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4128, y: -681}
+        DialogueText: "\uC591\uC0C1\uCD94\uB97C 1\uAC1C \uC5BB\uC5C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: exp
+    - rid: 6083855653500354753
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e7a1a748-ed40-4b88-99fb-985602693d7d
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4119, y: -502}
+        DialogueText: "\uCEE4\uD53C\uC5F4\uB9E4\uB97C 1\uAC1C \uC5BB\uC5C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: exp
+    - rid: 6083855653500354754
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 19e5bb62-f905-4fb3-a8a7-6957a90550eb
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3750, y: -338}
+        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 2620554768cfd2041a74e90fcbdb3759, type: 2}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354755
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f1169750-561b-4b87-9feb-8149c5f5b73b
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4163, y: -326}
+        DialogueText: "\uBA5C\uB860\uC744 1\uAC1C \uC5BB\uC5C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: exp
+    - rid: 6083855653500354756
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9dceee75-3ad8-42a5-a1b0-43734a370536
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4170, y: -142}
+        DialogueText: "\uBCF4\uC11D \uC625\uC218\uC218\uB97C 1\uAC1C \uC5BB\uC5C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: exp
+    - rid: 6083855653500354757
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c01dd489-15fa-4263-808f-82af399da57c
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4577, y: -623}
+        DialogueText: "\uC790, \uC5EC\uAE30 \uC788\uC5B4."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354758
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: a893fd4a-2c38-4ea7-85fb-d6b9ff3c48fa
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4860, y: -623}
+        DialogueText: "\uC815\uB9D0 \uD488\uC9C8\uC740 \uBCF4\uC99D\uB41C \uBB3C\uAC74\uC774\uC57C.
+          \uC2F8\uAC8C \uD314 \uC0DD\uAC01\uC740 \uC5C6\uC73C\uB2C8 \uD765\uC815\uC740
+          \uC0DD\uAC01\uD558\uC9C0 \uB9C8."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354759
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: af35fb05-816d-4d1c-a9b2-5bec08c75c03
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 4240, y: 60}
+        DialogueText: "\uB3C8\uB3C4 \uC5C6\uB294\uB370 \uC0AC\uB824\uACE0 \uD55C\uAC70\uC57C?
+          \uBB50\uD558\uB294\uAC70\uC57C. \uC2DC\uAC04 \uC544\uAE5D\uAC8C..."
+        PortraitKey: Agg
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354760
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: dc3e277a-b3ac-488d-8fd1-f0799a8bb4da
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3724, y: -678}
+        Handler: {fileID: 11400000, guid: f8f14bca72b70264ca7ce36f2f28d5c1, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: d10bc65957a6bb5409d495d0931ec422, type: 2}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354761
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 08876b05-db12-4869-afc5-1a7416d474d5
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 2043, y: 74}
+        DialogueText: "\uC5EC\uAE30\uC11C \uCDE8\uAE09\uD558\uB294 \uAC74 \uB808\uC774\uBE10
+          \uC0C1\uD68C\uC758 \uACE0\uAE09 \uC2DD\uC790\uC7AC\uB77C\uACE0."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354762
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b22cff4a-8081-480b-b401-8fa24611d38f
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 2552, y: -313}
+        DialogueText: "\uC790, \uB108\uC5D0\uAC8C\uB294 \uC544\uAE4C\uC6B4 \uBB3C\uAC74\uC774\uC57C."
+        PortraitKey: 
+        ActorKey: Hermes_Chapter_1
+    - rid: 6083855653500354763
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 56044cfe-9f91-4445-8741-8429148c3e9c
@@ -727,3 +630,39 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
+    - rid: 6083855653500354764
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: cff202f8-7f57-4cdd-8115-fcf9c3951bdb
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 229, y: 169}
+        Handler: {fileID: 11400000, guid: 249ba529da060b441b59bef7594bbe84, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: Quest_Lylla_buy_1
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+        - Target: Int
+          IntValue: 1
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6083855653500354765
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3c2e1d73-6c95-46ca-a73b-d2c549184c43
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 521, y: 75}
+        Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
+        Warps:
+        - Target: String
+          IntValue: 0
+          FloatValue: 0
+          StringValue: sell_2
+          ObjectValue: {fileID: 0}
+          BoolValue: 0

@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Pirene_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 34166e915bff5644a96050a8ca9df841, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 47587ea54e2bcc648b2c9ea5f2faf67e, type: 2}
     - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Controller
       value: 

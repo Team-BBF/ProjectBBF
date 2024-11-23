@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Wet_01_Aria
+  m_EditorClassIdentifier: 
+  _guid: 49945739ecde59a429f823ee57eb9c90
+  NodeLinks:
+  - BaseNodeGuid: e415546b-ef00-4ea6-9aac-6a41b20e5b7b
+    PortName: Execute
+    TargetNodeGuid: ca6e5a1b-5148-4818-b320-7b6b95f44fe0
+  - BaseNodeGuid: ca6e5a1b-5148-4818-b320-7b6b95f44fe0
+    PortName: Next
+    TargetNodeGuid: 9f2d94b5-90b0-4d11-8ba3-f31b463c7fd3
+  NodeData:
+  - rid: 6083855653500355081
+  - rid: 6083855653500355082
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855653500355081
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ca6e5a1b-5148-4818-b320-7b6b95f44fe0
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 231, y: 198}
+        DialogueText: "\uC544...!"
+        PortraitKey: Ave
+        ActorKey: Aria
+    - rid: 6083855653500355082
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 9f2d94b5-90b0-4d11-8ba3-f31b463c7fd3
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 452, y: 200}
+        DialogueText: "\uCC28\uAC00\uC6CC..."
+        PortraitKey: Agg
+        ActorKey: Aria

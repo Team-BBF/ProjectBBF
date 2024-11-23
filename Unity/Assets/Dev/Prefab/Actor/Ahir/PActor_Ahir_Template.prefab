@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Ahir_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b5ec3f4357f78542ba0f8917222cfb3, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ee5d7d235ac1864992d641951d4f908, type: 2}
     - target: {fileID: 4808605080145917445, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.25

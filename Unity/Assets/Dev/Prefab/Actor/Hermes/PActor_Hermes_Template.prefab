@@ -29,6 +29,10 @@ PrefabInstance:
       value: Hermes_Chapter_1
       objectReference: {fileID: 0}
     - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: d5bf14c9121d93e488b49328264b21f3, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: _hittedDialogue
       value: 
       objectReference: {fileID: 11400000, guid: 30ac125c87c7d3946a7290258e7aee55, type: 2}

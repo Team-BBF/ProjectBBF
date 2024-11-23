@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Ed_Pirene_1
+  m_EditorClassIdentifier: 
+  _guid: a2ca3dd6b5a7ca34fa5fa1e964f5171b
+  NodeLinks:
+  - BaseNodeGuid: 66cbb14f-d2d7-4f9f-ba73-df9e6a68eac5
+    PortName: Execute
+    TargetNodeGuid: 5d5946ab-cff6-4964-bc3a-e45b077c17aa
+  - BaseNodeGuid: 5d5946ab-cff6-4964-bc3a-e45b077c17aa
+    PortName: Next
+    TargetNodeGuid: 30721b1e-1df1-423f-b60a-f45d398b5f42
+  - BaseNodeGuid: 30721b1e-1df1-423f-b60a-f45d398b5f42
+    PortName: Next
+    TargetNodeGuid: f580e1f0-15a8-41e6-ad1e-7d4e309633f6
+  NodeData:
+  - rid: 6083855648063226032
+  - rid: 6083855648063226033
+  - rid: 6083855648063226034
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855648063226032
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5d5946ab-cff6-4964-bc3a-e45b077c17aa
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 221, y: 203}
+        DialogueText: "\uB300\uD68C\uB294 \uC798 \uBD24\uC5B4\uC694! \uC815\uB9D0
+          \uBA4B\uC9C0\uB358\uB370\uC694?"
+        PortraitKey: Smi
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226033
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 30721b1e-1df1-423f-b60a-f45d398b5f42
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 607, y: 203}
+        DialogueText: "\uC55E\uC73C\uB85C\uB3C4 \uB9C8\uC744\uC5D0\uC11C \uB9CC\uB098\uBA74
+          \uC798 \uBD80\uD0C1\uB4DC\uB9B4\uAC8C\uC694!"
+        PortraitKey: Smi
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226034
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f580e1f0-15a8-41e6-ad1e-7d4e309633f6
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1029, y: 198}
+        DialogueText: "\uC800\uB294 \uC774 \uBCD1\uC6D0\uC5D0\uC11C \uC77C\uD558\uACE0
+          \uC788\uC73C\uB2C8 \uC544\uD504\uC2DC\uBA74 \uAF2D \uC624\uC138\uC694!"
+        PortraitKey: Smi
+        ActorKey: Pirene_Chapter_1

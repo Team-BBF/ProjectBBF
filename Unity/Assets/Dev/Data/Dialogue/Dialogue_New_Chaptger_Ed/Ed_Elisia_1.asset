@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Ed_Elisia_1
+  m_EditorClassIdentifier: 
+  _guid: e45128fc212c63a41b0f4b3c7fc5ca1a
+  NodeLinks:
+  - BaseNodeGuid: 66cbb14f-d2d7-4f9f-ba73-df9e6a68eac5
+    PortName: Execute
+    TargetNodeGuid: 32e9e116-b9cb-4478-b2fe-1e159b5ed298
+  - BaseNodeGuid: 32e9e116-b9cb-4478-b2fe-1e159b5ed298
+    PortName: Next
+    TargetNodeGuid: 72a916a5-d931-4803-ad4d-2d1e89beafab
+  - BaseNodeGuid: 72a916a5-d931-4803-ad4d-2d1e89beafab
+    PortName: Next
+    TargetNodeGuid: ac23727a-7cc4-463e-9331-b95a62ce3e8e
+  NodeData:
+  - rid: 6083855648063226026
+  - rid: 6083855648063226027
+  - rid: 6083855648063226028
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855648063226026
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 32e9e116-b9cb-4478-b2fe-1e159b5ed298
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 231, y: 198}
+        DialogueText: "\uCEAC\uD558\uD558\uD558\uD558!!"
+        PortraitKey: Smi
+        ActorKey: Elisia_Chapter_1
+    - rid: 6083855648063226027
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 72a916a5-d931-4803-ad4d-2d1e89beafab
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 513, y: 200}
+        DialogueText: "\uC774\uC81C\uB294 \uADF8\uB0E5 {player}(\uC774)\uAC00 \uC544\uB2C8\uB77C
+          \uBA85\uC7A5 {player}\uB124!!"
+        PortraitKey: Smi
+        ActorKey: Elisia_Chapter_1
+    - rid: 6083855648063226028
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ac23727a-7cc4-463e-9331-b95a62ce3e8e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 966, y: 201}
+        DialogueText: "\uC55E\uC73C\uB85C\uB3C4 \uC7AC\uBC0C\uB294 \uBE75 \uAE30\uB300\uD560\uAC8C!"
+        PortraitKey: Smi
+        ActorKey: Elisia_Chapter_1

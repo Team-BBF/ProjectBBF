@@ -1,0 +1,302 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Bread_Pirene
+  m_EditorClassIdentifier: 
+  _guid: 48fd14725299ee84794fc46ad7e011c6
+  NodeLinks:
+  - BaseNodeGuid: 0ed4b202-1923-4dc2-8bfc-c5103376da1a
+    PortName: Execute
+    TargetNodeGuid: 6ce09ba4-da9b-42bf-a5a4-91ec8d5bace2
+  - BaseNodeGuid: f6f041ff-8001-4a90-a249-dc5e55b8a8d7
+    PortName: Next
+    TargetNodeGuid: 1e838cff-6fa3-4d5b-ba39-0c609b4b9964
+  - BaseNodeGuid: 66ba3157-c0c9-478e-ab9f-bbe50af484ea
+    PortName: Next
+    TargetNodeGuid: 2d38144b-27d9-4fbc-8788-7e4c9a449bbf
+  - BaseNodeGuid: 2d38144b-27d9-4fbc-8788-7e4c9a449bbf
+    PortName: Next
+    TargetNodeGuid: c53ce23f-d400-4310-91a0-fa595eaaaed2
+  - BaseNodeGuid: c53ce23f-d400-4310-91a0-fa595eaaaed2
+    PortName: Next
+    TargetNodeGuid: 6b0ffa67-299f-4642-9904-1120ea6f5129
+  - BaseNodeGuid: 6b0ffa67-299f-4642-9904-1120ea6f5129
+    PortName: Next
+    TargetNodeGuid: ea71a5d8-89ac-4b41-9067-74ee6db20bdd
+  - BaseNodeGuid: ea71a5d8-89ac-4b41-9067-74ee6db20bdd
+    PortName: Next
+    TargetNodeGuid: f6f041ff-8001-4a90-a249-dc5e55b8a8d7
+  - BaseNodeGuid: 3f704d9c-8289-48ae-9dbf-1da327a429d8
+    PortName: Next
+    TargetNodeGuid: 66ba3157-c0c9-478e-ab9f-bbe50af484ea
+  - BaseNodeGuid: 5ab14669-6ea6-403d-bf89-c8404c073a2c
+    PortName: Next
+    TargetNodeGuid: 439fadab-c4ee-43ab-931e-f38f4222c792
+  - BaseNodeGuid: 439fadab-c4ee-43ab-931e-f38f4222c792
+    PortName: Next
+    TargetNodeGuid: 14a7ac18-57f0-4e55-8078-a85239f6c6fd
+  - BaseNodeGuid: 14a7ac18-57f0-4e55-8078-a85239f6c6fd
+    PortName: Next
+    TargetNodeGuid: a0868c69-de24-414e-aa3a-12158a5fb3e2
+  - BaseNodeGuid: c0986983-11b3-44da-8b3d-bc168e859a83
+    PortName: Next
+    TargetNodeGuid: eb8ef08d-892b-44b7-9d9e-bdc6927cad59
+  - BaseNodeGuid: 64093e42-1b1f-4d11-a835-5248d72ce226
+    PortName: Next
+    TargetNodeGuid: 5ab14669-6ea6-403d-bf89-c8404c073a2c
+  - BaseNodeGuid: a0868c69-de24-414e-aa3a-12158a5fb3e2
+    PortName: Next
+    TargetNodeGuid: c0986983-11b3-44da-8b3d-bc168e859a83
+  - BaseNodeGuid: eb8ef08d-892b-44b7-9d9e-bdc6927cad59
+    PortName: Next
+    TargetNodeGuid: 4c2f8cb2-8dfa-428c-99d3-091940939507
+  - BaseNodeGuid: 4c2f8cb2-8dfa-428c-99d3-091940939507
+    PortName: Next
+    TargetNodeGuid: 6b7a9850-de12-4706-9e3d-7ec6c3e0311f
+  - BaseNodeGuid: 1e838cff-6fa3-4d5b-ba39-0c609b4b9964
+    PortName: Next
+    TargetNodeGuid: 96cbc49d-fa17-4bb4-b04c-303b74bbc703
+  - BaseNodeGuid: 6ce09ba4-da9b-42bf-a5a4-91ec8d5bace2
+    PortName: True
+    TargetNodeGuid: 64093e42-1b1f-4d11-a835-5248d72ce226
+  - BaseNodeGuid: 6ce09ba4-da9b-42bf-a5a4-91ec8d5bace2
+    PortName: False
+    TargetNodeGuid: 3f704d9c-8289-48ae-9dbf-1da327a429d8
+  NodeData:
+  - rid: 6083855648063226207
+  - rid: 6083855648063226208
+  - rid: 6083855648063226209
+  - rid: 6083855648063226212
+  - rid: 6083855648063226213
+  - rid: 6083855648063226214
+  - rid: 6083855648063226215
+  - rid: 6083855648063226216
+  - rid: 6083855648063226217
+  - rid: 6083855648063226218
+  - rid: 6083855648063226219
+  - rid: 6083855648063226220
+  - rid: 6083855648063226221
+  - rid: 6083855648063226222
+  - rid: 6083855648063226210
+  - rid: 6083855648063226211
+  - rid: 6083855648063226205
+  - rid: 6083855648063226206
+  - rid: 6083855648063226223
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855648063226205
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f6f041ff-8001-4a90-a249-dc5e55b8a8d7
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2719, y: 196}
+        DialogueText: "\uB2E4\uC74C\uC5D0 \uB2E4\uCE58\uC2DC\uB294 \uC77C\uC774 \uC788\uC73C\uBA74
+          \uC800\uD76C \uBCD1\uC6D0\uC5D0 \uC624\uC138\uC694! \uC774 \uC740\uD61C\uB294
+          \uAF2D \uAC1A\uC744\uAC8C\uC694!"
+        PortraitKey: Lov
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226206
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 1e838cff-6fa3-4d5b-ba39-0c609b4b9964
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3252, y: 191}
+        DialogueText: "\uC815\uB9D0 \uC798 \uBA39\uC744\uAC8C\uC694!"
+        PortraitKey: Lov
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226207
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 66ba3157-c0c9-478e-ab9f-bbe50af484ea
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 759, y: 189}
+        DialogueText: "\uC774\uB807\uAC8C \uBA4B\uC9C4 \uBE75\uC744 \uC8FC\uC2DC\uB294
+          \uAC70\uC608\uC694?"
+        PortraitKey: Smi
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226208
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 2d38144b-27d9-4fbc-8788-7e4c9a449bbf
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1093, y: 190}
+        DialogueText: "\uC774\uAC74 \uC815\uB9D0 \uAC10\uB3D9\uC774\uC5D0\uC694!"
+        PortraitKey: Smi
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226209
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c53ce23f-d400-4310-91a0-fa595eaaaed2
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1393, y: 191}
+        DialogueText: "\uC774 \uBE75\uC740 \uC815\uB839 \uB9AC\uCE74\uB791 \uC81C
+          \uD584\uC2A4\uD130\uC778 \uD584\uCE58\uB791 \uAC19\uC774 \uBA39\uC744\uAC8C\uC694!"
+        PortraitKey: Lol
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226210
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 6b0ffa67-299f-4642-9904-1120ea6f5129
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1859, y: 188}
+        DialogueText: "\uC544... \uD639\uC2DC \uC5FC\uCE58\uC5C6\uC9C0\uB9CC \uC870\uAE08
+          \uB354 \uC788\uC73C\uC2DC\uBA74 \uB098\uB220\uC8FC\uC2E4 \uC218 \uC788\uB098\uC694?"
+        PortraitKey: Ave
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226211
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ea71a5d8-89ac-4b41-9067-74ee6db20bdd
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2329, y: 190}
+        DialogueText: "\uB3D9\uC0DD\uB3C4 \uB300\uD68C \uBCF4\uBA74\uC11C \uB108\uBB34
+          \uBA39\uACE0 \uC2F6\uC5B4 \uD588\uAC70\uB4E0\uC694!"
+        PortraitKey: 
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226212
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3f704d9c-8289-48ae-9dbf-1da327a429d8
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 507, y: 194}
+        DialogueText: "\uC6B0\uC640!"
+        PortraitKey: Lol
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226213
+      type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 6ce09ba4-da9b-42bf-a5a4-91ec8d5bace2
+        NodeTitle: Condition
+        TypeName: Condition
+        Position: {x: 213, y: 210}
+        Handler: {fileID: 11400000, guid: 62b43e7f583bd024d82cf0b2137de0e5, type: 2}
+        Warps: []
+    - rid: 6083855648063226214
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5ab14669-6ea6-403d-bf89-c8404c073a2c
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 801, y: 400}
+        DialogueText: "\uC774\uAC70 \uBCF4\uAE30\uC5D0\uB9CC \uAC80\uC740 \uBE75\uC778\uAC00\uC694?"
+        PortraitKey: Smi
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226215
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 439fadab-c4ee-43ab-931e-f38f4222c792
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1153, y: 398}
+        DialogueText: "\uB300\uD68C\uC5D0\uC11C \uBCF8 \uBE75\uC774\uB791\uC740 \uB2E4\uB978
+          \uAC83 \uAC19\uC740\uB370..."
+        PortraitKey: Ave
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226216
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 14a7ac18-57f0-4e55-8078-a85239f6c6fd
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1539, y: 415}
+        DialogueText: "\uD2B9\uC81C \uBE75\uC774\uB77C\uACE0\uC694?"
+        PortraitKey: Ave
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226217
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c0986983-11b3-44da-8b3d-bc168e859a83
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2157, y: 418}
+        DialogueText: "(\uD53C\uB808\uB124\uAC00 \uAE34\uC7A5\uD55C \uCC44, \uBA39\uB294\uB2E4.)"
+        PortraitKey: 
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226218
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 64093e42-1b1f-4d11-a835-5248d72ce226
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 502, y: 397}
+        DialogueText: "\uC6B0\uC640!"
+        PortraitKey: Lol
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226219
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: a0868c69-de24-414e-aa3a-12158a5fb3e2
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1842, y: 412}
+        DialogueText: "\uADF8\uB7EC\uBA74... \uC798 \uBA39\uC744\uAC8C\uC694!"
+        PortraitKey: Lol
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226220
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: eb8ef08d-892b-44b7-9d9e-bdc6927cad59
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2531, y: 423}
+        DialogueText: "\uC73C\uC5D0......"
+        PortraitKey: Ave
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226221
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4c2f8cb2-8dfa-428c-99d3-091940939507
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2840, y: 433}
+        DialogueText: "\uC800\uB294 \uC774\uB9CC \uAC00\uBCFC\uAC8C\uC694..."
+        PortraitKey: Agg
+        ActorKey: Pirene_Chapter_1
+    - rid: 6083855648063226222
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 6b7a9850-de12-4706-9e3d-7ec6c3e0311f
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3175, y: 441}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: bd826412f6b0ccc4192ce52b63b08db3, type: 2}
+          BoolValue: 0
+    - rid: 6083855648063226223
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 96cbc49d-fa17-4bb4-b04c-303b74bbc703
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 3556, y: 197}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 67399f54ff593ef4d8f29703f83efcf6, type: 2}
+          BoolValue: 0

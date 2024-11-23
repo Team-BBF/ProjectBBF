@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Ed_Ahir_1
+  m_EditorClassIdentifier: 
+  _guid: a76575d7b5e72b045af5a3a876479d86
+  NodeLinks:
+  - BaseNodeGuid: 66cbb14f-d2d7-4f9f-ba73-df9e6a68eac5
+    PortName: Execute
+    TargetNodeGuid: 8d35dc0e-ff01-474e-9e16-1d538d7f6f38
+  - BaseNodeGuid: 8d35dc0e-ff01-474e-9e16-1d538d7f6f38
+    PortName: Next
+    TargetNodeGuid: b6441e90-eb64-4a2b-9176-602c369e44c8
+  NodeData:
+  - rid: 6083855648063226006
+  - rid: 6083855648063226007
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855648063226006
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: b6441e90-eb64-4a2b-9176-602c369e44c8
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 538, y: 204}
+        DialogueText: "\uC55E\uC73C\uB85C\uB3C4 \uB9C8\uC744\uC5D0\uC11C \uBA4B\uC9C4
+          \uBE75 \uAE30\uB300\uD560\uAC8C\uC694"
+        PortraitKey: Lol
+        ActorKey: Ahir_Chapter_1
+    - rid: 6083855648063226007
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 8d35dc0e-ff01-474e-9e16-1d538d7f6f38
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 232, y: 199}
+        DialogueText: "\uC544\uC8FC \uBA4B\uC9C4 \uBE75\uC774\uC5C8\uC5B4\uC694."
+        PortraitKey: Smi
+        ActorKey: Ahir_Chapter_1

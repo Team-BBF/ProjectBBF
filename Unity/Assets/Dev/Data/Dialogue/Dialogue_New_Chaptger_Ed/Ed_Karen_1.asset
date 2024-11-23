@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Ed_Karen_1
+  m_EditorClassIdentifier: 
+  _guid: 38b90e9f2b2f3924f8ec581c65aa183f
+  NodeLinks:
+  - BaseNodeGuid: 66cbb14f-d2d7-4f9f-ba73-df9e6a68eac5
+    PortName: Execute
+    TargetNodeGuid: 62990d26-e619-423f-bd7e-992a0b487f44
+  - BaseNodeGuid: 62990d26-e619-423f-bd7e-992a0b487f44
+    PortName: Next
+    TargetNodeGuid: 4bfbac05-eea9-44fb-8c8a-87899fa0c985
+  - BaseNodeGuid: 4bfbac05-eea9-44fb-8c8a-87899fa0c985
+    PortName: Next
+    TargetNodeGuid: 35fbcaae-cb42-4c9b-bd7b-3b591fcb41a2
+  NodeData:
+  - rid: 6083855648063226020
+  - rid: 6083855648063226021
+  - rid: 6083855648063226022
+  references:
+    version: 2
+    RefIds:
+    - rid: 6083855648063226020
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 62990d26-e619-423f-bd7e-992a0b487f44
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 245, y: 224}
+        DialogueText: "\uC6B0\uC2B9 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4!"
+        PortraitKey: Smi
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855648063226021
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4bfbac05-eea9-44fb-8c8a-87899fa0c985
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 548, y: 225}
+        DialogueText: "\uBA4B\uC9C4 \uC2B9\uBD80 \uAC10\uC0AC\uD588\uC2B5\uB2C8\uB2E4!"
+        PortraitKey: Smi
+        ActorKey: Karen_Chapter_1
+    - rid: 6083855648063226022
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 35fbcaae-cb42-4c9b-bd7b-3b591fcb41a2
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 854, y: 226}
+        DialogueText: "\uC885\uC885 \uB9C8\uC744\uC5D0 \uC62C \uB54C \uAC00\uAC8C\uC5D0
+          \uCC3E\uC544\uAC08\uAC8C\uC694!"
+        PortraitKey: Smi
+        ActorKey: Karen_Chapter_1

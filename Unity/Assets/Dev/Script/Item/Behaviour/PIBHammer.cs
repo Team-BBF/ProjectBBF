@@ -18,7 +18,7 @@ public class PIBHammer : PIBTwoStep
         
         if (itemData && itemData.Info.Contains(ToolType.Hammer))
         {
-            AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_Hammer");
+            AudioManager.Instance.PlayOneShot("Player", "Player_Tool_Using_Hoe");
             AnimateLookAt(playerController, AnimationActorKey.Action.Hammer, true);
             //_targetPos = playerController.Interactor.IndicatedPosition;
             

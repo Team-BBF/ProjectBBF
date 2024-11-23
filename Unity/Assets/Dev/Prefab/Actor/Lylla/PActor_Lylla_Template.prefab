@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: _movementData
       value: 
       objectReference: {fileID: 11400000, guid: c50867f167756fc4480329b680e7c43a, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 922f576576794d345a79063d3570d1f5, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: a4517bb43da89a34fa38958944998e5c, type: 2}
     - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Controller
       value: 
@@ -213,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ease: 4
   _duration: 0.4
+  _startDelay: 0
   _rangeY: 0.1
 --- !u!114 &6029884496698826169 stripped
 MonoBehaviour:

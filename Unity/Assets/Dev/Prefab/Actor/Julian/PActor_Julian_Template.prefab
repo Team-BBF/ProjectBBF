@@ -8,6 +8,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _saveKey
+      value: Julian_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _actorKey
+      value: Julian_Chapter_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ecc28708451dac41b9e65411d45903d, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 71fce2d270ac1c34aab40d90da78b990, type: 2}
+    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 31cdaf70aef52104cbe89a0f0a4fa9d5, type: 2}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844653115320804256, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1214765251, guid: 76474301c6a95034a945ab7ff808c75a, type: 3}
+    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Name
+      value: PActor_Julian_Template
+      objectReference: {fileID: 0}
     - target: {fileID: 657897982702387281, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_Controller
       value: 
@@ -72,46 +120,6 @@ PrefabInstance:
       propertyPath: _movementData
       value: 
       objectReference: {fileID: 11400000, guid: 7bf14bfa161bf644eb7019c142a8cc95, type: 2}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.1875
-      objectReference: {fileID: 0}
-    - target: {fileID: 818979446879402682, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.8125
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _saveKey
-      value: Julian_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: _actorKey
-      value: Julian_Chapter_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 31cdaf70aef52104cbe89a0f0a4fa9d5, type: 2}
-    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 7844653115320804256, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1214765251, guid: 76474301c6a95034a945ab7ff808c75a, type: 3}
-    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
-      propertyPath: m_Name
-      value: PActor_Julian_Template
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

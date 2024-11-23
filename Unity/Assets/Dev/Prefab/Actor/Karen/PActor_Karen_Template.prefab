@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Karen_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 30d3e135bf119ac4884ce1222db0f2cc, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _hittedDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b92f5adedb909541bbc9b8c7f328e75, type: 2}
     - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Controller
       value: 

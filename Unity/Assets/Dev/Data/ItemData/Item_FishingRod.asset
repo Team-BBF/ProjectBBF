@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Item_FishingRod
   m_EditorClassIdentifier: 
   _itemKey: Item_FishingRod
-  _itemName: "\uB09A\uC2DC\uB300"
-  _itemDescription: "\uBB3C\uACE0\uAE30\uB97C \uB09A\uC744 \uC218 \uC788\uB294 \uB09A\uC2DC\uB300!"
+  _itemName: "\uB09A\uC2EF\uB300"
+  _itemDescription: "\uBB3C\uACE0\uAE30\uB97C \uB09A\uC744 \uC218 \uC788\uB294 \uB09A\uC2EF\uB300!"
   _itemSprite: {fileID: 21300000, guid: e4ffd2666145b2847872e7ca17e7d62c, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets:
     - _requireToolTypes: 4

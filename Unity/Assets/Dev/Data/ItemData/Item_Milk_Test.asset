@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Item_Milk_Test
   m_EditorClassIdentifier: 
   _itemKey: Item_Milk_Test
-  _itemName: Milk
+  _itemName: "\uC6B0\uC720"
   _itemDescription: test
   _itemSprite: {fileID: 21300000, guid: 600dad6b9282a5e43937724a994ce388, type: 3}
   _maxStackCount: 4
+  _price: 0
   _itemTypeInfo:
     _sets: []
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

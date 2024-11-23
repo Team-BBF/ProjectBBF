@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemKey: Item_Dough_SpCake
   _itemName: "\uC2A4\uD398\uC15C \uCF00\uC774\uD06C \uBC18\uC8FD"
-  _itemDescription: "\uC2A4\uD398\uC15C \uCF00\uC774\uD06C\uB97C \uB9CC\uB4E4\uC218
-    \uC788\uB294 \uBC18\uC8FD \uC624\uBE10\uC5D0 \uAC00\uC838\uAC00\uBCF4\uC790!"
+  _itemDescription: "\uC2A4\uD398\uC15C \uCF00\uC774\uD06C\uB97C \uB9CC\uB4E4 \uC218
+    \uC788\uB294 \uBC18\uC8FD. \uC624\uBE10\uC5D0 \uAC00\uC838\uAC00 \uBCF4\uC790!"
   _itemSprite: {fileID: 21300000, guid: e3f9f07355601ed4aa59c8d2198be771, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets:
     - _requireToolTypes: 4
@@ -25,3 +26,6 @@ MonoBehaviour:
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

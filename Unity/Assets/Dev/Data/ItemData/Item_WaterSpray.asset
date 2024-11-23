@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Item_WaterSpray
   m_EditorClassIdentifier: 
   _itemKey: Item_WaterSpray
-  _itemName: WaterSpray
+  _itemName: "\uBB3C\uC870\uB9AC\uAC1C"
   _itemDescription: "\uC791\uBB3C\uC758 \uBB3C\uC744 \uC904 \uC218 \uC788\uB294 \uBB3C\uC870\uB9AC\uAC1C!"
   _itemSprite: {fileID: 21300000, guid: 7a3762f15d2d6734d9668b872458e82d, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets:
     - _requireToolTypes: 3

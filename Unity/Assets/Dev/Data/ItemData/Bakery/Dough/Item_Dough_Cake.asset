@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemKey: Item_Dough_Cake
   _itemName: "\uCF00\uC774\uD06C \uBC18\uC8FD"
-  _itemDescription: "\uC77C\uBC18 \uCF00\uC774\uD06C\uB97C \uB9CC\uB4E4\uC218 \uC788\uB294
-    \uBC18\uC8FD \uC624\uBE10\uC5D0 \uAC00\uC838\uAC00\uBCF4\uC790!"
+  _itemDescription: "\uC77C\uBC18 \uCF00\uC774\uD06C\uB97C \uB9CC\uB4E4 \uC218 \uC788\uB294
+    \uBC18\uC8FD. \uC624\uBE10\uC5D0 \uAC00\uC838\uAC00 \uBCF4\uC790!"
   _itemSprite: {fileID: 21300000, guid: 558d699583b68d640892fcace313aa61, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets:
     - _requireToolTypes: 4
@@ -25,3 +26,6 @@ MonoBehaviour:
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

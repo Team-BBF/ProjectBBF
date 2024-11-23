@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Item_Bread_BeachPie
   m_EditorClassIdentifier: 
   _itemKey: Item_Bread_BeachPie
-  _itemName: "\uD574\uBCC0\uD30C\uC774"
+  _itemName: "\uD574\uBCC0 \uD30C\uC774"
   _itemDescription: "\uC544\uD788\uB974\uC5D0\uAC8C \uC81C\uCD9C\uD558\uC790!"
   _itemSprite: {fileID: 21300000, guid: 718460a35f9e6034c9f25960b9ed3448, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets: []
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

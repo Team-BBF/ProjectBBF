@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Item_Bread_MarioMushroom
   m_EditorClassIdentifier: 
   _itemKey: Item_Bread_MarioMushroom
-  _itemName: "\uC218\uC0C1\uD560\uC815\uB3C4\uB85C \uC775\uC219\uD55C \uBC84\uC12F\uBE75"
+  _itemName: "\uC218\uC0C1\uD560 \uC815\uB3C4\uB85C \uC775\uC219\uD55C \uBC84\uC12F\uBE75"
   _itemDescription: "\uC544\uD788\uB974\uC5D0\uAC8C \uC81C\uCD9C\uD558\uC790!"
   _itemSprite: {fileID: 21300000, guid: e6a9145b328c1df428576c71581d3423, type: 3}
   _maxStackCount: 1
+  _price: 0
   _itemTypeInfo:
     _sets: []
   _actionCategoryType: 0
   _actionAnimationType: 0
   _usingActionAudioInfos: []
+  _playerItemBehaviours: []
+  _usePrevWait: 0
+  _useAndWait: 0

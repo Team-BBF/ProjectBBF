@@ -320,6 +320,7 @@ MonoBehaviour:
     m_Objects:
     - {fileID: -55396846058838647}
     - {fileID: 526625915938400714}
+    - {fileID: 4821324982510597053}
 --- !u!114 &-55396846058838647
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
   m_Name: Dialogue Marker
   m_EditorClassIdentifier: 
-  m_Time: 0.9166666666666666
+  m_Time: 1.1833333333333333
   _container: {fileID: 11400000, guid: 07de204a2ce1c4f41a87533ffff00f1f, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -478,3 +479,17 @@ MonoBehaviour:
   VirtualCamera:
     exposedName: e8200cf570208ec4dbd80ac73912d0b4
     defaultValue: {fileID: 0}
+--- !u!114 &4821324982510597053
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
+  m_Name: Dialogue Marker
+  m_EditorClassIdentifier: 
+  m_Time: 0.8166666666666667
+  _container: {fileID: 11400000, guid: abe4924aab2e996429f60a31120e92be, type: 2}

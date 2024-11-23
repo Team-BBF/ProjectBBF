@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8306249897364523806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac8c311cb403af409690e4ef84ed598, type: 3}
+  m_Name: Dialogue Marker
+  m_EditorClassIdentifier: 
+  m_Time: 0.6333333333333333
+  _container: {fileID: 11400000, guid: 7ed14d82c1bb2a34e819fe979d9b53b1, type: 2}
 --- !u!114 &-6870318663193526253
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,6 +334,7 @@ MonoBehaviour:
     m_Objects:
     - {fileID: -55396846058838647}
     - {fileID: 526625915938400714}
+    - {fileID: -8306249897364523806}
 --- !u!114 &-55396846058838647
 MonoBehaviour:
   m_ObjectHideFlags: 1

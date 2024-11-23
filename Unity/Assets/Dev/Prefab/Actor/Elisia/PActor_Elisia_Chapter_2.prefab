@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Elisia_Chapter_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4949799012376779906, guid: 0fb40389ea5f1094c8e003da1941e3b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 7021d785fa6a12f45bf60e7a6f756888, type: 2}
+    - target: {fileID: 5198328482305078123, guid: 0fb40389ea5f1094c8e003da1941e3b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1690357312, guid: 016a9ab04494a874fa46797a09062ff6, type: 3}
     - target: {fileID: 6633940948283213399, guid: 0fb40389ea5f1094c8e003da1941e3b4, type: 3}
       propertyPath: m_Name
       value: PActor_Elisia_Chapter_2

@@ -367,6 +367,14 @@ PrefabInstance:
       propertyPath: _actorKey
       value: Gambler_Chapter_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5087772006950334624, guid: e2ae6b865229a24479511ecbd7f58fa5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1230790910, guid: 33450dc1cc229fa45b8fb9c50a42c484, type: 3}
+    - target: {fileID: 5336341573551103817, guid: e2ae6b865229a24479511ecbd7f58fa5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: eaa061da32eb6f945b0ca0b790b61a21, type: 2}
     - target: {fileID: 5631875217458049145, guid: e2ae6b865229a24479511ecbd7f58fa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -50.81539
@@ -11119,11 +11127,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e1d0dbf4cf4502d40a8dcc3dadaad2f8, type: 2}
     - target: {fileID: 7236962955030520697, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.15
+      value: -30.36
       objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.27
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14294,7 +14302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 871f2e0ed603a8d4682d71adc5628bbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.11
+      value: -6.93
       objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 871f2e0ed603a8d4682d71adc5628bbf, type: 3}
       propertyPath: m_LocalRotation.x

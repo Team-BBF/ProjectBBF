@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: -508569099, guid: c45a1e03419b4a64798957160fe1f65a, type: 3}
     - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Name
-      value: PActor_Pirene_Chapter_3
+      value: PFActor_Ed_Template
       objectReference: {fileID: 0}
     - target: {fileID: 657897982702387281, guid: 8591b6aba3614654f92f9e2352f0d3cc, type: 3}
       propertyPath: m_Controller
@@ -145,7 +145,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79363269662463c8103653f59164279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wetEmotion: {fileID: 8515102419198398314}
+  _wetEmotionDuration: 1
+  _hittedEffect: {fileID: 0}
+  _hittedAudioGroup: 
+  _hittedAudioKey: 
   _favorability: {fileID: 1494131634890999741}
+--- !u!1 &8515102419198398314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5967932294532341665, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+  m_PrefabInstance: {fileID: 2664409437884469451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8665086375428048919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6681495090440575196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
@@ -163,6 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5770cff4e34806883489677b403511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hittedDialogue: {fileID: 0}
+  _wetDialogue: {fileID: 0}
   _bucketDialogueContainer: {fileID: 11400000, guid: d99ce44200eb5ab49af2d78c5832de47, type: 2}
   _bucketValidItemTable: {fileID: 11400000, guid: 8d050d941d2b9bd478c2b865aa03ac59, type: 2}
   _bucket: {fileID: 317919837871511849}

@@ -277,6 +277,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_BakerytFlow_Dough
       objectReference: {fileID: 0}
+    - target: {fileID: 6329048431401108850, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a794609eff7bdf4cb8cb97a145bc621, type: 3}
+    - target: {fileID: 6329048431401108850, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329048431401108850, guid: 2fb2487a45f81764cb4025b19b788c0b, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

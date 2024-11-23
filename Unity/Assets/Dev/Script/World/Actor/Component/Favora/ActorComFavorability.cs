@@ -8,8 +8,11 @@ using UnityEngine;
 public abstract class ActorComFavorability : ActorComponent, IBODialogue
 {
     [SerializeField] private DialogueContainer _hittedDialogue;
+    [SerializeField] private DialogueContainer _wetDialogue;
 
     public DialogueContainer HittedDialogue => _hittedDialogue;
+
+    public DialogueContainer WetDialogue => _wetDialogue;
 
     public CollisionInteraction Interaction { get; private set; }
 

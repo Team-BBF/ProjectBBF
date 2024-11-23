@@ -28,4 +28,10 @@ public class OnlyDialogueNpc : Npc
         if (caller.Owner is not PlayerController pc) return;
         _ = pc.Dialogue.RunDialogue(_favorablity.HittedDialogue, _favorablity.ProcessorData, Owner.transform.position);
     }
+
+    protected override void UpdateWetInteract(CollisionInteractionMono caller)
+    {
+        if (caller.Owner is not PlayerController pc) return;
+        _ = pc.Dialogue.RunDialogue(_favorablity.WetDialogue, _favorablity.ProcessorData, Owner.transform.position);
+    }
 }

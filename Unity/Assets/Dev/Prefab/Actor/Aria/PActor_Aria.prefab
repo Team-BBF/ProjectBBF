@@ -37,6 +37,10 @@ PrefabInstance:
       value: Aria
       objectReference: {fileID: 0}
     - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: fb11c60af0c1b25459988c55c0a2dc9f, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: _hittedDialogue
       value: 
       objectReference: {fileID: 11400000, guid: ec5b71aa5b579374a9b47e72572ac0c1, type: 2}

@@ -59,4 +59,10 @@ public class BucketNpc : Npc
         if (caller.Owner is not PlayerController pc) return;
         _ = pc.Dialogue.RunDialogue(_favorability.HittedDialogue, _favorability.ProcessorData, Owner.transform.position);
     }
+
+    protected override void UpdateWetInteract(CollisionInteractionMono caller)
+    {
+        if (caller.Owner is not PlayerController pc) return;
+        _ = pc.Dialogue.RunDialogue(_favorability.WetDialogue, _favorability.ProcessorData, Owner.transform.position);
+    }
 }

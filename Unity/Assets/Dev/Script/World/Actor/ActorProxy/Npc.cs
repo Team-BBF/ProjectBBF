@@ -25,7 +25,8 @@ public abstract class Npc : ActorProxy, IBOInteractiveMulti, IBOInteractiveTool
             ToolType.Hoe or 
             ToolType.Sickle or 
             ToolType.Hammer or 
-            ToolType.Pickaxe
+            ToolType.Pickaxe or
+            ToolType.WaterSpray
             ;
     }
 
@@ -35,15 +36,29 @@ public abstract class Npc : ActorProxy, IBOInteractiveMulti, IBOInteractiveTool
     }
     void IBOInteractiveTool.UpdateInteract(CollisionInteractionMono caller)
     {
-        if (_hittedEffect)
-        {
-            _hittedEffect.Play();
-        }
 
-        AudioManager.Instance.PlayOneShot(_hittedAudioGroup, _hittedAudioKey);
-        UpdateHittedInteract(caller);
+
+        if (caller.Owner is not PlayerController pc) return;
+
+        if (pc.Inventory.CurrentItemData)
+        {
+            if (pc.Inventory.CurrentItemData.Info.Contains(ToolType.WaterSpray))
+            {
+                UpdateWetInteract(caller);
+            }
+            else
+            {
+                if (_hittedEffect)
+                {
+                    _hittedEffect.Play();
+                }
+                AudioManager.Instance.PlayOneShot(_hittedAudioGroup, _hittedAudioKey);
+                UpdateHittedInteract(caller);
+            }
+        }
     }
 
     protected abstract void UpdateDefaultInteract(CollisionInteractionMono caller);
     protected abstract void UpdateHittedInteract(CollisionInteractionMono caller);
+    protected abstract void UpdateWetInteract(CollisionInteractionMono caller);
 }

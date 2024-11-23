@@ -13,6 +13,8 @@ public enum ToolType
     FishingRod,
     Seed,
     Pickaxe,
+    Sickle,
+    Hammer,
 }
 
 public enum ToolRank : int

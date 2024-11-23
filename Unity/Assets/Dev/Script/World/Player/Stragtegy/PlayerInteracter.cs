@@ -134,6 +134,8 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
 
         if (currentData && (
                 currentData.Info.Contains(ToolType.Hoe) ||
+                currentData.Info.Contains(ToolType.Hammer) ||
+                currentData.Info.Contains(ToolType.Sickle) ||
                 currentData.Info.Contains(ToolType.WaterSpray) ||
                 currentData.Info.Contains(ToolType.Fertilizer) ||
                 currentData.Info.Contains(ToolType.Seed) ||

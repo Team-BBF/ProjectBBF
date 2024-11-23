@@ -21,7 +21,12 @@ public abstract class Npc : ActorProxy, IBOInteractiveMulti, IBOInteractiveTool
     public CollisionInteraction Interaction => Owner.Interaction;
     public bool IsVaildTool(ToolRequireSet toolSet)
     {
-        return toolSet.RequireToolType == ToolType.Hoe;
+        return toolSet.RequireToolType is 
+            ToolType.Hoe or 
+            ToolType.Sickle or 
+            ToolType.Hammer or 
+            ToolType.Pickaxe
+            ;
     }
 
     void IBOInteractiveMulti.UpdateInteract(CollisionInteractionMono caller)

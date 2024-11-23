@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7d27462c610d3943a5845eafda00b6d, type: 3}
-  m_Name: Item_Pickaxe
+  m_Name: Item_Hammer
   m_EditorClassIdentifier: 
-  _itemKey: Item_Pickaxe
-  _itemName: "\uACE1\uAD2D\uC774"
-  _itemDescription: "\uAD11\uC11D\uC744 \uCE98 \uC218 \uC788\uB294 \uACE1\uAD2D\uC774!"
-  _itemSprite: {fileID: 21300000, guid: f86aa2b922e12c344a1d0e01d1fa6e4c, type: 3}
+  _itemKey: Item_Hammer
+  _itemName: "\uBFC5\uB9DD\uCE58"
+  _itemDescription: "\uBB34\uC5C7\uC774\uB4E0 \uD30C\uAD34\uD560 \uC218 \uC788\uB294
+    \uB9DD\uCE58!"
+  _itemSprite: {fileID: 21300000, guid: 430349b013541694a975da02c578d1a5, type: 3}
   _maxStackCount: 1
   _price: 0
   _itemTypeInfo:
     _sets:
-    - _requireToolTypes: 6
+    - _requireToolTypes: 8
       _requireToolRank: 1
   _actionCategoryType: 1
-  _actionAnimationType: 2
+  _actionAnimationType: 13
   _usingActionAudioInfos:
   - _usingKey: Use
     _mixerGroupKey: Player
     _audioKey: Player_Tool_Using_Pickaxe
   _playerItemBehaviours:
-  - {fileID: 11400000, guid: 2edd0b16ea15f784ca5c5b06e56955a9, type: 2}
+  - {fileID: 11400000, guid: bfc2483c21f2dc04ba8f325e14319bb7, type: 2}
   - {fileID: 11400000, guid: db2be936941f4ac48864cd5ac565a5d6, type: 2}
   _usePrevWait: 0
   _useAndWait: 0.5

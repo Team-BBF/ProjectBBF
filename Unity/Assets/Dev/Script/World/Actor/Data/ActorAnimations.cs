@@ -30,6 +30,8 @@ public static class AnimationActorKey
      * Action
      */
     public static readonly int Hoe              = Animator.StringToHash("Hoe");
+    public static readonly int Hammer           = Animator.StringToHash("Hammer");
+    public static readonly int Sickle           = Animator.StringToHash("Sickle");
     public static readonly int Pickaxe          = Animator.StringToHash("Pickaxe");
     public static readonly int Collect          = Animator.StringToHash("Collect");
     public static readonly int WaterSpray       = Animator.StringToHash("WaterSpray");
@@ -40,7 +42,7 @@ public static class AnimationActorKey
     public static readonly int Idle             = Animator.StringToHash("Idle");
     public static readonly int Move             = Animator.StringToHash("Move");
     public static readonly int Plant            = Animator.StringToHash("Plant");
-    public static readonly int Fishing            = Animator.StringToHash("Fishing");
+    public static readonly int Fishing          = Animator.StringToHash("Fishing");
 
     [Serializable]
     public enum Direction
@@ -70,6 +72,8 @@ public static class AnimationActorKey
         Move,
         Plant,
         Fishing,
+        Hammer,
+        Sickle,
     }
 
     public static int GetAniHash(Action action)
@@ -88,6 +92,9 @@ public static class AnimationActorKey
             case Action.Idle: return Idle; 
             case Action.Move: return Move;
             case Action.Plant: return Plant;
+            case Action.Fishing: return Fishing;
+            case Action.Hammer: return Hammer;
+            case Action.Sickle: return Sickle;
             default:
                 Debug.Assert(false, $"정의되지 않은 Action({action})");
                 return -1;

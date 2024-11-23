@@ -191,8 +191,9 @@ public class PlayerDialogue : MonoBehaviour, IPlayerStrategy
             if (actorInfo.Interaction.Owner is Actor actor)
             {
                 Vector2 dir = (actor.transform.position - _controller.transform.position).normalized;
-                _controller.VisualStrategy.MoveDir = dir;
+                _controller.VisualStrategy.SetIdle(dir);
             }
+            
 
             AudioManager.Instance.PlayOneShot("SFX", "SFX_Dialogue_Call");
 

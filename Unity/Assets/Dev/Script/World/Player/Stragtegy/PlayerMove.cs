@@ -149,6 +149,7 @@ public class PlayerMove : MonoBehaviour, IPlayerStrategy, IActorMove
     
     public void ResetVelocity()
     {
+        _lv = Vector2.zero;
         _rigidbody.velocity = Vector3.zero;
     }
 }

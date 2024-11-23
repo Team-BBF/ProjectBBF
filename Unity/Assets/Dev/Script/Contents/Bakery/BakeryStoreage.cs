@@ -37,7 +37,7 @@ public class BakeryStoreage : BakeryFlowBehaviour
         {
             var obj = PersistenceManager.Instance.LoadOrCreate<GridModelPersistenceObject>(_data.PersistenceKey);
             
-            if (obj.Saved is false)
+            if (obj.Saved is false || _data.Infinity)
             {
                 foreach (ItemDataSerializedSet itemSet in _data.DefaultItemList)
                 {

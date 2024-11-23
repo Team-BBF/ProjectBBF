@@ -25,15 +25,28 @@ public class ConfinerBinder : MonoBehaviour
         SceneLoader.Instance.WorldPostLoaded -= OnLoaded;
     }
 
-    private void OnLoaded(string worldSceneName)
+    public Collider2D Confiner
+    {
+        get => _cinemachine.m_BoundingShape2D;
+        set
+        {
+            _cinemachine.m_BoundingShape2D = value;
+            _cinemachine.InvalidateCache();
+        }
+    }
+    public void FindConfiner()
     {
         var obj = GameObjectStorage.Instance.StoredObjects.FirstOrDefault(x => x.CompareTag("Confiner"));
         
         if (obj is null || _cinemachine == false) return;
         if (obj.TryGetComponent(out PolygonCollider2D col))
         {
-            _cinemachine.InvalidateCache();
-            _cinemachine.m_BoundingShape2D = col;
+            Confiner = col;
         }
+    }
+
+    private void OnLoaded(string worldSceneName)
+    {
+        FindConfiner();
     }
 }

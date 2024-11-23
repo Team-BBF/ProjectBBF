@@ -1,0 +1,297 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed507e00ab63144f976694caab7934e, type: 3}
+  m_Name: Dialogue_Cheat
+  m_EditorClassIdentifier: 
+  _guid: 5a49133c55880ee4bbc6b1ec02c42aef
+  NodeLinks:
+  - BaseNodeGuid: b7fb9d81-0f9d-4f22-9c05-63d8cb1d8013
+    PortName: Execute
+    TargetNodeGuid: ab9e2bd9-67af-481f-9dfd-f3296eba48ab
+  - BaseNodeGuid: ab9e2bd9-67af-481f-9dfd-f3296eba48ab
+    PortName: "\uCC55\uD130\uB97C \uC774\uB3D9\uD558\uACE0 \uC2F6\uC5B4"
+    TargetNodeGuid: d56b9a2b-9d99-4990-b787-0f4568df45fa
+  - BaseNodeGuid: ab9e2bd9-67af-481f-9dfd-f3296eba48ab
+    PortName: "\uB3C8\uC744 \uC99D\uAC00/\uAC10\uC18C \uC2DC\uD0A4\uACE0 \uC2F6\uC5B4"
+    TargetNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+  - BaseNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+    PortName: + 100
+    TargetNodeGuid: 0ba33d0f-86a7-4396-b9e7-67c4a133bcf1
+  - BaseNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+    PortName: + 500
+    TargetNodeGuid: 0e27797e-40d2-4271-baf3-218417dec9b8
+  - BaseNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+    PortName: + 1000
+    TargetNodeGuid: eaa36505-a6fa-4785-9662-0fa14204be78
+  - BaseNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+    PortName: '- 100'
+    TargetNodeGuid: 2442b850-2e87-44a6-bfd9-4bca91b0e233
+  - BaseNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+    PortName: '- 500'
+    TargetNodeGuid: 55e10e1a-2936-4ee0-b700-ce067834afbe
+  - BaseNodeGuid: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+    PortName: '- 1000'
+    TargetNodeGuid: 0daab144-68c9-45b7-b499-3f6344143555
+  - BaseNodeGuid: 0ba33d0f-86a7-4396-b9e7-67c4a133bcf1
+    PortName: Next
+    TargetNodeGuid: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+  - BaseNodeGuid: 0e27797e-40d2-4271-baf3-218417dec9b8
+    PortName: Next
+    TargetNodeGuid: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+  - BaseNodeGuid: eaa36505-a6fa-4785-9662-0fa14204be78
+    PortName: Next
+    TargetNodeGuid: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+  - BaseNodeGuid: 2442b850-2e87-44a6-bfd9-4bca91b0e233
+    PortName: Next
+    TargetNodeGuid: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+  - BaseNodeGuid: 55e10e1a-2936-4ee0-b700-ce067834afbe
+    PortName: Next
+    TargetNodeGuid: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+  - BaseNodeGuid: 0daab144-68c9-45b7-b499-3f6344143555
+    PortName: Next
+    TargetNodeGuid: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+  - BaseNodeGuid: d56b9a2b-9d99-4990-b787-0f4568df45fa
+    PortName: "\uCC55\uD130 1"
+    TargetNodeGuid: 58b6b5c4-cc60-48ee-9bf1-8528fb2587c0
+  - BaseNodeGuid: d56b9a2b-9d99-4990-b787-0f4568df45fa
+    PortName: "\uCC55\uD130 2"
+    TargetNodeGuid: ccd821b1-5ea5-43a3-9a10-10cb0f417ca4
+  - BaseNodeGuid: d56b9a2b-9d99-4990-b787-0f4568df45fa
+    PortName: "\uCC55\uD130 Ed"
+    TargetNodeGuid: 991a3265-f953-4fbc-ae93-a19987843242
+  - BaseNodeGuid: ccd821b1-5ea5-43a3-9a10-10cb0f417ca4
+    PortName: Next
+    TargetNodeGuid: c93cf580-7eff-4d53-8347-ce5f7346d85e
+  - BaseNodeGuid: 991a3265-f953-4fbc-ae93-a19987843242
+    PortName: Next
+    TargetNodeGuid: c93cf580-7eff-4d53-8347-ce5f7346d85e
+  - BaseNodeGuid: 58b6b5c4-cc60-48ee-9bf1-8528fb2587c0
+    PortName: Next
+    TargetNodeGuid: c93cf580-7eff-4d53-8347-ce5f7346d85e
+  - BaseNodeGuid: ab9e2bd9-67af-481f-9dfd-f3296eba48ab
+    PortName: "\uD544\uC694 \uC5C6\uC5B4"
+    TargetNodeGuid: 604171c2-cedd-48db-ac06-d3b8dd716ccb
+  NodeData:
+  - rid: 6486206537317482517
+  - rid: 6486206537317482518
+  - rid: 6486206537317482519
+  - rid: 6486206537317482520
+  - rid: 6486206537317482521
+  - rid: 6486206537317482522
+  - rid: 6486206537317482523
+  - rid: 6486206537317482524
+  - rid: 6486206537317482525
+  - rid: 6486206537317482526
+  - rid: 6486206537317482527
+  - rid: 6486206537317482529
+  - rid: 6486206537317482530
+  - rid: 6486206537317482531
+  - rid: 6486206537317482528
+  references:
+    version: 2
+    RefIds:
+    - rid: 6486206537317482517
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 07628ff1-eb83-44e6-98fc-7e0de1bb1052
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 772, y: 380.66666}
+        DialogueText: "\uC5BC\uB9C8\uB098 \uC99D\uAC00/\uAC10\uC18C \uC2DC\uCF1C
+          \uB4DC\uB9B4\uAE4C\uC694?"
+        PortraitKey: Default
+        ActorKey: Cheater
+    - rid: 6486206537317482518
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0ba33d0f-86a7-4396-b9e7-67c4a133bcf1
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1482, y: 402}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: 100
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6486206537317482519
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0e27797e-40d2-4271-baf3-218417dec9b8
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1482, y: 545.3334}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: 500
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6486206537317482520
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: eaa36505-a6fa-4785-9662-0fa14204be78
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1468.6666, y: 697.3334}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: 1000
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6486206537317482521
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 2442b850-2e87-44a6-bfd9-4bca91b0e233
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1482, y: 872}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -100
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6486206537317482522
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 55e10e1a-2936-4ee0-b700-ce067834afbe
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1482, y: 1026}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -500
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6486206537317482523
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0daab144-68c9-45b7-b499-3f6344143555
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1482, y: 1178.6666}
+        Handler: {fileID: 11400000, guid: 15a91396debb6df46910769ab7a4980b, type: 2}
+        Warps:
+        - Target: Int
+          IntValue: -1000
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 0}
+          BoolValue: 0
+    - rid: 6486206537317482524
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: d56b9a2b-9d99-4990-b787-0f4568df45fa
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 780.6667, y: -31.333334}
+        DialogueText: "\uC5B4\uB5A4 \uCC55\uD130\uB85C \uC774\uB3D9\uC2DC\uCF1C \uB4DC\uB9B4\uAE4C\uC694?"
+        PortraitKey: Default
+        ActorKey: Cheater
+    - rid: 6486206537317482525
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ccd821b1-5ea5-43a3-9a10-10cb0f417ca4
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1288, y: -92}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: 6fbcde9f255088e4cae473a343b584b2, type: 2}
+          BoolValue: 0
+    - rid: 6486206537317482526
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 991a3265-f953-4fbc-ae93-a19987843242
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1266, y: 108}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: d4ca327499ec3c94cb415f17c5d45114, type: 2}
+          BoolValue: 0
+    - rid: 6486206537317482527
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 555ae84a-9457-42b7-a9aa-a64efcc2fd3f
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 2076.6667, y: 742}
+        DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4."
+        PortraitKey: Smile
+        ActorKey: Cheater
+    - rid: 6486206537317482528
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c93cf580-7eff-4d53-8347-ce5f7346d85e
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 1818.6666, y: -80}
+        DialogueText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4."
+        PortraitKey: Smile
+        ActorKey: Cheater
+    - rid: 6486206537317482529
+      type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 58b6b5c4-cc60-48ee-9bf1-8528fb2587c0
+        NodeTitle: Execution
+        TypeName: Execution
+        Position: {x: 1289.3334, y: -268.66666}
+        Handler: {fileID: 11400000, guid: a9d090beb376e594f8301585751d5991, type: 2}
+        Warps:
+        - Target: Object
+          IntValue: 0
+          FloatValue: 0
+          StringValue: 
+          ObjectValue: {fileID: 11400000, guid: ba5ec66c81c7ce544a3b6845d6f84e5b, type: 2}
+          BoolValue: 0
+    - rid: 6486206537317482530
+      type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: ab9e2bd9-67af-481f-9dfd-f3296eba48ab
+        NodeTitle: Branch
+        TypeName: Branch
+        Position: {x: 297.33334, y: 178.66667}
+        DialogueText: "\uC5B4\uB5A4 \uAC83\uC744 \uB3C4\uC640\uB4DC\uB9B4\uAE4C\uC694?"
+        PortraitKey: Smile
+        ActorKey: Cheater
+    - rid: 6486206537317482531
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 604171c2-cedd-48db-ac06-d3b8dd716ccb
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 455.33334, y: 490}
+        DialogueText: "\uC548\uB155\uD788\uAC00\uC138\uC694."
+        PortraitKey: Smile
+        ActorKey: Cheater

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0289f7c39d2a42178e50bb03f4ae5d3a, type: 3}
+  m_Name: Dat_Storage_Cheat_Item_BakedBread
+  m_EditorClassIdentifier: 
+  _infinity: 1
+  _persistenceKey: Storage_Cheat_Item_BakedBread
+  _defaultItemList:
+  - Item: {fileID: 11400000, guid: e5b313fc729fdce4690e3cb0d73889db, type: 2}
+    Count: 0
+  - Item: {fileID: 11400000, guid: 0d1acd5e55a816940ab7f3d4e4860378, type: 2}
+    Count: 0
+  - Item: {fileID: 11400000, guid: d504c2a902ed6be4aada687dcade5e92, type: 2}
+    Count: 0
+  - Item: {fileID: 11400000, guid: 0399e87e6d145ee47a33a9f189cf14cb, type: 2}
+    Count: 0
+  - Item: {fileID: 11400000, guid: dbf2cc8ed2d52f94eba83f34f6b599d3, type: 2}
+    Count: 0
+  - Item: {fileID: 11400000, guid: eb2689667e27e36468a9207f7bd7187e, type: 2}
+    Count: 0
+  - Item: {fileID: 11400000, guid: 8b026329d6cea2b40b5251af80e069a4, type: 2}
+    Count: 0

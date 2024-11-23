@@ -61,6 +61,10 @@ public class RootSceneLoader : MonoBehaviour
         {
             if (GameObjectStorage.Instance && GameObjectStorage.Instance.TryGetPlayerController(out var pc))
             {
+                if (Camera.main.TryGetComponent(out ConfinerBinder binder))
+                {
+                    binder.FindConfiner();
+                }
                 pc.transform.position = (Vector2)transform.position;
             }
         }

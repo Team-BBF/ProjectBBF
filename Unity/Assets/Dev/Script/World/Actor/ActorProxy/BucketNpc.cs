@@ -10,6 +10,8 @@ public class BucketNpc : Npc
     [SerializeField] private BucketFavorability _favorability;
     public BucketFavorability Favorability => _favorability;
 
+    public const string SELL_ACTION_KEY = "bucket_sell_action_is_true";
+
     protected override void OnInit()
     {
         base.OnInit();
@@ -33,7 +35,14 @@ public class BucketNpc : Npc
                 {
                     try
                     {
-                        _favorability.ClearBucket();
+                        if(Favorability.ProcessorData.BindingTable.TryGetValue(SELL_ACTION_KEY, out string isTrue))
+                        {
+                            if (isTrue == "true")
+                            {
+                                _favorability.ClearBucket();
+                                Favorability.ProcessorData.BindingTable[SELL_ACTION_KEY] = "";
+                            }
+                        }
                     }
                     catch (Exception e)
                     {

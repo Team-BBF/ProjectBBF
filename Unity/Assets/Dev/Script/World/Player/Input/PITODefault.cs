@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using ProjectBBF.Event;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
@@ -34,11 +35,16 @@ namespace ProjectBBF.Input
 
                 IsUsingTool = true;
 
+                List<UniTask> tasks = new List<UniTask>(data.PlayerItemBehaviours.Count);
+                
                 foreach (PlayerItemBehaviour behaviour in data.PlayerItemBehaviours)
                 {
-                    await behaviour.DoAction(Owner, data, Owner.GetCancellationTokenOnDestroy());
+                    UniTask task = behaviour.DoAction(Owner, data, Owner.GetCancellationTokenOnDestroy());
+                    tasks.Add(task);
                 }
 
+                _ = await UniTask.WhenAll(tasks).SuppressCancellationThrow();
+                
                 await UniTask.Yield(PlayerLoopTiming.Update, Owner.GetCancellationTokenOnDestroy());
                 IsUsingTool = false;
             }

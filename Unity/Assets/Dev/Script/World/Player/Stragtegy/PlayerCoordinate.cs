@@ -69,7 +69,13 @@ public class PlayerCoordinate : MonoBehaviour, IPlayerStrategy
         Vector2 clickPoint = Camera.main.ScreenToWorldPoint(InputManager.Map.Player.Look.ReadValue<Vector2>());
         Vector2 dir = clickPoint - (Vector2)_controller.transform.position;
 
-        return GetDirOffset(_controller.VisualStrategy.ToNormalizedVector(dir, true));
+        float dis = dir.magnitude;
+        dir.Normalize();
+        
+        float minDis = Mathf.Min(GetDirOffset(_controller.VisualStrategy.ToNormalizedVector(dir, true)).magnitude, dis); 
+        minDis = Mathf.Min(_data.MaxDistance, minDis);
+        
+        return dir.normalized * minDis;
     }
     public Vector2 GetLookAtPosition()
     { 

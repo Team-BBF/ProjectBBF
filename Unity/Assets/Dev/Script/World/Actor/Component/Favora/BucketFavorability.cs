@@ -92,6 +92,8 @@ public class BucketFavorability : ActorFavorablity
 
                     return;
                 }
+                
+                return; 
             }
 
             if (IsValidBucketItem(slot.Data))

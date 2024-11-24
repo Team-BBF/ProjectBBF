@@ -26,12 +26,15 @@ MonoBehaviour:
   - BaseNodeGuid: 170862e3-b2aa-4bbe-ab85-ba1a6757fbdd
     PortName: False
     TargetNodeGuid: caab277a-6761-4c06-992b-60c0066993d3
-  - BaseNodeGuid: 17220886-29e0-405b-973e-3158990b4a0b
-    PortName: Next
-    TargetNodeGuid: 75c9da65-1cd3-49ea-98ca-26111ef1bf42
+  - BaseNodeGuid: 170862e3-b2aa-4bbe-ab85-ba1a6757fbdd
+    PortName: True
+    TargetNodeGuid: d75b234f-dfdd-4523-ac73-1b2b577e9e55
   - BaseNodeGuid: 1756c5b6-3e66-4865-98ce-c24c6d8c849a
     PortName: "\uC548\uB155!"
     TargetNodeGuid: d8dad473-97cf-43b0-8ebf-6945a89636f1
+  - BaseNodeGuid: 1756c5b6-3e66-4865-98ce-c24c6d8c849a
+    PortName: "\uB108\uB294 \uC5B4\uCA4C\uB2E4 \uB300\uD68C\uC5D0 \uCD9C\uC804\uD588\uC5B4?"
+    TargetNodeGuid: be40b649-e33e-4b92-a6e4-93b901d59581
   - BaseNodeGuid: 1ca6ca70-80be-453a-a6ac-fb361cf679d3
     PortName: False
     TargetNodeGuid: 76bd7ee5-6f86-4dcf-84d1-7d169964af3c
@@ -41,9 +44,6 @@ MonoBehaviour:
   - BaseNodeGuid: 1e281658-1cf2-4110-a4cc-0aa0a2d4108a
     PortName: Next
     TargetNodeGuid: b8c6438e-e324-4c70-83b1-a7aff6e1c9b4
-  - BaseNodeGuid: 243f71f6-3bab-4773-a5ba-870db9465f0c
-    PortName: Next
-    TargetNodeGuid: a1251f11-e0d4-4f6f-8877-f9f33359637a
   - BaseNodeGuid: 52b10f1b-48af-4c68-b40d-8d3089c0f7ae
     PortName: Next
     TargetNodeGuid: ea5b1873-fb17-40d3-8232-6df04648591f
@@ -53,30 +53,18 @@ MonoBehaviour:
   - BaseNodeGuid: 64b202e3-a614-4dde-bef4-1eee808bf7ee
     PortName: Next
     TargetNodeGuid: 01d3151a-9ace-40db-a7b3-837da26e014e
-  - BaseNodeGuid: 75c9da65-1cd3-49ea-98ca-26111ef1bf42
-    PortName: Next
-    TargetNodeGuid: 895e5799-adf6-4745-b50d-ba4d4b3bda38
   - BaseNodeGuid: 76bd7ee5-6f86-4dcf-84d1-7d169964af3c
     PortName: Next
     TargetNodeGuid: 1756c5b6-3e66-4865-98ce-c24c6d8c849a
-  - BaseNodeGuid: 895e5799-adf6-4745-b50d-ba4d4b3bda38
-    PortName: Next
-    TargetNodeGuid: 96156d54-422d-40e0-8970-0f793c00777f
   - BaseNodeGuid: 8a6237f8-ba5b-4462-a7e3-261e3bd918be
     PortName: Next
     TargetNodeGuid: 848b820d-8fd9-411c-a465-b456a0ced56c
   - BaseNodeGuid: 9552563f-02b3-4f27-8f3e-a8c46802a658
     PortName: Next
     TargetNodeGuid: f89d4973-4c9d-47f3-ab2d-94a1a9c58f53
-  - BaseNodeGuid: 96156d54-422d-40e0-8970-0f793c00777f
-    PortName: Next
-    TargetNodeGuid: 243f71f6-3bab-4773-a5ba-870db9465f0c
   - BaseNodeGuid: 97292638-d9b9-44b8-8310-7bca6e4c0eda
     PortName: Next
     TargetNodeGuid: 8a6237f8-ba5b-4462-a7e3-261e3bd918be
-  - BaseNodeGuid: a1251f11-e0d4-4f6f-8877-f9f33359637a
-    PortName: Next
-    TargetNodeGuid: cbb9eebd-77be-4d34-81bf-b995251fadb1
   - BaseNodeGuid: a20ee90d-17c1-4b8e-9f58-517566592992
     PortName: Next
     TargetNodeGuid: a831349d-8332-484b-a34f-86ec77cb89fa
@@ -92,9 +80,6 @@ MonoBehaviour:
   - BaseNodeGuid: caab277a-6761-4c06-992b-60c0066993d3
     PortName: Next
     TargetNodeGuid: 268bb957-a0ad-4e35-ab78-7c4400177161
-  - BaseNodeGuid: cbb9eebd-77be-4d34-81bf-b995251fadb1
-    PortName: Next
-    TargetNodeGuid: 5fdd0060-f1bb-433e-a3b0-d351fb0b17c5
   - BaseNodeGuid: cd40676d-f8f0-462f-875d-4f7654d22ae7
     PortName: False
     TargetNodeGuid: 1ca6ca70-80be-453a-a6ac-fb361cf679d3
@@ -128,62 +113,77 @@ MonoBehaviour:
   - BaseNodeGuid: 848b820d-8fd9-411c-a465-b456a0ced56c
     PortName: "\uD734\uAC00?"
     TargetNodeGuid: a4331464-38fc-4e28-b397-f0aefde4e0ee
-  - BaseNodeGuid: 170862e3-b2aa-4bbe-ab85-ba1a6757fbdd
-    PortName: True
-    TargetNodeGuid: d75b234f-dfdd-4523-ac73-1b2b577e9e55
-  - BaseNodeGuid: b6deb866-69c1-49b1-8d37-de1790c4cca5
-    PortName: Next
-    TargetNodeGuid: 17220886-29e0-405b-973e-3158990b4a0b
   - BaseNodeGuid: d75b234f-dfdd-4523-ac73-1b2b577e9e55
     PortName: Next
     TargetNodeGuid: b6deb866-69c1-49b1-8d37-de1790c4cca5
-  - BaseNodeGuid: 1756c5b6-3e66-4865-98ce-c24c6d8c849a
-    PortName: "\uB108\uB294 \uC5B4\uCA4C\uB2E4 \uB300\uD68C\uC5D0 \uCD9C\uC804\uD588\uC5B4?"
-    TargetNodeGuid: be40b649-e33e-4b92-a6e4-93b901d59581
+  - BaseNodeGuid: 17220886-29e0-405b-973e-3158990b4a0b
+    PortName: Next
+    TargetNodeGuid: 75c9da65-1cd3-49ea-98ca-26111ef1bf42
+  - BaseNodeGuid: 243f71f6-3bab-4773-a5ba-870db9465f0c
+    PortName: Next
+    TargetNodeGuid: a1251f11-e0d4-4f6f-8877-f9f33359637a
+  - BaseNodeGuid: 75c9da65-1cd3-49ea-98ca-26111ef1bf42
+    PortName: Next
+    TargetNodeGuid: 895e5799-adf6-4745-b50d-ba4d4b3bda38
+  - BaseNodeGuid: 895e5799-adf6-4745-b50d-ba4d4b3bda38
+    PortName: Next
+    TargetNodeGuid: 96156d54-422d-40e0-8970-0f793c00777f
+  - BaseNodeGuid: 96156d54-422d-40e0-8970-0f793c00777f
+    PortName: Next
+    TargetNodeGuid: 243f71f6-3bab-4773-a5ba-870db9465f0c
+  - BaseNodeGuid: a1251f11-e0d4-4f6f-8877-f9f33359637a
+    PortName: Next
+    TargetNodeGuid: cbb9eebd-77be-4d34-81bf-b995251fadb1
+  - BaseNodeGuid: cbb9eebd-77be-4d34-81bf-b995251fadb1
+    PortName: Next
+    TargetNodeGuid: 5fdd0060-f1bb-433e-a3b0-d351fb0b17c5
+  - BaseNodeGuid: b6deb866-69c1-49b1-8d37-de1790c4cca5
+    PortName: Next
+    TargetNodeGuid: 17220886-29e0-405b-973e-3158990b4a0b
   NodeData:
-  - rid: 6083855669911094103
-  - rid: 6083855669911094104
-  - rid: 6083855669911094105
-  - rid: 6083855669911094106
-  - rid: 6083855669911094107
-  - rid: 6083855669911094108
-  - rid: 6083855669911094109
-  - rid: 6083855669911094110
-  - rid: 6083855669911094111
-  - rid: 6083855669911094112
-  - rid: 6083855669911094113
-  - rid: 6083855669911094114
-  - rid: 6083855669911094115
-  - rid: 6083855669911094116
-  - rid: 6083855669911094117
-  - rid: 6083855669911094118
-  - rid: 6083855669911094119
-  - rid: 6083855669911094120
-  - rid: 6083855669911094121
-  - rid: 6083855669911094122
-  - rid: 6083855669911094123
-  - rid: 6083855669911094124
-  - rid: 6083855669911094125
-  - rid: 6083855669911094126
-  - rid: 6083855669911094127
-  - rid: 6083855669911094128
-  - rid: 6083855669911094129
-  - rid: 6083855669911094130
-  - rid: 6083855669911094131
-  - rid: 6083855669911094132
-  - rid: 6083855669911094134
-  - rid: 6083855669911094135
-  - rid: 6083855669911094136
-  - rid: 6083855669911094137
-  - rid: 6083855669911094138
-  - rid: 6083855669911094139
-  - rid: 6083855669911094140
-  - rid: 6083855669911094141
-  - rid: 6083855669911094133
+  - rid: 6771581511552204848
+  - rid: 6771581511552204849
+  - rid: 6771581511552204850
+  - rid: 6771581511552204851
+  - rid: 6771581511552204852
+  - rid: 6771581511552204853
+  - rid: 6771581511552204854
+  - rid: 6771581511552204855
+  - rid: 6771581511552204856
+  - rid: 6771581511552204857
+  - rid: 6771581511552204858
+  - rid: 6771581511552204859
+  - rid: 6771581511552204860
+  - rid: 6771581511552204861
+  - rid: 6771581511552204862
+  - rid: 6771581511552204863
+  - rid: 6771581511552204864
+  - rid: 6771581511552204865
+  - rid: 6771581511552204866
+  - rid: 6771581511552204867
+  - rid: 6771581511552204868
+  - rid: 6771581511552204869
+  - rid: 6771581511552204870
+  - rid: 6771581511552204871
+  - rid: 6771581511552204872
+  - rid: 6771581511552204873
+  - rid: 6771581511552204874
+  - rid: 6771581511552204875
+  - rid: 6771581511552204876
+  - rid: 6771581511552204877
+  - rid: 6771581511552204878
+  - rid: 6771581511552204879
+  - rid: 6771581511552204880
+  - rid: 6771581511552204881
+  - rid: 6771581511552204882
+  - rid: 6771581511552204883
+  - rid: 6771581511552204884
+  - rid: 6771581511552204885
+  - rid: 6771581511552204886
   references:
     version: 2
     RefIds:
-    - rid: 6083855669911094103
+    - rid: 6771581511552204848
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 01d3151a-9ace-40db-a7b3-837da26e014e
@@ -194,7 +194,7 @@ MonoBehaviour:
           \uD574\uB3C4 \uC2DC\uAC04\uC774 \uAC04\uB2E4\uAD6C..."
         PortraitKey: Smi
         ActorKey: Aria
-    - rid: 6083855669911094104
+    - rid: 6771581511552204849
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 01f55603-bd7c-4571-ac32-073bf00bca5a
@@ -205,7 +205,7 @@ MonoBehaviour:
           \uAF2D \uD574 \uBD10...!"
         PortraitKey: Smi
         ActorKey: Aria
-    - rid: 6083855669911094105
+    - rid: 6771581511552204850
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 170862e3-b2aa-4bbe-ab85-ba1a6757fbdd
@@ -226,7 +226,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094106
+    - rid: 6771581511552204851
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1756c5b6-3e66-4865-98ce-c24c6d8c849a
@@ -237,7 +237,7 @@ MonoBehaviour:
           \uC788\uB2E4.)"
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094107
+    - rid: 6771581511552204852
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1ca6ca70-80be-453a-a6ac-fb361cf679d3
@@ -252,7 +252,7 @@ MonoBehaviour:
           StringValue: Aria_2
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094108
+    - rid: 6771581511552204853
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 1e281658-1cf2-4110-a4cc-0aa0a2d4108a
@@ -263,7 +263,7 @@ MonoBehaviour:
           \uBAB0\uB77C...!"
         PortraitKey: Smi
         ActorKey: Aria
-    - rid: 6083855669911094109
+    - rid: 6771581511552204854
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 268bb957-a0ad-4e35-ab78-7c4400177161
@@ -273,7 +273,7 @@ MonoBehaviour:
         DialogueText: "\uC228 \uC26C\uAE30\uB3C4 \uADC0\uCC2E\uB2E4..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094110
+    - rid: 6771581511552204855
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 52b10f1b-48af-4c68-b40d-8d3089c0f7ae
@@ -284,7 +284,7 @@ MonoBehaviour:
           \uD2B9\uC9D5\uC778 \uC624\uB9AC\uC57C."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094111
+    - rid: 6771581511552204856
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 59a21f0a-bc18-48b2-a039-ab415c10e6d3
@@ -294,7 +294,7 @@ MonoBehaviour:
         DialogueText: "\uC548\uB155."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094112
+    - rid: 6771581511552204857
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 5b261f03-0777-4972-a30a-4eb1b96eb1d9
@@ -305,7 +305,7 @@ MonoBehaviour:
           \uC624\uB294 \uAC8C \uC815\uB9D0 \uC7AC\uBC0C\uC5B4...!"
         PortraitKey: Lol
         ActorKey: Aria
-    - rid: 6083855669911094113
+    - rid: 6771581511552204858
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 64b202e3-a614-4dde-bef4-1eee808bf7ee
@@ -316,7 +316,7 @@ MonoBehaviour:
           \uC548\uACBD\uC744 \uBC97\uACBC\uC744 \uB54C\uAC00 \uAC00\uAD00\uC774\uAC70\uB4E0...!"
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094114
+    - rid: 6771581511552204859
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 76bd7ee5-6f86-4dcf-84d1-7d169964af3c
@@ -326,7 +326,7 @@ MonoBehaviour:
         DialogueText: "\uD558\uC554..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094115
+    - rid: 6771581511552204860
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 8a6237f8-ba5b-4462-a7e3-261e3bd918be
@@ -336,7 +336,7 @@ MonoBehaviour:
         DialogueText: "\uADFC\uB370 \uB108\uBB34 \uADC0\uCC2E\uC544... "
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094116
+    - rid: 6771581511552204861
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 9552563f-02b3-4f27-8f3e-a8c46802a658
@@ -347,7 +347,7 @@ MonoBehaviour:
           \uB3D9\uBB3C\uB4E4\uC774\uB791 \uB180\uACE0 \uC2F6\uB2E4..."
         PortraitKey: Smi
         ActorKey: Aria
-    - rid: 6083855669911094117
+    - rid: 6771581511552204862
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 97292638-d9b9-44b8-8310-7bca6e4c0eda
@@ -358,7 +358,7 @@ MonoBehaviour:
           \uC900\uB2E4\uACE0 \uD588\uC5B4..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094118
+    - rid: 6771581511552204863
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a20ee90d-17c1-4b8e-9f58-517566592992
@@ -368,7 +368,7 @@ MonoBehaviour:
         DialogueText: "(\uC544\uB9AC\uC544\uAC00 \uC0AC\uC545\uD558\uAC8C \uC6C3\uB294\uB2E4.)"
         PortraitKey: Lol
         ActorKey: Aria
-    - rid: 6083855669911094119
+    - rid: 6771581511552204864
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a4331464-38fc-4e28-b397-f0aefde4e0ee
@@ -378,7 +378,7 @@ MonoBehaviour:
         DialogueText: "\uC751... \uC774\uC81C \uC232\uC5D0\uC11C \uB180\uC544\uC57C\uC9C0."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094120
+    - rid: 6771581511552204865
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a831349d-8332-484b-a34f-86ec77cb89fa
@@ -399,7 +399,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 1
-    - rid: 6083855669911094121
+    - rid: 6771581511552204866
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b8c6438e-e324-4c70-83b1-a7aff6e1c9b4
@@ -409,7 +409,7 @@ MonoBehaviour:
         DialogueText: "\uCC38\uACE0\uB85C \uB77C\uC77C\uB77C\uB3C4 \uBC24\uACE0\uB0E5\uC774\uC57C...!"
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094122
+    - rid: 6771581511552204867
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: be40b649-e33e-4b92-a6e4-93b901d59581
@@ -419,7 +419,7 @@ MonoBehaviour:
         DialogueText: "\uB300\uD68C...?"
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094123
+    - rid: 6771581511552204868
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: caab277a-6761-4c06-992b-60c0066993d3
@@ -429,7 +429,7 @@ MonoBehaviour:
         DialogueText: ......
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094124
+    - rid: 6771581511552204869
       type: {class: ConditionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: cd40676d-f8f0-462f-875d-4f7654d22ae7
@@ -450,7 +450,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094125
+    - rid: 6771581511552204870
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d8dad473-97cf-43b0-8ebf-6945a89636f1
@@ -460,7 +460,7 @@ MonoBehaviour:
         DialogueText: "...... \uC544. \uC751."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094126
+    - rid: 6771581511552204871
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: e093bb22-f70e-493e-ad0f-a2895dd7a6fa
@@ -471,7 +471,7 @@ MonoBehaviour:
           \uC548 \uD558\uACE0..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094127
+    - rid: 6771581511552204872
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ea5b1873-fb17-40d3-8232-6df04648591f
@@ -482,7 +482,7 @@ MonoBehaviour:
           \uC6B8\uC5B4\uB300\uB294\uAC8C \uC5BC\uB9C8\uB098 \uC7AC\uBC0C\uB294\uB370..."
         PortraitKey: Smi
         ActorKey: Aria
-    - rid: 6083855669911094128
+    - rid: 6771581511552204873
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ed38872b-a844-465e-b3c9-b924b56968cd
@@ -493,7 +493,7 @@ MonoBehaviour:
           \uBD80\uC5C9\uC774\uC57C!"
         PortraitKey: Lol
         ActorKey: Aria
-    - rid: 6083855669911094129
+    - rid: 6771581511552204874
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: ef7d7d8d-dee4-440a-9b40-19e1774a281e
@@ -504,7 +504,7 @@ MonoBehaviour:
           \uC11C\uC2DD\uD558\uB294 \uAC80\uC740 \uACE0\uC591\uC774\uC57C!"
         PortraitKey: Smi
         ActorKey: Aria
-    - rid: 6083855669911094130
+    - rid: 6771581511552204875
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: f89d4973-4c9d-47f3-ab2d-94a1a9c58f53
@@ -516,7 +516,7 @@ MonoBehaviour:
           \uC560\uB4E4\uC774\uB791 \uB180 \uAC70\uC57C!!"
         PortraitKey: Lov
         ActorKey: Aria
-    - rid: 6083855669911094131
+    - rid: 6771581511552204876
       type: {class: BranchNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 848b820d-8fd9-411c-a465-b456a0ced56c
@@ -526,7 +526,7 @@ MonoBehaviour:
         DialogueText: "... \uADF8\uB798\uB3C4 \uD798\uB0B4\uC57C\uC9C0..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094132
+    - rid: 6771581511552204877
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: d75b234f-dfdd-4523-ac73-1b2b577e9e55
@@ -536,17 +536,7 @@ MonoBehaviour:
         DialogueText: "\uC774\uAC74... \uBB50\uC57C...?"
         PortraitKey: Yaw
         ActorKey: Aria
-    - rid: 6083855669911094133
-      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
-      data:
-        GUID: 5fdd0060-f1bb-433e-a3b0-d351fb0b17c5
-        NodeTitle: Text
-        TypeName: Text
-        Position: {x: 3805, y: -156}
-        DialogueText: "1500\uC6D0\uC744 \uC5BB\uC5C8\uB2E4!"
-        PortraitKey: 
-        ActorKey: exp
-    - rid: 6083855669911094134
+    - rid: 6771581511552204878
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 17220886-29e0-405b-973e-3158990b4a0b
@@ -556,7 +546,7 @@ MonoBehaviour:
         DialogueText: "\uC624... \uAE4C\uBA39\uACE0 \uC788\uC5C8\uB2E4..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094135
+    - rid: 6771581511552204879
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 243f71f6-3bab-4773-a5ba-870db9465f0c
@@ -571,7 +561,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094136
+    - rid: 6771581511552204880
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 75c9da65-1cd3-49ea-98ca-26111ef1bf42
@@ -581,7 +571,7 @@ MonoBehaviour:
         DialogueText: "\uACE0\uB9C8\uC6CC..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094137
+    - rid: 6771581511552204881
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 895e5799-adf6-4745-b50d-ba4d4b3bda38
@@ -592,7 +582,7 @@ MonoBehaviour:
           \uC804\uB2EC\uD574 \uC918..."
         PortraitKey: 
         ActorKey: Aria
-    - rid: 6083855669911094138
+    - rid: 6771581511552204882
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 96156d54-422d-40e0-8970-0f793c00777f
@@ -613,7 +603,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094139
+    - rid: 6771581511552204883
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a1251f11-e0d4-4f6f-8877-f9f33359637a
@@ -634,7 +624,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094140
+    - rid: 6771581511552204884
       type: {class: ExecutionNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: cbb9eebd-77be-4d34-81bf-b995251fadb1
@@ -655,7 +645,7 @@ MonoBehaviour:
           StringValue: 
           ObjectValue: {fileID: 0}
           BoolValue: 0
-    - rid: 6083855669911094141
+    - rid: 6771581511552204885
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: b6deb866-69c1-49b1-8d37-de1790c4cca5
@@ -664,4 +654,14 @@ MonoBehaviour:
         Position: {x: 1333, y: -154}
         DialogueText: "\uC544, \uBCF4\uC11D \uC625\uC218\uC218...\uAD6C\uB098"
         PortraitKey: 
-        ActorKey: 
+        ActorKey: Aria
+    - rid: 6771581511552204886
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5fdd0060-f1bb-433e-a3b0-d351fb0b17c5
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 3805, y: -156}
+        DialogueText: "1500\uC6D0\uC744 \uC5BB\uC5C8\uB2E4!"
+        PortraitKey: 
+        ActorKey: exp

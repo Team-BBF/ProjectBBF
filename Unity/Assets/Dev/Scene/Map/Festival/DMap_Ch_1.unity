@@ -11153,6 +11153,10 @@ PrefabInstance:
       propertyPath: _hittedDialogue
       value: 
       objectReference: {fileID: 11400000, guid: e1d0dbf4cf4502d40a8dcc3dadaad2f8, type: 2}
+    - target: {fileID: 5967932294532341665, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7236962955030520697, guid: 1393c325ba0f8694f9aaa31091448e4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.36
@@ -14792,6 +14796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hittedDialogue: {fileID: 0}
+  _wetDialogue: {fileID: 0}
   _bucketDialogueContainer: {fileID: 11400000, guid: 523aefdd0adc7d94dbac17f89b3cf34d, type: 2}
   _bucketValidItemTable: {fileID: 11400000, guid: 93678d85c7ea5fe42810f88d0cd2035f, type: 2}
   _bucket: {fileID: 0}

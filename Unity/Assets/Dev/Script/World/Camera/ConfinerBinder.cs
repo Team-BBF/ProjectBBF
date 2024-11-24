@@ -15,7 +15,12 @@ public class ConfinerBinder : MonoBehaviour
     private void Awake()
     {
         SceneLoader.Instance.WorldPostLoaded += OnLoaded;
-        OnLoaded("");
+    }
+
+    private void Start()
+    {
+        
+        FindConfiner();
     }
 
     private void OnDestroy()
@@ -30,6 +35,7 @@ public class ConfinerBinder : MonoBehaviour
         get => _cinemachine.m_BoundingShape2D;
         set
         {
+            _cinemachine.InvalidateCache();
             _cinemachine.m_BoundingShape2D = value;
             _cinemachine.InvalidateCache();
         }

@@ -22,7 +22,7 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
 
         [NonSerialized] public bool Used;
     }
-
+    [FormerlySerializedAs("_hammer")] [SerializeField] private ItemData _hammerItemData;
     [SerializeField] private CinemachineVirtualCamera _camera;
 
     [SerializeField] private GameTimerUI _timerUI;
@@ -155,6 +155,8 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         _scoreUI.Visible = false;
         _camera.gameObject.SetActive(false);
     }
+    private IInventorySlot _hammerSlot = null;
+    private IInventorySlot _targetSwapSlot = null;
 
     protected override void OnGameInit()
     {
@@ -170,12 +172,46 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         Player.HudController.Visible = false;
         Player.QuestPresenter.Visible = false;
         Player.RecipeSummaryView.Visible = false;
+        
+        Player.Inventory.QuickView.CurrentItemIndex = 0;
+        Player.Inventory.QuickView.CursorMoveLock = true;
+        Player.Inventory.QuickView.Visible = false;
 
         Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
+        Player.InputController.UI.Value = null;
 
         _gameCts = CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());
         Score = 0;
         GameTime = 0;
+        
+        if (_hammerItemData)
+        {
+            Player.Inventory.Model.PushItem(_hammerItemData, 1);
+        }
+        
+        using IEnumerator<IInventorySlot> slotEnumerator = Player.Inventory.Model.GetEnumerator();
+
+        
+        
+        while (slotEnumerator.MoveNext())
+        {
+            if (slotEnumerator.Current is not null && slotEnumerator.Current.Data == _hammerItemData)
+            {
+                _hammerSlot = slotEnumerator.Current;
+                break;
+            }
+        }
+        
+        Debug.Assert(_hammerSlot is not null, "플레이어에게서 낚시대를 찾을 수 없습니다.");
+        
+        _targetSwapSlot = Player.Inventory.Model.GetSlotSequentially(0);
+        Debug.Assert(_targetSwapSlot is not null);
+        
+        
+        if (_hammerSlot is not null && _targetSwapSlot is not null)
+        {
+            _hammerSlot.Swap(_targetSwapSlot);
+        }
 
         _uiPanel.SetActive(true);
         foreach (MoleMinigameData.Mole mole in Data.Moles)
@@ -331,7 +367,17 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         Player.HudController.Visible = true;
         Player.QuestPresenter.Visible = true;
         Player.RecipeSummaryView.Visible = true;
+        Player.Inventory.QuickInvVisible = true;
+        Player.Inventory.QuickView.CursorMoveLock = false;
+        Player.Inventory.QuickView.Visible = true;
+        
+        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
 
+        if (_hammerSlot is not null && _targetSwapSlot is not null)
+        {
+            _hammerSlot.Swap(_targetSwapSlot);
+            _hammerSlot.Clear();
+        }
 
         _camera.gameObject.SetActive(false);
 

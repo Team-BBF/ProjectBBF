@@ -69,9 +69,9 @@ public class DialogueContext
 
                 bool editorPass = false;
                 
-                #if UNITY_EDITOR
+                //#if UNITY_EDITOR
                 editorPass = Input.GetKey(KeyCode.X);
-                #endif
+                //#endif
                 
                 await UniTask.WaitUntil(() =>
                     {

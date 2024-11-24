@@ -185,7 +185,6 @@ MonoBehaviour:
   - rid: 6083855669911094003
   - rid: 6083855669911094004
   - rid: 6083855669911094005
-  - rid: 6083855669911094006
   - rid: 6083855669911094007
   - rid: 6083855669911094008
   - rid: 6083855669911094009
@@ -215,6 +214,7 @@ MonoBehaviour:
   - rid: 6083855669911094033
   - rid: 6083855669911094034
   - rid: 6083855669911094035
+  - rid: 6083855669911094006
   references:
     version: 2
     RefIds:
@@ -365,7 +365,7 @@ MonoBehaviour:
         GUID: 848d2139-2ec1-4dc9-a82b-6f60df720743
         NodeTitle: Condition
         TypeName: Condition
-        Position: {x: 840, y: -168}
+        Position: {x: 794, y: -172}
         Handler: {fileID: 11400000, guid: d0a6352dc4ca27c4fb3cd76966849710, type: 2}
         Warps:
         - Target: String

@@ -4,20 +4,9 @@ using ProjectBBF.Event;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "ProjectBBF/Behaviour/Item/ToolCollect ",  fileName = "Bav_Item_ToolCollect")]
-public class PIBToolCollect : PlayerItemBehaviour
+public class PIBToolCollect : PIBTwoStep
 {
-    public override async UniTask DoAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
-    {
-        await UniTask.CompletedTask;
-        
-        var interaction = playerController.Interactor.FindCloserObject();
-        if (interaction == false) return;
-
-        CollisionInteractionUtil
-            .CreateSelectState()
-            .Bind<IBOInteractiveTool>(x => CollectObject(x, playerController))
-            .Execute(interaction.ContractInfo, out bool _);
-    }
+    private CollisionInteractionMono _target;
     
     private bool CollectObject(IBOInteractiveTool action, PlayerController pc)
     {
@@ -35,5 +24,33 @@ public class PIBToolCollect : PlayerItemBehaviour
 
 
         return false;
+    }
+    protected override async UniTask<ActionResult> PreAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        await UniTask.CompletedTask;
+        
+        _target = playerController.Interactor.FindCloserObject();
+        if (_target == false) return ActionResult.Break;
+        
+        return ActionResult.Continue;
+    }
+
+    protected override async UniTask<ActionResult> PostAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        await UniTask.CompletedTask;
+        
+        if(_target == false) return ActionResult.Break;
+        
+        CollisionInteractionUtil
+            .CreateSelectState()
+            .Bind<IBOInteractiveTool>(x => CollectObject(x, playerController))
+            .Execute(_target.ContractInfo, out bool _);
+
+        return ActionResult.Continue;
+    }
+
+    protected override UniTask EndAction(PlayerController playerController, ItemData itemData, CancellationToken token = default)
+    {
+        return UniTask.CompletedTask;
     }
 }

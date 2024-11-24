@@ -11,6 +11,9 @@ public class PlayerCoordinateData : ScriptableObject
     [SerializeField] private Vector2 _upOffset;
     [SerializeField] private Vector2 _downOffset;
     [SerializeField] private float _radius;
+    [SerializeField] private float _maxDistance;
+
+    public float MaxDistance => _maxDistance;
 
     public Vector2 SideOffset => _sideOffset;
 

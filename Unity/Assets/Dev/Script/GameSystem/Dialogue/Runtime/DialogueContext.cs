@@ -77,9 +77,9 @@ public class DialogueContext
                     {
                         bool pass = false;
                         
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
                         pass = Input.GetKey(KeyCode.X);
-#endif
+//#endif
                         pass |= InputManager.Map.UI.DialogueSkip.triggered;
 
                         return pass;

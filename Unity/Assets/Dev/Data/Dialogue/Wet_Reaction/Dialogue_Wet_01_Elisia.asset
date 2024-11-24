@@ -17,19 +17,33 @@ MonoBehaviour:
   - BaseNodeGuid: e415546b-ef00-4ea6-9aac-6a41b20e5b7b
     PortName: Execute
     TargetNodeGuid: 2cdaa922-a6c4-4083-a17d-d8ff52c16b8a
+  - BaseNodeGuid: 2cdaa922-a6c4-4083-a17d-d8ff52c16b8a
+    PortName: Next
+    TargetNodeGuid: c79215da-06a0-424e-9515-b6411109e656
   NodeData:
-  - rid: 6083855653500355080
+  - rid: 6083855669911094142
+  - rid: 6083855669911094143
   references:
     version: 2
     RefIds:
-    - rid: 6083855653500355080
+    - rid: 6083855669911094142
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 2cdaa922-a6c4-4083-a17d-d8ff52c16b8a
         NodeTitle: Text
         TypeName: Text
         Position: {x: 222, y: 200}
-        DialogueText: "\uC704\uB300\uD55C \uB808\uB4DC \uB4DC\uB798\uACE4\uC5D0\uAC8C
-          \uC774\uAC8C \uBB34\uC2A8 \uC9D3\uC774\uC9C0...?"
+        DialogueText: "\uC774\uAC8C \uBB34\uC2A8 \uC9D3\uC774\uC9C0...?"
+        PortraitKey: Agg
+        ActorKey: Elisia_Chapter_1
+    - rid: 6083855669911094143
+      type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c79215da-06a0-424e-9515-b6411109e656
+        NodeTitle: Text
+        TypeName: Text
+        Position: {x: 533, y: 198}
+        DialogueText: "{player}. \uC7A5\uB09C\uC774 \uC9C0\uB098\uCE58\uBA74 \uD070\uC77C\uB0A0
+          \uC218 \uC788\uC5B4."
         PortraitKey: Agg
         ActorKey: Elisia_Chapter_1

@@ -96,10 +96,26 @@ PrefabInstance:
       propertyPath: _hittedDialogue
       value: 
       objectReference: {fileID: 11400000, guid: a4517bb43da89a34fa38958944998e5c, type: 2}
+    - target: {fileID: 4358086960736183196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358086960736183196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358086960736183196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6938030239645781065, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: abfa55a4d4e3ca34093a2f8cfe8b8160, type: 2}
+    - target: {fileID: 7689069794954926429, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: faa625e622b42d64e9dfaaf53bc417a4, type: 3}
     - target: {fileID: 7697288667054222113, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.2

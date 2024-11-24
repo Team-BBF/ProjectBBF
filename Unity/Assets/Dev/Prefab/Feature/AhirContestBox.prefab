@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6114501, y: 0.6114501, z: 0.6114501}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8594081389945653459}
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2.5, y: 2}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeObject: {fileID: 774684139602967578}
   _interruptPlayerControl: 1
+  _isInteractingByClick: 0
 --- !u!114 &787454703130337317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +240,9 @@ MonoBehaviour:
   _resolvor: 0
   _buckets:
   - {fileID: 9209129941722838342}
+  _passItemToNextCh: 0
   doOnceKey: Ahir_Chapter_1_ContestResultBox
+  _ahirBoxKey: 
   _ani: {fileID: 4833999860125175358}
 --- !u!1 &7854840363917133398
 GameObject:
@@ -353,6 +356,7 @@ MonoBehaviour:
   _interaction: {fileID: 787454703130337317}
   _rigid: {fileID: 2038823585434101786}
   _data: {fileID: 11400000, guid: 28a9df2fa46154644a1069fbb23898cc, type: 2}
+  _isSingleCloser: 0
   _onFade:
     m_PersistentCalls:
       m_Calls: []
@@ -462,26 +466,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8594081389945653459}
     m_Modifications:
-    - target: {fileID: 3128605142480319501, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361744241096775842, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361744241096775842, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 8425257423240769487, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
-      propertyPath: _data
-      value: 
-      objectReference: {fileID: 11400000, guid: 28a9df2fa46154644a1069fbb23898cc, type: 2}
-    - target: {fileID: 8425257423240769487, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
-      propertyPath: _interaction
-      value: 
-      objectReference: {fileID: 787454703130337317}
     - target: {fileID: 1358751654226165324, guid: ff14a4a94f0795a418016029999c8672, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.27
@@ -518,6 +502,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3128605142480319501, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361744241096775842, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361744241096775842, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425257423240769487, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 28a9df2fa46154644a1069fbb23898cc, type: 2}
+    - target: {fileID: 8425257423240769487, guid: 365e9450ac9009d4b8309d47ea5e8d8d, type: 3}
+      propertyPath: _interaction
+      value: 
+      objectReference: {fileID: 787454703130337317}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

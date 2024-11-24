@@ -17,6 +17,10 @@ PrefabInstance:
       value: Cheater
       objectReference: {fileID: 0}
     - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _wetDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: a21387b5460e70c4e938ee7c0c257755, type: 2}
+    - target: {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: _hittedDialogue
       value: 
       objectReference: {fileID: 11400000, guid: af07c221a2c127343baa986059afa5ed, type: 2}

@@ -2211,7 +2211,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -3343,6 +3343,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3608732300981117893, guid: 40a08865e12e93d4a8954444c54c525a, type: 3}
   m_PrefabInstance: {fileID: 1673202769}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &949430466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949430468}
+  - component: {fileID: 949430467}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &949430467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949430466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 8b8f9efd2ebdaa249b63be38e7ccdf6c, type: 2}
+--- !u!4 &949430468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949430466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.768799, y: 2.8034358, z: 0.023532264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &985071553
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,12 +4229,12 @@ MonoBehaviour:
     Artist-\n\n\uAE40\uBBFC\uC9C0\n\n\uBC15\uB2E4\uC815\n\n\uC815\uBBFC\uC131\n\n\n\n-Effect
     Artist-\n\n\uD669\uC778\uC601\n\n\n\n-Game Design Supporter-\n\n\uD64D\uAE30\uB95C\n\n-Animator
     Supporter-\n\n\uBC15\uC2DC\uC740\n\n-UI Supporter-\n\n\uBC15\uACC4\uD654\n\n\n\n-Special
-    Thanks to-\n\n\uAE40\uC0C1\uC911 \uAD50\uC218\uB2D8\n\n\uAE40\uC601\uC9C4 \uAD50\uC218\uB2D8\n\n\uAE40\uC6A9\uADDC
-    \uAD50\uC218\uB2D8\n\n\uAE40\uC815\uC120 \uAD50\uC218\uB2D8\n\n\uAE40\uD6A8\uB0A8
-    \uAD50\uC218\uB2D8\n\n\uC2E0\uC720\uCCA0 \uAD50\uC218\uB2D8\n\n\uC624\uD604\uC8FC
-    \uAD50\uC218\uB2D8\n\n\uC774\uB3D9\uD6C4 \uAD50\uC218\uB2D8\n\n\uC774\uC0C1\uC6D0
-    \uAD50\uC218\uB2D8\n\n\uC774\uC2B9\uD658 \uAD50\uC218\uB2D8\n\n\uCD5C\uD654\uC120
-    \uAD50\uC218\uB2D8"
+    Thanks to-\n\n\uC774\uC2B9\uC900\n\n\uAE40\uC0C1\uC911 \uAD50\uC218\uB2D8\n\n\uAE40\uC601\uC9C4
+    \uAD50\uC218\uB2D8\n\n\uAE40\uC6A9\uADDC \uAD50\uC218\uB2D8\n\n\uAE40\uC815\uC120
+    \uAD50\uC218\uB2D8\n\n\uAE40\uD6A8\uB0A8 \uAD50\uC218\uB2D8\n\n\uC2E0\uC720\uCCA0
+    \uAD50\uC218\uB2D8\n\n\uC624\uD604\uC8FC \uAD50\uC218\uB2D8\n\n\uC774\uB3D9\uD6C4
+    \uAD50\uC218\uB2D8\n\n\uC774\uC0C1\uC6D0 \uAD50\uC218\uB2D8\n\n\uC774\uC2B9\uD658
+    \uAD50\uC218\uB2D8\n\n\uCD5C\uD654\uC120 \uAD50\uC218\uB2D8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 594ad54fb91d5e24caccaaad628f89a1, type: 2}
   m_sharedMaterial: {fileID: -2426773843448081593, guid: 594ad54fb91d5e24caccaaad628f89a1, type: 2}
@@ -8369,3 +8418,4 @@ SceneRoots:
   - {fileID: 2052403272}
   - {fileID: 93437441}
   - {fileID: 2015746238}
+  - {fileID: 949430468}

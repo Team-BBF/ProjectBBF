@@ -12,22 +12,22 @@ public class MinigamePlayer : MonoBehaviour
     {
         _minigame = GetComponent<IMinigame>();
 
-        SceneLoader.Instance.FadeinComplete += Play;
+        SceneLoader.Instance.WorldPostLoaded += Play;
     }
 
     private void OnDestroy()
     {
         if(SceneLoader.Instance)
-            SceneLoader.Instance.FadeinComplete -= Play;
+            SceneLoader.Instance.WorldPostLoaded -= Play;
     }
 
     [ButtonMethod]
     private void OnPlay()
     {
-        Play();
+        Play("");
     }
     
-    private void Play()
+    private void Play(string _)
     {
         if (_minigame is not null)
         {

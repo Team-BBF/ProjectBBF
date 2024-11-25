@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public CollisionInteraction Interaction => _interaction;
     public PlayerBlackboard Blackboard { get; private set; }
+    public bool SaveLock { get; set; }
     private HudController _hudController;
 
     public HudController HudController

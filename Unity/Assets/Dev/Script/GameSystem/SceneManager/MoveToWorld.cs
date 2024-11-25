@@ -16,6 +16,7 @@ public class MoveToWorld : MonoBehaviour
     [SerializeField] private bool _save;
     [SerializeField] private bool _load;
     [SerializeField] private bool _savePosAndWorld = true;
+    [SerializeField] private bool _saveCurrentPosAndWorld;
     [SerializeField] private bool _unloadImmutable;
     [SerializeField] private Transform _initPlayerPosition;
 
@@ -45,6 +46,12 @@ public class MoveToWorld : MonoBehaviour
         {
             pc.Blackboard.CurrentPosition = pos;
             pc.Blackboard.CurrentWorld = scene;
+        }
+
+        if (_saveCurrentPosAndWorld)
+        {
+            pc.Blackboard.CurrentPosition = pc.transform.position;
+            pc.Blackboard.CurrentWorld = SceneLoader.Instance.CurrentWorldScene;
         }
 
 

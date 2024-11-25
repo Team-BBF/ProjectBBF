@@ -2257,6 +2257,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 0
   _initPlayerPosition: {fileID: 2097345646}
 --- !u!114 &1473615944
@@ -2529,9 +2530,10 @@ MonoBehaviour:
   _directorKey: BlackAlpha
   _fadeOut: 1
   _fadeIn: 1
-  _save: 1
+  _save: 0
   _load: 0
-  _savePosAndWorld: 1
+  _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 0
   _initPlayerPosition: {fileID: 1820946036}
 --- !u!114 &1593955251

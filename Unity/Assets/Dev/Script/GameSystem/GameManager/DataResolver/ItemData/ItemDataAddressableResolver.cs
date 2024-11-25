@@ -26,7 +26,7 @@ public class ItemDataAddressableResolver : IItemDataResolver
     {
         AsyncOperationHandle<IList<IResourceLocation>> locations = Addressables.LoadResourceLocationsAsync(
             "ItemData",
-            null
+            typeof(ItemData)
             );
         locations.WaitForCompletion();
         

@@ -2161,6 +2161,7 @@ GameObject:
   - component: {fileID: 1350330332}
   - component: {fileID: 1350330334}
   - component: {fileID: 1350330333}
+  - component: {fileID: 1350330335}
   m_Layer: 0
   m_Name: MoveToScene
   m_TagString: Untagged
@@ -2235,8 +2236,21 @@ MonoBehaviour:
   _save: 1
   _load: 0
   _savePosAndWorld: 1
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 0
   _initPlayerPosition: {fileID: 333945567}
+--- !u!114 &1350330335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350330331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabb6c6ae5dd4da5b4ad55d4202c6ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1358546850
 GameObject:
   m_ObjectHideFlags: 0

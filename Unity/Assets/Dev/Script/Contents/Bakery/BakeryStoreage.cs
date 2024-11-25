@@ -39,6 +39,7 @@ public class BakeryStoreage : BakeryFlowBehaviour
             
             if (obj.Saved is false || _data.Infinity)
             {
+                _storageInventory.Model.Clear();
                 foreach (ItemDataSerializedSet itemSet in _data.DefaultItemList)
                 {
                     _storageInventory.Model.PushItem(itemSet.Item, itemSet.Count <= 0 ? itemSet.Item.MaxStackCount : itemSet.Count);

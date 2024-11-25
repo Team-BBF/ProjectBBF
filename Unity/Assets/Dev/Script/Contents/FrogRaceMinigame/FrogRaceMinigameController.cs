@@ -211,16 +211,17 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
             int money = (int)(frogData.FrogData.DividendRate * _money);
             blackboard.Money += money;
             inst.DialogueText = $"<color=#826209>{money}</color> 원 벌었습니다.";
+            await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update);
         }
-        else
+        else if(_money > 0)
         {
             AudioManager.Instance.PlayOneShot("SFX", "SFX_Frog_Lose");
             inst.DialogueText = $"돈을 잃었습니다.";
             blackboard.Money = Mathf.Max(0, blackboard.Money - _money);
+            await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update);
         }
 
         OnGameRelease();
-        await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update);
         inst.ResetDialogue();
 #else
         OnGameRelease();

@@ -75,6 +75,8 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
     protected override async UniTask OnTutorial()
     {
         DialogueController.Instance.ResetDialogue();
+        
+#if !STOVE_BUILD
         var inst = DialogueController.Instance;
 
         var fields = _frogs.Select(x => inst.GetField<BranchFieldButton>().Init(x.FrogData.DisplayName)).ToArray();
@@ -122,6 +124,7 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
         }
 
         DialogueController.Instance.ResetDialogue();
+#endif
     }
 
     protected override void OnGameBegin()
@@ -190,11 +193,13 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
     {
 
         Player.MoveStrategy.ResetVelocity();
+        
+        
+#if !STOVE_BUILD
         var blackboard = PersistenceManager.Instance.LoadOrCreate<PlayerBlackboard>("Player_Blackboard");
         var inst = DialogueController.Instance;
         inst.ResetDialogue();
         inst.Visible = true;
-
 
         if (_goalIndex == _targetIndex)
         {
@@ -216,6 +221,10 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
 
         OnGameRelease();
         await UniTask.WaitUntil(() => InputManager.Map.UI.DialogueSkip.triggered, PlayerLoopTiming.Update);
+        inst.ResetDialogue();
+#else
+        OnGameRelease();
+#endif
 
         Player.Blackboard.IsMoveStopped = false;
         Player.Blackboard.IsInteractionStopped = false;
@@ -226,6 +235,5 @@ public class FrogRaceMinigameController : MinigameBase<FrogRaceMinigameData>
         Player.RecipeSummaryView.Visible = true;
         Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
         
-        inst.ResetDialogue();
     }
 }

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -330699523, guid: 06a390af7580d5941a3d4282e2910f6f, type: 3}
+    - target: {fileID: 8111947695575930656, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _favorablity
+      value: 
+      objectReference: {fileID: 6981405652881501192}
     - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
       propertyPath: m_Name
       value: PActor_Piraeus_Template
@@ -120,8 +124,32 @@ PrefabInstance:
       propertyPath: _movementData
       value: 
       objectReference: {fileID: 11400000, guid: b749fac72fb81554c9268f6898b03c33, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4027983535149176695, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6681495090440575196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6981405652881501192}
   m_SourcePrefab: {fileID: 100100000, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+--- !u!1 &8665086375428048919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6681495090440575196, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+  m_PrefabInstance: {fileID: 2664409437884469451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6981405652881501192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665086375428048919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a7a3d9897f48f1b6bf6f7bf78b7002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hittedDialogue: {fileID: 11400000, guid: a2e463c96928955458bb44244d303d2f, type: 2}
+  _wetDialogue: {fileID: 11400000, guid: f1c8f152530f82f44be1e0140127a978, type: 2}
+  _stoveFrogDialogue: {fileID: 11400000, guid: bea8d6b17ed3f9c4c8d323c7bd62cd55, type: 2}

@@ -3210,18 +3210,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 243572834}
     m_Modifications:
-    - target: {fileID: 87879659511388457, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
-      propertyPath: _bucketDialogueContainer
-      value: 
-      objectReference: {fileID: 11400000, guid: aa113d058959fb84bad6f8ceaf2fd35d, type: 2}
-    - target: {fileID: 3048348021829871843, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4502114533719201275, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.19000006
-      objectReference: {fileID: 0}
     - target: {fileID: 5301986901876824259, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
       propertyPath: m_Name
       value: PActor_Lylla_Ed
@@ -3232,7 +3220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6130304993720184102, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.73
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 6130304993720184102, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3265,14 +3253,6 @@ PrefabInstance:
     - target: {fileID: 6130304993720184102, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606692542859175294, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 7015268274837040086, guid: 1980b66a2a6562749b661454f3a37edb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

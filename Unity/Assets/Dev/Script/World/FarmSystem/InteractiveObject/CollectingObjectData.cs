@@ -29,7 +29,7 @@ public class CollectingObjectData : ScriptableObject
     private bool _onlyTool;
     
     [field: SerializeField, Header("조건 도구")] 
-    private ToolRequireSet _requireSet;
+    private ToolRequireSet[] _requireSets;
 
     [field: SerializeField, Header("수집했을 때 드랍하는 아이템 테이블")]
     private List<Item> _dropItems;
@@ -41,7 +41,7 @@ public class CollectingObjectData : ScriptableObject
 
     public int MaxCollectCount => _maxCollectCount;
 
-    public ToolRequireSet RequireSet => _requireSet;
+    public ToolRequireSet[] RequireSets => _requireSets;
 
     public IReadOnlyList<Item> DropItems => _dropItems;
 

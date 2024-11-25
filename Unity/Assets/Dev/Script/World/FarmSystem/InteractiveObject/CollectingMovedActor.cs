@@ -66,7 +66,7 @@ public class CollectingMovedActor : ActorComponent
         public CollisionInteraction Interaction { get; set; }
         public bool IsVaildTool(ToolRequireSet toolSet)
         {
-            return ToolTypeUtil.Contains(_actorCom._collectingData.RequireSet, toolSet);
+            return ToolTypeUtil.Contains(_actorCom._collectingData.RequireSets, toolSet.RequireToolType);
         }
 
         public void UpdateInteract(CollisionInteractionMono caller)

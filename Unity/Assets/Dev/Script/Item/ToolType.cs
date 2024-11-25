@@ -88,8 +88,12 @@ public static class ToolTypeUtil
     }
     public static bool Contains(ToolRequireSet[] sets, ToolType type, ToolRank? rank = null)
     {
+        if (sets is null) return false;
+        
         foreach (ToolRequireSet set in sets)
         {
+            if (set is null) continue;
+            
             if (Contains(set, type, rank))
             {
                 return true;

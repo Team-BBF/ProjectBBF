@@ -21,12 +21,12 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 416a113f-e641-410c-ab5a-b25949efb31e
   NodeData:
-  - rid: 6083855653500355093
-  - rid: 6083855653500355094
+  - rid: 734291828235829252
+  - rid: 734291828235829253
   references:
     version: 2
     RefIds:
-    - rid: 6083855653500355093
+    - rid: 734291828235829252
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 416a113f-e641-410c-ab5a-b25949efb31e
@@ -34,10 +34,10 @@ MonoBehaviour:
         TypeName: Text
         Position: {x: 527, y: 204}
         DialogueText: "\uC800\uC5D0\uAC8C \uBB3C\uC744 \uC8FC\uC154\uB3C4 \uC2F9\uC740
-          \uC548\uC790\uB780\uB2F5\uB2C8\uB2E4."
+          \uC548 \uC790\uB780\uB2F5\uB2C8\uB2E4."
         PortraitKey: Lol
         ActorKey: Julian_Chapter_1
-    - rid: 6083855653500355094
+    - rid: 734291828235829253
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: c1c9e3a2-e0bf-4a9a-9828-09622fa1eb1f

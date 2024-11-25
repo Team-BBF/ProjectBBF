@@ -21,12 +21,12 @@ MonoBehaviour:
     PortName: Next
     TargetNodeGuid: 5dcb777b-33cd-4105-bfae-8a6fdaaca5c2
   NodeData:
-  - rid: 6083855653500355078
-  - rid: 6083855653500355079
+  - rid: 734291828235829248
+  - rid: 734291828235829249
   references:
     version: 2
     RefIds:
-    - rid: 6083855653500355078
+    - rid: 734291828235829248
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: a710f6fa-eb34-4119-869e-43e1995c7f57
@@ -36,13 +36,13 @@ MonoBehaviour:
         DialogueText: "\uC774\uAC8C... \uBB50\uD558\uB294 \uAC70\uC5D0\uC694...!"
         PortraitKey: Ave
         ActorKey: Ahir_Chapter_1
-    - rid: 6083855653500355079
+    - rid: 734291828235829249
       type: {class: TextNodeData, ns: DS.Runtime, asm: Assembly-CSharp}
       data:
         GUID: 5dcb777b-33cd-4105-bfae-8a6fdaaca5c2
         NodeTitle: Text
         TypeName: Text
         Position: {x: 536, y: 204}
-        DialogueText: "...\uB2E4 \uC816\uC5C8\uC796\uC544\uC694......"
+        DialogueText: "... \uB2E4 \uC816\uC5C8\uC796\uC544\uC694......"
         PortraitKey: Agg
         ActorKey: Ahir_Chapter_1

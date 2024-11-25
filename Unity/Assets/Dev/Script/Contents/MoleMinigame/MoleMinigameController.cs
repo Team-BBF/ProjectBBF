@@ -169,6 +169,11 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         _brain = Camera.main.GetComponent<CinemachineBrain>();
         _brain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
         
+
+        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
+        Player.InputController.UI.Value = null;
+        Player.InputController.Interact.Value = null;
+        
         Player.HudController.Visible = false;
         Player.QuestPresenter.Visible = false;
         Player.RecipeSummaryView.Visible = false;
@@ -176,9 +181,6 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         Player.Inventory.QuickView.CurrentItemIndex = 0;
         Player.Inventory.QuickView.CursorMoveLock = true;
         Player.Inventory.QuickView.Visible = false;
-
-        Player.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(Player));
-        Player.InputController.UI.Value = null;
 
         _gameCts = CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());
         Score = 0;
@@ -377,7 +379,11 @@ public class MoleMinigameController : MinigameBase<MoleMinigameData>
         {
             _hammerSlot.Swap(_targetSwapSlot);
             _hammerSlot.Clear();
-        }
+        }        
+        
+        _hammerSlot = null;
+        _targetSwapSlot = null;
+
 
         _camera.gameObject.SetActive(false);
 

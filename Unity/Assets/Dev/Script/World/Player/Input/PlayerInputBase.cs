@@ -55,6 +55,8 @@ namespace ProjectBBF.Input
             Tool.Value = null;
             QuestUI.Value = null;
         }
+        
+        public bool ForceWorldLoadingLock { get; set; }
 
         public InputBinder<PlayerController, PlayerInputUI> UI { get; private set; } = new();
         public InputBinder<PlayerController, PlayerInputMove> Move { get; private set; } = new();
@@ -107,6 +109,8 @@ namespace ProjectBBF.Input
 
         public override void Update()
         {
+            if (ForceWorldLoadingLock) return;
+            
             if (Tool.Value?.IsUsingTool is false &&
                 Owner.Interactor.IsInteracting is false &&
                 Owner.Dialogue.IsTalking is false &&

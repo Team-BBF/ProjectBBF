@@ -347,6 +347,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 46774134}
 --- !u!114 &46774137
@@ -461,6 +462,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 81800848}
 --- !u!114 &81800851
@@ -607,6 +609,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 216967539}
 --- !u!114 &216967542
@@ -1019,6 +1022,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 686351763}
 --- !u!114 &686351766
@@ -1133,6 +1137,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 844958397}
 --- !u!114 &844958400
@@ -1247,6 +1252,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 963184599}
 --- !u!114 &963184602
@@ -1361,6 +1367,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1050035964}
 --- !u!114 &1050035967
@@ -1698,6 +1705,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1290716237}
 --- !u!114 &1290716240
@@ -3159,6 +3167,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1588774672}
 --- !u!114 &1588774675
@@ -3540,18 +3549,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1719906458}
-        m_TargetAssemblyTypeName: MapItemGiverReceiver, Assembly-CSharp
-        m_MethodName: GiveItemToPlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   _interaction: {fileID: 1719906460}
   _saveKey: Ch_2_FirstInv_Clear_Given
 --- !u!114 &1719906460
@@ -3709,6 +3706,7 @@ MonoBehaviour:
   _save: 0
   _load: 0
   _savePosAndWorld: 0
+  _saveCurrentPosAndWorld: 0
   _unloadImmutable: 1
   _initPlayerPosition: {fileID: 1898658884}
 --- !u!114 &1898658887

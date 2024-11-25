@@ -58,6 +58,7 @@ public class MoveToWorld : MonoBehaviour
         var loaderInst = SceneLoader.Instance;
         var PersistenceInst = PersistenceManager.Instance;
 
+        pc.InputController.ForceWorldLoadingLock = true;
         pc.InputController.Interact.Value = null;
         pc.InputController.UI.Value = null;
         pc.InputController.Move.Value = null;
@@ -95,10 +96,14 @@ public class MoveToWorld : MonoBehaviour
         {
             _ = await loaderInst.UnloadImmutableScenesAsync();
         }
-
+        
+        if (pc)
+        {
+            pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+        }
 
         _ = await loaderInst.LoadWorldAsync(scene);
-
+        
         if (_fadeIn)
         {
             _ = await loaderInst.WorkDirectorAsync(true, _directorKey);
@@ -106,7 +111,8 @@ public class MoveToWorld : MonoBehaviour
 
         if (pc)
         {
-            pc.InputController.BindInput(InputAbstractFactory.CreateFactory<PlayerController, DefaultPlayerInputFactory>(pc));
+            pc.InputController.ForceWorldLoadingLock = false;
         }
+
     }
 }

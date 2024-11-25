@@ -22,6 +22,9 @@ public class MapDialogueEventReceiver : MonoBehaviour, IBODialogue
     [SerializeField] private DialogueContainer _container;
 
     public CollisionInteraction Interaction => _trigger.Interaction;
+
+    public virtual DialogueContainer Container => _container;
+
     public DialogueEvent DequeueDialogueEvent()
     {
         var data = PersistenceManager.Instance.LoadOrCreate<MapDialogueEventPersistence>(_eventKey);
@@ -35,7 +38,7 @@ public class MapDialogueEventReceiver : MonoBehaviour, IBODialogue
 
         return new DialogueEvent()
         {
-            Container = _container,
+            Container = Container,
             Type = DialogueBranchType.Dialogue
         };
     }
@@ -44,7 +47,7 @@ public class MapDialogueEventReceiver : MonoBehaviour, IBODialogue
     {
         return new DialogueEvent()
         {
-            Container = _container,
+            Container = Container,
             Type = DialogueBranchType.Dialogue
         };
     }

@@ -687,6 +687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Inventory_TrashBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1495038950899135089, guid: 700d3e3a8e5831947805bc58c83e0620, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3843336994501242047, guid: 700d3e3a8e5831947805bc58c83e0620, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

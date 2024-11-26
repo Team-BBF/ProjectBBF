@@ -47,18 +47,6 @@ public class UIResolutionScaler : MonoBehaviour
     private CanvasScaler _scaler;
     private ScreenManager _manager;
 
-    private void Awake()
-    {
-        // TODO: 크로니클용. 나중에 지우셈
-#if !UNITY_EDITOR
-        _standardResolution = new Vector2Int(2560, 1440);
-
-        _lowerCase = 0;
-        _lowerReferenceResolution = _standardResolution;
-        _lowerScreenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
-#endif
-    }
-
     private void Start()
     {
         _manager = ScreenManager.Instance;

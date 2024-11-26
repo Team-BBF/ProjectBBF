@@ -37,6 +37,24 @@ public class PlayerQuickInventoryView : MonoBehaviour, IInventoryView
     private void Awake()
     {
         _cursor.gameObject.SetActive(false);
+
+        foreach (var slot in _slots)
+        {
+            if (slot == false) continue;
+
+            slot.OnClick += OnSlotClick;
+        }
+    }
+
+    private void OnSlotClick(PlayerQuickInventorySlotView obj)
+    {
+        int index = _slots.FirstIndex(x => x == obj);
+        if (index == -1) return;
+
+        if (_slots[index] is not null && _slots[index].ItemData)
+        {
+            CurrentItemIndex = index;
+        }
     }
 
     private void OnEnable()

@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PlayerQuickInventorySlotView : MonoBehaviour
+public class PlayerQuickInventorySlotView : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Image _slotImage;
     [SerializeField] private TMP_Text _text;
     private IInventorySlot _slotController;
+    
+    public event Action<PlayerQuickInventorySlotView> OnClick;
 
     private void Awake()
     {
@@ -62,5 +65,10 @@ public class PlayerQuickInventorySlotView : MonoBehaviour
             return;
         }
         _text.text = slot.Count == 0 ? "" : slot.Count.ToString();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnClick?.Invoke(this);
     }
 }

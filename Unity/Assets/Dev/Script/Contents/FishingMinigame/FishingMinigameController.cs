@@ -105,6 +105,7 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
         _timerUI.Visible = true;
         _uiPanel.SetActive(true);
         StartCoroutine(CoTimer());
+        StartCoroutine(CoFirstClickCursor());
     }
 
     protected override void OnGameRelease()
@@ -131,6 +132,7 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
             }
         }
         
+        
         _fishingSlot = null;
         _targetSwapSlot = null;
     }
@@ -148,6 +150,7 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
 
     protected override UniTask OnGameEnd(bool isRequestEnd)
     {
+        Player.Interactor.CHRO_FISHING = false;
         Player.Blackboard.IsFishingStopped = true;
         if (isRequestEnd) return UniTask.CompletedTask;
         return UniTask.CompletedTask;;
@@ -161,6 +164,32 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
     public FishingContext CreateContext()
     {
         return new FishingContext(_fishRenderer, Data);
+    }
+
+    private IEnumerator CoFirstClickCursor()
+    {
+        bool flip = false;
+        Player.Interactor.CHRO_FISHING = true;
+        while (ScreenManager.Instance)
+        {
+            if(Player == false)break;
+            if (Player.Fishing.IsFishing) break;
+            
+            if (flip)
+            {
+                ScreenManager.Instance.SetCursorForce(CursorType.CanClick);
+            }
+            else
+            {
+                ScreenManager.Instance.SetCursorForce(CursorType.ClickEmpty);  
+            }
+
+            flip = !flip;
+            
+            yield return new WaitForSeconds(0.25f);
+        }
+
+        Player.Interactor.CHRO_FISHING = false;
     }
 
     private IEnumerator CoTimer()

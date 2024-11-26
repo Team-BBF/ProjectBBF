@@ -282,13 +282,14 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
     #endregion
 
     #region Unity Method
+    public bool CHRO_FISHING { get; set; }
 
     private void Update()
     {
         CalculateCloseObject();
         CalcultateIndicatorPosition();
 
-        if (ScreenManager.Instance)
+        if (ScreenManager.Instance && CHRO_FISHING is false)
         {
             if (FindClickObjectWithoutClick())
             {

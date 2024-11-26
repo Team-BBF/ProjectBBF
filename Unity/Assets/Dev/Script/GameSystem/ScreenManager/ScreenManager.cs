@@ -13,6 +13,7 @@ public enum CursorType
 {
     Default,
     CanClick,
+    ClickEmpty,
     None,
 }
 

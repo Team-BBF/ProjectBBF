@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8179536198584789104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1260773709800933303, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286914129994640181, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859516298495740257, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _targetQuestList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081332623763283446, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _targetQuestList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1012b5d37b055ca4ca1c577342dc1dc4, type: 2}
+    - target: {fileID: 5081332623763283446, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _targetQuestList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 006abbd1574ba51449e4a255f39dc1d9, type: 2}
+    - target: {fileID: 5081332623763283446, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _targetQuestList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 26c41b42cd96c6440b51a013031903a7, type: 2}
+    - target: {fileID: 5081332623763283446, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: _targetQuestList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 26c41b42cd96c6440b51a013031903a7, type: 2}
+    - target: {fileID: 6438325822105312626, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236962955030520697, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689069794954926429, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712666892707010204, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+      propertyPath: m_Name
+      value: PActor_FishingGhost
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 71108833136805747, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8677df67c7367d48b06acbee2f4ec4d, type: 3}

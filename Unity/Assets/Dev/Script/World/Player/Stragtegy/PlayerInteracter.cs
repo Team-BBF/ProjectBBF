@@ -143,7 +143,11 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
             ))
         {
             var obj = FindCloserObject();
-            if (obj == false) return;
+            if (obj == false)
+            {
+                _indicator.enabled = false;
+                return;
+            }
 
             var pos = _coordinate.GetLookAtPosition();
 

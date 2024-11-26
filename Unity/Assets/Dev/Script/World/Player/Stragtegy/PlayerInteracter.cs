@@ -255,7 +255,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
         {
             Vector2 worldPos = camera.ScreenToWorldPoint(mousePos);
 
-            Collider2D[] cols = Physics2D.OverlapCircleAll(worldPos, 0.15f, ~LayerMask.GetMask("Player", "Ignore Raycast"));
+            Collider2D[] cols = Physics2D.OverlapCircleAll(worldPos, 0.15f, ~LayerMask.GetMask("Player", "Ignore Raycast", "FarmPlatform"));
 
             float minDis = Mathf.Infinity;
             CollisionInteractionMono minObj = null;

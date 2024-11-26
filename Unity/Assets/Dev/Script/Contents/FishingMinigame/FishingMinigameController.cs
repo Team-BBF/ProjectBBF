@@ -177,7 +177,7 @@ public class FishingMinigameController : MinigameBase<FishingMinigameData>
             
             if (flip)
             {
-                ScreenManager.Instance.SetCursorForce(CursorType.CanClick);
+                ScreenManager.Instance.SetCursorForce(CursorType.LeftClick);
             }
             else
             {

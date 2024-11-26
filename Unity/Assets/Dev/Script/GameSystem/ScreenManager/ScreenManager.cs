@@ -12,7 +12,8 @@ using UnityEngine.UI;
 public enum CursorType
 {
     Default,
-    CanClick,
+    LeftClick,
+    RightClick,
     ClickEmpty,
     None,
 }

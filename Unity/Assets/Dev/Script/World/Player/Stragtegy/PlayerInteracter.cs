@@ -293,7 +293,7 @@ public class PlayerInteracter : MonoBehaviour, IPlayerStrategy
         {
             if (FindClickObjectWithoutClick())
             {
-                ScreenManager.Instance.CurrentCursor = CursorType.CanClick;                
+                ScreenManager.Instance.CurrentCursor = CursorType.RightClick;                
             }
             else
             {

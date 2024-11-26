@@ -11,6 +11,8 @@ using MyBox; // DOTween 네임스페이스 추가
 [RequireComponent(typeof(RectTransform))]
 public class QuestIndicatorObstacleUI : MonoBehaviour
 {
+    [SerializeField] private float _minAlpha = 0f;
+    [SerializeField] private float _maxAlpha= 1f;
     [SerializeField] private bool _ignore;
     
     private Tween _currentTextTween;
@@ -56,7 +58,7 @@ public class QuestIndicatorObstacleUI : MonoBehaviour
         if (_ignore) return;
         
         StopAllCoroutines();
-        StartCoroutine(CoDoFade(fadeAlpha, duration));
+        StartCoroutine(CoDoFade(Mathf.Clamp(fadeAlpha, _minAlpha, _maxAlpha), duration));
     }
 
     private IEnumerator CoDoFade(float endAlpha, float duration)
